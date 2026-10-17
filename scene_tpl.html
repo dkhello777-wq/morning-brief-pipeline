@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<style>
+*{box-sizing:border-box;margin:0}
+body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overflow:hidden}
+#stage{width:1080px;height:1920px;background:#FFE600;position:relative;overflow:hidden}
+#stage.pm{background:#111;color:#FFE600}
+#stage.pm .tag{background:#FFE600;color:#111}
+#stage.pm .h1 .cur{background:#FFE600}
+#stage.pm .box{background:#1c1c1c;color:#F4F1EA;border-color:#FFE600;box-shadow:14px 14px 0 #FFE600}
+#stage.pm .box.dark{background:#FFE600;color:#111}
+#stage.pm .foot{border-color:#FFE600}
+#stage.pm .wipe{background:#FFE600}
+#stage.pm svg text{fill:#FFE600}
+#stage.pm svg [stroke='#111']{stroke:#FFE600}
+#stage.pm svg [fill='#111']{fill:#FFE600}
+#stage.pm svg [fill='#fff']{fill:#1c1c1c}
+#stage.pm #s7{background:#FFE600;color:#111}
+#stage.pm #s7 .tag{background:#111;color:#FFE600}
+#stage.pm #s7 .box{background:#111;color:#FFE600;border-color:#111;box-shadow:14px 14px 0 #111}
+#stage.pm #s7 .foot{border-color:#111}
+#stage.pm #s7 .h1 .cur{background:#111}
+.scene{position:absolute;inset:0;padding:90px 130px;display:none;flex-direction:column;gap:30px}
+.scene.on{display:flex}
+.tag{align-self:flex-start;background:#111;color:#FFE600;padding:14px 26px;font-size:28px;font-weight:900;transform-origin:left center;max-width:100%}
+.h1{font-size:104px;font-weight:900;line-height:1.02;letter-spacing:-.04em;min-height:330px;word-break:keep-all}
+.h1 .cur{display:inline-block;width:14px;height:90px;background:#111;vertical-align:-10px;margin-left:6px}
+.box{background:#fff;border:5px solid #111;box-shadow:14px 14px 0 #111}
+.item{display:flex;gap:24px;padding:26px 30px;align-items:center}
+.item .n{font-size:40px;font-weight:900;flex-shrink:0}
+.item .t{font-size:36px;font-weight:900;line-height:1.3;word-break:keep-all}
+.item .s{font-size:24px;margin-top:6px;font-weight:500;word-break:keep-all}
+.foot{margin-top:auto;font-size:26px;font-weight:900;border-top:5px solid #111;padding-top:18px;display:flex;justify-content:space-between;gap:20px}
+.foot span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ill{height:500px;display:flex;align-items:center;justify-content:center;position:relative;flex-direction:column;gap:10px}
+.big{font-size:140px;font-weight:900;letter-spacing:-.05em;line-height:1}
+.sub{font-size:32px;font-weight:700;line-height:1.5;word-break:keep-all}
+.stamp{position:absolute;right:150px;bottom:200px;transform:rotate(-8deg);border:8px solid #E8202A;color:#E8202A;font-size:60px;font-weight:900;padding:14px 30px;background:rgba(255,255,255,.85);transform-origin:center;white-space:nowrap}
+.wipe{position:absolute;inset:0;background:#111;transform:translateX(-100%);pointer-events:none}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.kbox{padding:28px}
+.kbox .big{font-size:92px}
+.dark{background:#111;color:#FFE600;box-shadow:14px 14px 0 #111}
+/* opening card doubles as the reel cover: keep it inside the 3:4 profile-grid crop (y 240-1680) */
+#s1{padding-top:300px}
+#s1 .tag{align-self:center;transform-origin:center}
+#s1 .h1{text-align:center;font-size:100px}
+</style></head><body>
+<div id="stage">
+
+<div class="scene" id="s1">
+  <div class="tag" id="s1tag"></div>
+  <div class="h1" id="s1h"></div>
+  <div class="box item" id="s1a"><div class="n">①</div><div><div class="t">간밤의 세계 이슈 3가지</div><div class="s" id="s1as"></div></div></div>
+  <div class="box item" id="s1b"><div class="n">②</div><div><div class="t">새로운 AI 기술</div><div class="s" id="s1bs"></div></div></div>
+  <div class="box item" id="s1c"><div class="n">③</div><div><div class="t">미국 증시 흐름</div><div class="s">다우 · S&amp;P 500 · 나스닥</div></div></div>
+  <div class="foot"><span>▶ 60초 브리핑</span><span>1/7</span></div>
+</div>
+
+<!-- generic issue scenes x3 -->
+<div class="scene" id="s2">
+  <div class="tag" id="s2tag"></div>
+  <div class="h1" id="s2h"></div>
+  <div class="ill" id="s2ill"></div>
+  <div class="grid2"><div class="box kbox" id="s2a"><div class="big" id="s2an"></div><div class="sub" id="s2al"></div></div><div class="box kbox dark" id="s2b"><div class="big" id="s2bn" style="font-size:64px;line-height:1.1"></div><div class="sub" id="s2bl"></div></div></div>
+  <div class="foot"><span id="s2src"></span><span>2/7</span></div>
+</div>
+<div class="scene" id="s3">
+  <div class="tag" id="s3tag"></div>
+  <div class="h1" id="s3h"></div>
+  <div class="ill" id="s3ill"></div>
+  <div class="grid2"><div class="box kbox" id="s3a"><div class="big" id="s3an"></div><div class="sub" id="s3al"></div></div><div class="box kbox dark" id="s3b"><div class="big" id="s3bn" style="font-size:64px;line-height:1.1"></div><div class="sub" id="s3bl"></div></div></div>
+  <div class="foot"><span id="s3src"></span><span>3/7</span></div>
+</div>
+<div class="scene" id="s4">
+  <div class="tag" id="s4tag"></div>
+  <div class="h1" id="s4h"></div>
+  <div class="ill" id="s4ill"></div>
+  <div class="grid2"><div class="box kbox" id="s4a"><div class="big" id="s4an"></div><div class="sub" id="s4al"></div></div><div class="box kbox dark" id="s4b"><div class="big" id="s4bn" style="font-size:64px;line-height:1.1"></div><div class="sub" id="s4bl"></div></div></div>
+  <div class="foot"><span id="s4src"></span><span>4/7</span></div>
+</div>
+
+<div class="scene" id="s5">
+  <div class="tag" id="s5tag"></div>
+  <div class="h1" id="s5h"></div>
+  <div class="ill box" style="height:380px;padding:0 40px;gap:10px;flex-direction:row" id="wave"></div>
+  <div class="box item" id="s5a"><div class="n">▸</div><div><div class="t" id="s5at"></div><div class="s" id="s5as"></div></div></div>
+  <div class="box item" id="s5b"><div class="n">▸</div><div><div class="t" id="s5bt"></div><div class="s" id="s5bs"></div></div></div>
+  <div class="stamp" id="s5stamp"></div>
+  <div class="foot"><span id="s5src"></span><span>5/7</span></div>
+</div>
+
+<div class="scene" id="s6">
+  <div class="tag" id="s6tag"></div>
+  <div class="h1" id="s6h"></div>
+  <div class="box" style="padding:30px 40px;display:flex;justify-content:space-between;align-items:center" id="m1"><div><div class="sub">다우</div><div class="big" style="font-size:72px" id="m1v">0</div></div><div class="big" style="font-size:80px" id="m1p"></div></div>
+  <div class="box" style="padding:30px 40px;display:flex;justify-content:space-between;align-items:center" id="m2"><div><div class="sub">S&amp;P 500</div><div class="big" style="font-size:72px" id="m2v">0</div></div><div class="big" style="font-size:80px" id="m2p"></div></div>
+  <div class="box" style="padding:30px 40px;display:flex;justify-content:space-between;align-items:center" id="m3"><div><div class="sub">나스닥</div><div class="big" style="font-size:72px" id="m3v">0</div></div><div class="big" style="font-size:80px" id="m3p"></div></div>
+  <div class="box dark" style="padding:28px 36px" id="m4"><div class="sub" id="m4t"></div></div>
+  <div class="foot"><span>상승 = 빨강 · 하락 = 파랑 (국내 관행)</span><span>6/7</span></div>
+</div>
+
+<div class="scene" id="s7" style="background:#111;color:#FFE600">
+  <div class="tag" style="background:#FFE600;color:#111">오늘의 한 줄</div>
+  <div class="h1" id="s7h" style="min-height:560px;font-size:112px"></div>
+  <div class="box" style="padding:40px;background:#FFE600;color:#111;box-shadow:14px 14px 0 #FFE600;border-color:#FFE600" id="s7a"><div class="big" style="font-size:56px;line-height:1.15" id="ctaBig"></div><div class="sub" style="margin-top:14px" id="ctaSub"></div></div>
+  <div class="foot" style="border-color:#FFE600"><span>정보 제공 목적 · 투자 권유 아님</span><span>7/7</span></div>
+</div>
+
+<div class="wipe" id="wipe"></div>
+</div>
+
+<script>
+const C = __CONTENT__;
+let D=[], START=[];
+window.setDurations=function(arr){D=arr.slice();START=[];let acc=0;for(const d of D){START.push(acc);acc+=d;}window.TOTAL=acc;};
+window.setDurations(C.durations || [9,12,12,12,12,12,7]);
+const WIPE=0.35;
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const easeOut=t=>1-Math.pow(1-t,3);
+const back=t=>{const c=1.70158;return 1+(c+1)*Math.pow(t-1,3)+c*Math.pow(t-1,2);};
+const typed=(el,text,t,cps=14)=>{const n=Math.floor(Math.max(t,0)*cps);el.innerHTML=text.slice(0,n).replace(/\n/g,'<br>')+(n<text.length?'<span class="cur"></span>':'');};
+const pop=(el,t,delay=0,dur=0.45)=>{const p=clamp((t-delay)/dur);el.style.opacity=p<=0?0:1;el.style.transform=`scale(${p<=0?0.6:0.6+0.4*back(p)})`;};
+const slide=(el,t,delay=0,dur=0.5)=>{const p=clamp((t-delay)/dur);el.style.opacity=p;el.style.transform=`translateY(${(1-easeOut(p))*60}px)`;};
+const fmt=n=>n.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
+
+// ---- static fill ----
+const PM=C.edition==='pm'; if(PM) $('stage').classList.add('pm');
+const ORDER=PM?[0,1,2,3,5,6]:[0,1,2,3,4,5,6];
+$('s1tag').textContent=(PM?'EVENING BRIEF ★ ':'MORNING BRIEF ★ ')+C.date_short;
+const br=s=>esc(s).replace(/\n/g,'<br>');
+$('s1h').dataset.text=C.title||'';
+if(PM){ $('s1a').querySelector('.t').textContent='오늘의 국내 이슈 3가지'; $('s1as').textContent=C.issues.map(i=>i.short).join(' · '); $('s1b').style.display='none'; $('s1c').querySelector('.t').textContent=C.market.headline_short||'국내 증시 마감'; $('s1c').querySelector('.s').textContent=C.market.date_label||''; $('s1c').querySelector('.n').textContent='②'; $('s1').querySelector('.foot span:first-child').textContent='▶ 45초 저녁 브리핑'; }
+else{ $('s1as').textContent=C.issues.map(i=>i.short).join(' · '); $('s1bs').textContent=(C.ai.company?C.ai.company+' · ':'')+(C.ai.short||''); }
+
+// ---- illustrations (code-drawn SVG) ----
+function ill(d){
+  d=d||{}; const k=d.kind;
+  if(k==='bars'){
+    const sc=320/Math.max(d.a||1,d.b||1,1);
+    return `<svg width="900" height="480" viewBox="0 0 900 480">
+      <g class="bA"><rect x="140" y="400" width="240" height="0" fill="#111" stroke="#111" stroke-width="6"/>
+      <text x="260" y="450" font-size="34" font-weight="900" text-anchor="middle" fill="#111">${esc(d.a_label)}</text>
+      <text class="nA" x="260" y="380" font-size="84" font-weight="900" text-anchor="middle" fill="#111">0</text></g>
+      <g class="bB"><rect x="520" y="400" width="240" height="0" fill="#fff" stroke="#111" stroke-width="6"/>
+      <text x="640" y="450" font-size="34" font-weight="900" text-anchor="middle" fill="#111">${esc(d.b_label)}</text>
+      <text class="nB" x="640" y="380" font-size="84" font-weight="900" text-anchor="middle" fill="#111">0</text></g>
+      <line x1="80" y1="400" x2="820" y2="400" stroke="#111" stroke-width="6"/></svg>`;
+  }
+  if(k==='globe'){
+    return `<svg width="460" height="460" viewBox="0 0 460 460"><g class="glb">
+      <circle cx="230" cy="230" r="200" fill="#fff" stroke="#111" stroke-width="12"/>
+      <ellipse class="mer" cx="230" cy="230" rx="90" ry="200" fill="none" stroke="#111" stroke-width="8"/>
+      <line x1="30" y1="230" x2="430" y2="230" stroke="#111" stroke-width="8"/>
+      <path d="M60 130 Q230 90 400 130" fill="none" stroke="#111" stroke-width="8"/>
+      <path d="M60 330 Q230 370 400 330" fill="none" stroke="#111" stroke-width="8"/></g>
+      <circle class="dot" cx="300" cy="170" r="22" fill="#E8202A"/></svg>`;
+  }
+  if(k==='alert'||k==='number'){
+    let spikes='';
+    if(k==='alert') for(let i=0;i<8;i++){const a=i*Math.PI/4;spikes+=`<line x1="${150+80*Math.cos(a)}" y1="${150+80*Math.sin(a)}" x2="${150+125*Math.cos(a)}" y2="${150+125*Math.sin(a)}" stroke="#111" stroke-width="10" stroke-linecap="round"/><circle cx="${150+125*Math.cos(a)}" cy="${150+125*Math.sin(a)}" r="14" fill="#E8202A"/>`;}
+    const icon=k==='alert'?`<svg width="300" height="300" viewBox="0 0 300 300"><g class="spin">${spikes}<circle cx="150" cy="150" r="80" fill="#fff" stroke="#111" stroke-width="10"/></g></svg>`:'';
+    return `${icon}<div class="big cnt" style="font-size:${k==='alert'?120:170}px">0</div><div class="sub" style="text-align:center">${esc(d.label)}</div>`;
+  }
+  if(k==='bridge'){
+    return `<svg width="940" height="480" viewBox="0 0 940 480">
+      <path d="M0 440 Q60 420 120 440 T240 440 T360 440 T480 440 T600 440 T720 440 T840 440 T960 440" fill="none" stroke="#111" stroke-width="6" class="wave"/>
+      <path class="draw" d="M20 300 L920 300" fill="none" stroke="#111" stroke-width="18"/>
+      <path class="draw" d="M120 300 Q470 -40 820 300" fill="none" stroke="#111" stroke-width="14"/>
+      <g class="cables" stroke="#111" stroke-width="5"><line x1="220" y1="300" x2="220" y2="206"/><line x1="320" y1="300" x2="320" y2="130"/><line x1="420" y1="300" x2="420" y2="92"/><line x1="520" y1="300" x2="520" y2="92"/><line x1="620" y1="300" x2="620" y2="130"/><line x1="720" y1="300" x2="720" y2="206"/></g>
+      <text x="80" y="380" font-size="40" font-weight="900" fill="#111">${esc(d.a_label)}</text>
+      <text x="860" y="380" font-size="40" font-weight="900" text-anchor="end" fill="#111">${esc(d.b_label)}</text></svg>`;
+  }
+  // trend (default)
+  const up=(d.direction||'up')==='up';
+  return `<svg width="300" height="300" viewBox="0 0 300 300" class="arrow"><path d="${up?'M150 40 L260 160 L200 160 L200 260 L100 260 L100 160 L40 160 Z':'M150 260 L40 140 L100 140 L100 40 L200 40 L200 140 L260 140 Z'}" fill="${up?'#E8202A':'#1F5FD6'}" stroke="#111" stroke-width="10" stroke-linejoin="round"/></svg><div class="sub" style="text-align:center">${esc(d.label)}</div>`;
+}
+
+C.issues.forEach((it,k)=>{ const s=`s${k+2}`;
+  $(s+'tag').textContent=['①','②','③'][k]+' '+(it.region||'');
+  $(s+'h').dataset.text=it.headline||'';
+  $(s+'an').textContent=it.stat1||''; $(s+'al').textContent=it.stat1_label||'';
+  $(s+'bn').innerHTML=br(it.stat2); $(s+'bl').textContent=it.stat2_label||'';
+  $(s+'src').textContent='출처: '+(it.source||'');
+  $(s+'ill').innerHTML=ill(it.ill);
+});
+if(!PM){
+  $('s5tag').textContent='새로운 AI 기술 · '+(C.ai.company||'');
+  $('s5h').dataset.text=C.ai.headline||'';
+  $('s5at').textContent=C.ai.point1||''; $('s5as').textContent=C.ai.point1_sub||'';
+  $('s5bt').textContent=C.ai.point2||''; $('s5bs').textContent=C.ai.point2_sub||'';
+  $('s5stamp').textContent=C.ai.verdict||'';
+  $('s5src').textContent='출처: '+(C.ai.source||'');
+  const w=$('wave'); for(let i=0;i<40;i++){const b=document.createElement('div');b.style.cssText='width:12px;height:30px;background:currentColor;border-radius:6px';w.appendChild(b);}
+}
+$('s6tag').textContent=PM?'국내 증시 마감 · '+(C.market.date_label||''):'미국 증시 흐름 · '+(C.market.date_label||'');
+$('s6h').dataset.text=C.market.headline||'';
+const M=PM?(C.market.rows||[]).slice(0,3).map((r,i)=>[['m1','m2','m3'][i],r]):[['m1',C.market.dow],['m2',C.market.spx],['m3',C.market.ndx]];
+['m1','m2','m3'].forEach((id,i)=>{ if(i>=M.length) $(id).style.display='none'; });
+M.forEach(([id,m])=>{ if(PM) $(id).querySelector('.sub').textContent=m.name||''; $(id+'p').style.color=(m.pct>=0)?'#E8202A':'#1F5FD6'; });
+$('m4t').innerHTML=br(C.market.note);
+if(PM) $('s6').querySelector('.foot span:first-child').textContent='상승 = 빨강 · 하락 = 파랑';
+$('s7h').dataset.text=C.oneliner||'';
+$('ctaBig').innerHTML=PM?'지금 팔로우 안 하면<br>내일 저녁엔 못 만나요':'지금 팔로우 안 하면<br>내일 아침엔 못 만나요';
+$('ctaSub').textContent=PM?'♥ 좋아요 · ✓ 매일 저녁 6시':'♥ 좋아요 · ✓ 매일 아침 7시';
+// renumber footers for the scenes actually used
+ORDER.forEach((si,k)=>{ const sp=$(`s${si+1}`).querySelector('.foot span:last-child'); if(sp) sp.textContent=`${k+1}/${ORDER.length}`; });
+
+// ---- per-scene animation ----
+function animIll(kind,root,d,t){
+  if(!root) return;
+  if(kind==='bars'){ const p=easeOut(clamp((t-0.6)/1.6)); const sc=320/Math.max(d.a||1,d.b||1,1);
+    const A=root.querySelector('.bA rect'),B=root.querySelector('.bB rect');
+    A.setAttribute('height',p*d.a*sc);A.setAttribute('y',400-p*d.a*sc);B.setAttribute('height',p*d.b*sc);B.setAttribute('y',400-p*d.b*sc);
+    const nA=root.querySelector('.nA'),nB=root.querySelector('.nB');
+    nA.textContent=(p*d.a).toFixed(d.decimals||0)+(d.unit||''); nA.setAttribute('y',400-p*d.a*sc-24);
+    nB.textContent=(p*d.b).toFixed(d.decimals||0)+(d.unit||''); nB.setAttribute('y',400-p*d.b*sc-24); }
+  else if(kind==='globe'){ const g=root.querySelector('.glb'); g.style.transformOrigin='230px 230px'; g.style.transform=`rotate(${Math.sin(t*0.8)*6}deg)`; root.querySelector('.mer').setAttribute('rx',90*Math.abs(Math.cos(t*0.9))+4); const dot=root.querySelector('.dot'); dot.setAttribute('r',18+6*Math.abs(Math.sin(t*4))); }
+  else if(kind==='alert'||kind==='number'){ const c=root.querySelector('.cnt'); if(c){ const p=easeOut(clamp((t-0.5)/1.5)); c.textContent=Math.round(p*(d.value||0)).toLocaleString('en-US')+(d.suffix||''); }
+    const s=root.querySelector('.spin'); if(s){ s.style.transformOrigin='150px 150px'; s.style.transform=`rotate(${t*20}deg) scale(${0.9+0.1*Math.sin(t*4)})`; } }
+  else if(kind==='bridge'){ root.querySelectorAll('.draw').forEach(e=>{ const L=1400; const q=clamp((t-0.4)/1.6); e.style.strokeDasharray=L; e.style.strokeDashoffset=L*(1-q); });
+    root.querySelector('.cables').style.opacity=clamp((t-1.8)/0.5); root.querySelector('.wave').style.transform=`translateX(${-(t*40)%120}px)`; }
+  else { const a=root.querySelector('.arrow'); if(a){ a.style.transform=`translateY(${-10*Math.abs(Math.sin(t*3))}px)`; } }
+}
+const DS=si=>D[ORDER.indexOf(si)]||10;
+const issueScene=k=>t=>{ const it=C.issues[k]; const s=`s${k+2}`;
+  pop($(s+'tag'),t,0.1); typed($(s+'h'),it.headline||'',t-0.3,13);
+  animIll((it.ill||{}).kind,$(s+'ill'),it.ill||{},t);
+  slide($(s+'a'),t,DS(k+1)*0.42); slide($(s+'b'),t,DS(k+1)*0.55); };
+const SCENES=[
+  // 1: opening. Fully composed on every frame so any frame Instagram picks as the cover is a finished card.
+  t=>{ const h=$('s1h'); h.innerHTML=br(h.dataset.text); $('s1tag').style.transform=`scale(${1+0.03*Math.sin(t*3)})`; },
+  issueScene(0), issueScene(1), issueScene(2),
+  t=>{ pop($('s5tag'),t,0.1); typed($('s5h'),C.ai.headline||'',t-0.3,13);
+    [...$('wave').children].forEach((b,i)=>{ b.style.height=(30+(t>0.3?150*Math.abs(Math.sin(t*5+i*0.5))*Math.abs(Math.sin(i*0.9+1)):0))+'px'; });
+    slide($('s5a'),t,DS(4)*0.3); slide($('s5b'),t,DS(4)*0.42);
+    const sp=easeOut(clamp((t-DS(4)*0.62)/0.35)); const st=$('s5stamp'); st.style.opacity=sp>0?1:0; st.style.transform=`rotate(-8deg) scale(${sp>0?3-2*sp:3})`; },
+  t=>{ pop($('s6tag'),t,0.1); typed($('s6h'),C.market.headline||'',t-0.3,13);
+    M.forEach(([id,m],i)=>{ const d=DS(5)*(0.1+0.16*i); slide($(id),t,d-0.3); const p=easeOut(clamp((t-d)/1.4));
+      $(id+'v').textContent=fmt((m.value||0)*p); $(id+'p').textContent=(m.pct>=0?'▲':'▼')+Math.abs((m.pct||0)*p).toFixed(2)+'%'; });
+    slide($('m4'),t,DS(5)*0.68); },
+  t=>{ typed($('s7h'),C.oneliner||'',t-0.2,16); slide($('s7a'),t,3.2); },
+];
+
+window.seek=function(T){
+  let i=0; for(let k=0;k<D.length;k++){ if(T>=START[k]) i=k; }
+  const si=ORDER[i];
+  document.querySelectorAll('.scene').forEach((s,k)=>s.classList.toggle('on',k===si));
+  const t=T-START[i]; SCENES[si](t);
+  const w=$('wipe'); const rem=START[i]+D[i]-T;
+  if(i<D.length-1&&rem<WIPE){ w.style.transform=`translateX(${-100+100*(1-rem/WIPE)}%)`; }
+  else if(i>0&&t<WIPE){ w.style.transform=`translateX(${100*(t/WIPE)}%)`; }
+  else w.style.transform='translateX(-100%)';
+};
+window.seek(0);
+</script>
+</body></html>
