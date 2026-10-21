@@ -45,7 +45,7 @@ def fetch(url, data=None, headers={}, timeout=25):
         return None
 
 def fluent(name):
-    g = name.replace("\ufe0f", "")
+    g = name.replace(chr(0xFE0F), "")
     if not name.isascii():  # a single-codepoint glyph maps to its Unicode name; flags etc. stay glyphs
         if len(g) != 1: return None
         try: name = unicodedata.name(g).lower()
