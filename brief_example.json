@@ -6,6 +6,7 @@
       "region": "볼리비아", "short": "볼리비아 결선",
       "headline": "볼리비아 결선\n접전,\n46 vs 44",
       "ill": {"kind": "bars", "a": 46, "b": 44, "a_label": "후보 A", "b_label": "후보 B", "unit": "%"},
+      "icon": ["Ballot box with ballot", "🇧🇴"], "motion": "bob",
       "stat1": "±2%p", "stat1_label": "오차범위 → 통계상 동률",
       "stat2": "10/25\n결선 투표", "stat2_label": "10/10~13 조사",
       "source": "Reuters"
@@ -14,6 +15,7 @@
       "region": "중국–북한", "short": "신압록강대교",
       "headline": "12년 만에\n개통\n신압록강대교",
       "ill": {"kind": "bridge", "a_label": "단둥", "b_label": "신의주"},
+      "icon": ["Articulated lorry", "Bridge at night"], "motion": "drive",
       "stat1": "12년", "stat1_label": "개통 지연 끝",
       "stat2": "3km", "stat2_label": "양국 최대 육로 교역로",
       "source": "Reuters / Xinhua"
@@ -22,6 +24,8 @@
       "region": "콩고민주공화국", "short": "에볼라",
       "headline": "에볼라\n사망\n4,000명 넘어",
       "ill": {"kind": "alert", "value": 4000, "suffix": "+", "label": "누적 사망 (정부 집계)"},
+      "icon": ["Microbe"], "motion": "pulse",
+      "image_prompt": "a giant virus particle looming over a small field hospital tent",
       "stat1": "7개 주", "stat1_label": "확산 지역",
       "stat2": "아직\n꺾이지\n않음", "stat2_label": "",
       "source": "Reuters"
