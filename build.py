@@ -8,21 +8,95 @@ Output: out_dir/final.mp4 (1080x1920, narration + ducked music bed), out_dir/cov
 Cover: Instagram picks the reel's grid/feed cover from the video itself (the publish tool has no cover option),
 so the opening scene is drawn fully composed on every frame (no typing, no cursor) and kept inside the 3:4 grid crop.
 Set NO_TTS=1 for a silent test build (no Typecast call; durations estimated from script length).
+
+Issue art (center of scenes 2-4): each issue may set "icon" (a Fluent Emoji 3D name such as "Fire engine", or a glyph
+such as "🇺🇸"; a list = fallbacks in order) plus optional "motion" (bob|sway|pulse|shake|spin|drive). One issue may set
+"image_prompt" for an AI illustration (needs GEMINI_API_KEY; falls back to its icon). RECENT_ICONS=path to a text file
+of icon names used in recent reels (one per line) so they are skipped. CHECK_ART=1 resolves the art and exits.
 """
-import json, os, pathlib, subprocess, sys, time, urllib.request, wave
+import base64, json, os, pathlib, subprocess, sys, time, unicodedata, urllib.parse, urllib.request, wave
 import numpy as np
 
 HERE = pathlib.Path(__file__).parent
 brief = json.load(open(sys.argv[1]))
 out = pathlib.Path(sys.argv[2]); out.mkdir(parents=True, exist_ok=True)
 NO_TTS = os.environ.get("NO_TTS") == "1"
-KEY = "" if NO_TTS else os.environ["TYPECAST_API_KEY"]
+CHECK_ART = os.environ.get("CHECK_ART") == "1"
+KEY = "" if NO_TTS or CHECK_ART else os.environ["TYPECAST_API_KEY"]
 VOICE = brief.get("voice_id", "tc_68d4b115f0486108a7eefb37")
 FPS = 24; PAD = 0.9; SR = 44100
 n_scenes = 6 if brief.get("edition") == "pm" else 7
 assert len(brief["scripts"]) == n_scenes, f"scripts must have {n_scenes} entries"
 
 def run(cmd): subprocess.run(cmd, check=True)
+
+# ---------- 0. issue art ----------
+FLUENT = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/"
+STYLE = ("Bold flat editorial illustration for a news card, thick black outlines, flat colors limited to black, white, "
+         "red #E8202A and blue #1F5FD6 accents, one clear central subject, simple shapes, centered, plain solid {bg} "
+         "background, no text, no letters, no numbers, no logos, no real or recognizable people. Subject: ")
+
+def fetch(url, data=None, headers={}, timeout=25):
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, data=data, headers=headers), timeout=timeout) as r:
+            return r.read()
+    except Exception as e:
+        if getattr(e, "code", None) != 404: print("art fetch failed", url[:90], e, flush=True)
+        return None
+
+def fluent(name):
+    g = name.replace("\ufe0f", "")
+    if not name.isascii():  # a single-codepoint glyph maps to its Unicode name; flags etc. stay glyphs
+        if len(g) != 1: return None
+        try: name = unicodedata.name(g).lower()
+        except ValueError: return None
+    n = name.strip(); n = n[:1].upper() + n[1:].lower(); sn = n.lower().replace(" ", "_")
+    for path in (f"{n}/3D/{sn}_3d.png", f"{n}/Default/3D/{sn}_3d_default.png"):
+        png = fetch(FLUENT + urllib.parse.quote(path))
+        if png and png[:4] == b"\x89PNG": return png
+    return None
+
+def ai_image(prompt):
+    key = os.environ.get("GEMINI_API_KEY")
+    if not key: return None
+    model = os.environ.get("GEMINI_IMAGE_MODEL", "gemini-2.5-flash-image")
+    bg = "near-black #111111" if brief.get("edition") == "pm" else "bright yellow #FFE600"
+    body = json.dumps({"contents": [{"parts": [{"text": STYLE.format(bg=bg) + prompt}]}],
+                       "generationConfig": {"responseModalities": ["IMAGE"], "imageConfig": {"aspectRatio": "1:1"}}}).encode()
+    r = fetch(f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent", body,
+              {"x-goog-api-key": key, "Content-Type": "application/json"}, timeout=120)
+    try:
+        for part in json.loads(r)["candidates"][0]["content"]["parts"]:
+            if "inlineData" in part: return base64.b64decode(part["inlineData"]["data"])
+    except Exception as e:
+        print("ai image failed", e, flush=True)
+    return None
+
+rp = os.environ.get("RECENT_ICONS")
+recent = {l.strip().lower() for l in pathlib.Path(rp).read_text().splitlines() if l.strip()} if rp and pathlib.Path(rp).exists() else set()
+used, ai_done = set(), False
+for k, it in enumerate(brief["issues"], 1):
+    art = None
+    if it.get("image_prompt") and not ai_done:
+        png = ai_image(it["image_prompt"])
+        if png:
+            ai_done = True; art = {"src": "data:image/png;base64," + base64.b64encode(png).decode(), "ai": True}
+            (out / f"art{k}.png").write_bytes(png); it["icon_used"] = "AI"
+    cands = it.get("icon") or []
+    cands = [cands] if isinstance(cands, str) else cands
+    for fresh_only in (True, False):
+        if art: break
+        for c in cands:
+            key_ = c.strip().lower()
+            if key_ in used or (fresh_only and key_ in recent): continue
+            png = fluent(c)
+            if png: art = {"src": "data:image/png;base64," + base64.b64encode(png).decode()}
+            elif not c.isascii(): art = {"glyph": c}  # flags and other glyphs Fluent lacks: drawn with the emoji font
+            if art: used.add(key_); it["icon_used"] = c; break
+    if art: art["motion"] = it.get("motion", "bob"); it["art"] = art
+    print("art", k, it.get("icon_used", "none (code-drawn fallback)"), flush=True)
+(out / "icons_used.txt").write_text("".join(it["icon_used"] + "\n" for it in brief["issues"] if it.get("icon_used") not in (None, "AI")))
+if CHECK_ART: sys.exit(0)
 
 # ---------- 1. TTS ----------
 durs = []

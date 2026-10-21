@@ -7,6 +7,7 @@
       "region": "시흥", "short": "시흥 화재",
       "headline": "시흥 금속\n도금공장 화재\n8명 부상",
       "ill": {"kind": "alert", "value": 8, "suffix": "명", "label": "소방관 1명 심정지 → 위중"},
+      "icon": ["Fire engine", "Fire"], "motion": "drive",
       "stat1": "17일", "stat1_label": "합동 감식 진행",
       "stat2": "원인\n조사 중", "stat2_label": "",
       "source": "SBS"
@@ -15,6 +16,7 @@
       "region": "인천", "short": "흉기 난동",
       "headline": "인천 흉기\n난동 피의자\n신상 공개",
       "ill": {"kind": "number", "value": 8, "suffix": "명 부상", "label": "시민 피해"},
+      "icon": ["Police car light", "Police car"], "motion": "pulse",
       "stat1": "59세", "stat1_label": "16일 구속",
       "stat2": "동기\n불분명", "stat2_label": "횡설수설 진술",
       "source": "SBS"
@@ -22,7 +24,8 @@
     {
       "region": "국회", "short": "탄핵 논의",
       "headline": "민주당,\n대법원장\n탄핵 논의 착수",
-      "ill": {"kind": "globe"},
+      "ill": {"kind": "icon"},
+      "icon": ["Balance scale", "Classical building"], "motion": "sway",
       "stat1": "조희대", "stat1_label": "대법원장",
       "stat2": "\"돌아올 수\n없는 강\"", "stat2_label": "국정감사 발언",
       "source": "SBS"
