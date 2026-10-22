@@ -15,9 +15,10 @@ What to write into `brief.json` (hook, script lengths, cover order, caption fiel
 
 - `hook: {"q", "hi"}` on the brief turns the opening card into a two-line hook (the number line on an accent bar).
   Without it the old `title` is shown.
-- Every cover (briefing and short) opens with the date in large type, read from `date_short` (`"10.22 THU"` → `10.22` beside
-  `목요일 / 아침 브리핑`), so posts can be told apart in the profile grid. The carousel cover does the same with `dates`
-  (`"10.19–10.25"`) beside `week_label`.
+- Covers (briefing, short, weekly carousel) use a minimal editorial layout: ivory (morning) or ink (evening) background,
+  the date in large type, the hook left-aligned with the number line on a yellow marker stroke, the issue list, and the
+  lead issue's art. The date comes from `date_short` (`"10.22 THU"` → `10.22` beside `목요일 / 아침 브리핑`); the carousel
+  shows `dates` (`"10.19–10.25"`) above `week_label`. The cover font is Pretendard (`fonts/`, SIL OFL), loaded from the repo.
 - A short is the issue's hook cover (1.6s), its scene with the briefing's own narration, and an end card pointing to the
   full briefing (2.4s): 10-15s. Run it after the briefing with the same `out` so it reuses `v{n+1}.mp3`, the AI art and
   the icon choice (`art_used.json`); it makes no TTS or image calls of its own.

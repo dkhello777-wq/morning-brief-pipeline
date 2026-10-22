@@ -191,6 +191,7 @@ if total > LIMIT: print(f"WARN length {total:.1f}s is over the {LIMIT}s target: 
 
 # ---------- 2. render frames ----------
 html = (HERE / "scene_tpl.html").read_text().replace("__CONTENT__", json.dumps(brief, ensure_ascii=False))
+html = html.replace("__FONT__", (HERE / "fonts" / "PretendardVariable.ttf").resolve().as_uri())
 (out / f"scene{SFX}.html").write_text(html)
 frames = out / f"frames{SFX}"; frames.mkdir(exist_ok=True)
 for old in frames.glob("f*.png"): old.unlink()
