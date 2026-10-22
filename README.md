@@ -18,3 +18,12 @@ Avoiding repeats: set `RECENT_ICONS=recent_icons.txt` (one name per line, from r
 used twice in one reel. The icons actually used are written to `out_dir/icons_used.txt`.
 
 Check art before a full build: `CHECK_ART=1 python3 build.py brief.json out_dir` prints what each issue resolved to.
+
+## Reel performance (`analytics/`)
+
+After a reel has been up for ~48 h, save the reels list from vidIQ `vidiq_instagram_owner_insights` (account day.brief)
+as `analytics/snapshots/YYYY-MM-DD.json` (drop the signed `thumbnailUrl`s) and run `python3 analytics/analyze.py`.
+It writes `analytics/report.md`: per-reel views/likes/saves/shares/watch %, and comparisons by AM/PM, lead topic,
+topics covered and length. Add one row per published reel to `analytics/episodes.csv` (icons from `out_dir/icons_used.txt`,
+cover style, hook line) so icons and covers can be compared too. The report flags every comparison as not yet meaningful
+until the median reel has 100+ views and each group has 10+ reels.
