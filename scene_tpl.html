@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8">
 <style>
+@font-face{font-family:'Pretendard Variable';src:url('__FONT__');font-weight:45 920}
 *{box-sizing:border-box;margin:0}
 body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overflow:hidden}
 #stage{width:1080px;height:1920px;background:#FFE600;position:relative;overflow:hidden}
@@ -50,30 +51,39 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 .kbox{padding:28px}
 .kbox .big{font-size:92px}
 .dark{background:#111;color:#FFE600;box-shadow:14px 14px 0 #111}
-/* opening card doubles as the reel cover: keep it inside the 3:4 profile-grid crop (y 240-1680) */
-#s1{padding-top:300px}
-#s1 .tag{align-self:center;transform-origin:center}
-#s1 .h1{text-align:center;font-size:100px}
-/* hook cover: line 1 plain, line 2 (the number) on an accent bar */
-.hook{display:flex;flex-direction:column;align-items:center;gap:26px;min-height:0;word-break:keep-all}
-.hook .hq{font-size:88px;font-weight:900;line-height:1.08;letter-spacing:-.04em;text-align:center}
-.hook .hi{background:#111;color:#FFE600;padding:8px 30px 16px;font-size:96px;font-weight:900;line-height:1.08;letter-spacing:-.04em;text-align:center}
-#stage.pm .hook .hi{background:#FFE600;color:#111}
-#s1 .ill{height:520px}
-#s1 .art{opacity:1}
+/* opening card doubles as the reel cover (minimal editorial): ivory / ink, the date in large type, hook left-aligned.
+   Everything sits inside the 3:4 profile-grid crop (y 240-1680). */
+#s1{padding:300px 96px 0;gap:0;background:#F5F2EA;color:#141414;--mut:#8B877D;--acc:#FFD43B;font-family:'Pretendard Variable',Pretendard,'Noto Sans CJK KR',sans-serif;word-break:keep-all}
+#stage.pm #s1{background:#16171B;color:#F3F1EC;--mut:#8D8C88}
+#s1 .cvtop{display:flex;justify-content:space-between;font-size:30px;font-weight:700;letter-spacing:.18em;color:var(--mut)}
+#s1 .cvrule{height:3px;background:currentColor;margin:22px 0 34px}
+#s1 .cvdate{display:flex;align-items:flex-end;gap:26px}
+#s1 .cvdate .md{font-size:236px;font-weight:800;letter-spacing:-.055em;line-height:.8}
+#s1 .cvdate .dw{font-size:44px;font-weight:800;line-height:1.1;padding-bottom:6px}
+#s1 .cvdate .kd{font-size:30px;font-weight:600;color:var(--mut);margin-top:6px}
+#s1 .cvq{margin-top:96px;font-size:76px;font-weight:700;letter-spacing:-.04em;line-height:1.2}
+#s1 .cvhi{font-size:96px;font-weight:900;letter-spacing:-.045em;line-height:1.15;margin-top:6px}
+#s1 .cvhi span{background:linear-gradient(transparent 58%,var(--acc) 58%,var(--acc) 92%,transparent 92%)}
+#stage.pm #s1 .cvhi span{background:none;color:var(--acc)}
+#s1 .cvlist{margin-top:80px;display:flex;flex-direction:column;gap:20px;font-size:34px;font-weight:600}
+#s1 .cvlist div{display:flex;gap:22px;opacity:.85}
+#s1 .cvlist b{color:var(--mut);font-weight:700}
+#s1 .cvart{position:absolute;right:90px;top:1180px;display:flex;flex-direction:column;align-items:center}
+#s1 .cvart .art{opacity:1}
+#s1 .cvart .art.ai{border:none;box-shadow:none;border-radius:28px}
 #s8{justify-content:center;align-items:center;text-align:center;gap:40px}
 #s8 .h1{min-height:0;font-size:88px}
 </style></head><body>
 <div id="stage">
 
 <div class="scene" id="s1">
-  <div class="tag" id="s1tag"></div>
-  <div class="h1" id="s1h"></div>
-  <div class="box item" id="s1a"><div class="n">①</div><div><div class="t">간밤의 세계 이슈 3가지</div><div class="s" id="s1as"></div></div></div>
-  <div class="box item" id="s1b"><div class="n">②</div><div><div class="t">새로운 AI 기술</div><div class="s" id="s1bs"></div></div></div>
-  <div class="box item" id="s1c"><div class="n">③</div><div><div class="t">미국 증시 흐름</div><div class="s">다우 · S&amp;P 500 · 나스닥</div></div></div>
-  <div class="ill" id="s1ill" style="display:none"></div>
-  <div class="foot"><span>▶ 60초 브리핑</span><span>1/7</span></div>
+  <div class="cvtop"><span id="s1ed"></span><span>7AM.BRIEF</span></div>
+  <div class="cvrule"></div>
+  <div class="cvdate"><div class="md" id="s1md"></div><div><div class="dw" id="s1dw"></div><div class="kd" id="s1kd"></div></div></div>
+  <div class="cvq" id="s1q"></div>
+  <div class="cvhi"><span id="s1hi"></span></div>
+  <div class="cvlist" id="s1list"></div>
+  <div class="cvart" id="s1ill"></div>
 </div>
 
 <!-- generic issue scenes x3 -->
@@ -157,17 +167,21 @@ const PM=C.edition==='pm'; if(PM) $('stage').classList.add('pm');
 // C.short = n (1-3): a one-issue short = hook cover, issue scene n, end card
 const SHORT=C.short||0;
 const ORDER=SHORT?[0,SHORT,7]:PM?[0,1,2,3,5,6]:[0,1,2,3,4,5,6];
-$('s1tag').textContent=(PM?'EVENING BRIEF ★ ':'MORNING BRIEF ★ ')+C.date_short;
 const br=s=>esc(s).replace(/\n/g,'<br>');
-// long hook lines shrink so each line stays on one row inside the cover
+const one=s=>String(s||'').replace(/\s*\n\s*/g,' ');
+// cover: date_short "10.22 THU" -> "10.22" with "목요일 / 아침 브리핑" beside it
+const DM=/^\s*(\d{1,2})\.(\d{1,2})\s*([A-Za-z]{3})?/.exec(C.date_short||'');
+const DOW=DM&&{MON:'월',TUE:'화',WED:'수',THU:'목',FRI:'금',SAT:'토',SUN:'일'}[(DM[3]||'').toUpperCase()];
+$('s1ed').textContent=PM?'EVENING BRIEF':'MORNING BRIEF';
+$('s1md').textContent=DM?`${+DM[1]}.${DM[2].padStart(2,'0')}`:(C.date_short||'');
+$('s1dw').textContent=DOW?DOW+'요일':'';
+$('s1kd').textContent=SHORT?'15초 이슈':PM?'저녁 브리핑':'아침 브리핑';
+// hook: question line, then the number line on a marker stroke (long number lines shrink to stay on one row)
 const fit=(t,base,max)=>{ const n=Math.max(...String(t||'').split('\n').map(l=>l.length)); return n>max?Math.round(base*max/n):base; };
-const hookHtml=h=>`<div class="hq" style="font-size:${fit(h.q,88,10)}px">${br(h.q)}</div>`+(h.hi?`<div class="hi" style="font-size:${fit(h.hi,96,9)}px">${br(h.hi)}</div>`:'');
 const HOOK=SHORT?C.issues[SHORT-1].hook:C.hook;
-if(HOOK){ $('s1h').classList.add('hook'); $('s1h').dataset.html=hookHtml(HOOK); }
-else $('s1h').dataset.html=br(C.title||'');
-if(PM){ $('s1a').querySelector('.t').textContent='오늘의 국내 이슈 3가지'; $('s1as').textContent=C.issues.map(i=>i.short).join(' · '); $('s1b').style.display='none'; $('s1c').querySelector('.t').textContent=C.market.headline_short||'국내 증시 마감'; $('s1c').querySelector('.s').textContent=C.market.date_label||''; $('s1c').querySelector('.n').textContent='②'; $('s1').querySelector('.foot span:first-child').textContent='▶ 45초 저녁 브리핑'; }
-else{ $('s1as').textContent=C.issues.map(i=>i.short).join(' · '); $('s1bs').textContent=(C.ai.company?C.ai.company+' · ':'')+(C.ai.short||''); }
-
+if(HOOK){ $('s1q').textContent=one(HOOK.q); $('s1hi').textContent=one(HOOK.hi); $('s1hi').parentNode.style.fontSize=fit(one(HOOK.hi),96,10)+'px'; }
+else{ $('s1q').style.display='none'; $('s1hi').innerHTML=br(C.title||''); $('s1hi').parentNode.style.marginTop='0'; }
+if(!SHORT) $('s1list').innerHTML=C.issues.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.short)}</div>`).join('');
 // ---- illustrations: story art (Fluent 3D emoji / AI image, set by build.py) + code-drawn data graphics ----
 function artHtml(a,size){
   const inner=a.src?`<img src="${a.src}">`:`<div class="glyph" style="font-size:${Math.round(size*0.8)}px">${esc(a.glyph)}</div>`;
@@ -249,13 +263,11 @@ $('ctaBig').innerHTML=PM?'지금 팔로우 안 하면<br>내일 저녁엔 못 �
 $('ctaSub').textContent=PM?'♥ 좋아요 · ✓ 매일 저녁 6시':'♥ 좋아요 · ✓ 매일 아침 7시';
 if(SHORT){
   const it=C.issues[SHORT-1];
-  ['s1a','s1b','s1c'].forEach(id=>$(id).style.display='none');
-  if(it.art){ $('s1ill').style.display='flex'; $('s1ill').innerHTML=artHtml(it.art,it.art.ai?400:380); }
-  $('s1').querySelector('.foot span:first-child').textContent='▶ 15초 이슈 · '+(it.short||'');
   $(`s${SHORT+1}tag`).textContent=it.region||'';
   $('s8h').innerHTML=br(PM?'오늘의 다른\n국내 이슈는?':'간밤의 다른\n세계 이슈는?');
   $('s8s').innerHTML=br(PM?'프로필의 3분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 3분 아침 브리핑에서\n매일 아침 7시 · 팔로우');
 }
+{ const a=SHORT?C.issues[SHORT-1].art:(C.issues[0]||{}).art; if(a) $('s1ill').innerHTML=artHtml(a,SHORT?(a.ai?320:300):(a.ai?250:230)); }
 // renumber footers for the scenes actually used
 ORDER.forEach((si,k)=>{ const sp=$(`s${si+1}`).querySelector('.foot span:last-child'); if(sp) sp.textContent=`${k+1}/${ORDER.length}`; });
 
@@ -297,7 +309,7 @@ const issueScene=k=>t=>{ const it=C.issues[k]; const s=`s${k+2}`;
   slide($(s+'a'),t,DS(k+1)*0.42); slide($(s+'b'),t,DS(k+1)*0.55); };
 const SCENES=[
   // 1: opening. Fully composed on every frame so any frame Instagram picks as the cover is a finished card.
-  t=>{ const h=$('s1h'); h.innerHTML=h.dataset.html; $('s1tag').style.transform=`scale(${1+0.03*Math.sin(t*3)})`; },
+  t=>{},
   issueScene(0), issueScene(1), issueScene(2),
   t=>{ pop($('s5tag'),t,0.1); typed($('s5h'),C.ai.headline||'',t-0.3,13);
     [...$('wave').children].forEach((b,i)=>{ b.style.height=(30+(t>0.3?150*Math.abs(Math.sin(t*5+i*0.5))*Math.abs(Math.sin(i*0.9+1)):0))+'px'; });

@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="ko"><head><meta charset="utf-8">
 <style>
+@font-face{font-family:'Pretendard Variable';src:url('__FONT__');font-weight:45 920}
 *{box-sizing:border-box;margin:0}
 body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overflow:hidden}
 .slide{width:1080px;height:1350px;background:#FFE600;padding:110px 100px 90px;display:none;flex-direction:column;gap:36px;word-break:keep-all}
@@ -14,6 +15,17 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 .dark .num{background:#FFE600;color:#111}
 .box{background:#fff;border:5px solid #111;box-shadow:14px 14px 0 #111;padding:34px 40px;font-size:38px;font-weight:700;line-height:1.5}
 .dark .box{background:#1c1c1c;color:#F4F1EA;border-color:#FFE600;box-shadow:14px 14px 0 #FFE600}
+/* cover (minimal editorial, same as the reel covers): ivory, the week's dates in large type */
+.slide.cover{background:#F5F2EA;color:#141414;gap:0;font-family:'Pretendard Variable',Pretendard,'Noto Sans CJK KR',sans-serif}
+.cover .cvtop{display:flex;justify-content:space-between;font-size:30px;font-weight:700;letter-spacing:.18em;color:#8B877D}
+.cover .cvrule{height:3px;background:#141414;margin:22px 0 40px}
+.cover .md{font-weight:800;letter-spacing:-.04em;line-height:.85;white-space:nowrap}
+.cover .wk{font-size:40px;font-weight:700;color:#8B877D;margin-top:22px}
+.cover .ttl{margin-top:84px;font-size:92px;font-weight:900;letter-spacing:-.045em;line-height:1.15}
+.cover .ttl span{background:linear-gradient(transparent 58%,#FFD43B 58%,#FFD43B 92%,transparent 92%)}
+.cover .cvlist{margin-top:64px;display:flex;flex-direction:column;gap:18px;font-size:36px;font-weight:600}
+.cover .cvlist b{color:#8B877D;font-weight:700;margin-right:22px}
+.cover .foot{border-color:#141414}
 .list{display:flex;flex-direction:column;gap:18px;font-size:40px;font-weight:900}
 .foot{margin-top:auto;font-size:28px;font-weight:900;border-top:5px solid currentColor;padding-top:18px;display:flex;justify-content:space-between}
 </style></head><body>
@@ -24,8 +36,12 @@ const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
 const br=s=>esc(s).replace(/\n/g,'<br>');
 const N=C.items.length+2;
 const foot=(k,l)=>`<div class="foot"><span>${esc(l)}</span><span>${k}/${N}</span></div>`;
-let h=`<div class="slide"><div class="tag">7am.brief ★ ${esc(C.week_label)}</div><div class="h1">${br(C.title)}</div>
-  <div class="list">${C.items.map((it,i)=>`<div>${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>`).join('')}</div>${foot(1,'저장해두고 다시 보기 →')}</div>`;
+// cover: the week's dates ("10.19–10.25", or week_label) in large type so it is told apart in the profile grid
+const md=C.dates||C.week_label||'';
+let h=`<div class="slide cover"><div class="cvtop"><span>WEEKLY BRIEF</span><span>7AM.BRIEF</span></div><div class="cvrule"></div>
+  <div class="md" style="font-size:${Math.min(236,Math.round(1500/Math.max(md.length,1)))}px">${esc(md)}</div>${C.dates&&C.week_label?`<div class="wk">${esc(C.week_label)} · 주간 정리</div>`:''}
+  <div class="ttl">${String(C.title||'').split('\n').map(l=>`<span>${esc(l)}</span>`).join('<br>')}</div>
+  <div class="cvlist">${C.items.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.tag)}</div>`).join('')}</div>${foot(1,'저장해두고 다시 보기 →')}</div>`;
 C.items.forEach((it,i)=>{ h+=`<div class="slide${i%2?' dark':''}"><div class="tag">${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>
   <div class="h2">${br(it.headline)}</div>${it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="box">${br(it.body)}</div>
   ${foot(i+2,'출처: '+(it.source||''))}</div>`; });
