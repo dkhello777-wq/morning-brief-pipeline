@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Weekly save-for-later carousel ("이번 주 돈 되는 뉴스 5").
 Usage: python3 carousel.py week.json out_dir
-week.json schema: see week_example.json (3-7 items; each tag, headline, optional num, body, source).
+week.json schema: see week_example.json (3-7 items; each tag, headline, optional num, body, source;
+"dates" e.g. "10.19–10.25" is shown large on the cover beside week_label).
 Output: out_dir/slide_01.png ... (1080x1350, Instagram 4:5 carousel), out_dir/caption.txt,
 and out_dir/carousel.mp4 (the same slides as a 1080x1920 slideshow reel, 3.5s each, for publish tools that only take reels).
 """

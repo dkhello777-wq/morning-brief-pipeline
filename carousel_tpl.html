@@ -14,6 +14,9 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 .dark .num{background:#FFE600;color:#111}
 .box{background:#fff;border:5px solid #111;box-shadow:14px 14px 0 #111;padding:34px 40px;font-size:38px;font-weight:700;line-height:1.5}
 .dark .box{background:#1c1c1c;color:#F4F1EA;border-color:#FFE600;box-shadow:14px 14px 0 #FFE600}
+.dhead{align-self:flex-start;display:flex;align-items:center;gap:26px;border-bottom:10px solid #111;padding:0 6px 12px}
+.dhead .md{font-size:var(--md,140px);font-weight:900;letter-spacing:-.05em;line-height:.9;white-space:nowrap}
+.dhead .dw{font-size:40px;font-weight:900;line-height:1.15;white-space:nowrap}
 .list{display:flex;flex-direction:column;gap:18px;font-size:40px;font-weight:900}
 .foot{margin-top:auto;font-size:28px;font-weight:900;border-top:5px solid currentColor;padding-top:18px;display:flex;justify-content:space-between}
 </style></head><body>
@@ -24,7 +27,10 @@ const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
 const br=s=>esc(s).replace(/\n/g,'<br>');
 const N=C.items.length+2;
 const foot=(k,l)=>`<div class="foot"><span>${esc(l)}</span><span>${k}/${N}</span></div>`;
-let h=`<div class="slide"><div class="tag">7am.brief ★ ${esc(C.week_label)}</div><div class="h1">${br(C.title)}</div>
+// cover date, big enough to read in the profile grid: "10.19–10.25" (dates) beside "10월 3주차 / 주간 정리"
+const md=C.dates||C.week_label||'';
+const head=md?`<div class="dhead" style="--md:${md.length>6?Math.min(140,Math.round(1000/md.length)):140}px"><div class="md">${esc(md)}</div><div class="dw">${C.dates&&C.week_label?esc(C.week_label)+'<br>':''}주간 정리</div></div>`:'<div class="tag">7am.brief</div>';
+let h=`<div class="slide">${head}<div class="h1">${br(C.title)}</div>
   <div class="list">${C.items.map((it,i)=>`<div>${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>`).join('')}</div>${foot(1,'저장해두고 다시 보기 →')}</div>`;
 C.items.forEach((it,i)=>{ h+=`<div class="slide${i%2?' dark':''}"><div class="tag">${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>
   <div class="h2">${br(it.headline)}</div>${it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="box">${br(it.body)}</div>
