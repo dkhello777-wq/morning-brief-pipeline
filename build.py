@@ -13,6 +13,16 @@ Issue art (center of scenes 2-4): each issue may set "icon" (a Fluent Emoji 3D n
 such as "🇺🇸"; a list = fallbacks in order) plus optional "motion" (bob|sway|pulse|shake|spin|drive). One issue may set
 "image_prompt" for an AI illustration (needs GEMINI_API_KEY; falls back to its icon). RECENT_ICONS=path to a text file
 of icon names used in recent reels (one per line) so they are skipped. CHECK_ART=1 resolves the art and exits.
+
+Hook cover: "hook": {"q": "question line", "hi": "number line"} replaces the opening title with a two-line hook
+(line 2 on an accent bar). Each issue may carry its own "hook" for its short.
+
+One-issue short: SHORT=n (1-3) builds a 10-15s reel of issue n (hook cover, the issue scene, an end card pointing to
+the full briefing) into the same out_dir as the briefing, reusing its narration (v{n+1}.mp3), AI art and icon choice,
+so a short costs no extra TTS or image calls. Outputs carry a _short{n} suffix (final_short1.mp4, cover_short1.jpg...).
+
+Captions: out_dir/caption.txt (or caption_short{n}.txt) is written from the brief in the fixed account template
+(see CONTENT_RULES.md); issues may set "summary" and "keywords", the brief "question" and "keywords".
 """
 import base64, json, os, pathlib, subprocess, sys, time, unicodedata, urllib.parse, urllib.request, wave
 import numpy as np
@@ -24,11 +34,48 @@ NO_TTS = os.environ.get("NO_TTS") == "1"
 CHECK_ART = os.environ.get("CHECK_ART") == "1"
 KEY = "" if NO_TTS or CHECK_ART else os.environ["TYPECAST_API_KEY"]
 VOICE = brief.get("voice_id", "tc_68d4b115f0486108a7eefb37")
-FPS = 24; PAD = 0.9; SR = 44100
-n_scenes = 6 if brief.get("edition") == "pm" else 7
+FPS = 24; PAD = 0.6; SR = 44100
+PM = brief.get("edition") == "pm"
+n_scenes = 6 if PM else 7
 assert len(brief["scripts"]) == n_scenes, f"scripts must have {n_scenes} entries"
+SHORT = int(os.environ.get("SHORT", "0"))
+assert 0 <= SHORT <= len(brief["issues"]), "SHORT must name an issue (1-3)"
+SFX = f"_short{SHORT}" if SHORT else ""
+COVER_S, END_S = 1.6, 2.4  # silent hook cover and end card of a short
 
 def run(cmd): subprocess.run(cmd, check=True)
+
+# ---------- captions (fixed account template, CONTENT_RULES.md) ----------
+def caption(b, short=0):
+    one = lambda x: " ".join(str(x or "").split())
+    hook = lambda h, fb: one(f"{h.get('q', '')} {h.get('hi', '')}") if h else one(fb)
+    tags = lambda kws: " ".join("#" + k.replace(" ", "").lstrip("#") for k in dict.fromkeys(kws) if k)
+    pm = b.get("edition") == "pm"
+    follow = "매일 07:00 세계·시장 / 18:00 국내 이슈를 3분 브리핑으로 → 팔로우하고 받아보기"
+    if short:
+        it = b["issues"][short - 1]
+        lines = [f"📌 {hook(it.get('hook'), it.get('headline'))}", "", one(it.get("summary") or it.get("headline")), ""]
+        q = it.get("question") or b.get("question")
+        if q: lines.append(f"💬 {one(q)}")
+        lines += [f"{'오늘의 다른 국내 이슈' if pm else '간밤의 다른 세계 이슈'}는 → 프로필의 3분 브리핑에서",
+                  f"출처: {it.get('source', '')}", tags((it.get("keywords") or [])[:3] + ["오늘의뉴스"])]
+        return "\n".join(lines) + "\n"
+    lines = [f"{'🌙' if pm else '🌅'} {hook(b.get('hook'), b.get('title'))}", ""]
+    for n, it in zip("➊➋➌", b["issues"]):
+        lines.append(f"{n} {one(it.get('short'))} — {one(it.get('summary') or it.get('headline'))}")
+    m = b.get("market") or {}
+    if m.get("headline"): lines.append(f"📈 {one(m['headline'])}" + (f" ({one(m['note'])})" if m.get("note") else ""))
+    if (b.get("ai") or {}).get("short"): lines.append(f"🤖 {one(b['ai'].get('company'))} {one(b['ai']['short'])}")
+    lines.append("")
+    if b.get("question"): lines += [f"💬 {one(b['question'])}", ""]
+    srcs = [it.get("source") for it in b["issues"]] + [(b.get("ai") or {}).get("source")]
+    kws = list(b.get("keywords") or []) + [k for it in b["issues"] for k in (it.get("keywords") or [])[:1]]
+    lines += [follow, "출처: " + " · ".join(dict.fromkeys(s for s in srcs if s)),
+              tags(kws[:3] + ["오늘의뉴스", "경제뉴스"])]
+    return "\n".join(lines) + "\n"
+
+if os.environ.get("CAPTION_ONLY") == "1":
+    print(caption(brief, SHORT)); sys.exit(0)
 
 # ---------- 0. issue art ----------
 FLUENT = "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/"
@@ -72,18 +119,21 @@ def ai_image(prompt):
         print("ai image failed", e, flush=True)
     return None
 
+chosen = json.loads((out / "art_used.json").read_text()) if (out / "art_used.json").exists() else {}
 rp = os.environ.get("RECENT_ICONS")
 recent = {l.strip().lower() for l in pathlib.Path(rp).read_text().splitlines() if l.strip()} if rp and pathlib.Path(rp).exists() else set()
 used, ai_done = set(), False
 for k, it in enumerate(brief["issues"], 1):
     art = None
     if it.get("image_prompt") and not ai_done:
-        png = ai_image(it["image_prompt"])
+        prev = out / f"art{k}.png"  # already generated for this brief (a short after its briefing, or a rerun)
+        png = prev.read_bytes() if prev.exists() else ai_image(it["image_prompt"])
         if png:
             ai_done = True; art = {"src": "data:image/png;base64," + base64.b64encode(png).decode(), "ai": True}
             (out / f"art{k}.png").write_bytes(png); it["icon_used"] = "AI"
     cands = it.get("icon") or []
     cands = [cands] if isinstance(cands, str) else cands
+    if SHORT and chosen.get(str(k)) not in (None, "AI"): cands = [chosen[str(k)]] + cands
     for fresh_only in (True, False):
         if art: break
         for c in cands:
@@ -95,12 +145,23 @@ for k, it in enumerate(brief["issues"], 1):
             if art: used.add(key_); it["icon_used"] = c; break
     if art: art["motion"] = it.get("motion", "bob"); it["art"] = art
     print("art", k, it.get("icon_used", "none (code-drawn fallback)"), flush=True)
-(out / "icons_used.txt").write_text("".join(it["icon_used"] + "\n" for it in brief["issues"] if it.get("icon_used") not in (None, "AI")))
+if not SHORT:
+    (out / "art_used.json").write_text(json.dumps({str(k): it["icon_used"] for k, it in enumerate(brief["issues"], 1) if it.get("icon_used")}))
+    (out / "icons_used.txt").write_text("".join(it["icon_used"] + "\n" for it in brief["issues"] if it.get("icon_used") not in (None, "AI")))
 if CHECK_ART: sys.exit(0)
 
 # ---------- 1. TTS ----------
+# scene i (1-based) speaks scripts[i-1] from v{i}.mp3; a short speaks only its issue's script, between silent cards
+if SHORT:
+    brief["short"] = SHORT
+    voiced = [(None, COVER_S), (SHORT + 1, None), (None, END_S)]
+else:
+    voiced = [(i, None) for i in range(1, n_scenes + 1)]
 durs = []
-for i, text in enumerate(brief["scripts"], 1):
+for i, fixed in voiced:
+    if i is None:
+        durs.append(fixed); continue
+    text = brief["scripts"][i - 1]
     mp3 = out / f"v{i}.mp3"
     if not mp3.exists():
         if NO_TTS:
@@ -122,14 +183,16 @@ for i, text in enumerate(brief["scripts"], 1):
     d = float(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                        "-of", "csv=p=0", str(mp3)]))
     durs.append(round(d, 2)); print("tts", i, durs[-1], flush=True)
-scene_durs = [d + PAD for d in durs]
+scene_durs = [d if i is None else d + PAD for (i, _), d in zip(voiced, durs)]
 brief["durations"] = scene_durs
 total = sum(scene_durs)
+LIMIT = 16 if SHORT else 62
+if total > LIMIT: print(f"WARN length {total:.1f}s is over the {LIMIT}s target: shorten the scripts (CONTENT_RULES.md)", flush=True)
 
 # ---------- 2. render frames ----------
 html = (HERE / "scene_tpl.html").read_text().replace("__CONTENT__", json.dumps(brief, ensure_ascii=False))
-(out / "scene.html").write_text(html)
-frames = out / "frames"; frames.mkdir(exist_ok=True)
+(out / f"scene{SFX}.html").write_text(html)
+frames = out / f"frames{SFX}"; frames.mkdir(exist_ok=True)
 for old in frames.glob("f*.png"): old.unlink()
 from playwright.sync_api import sync_playwright
 with sync_playwright() as p:
@@ -137,7 +200,7 @@ with sync_playwright() as p:
     except Exception:  # pip playwright newer than the preinstalled browser: use the bundled chromium directly
         b = p.chromium.launch(executable_path="/opt/pw-browsers/chromium")
     pg = b.new_page(viewport={"width": 1080, "height": 1920})
-    pg.goto((out / "scene.html").resolve().as_uri()); pg.wait_for_timeout(600)
+    pg.goto((out / f"scene{SFX}.html").resolve().as_uri()); pg.wait_for_timeout(600)
     n = int(total * FPS)
     for f in range(n):
         pg.evaluate(f"window.seek({f/FPS})"); pg.screenshot(path=str(frames / f"f{f:05d}.png"))
@@ -145,21 +208,22 @@ with sync_playwright() as p:
     # preview sheet for QA
     for i, s in enumerate(scene_durs):
         T = sum(scene_durs[:i]) + s * 0.75; pg.evaluate(f"window.seek({T})")
-        pg.screenshot(path=str(out / f"preview_{i+1}.png"))
+        pg.screenshot(path=str(out / f"preview{SFX}_{i+1}.png"))
     b.close()
 # frame 0 is the reel cover; keep a copy so it can be checked before publishing
-run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(frames / "f00000.png"), "-q:v", "2", str(out / "cover.jpg")])
+run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(frames / "f00000.png"), "-q:v", "2", str(out / f"cover{SFX}.jpg")])
 
 # ---------- 3. narration track (padded) ----------
 parts = []
-for i, (d, L) in enumerate(zip(durs, scene_durs), 1):
-    seg = out / f"seg{i}.wav"
-    run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / f"v{i}.mp3"), "-af", f"adelay=300|300,apad=whole_dur={L}",
+for k, ((i, _), L) in enumerate(zip(voiced, scene_durs), 1):
+    seg = out / f"seg{SFX}_{k}.wav"
+    src = ["-f", "lavfi", "-i", f"anullsrc=r={SR}:cl=stereo"] if i is None else ["-i", str(out / f"v{i}.mp3")]
+    run(["ffmpeg", "-y", "-loglevel", "error", *src, "-af", f"adelay=300|300,apad=whole_dur={L}",
          "-t", str(L), "-ar", str(SR), "-ac", "2", str(seg)])
     parts.append(seg.name)
-(out / "list.txt").write_text("".join(f"file '{p}'\n" for p in parts))
-run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(out / "list.txt"),
-     "-c:a", "pcm_s16le", str(out / "narration.wav")])
+(out / f"list{SFX}.txt").write_text("".join(f"file '{p}'\n" for p in parts))
+run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(out / f"list{SFX}.txt"),
+     "-c:a", "pcm_s16le", str(out / f"narration{SFX}.wav")])
 
 # ---------- 4. music bed (synthesized, royalty-free) ----------
 def music(LEN, path):
@@ -198,14 +262,15 @@ def music(LEN, path):
     mix /= np.max(np.abs(mix)) * 1.05; pcm = (mix.T * 32767).astype(np.int16)
     with wave.open(str(path), 'wb') as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm.tobytes())
-music(total, out / "bed.wav")
+music(total, out / f"bed{SFX}.wav")
 
 # ---------- 5. mix + mux ----------
-run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "narration.wav"), "-i", str(out / "bed.wav"), "-filter_complex",
+run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / f"narration{SFX}.wav"), "-i", str(out / f"bed{SFX}.wav"), "-filter_complex",
      "[1:a]volume=0.5[bed];[bed][0:a]sidechaincompress=threshold=0.05:ratio=6:attack=40:release=500:makeup=1[ducked];"
      "[0:a][ducked]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,loudnorm=I=-15:TP=-1.5:LRA=11[a]",
-     "-map", "[a]", "-c:a", "aac", "-b:a", "192k", str(out / "mix.m4a")])
-run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"), "-i", str(out / "mix.m4a"),
+     "-map", "[a]", "-c:a", "aac", "-b:a", "192k", str(out / f"mix{SFX}.m4a")])
+run(["ffmpeg", "-y", "-loglevel", "error", "-framerate", str(FPS), "-i", str(frames / "f%05d.png"), "-i", str(out / f"mix{SFX}.m4a"),
      "-c:v", "libx264", "-pix_fmt", "yuv420p", "-crf", "20", "-preset", "medium", "-c:a", "copy", "-shortest",
-     "-movflags", "+faststart", str(out / "final.mp4")])
-print("DONE", out / "final.mp4", "seconds", round(total, 1), "cover", out / "cover.jpg")
+     "-movflags", "+faststart", str(out / f"final{SFX}.mp4")])
+(out / f"caption{SFX}.txt").write_text(caption(brief, SHORT))
+print("DONE", out / f"final{SFX}.mp4", "seconds", round(total, 1), "cover", out / f"cover{SFX}.jpg", "caption", out / f"caption{SFX}.txt")

@@ -1,6 +1,25 @@
 # morning-brief-pipeline
 Builds the 7am.brief morning/evening news reels: `TYPECAST_API_KEY=... python3 build.py brief.json out_dir`.
 
+What to write into `brief.json` (hook, script lengths, cover order, caption fields, posting schedule) is in
+[CONTENT_RULES.md](CONTENT_RULES.md).
+
+## Hook cover, shorts, captions, weekly carousel
+
+| | command | output |
+|---|---|---|
+| briefing | `python3 build.py brief.json out` | `final.mp4`, `cover.jpg`, `caption.txt` |
+| one-issue short | `SHORT=2 python3 build.py brief.json out` | `final_short2.mp4`, `cover_short2.jpg`, `caption_short2.txt` |
+| caption only | `CAPTION_ONLY=1 python3 build.py brief.json out` | prints the caption |
+| weekly carousel | `python3 carousel.py week.json out_week` | `slide_01.png`..., `carousel.mp4`, `caption.txt` |
+
+- `hook: {"q", "hi"}` on the brief turns the opening card into a two-line hook (the number line on an accent bar).
+  Without it the old `title` is shown.
+- A short is the issue's hook cover (1.6s), its scene with the briefing's own narration, and an end card pointing to the
+  full briefing (2.4s): 10-15s. Run it after the briefing with the same `out` so it reuses `v{n+1}.mp3`, the AI art and
+  the icon choice (`art_used.json`); it makes no TTS or image calls of its own.
+- Scenes are padded by 0.6s (was 0.9s), and the build prints `WARN length` past 62s (briefing) or 16s (short).
+
 ## Issue art (center of the issue scenes)
 
 Each issue in `brief.json` can carry story-specific art on top of its data graphic (`ill`):
