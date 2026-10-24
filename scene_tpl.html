@@ -53,7 +53,7 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 .dark{background:#111;color:#FFE600;box-shadow:14px 14px 0 #111}
 /* opening card doubles as the reel cover (minimal editorial): ivory / ink, the date in large type, hook left-aligned.
    Everything sits inside the 3:4 profile-grid crop (y 240-1680). */
-#s1{padding:300px 96px 0;gap:0;background:#F5F2EA;color:#141414;--mut:#8B877D;--acc:#FFD43B;font-family:'Pretendard Variable',Pretendard,'Noto Sans CJK KR',sans-serif;word-break:keep-all}
+#s1{padding:0;gap:0;background:#F5F2EA;color:#141414;--mut:#8B877D;--acc:#FFD43B;font-family:'Pretendard Variable',Pretendard,'Noto Sans CJK KR',sans-serif;word-break:keep-all}
 #stage.pm #s1{background:#16171B;color:#F3F1EC;--mut:#8D8C88}
 #s1 .cvtop{display:flex;justify-content:space-between;font-size:30px;font-weight:700;letter-spacing:.18em;color:var(--mut)}
 #s1 .cvrule{height:3px;background:currentColor;margin:22px 0 34px}
@@ -73,10 +73,28 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 #s1 .cvart .art.ai{border:none;box-shadow:none;border-radius:28px}
 #s8{justify-content:center;align-items:center;text-align:center;gap:40px}
 #s8 .h1{min-height:0;font-size:88px}
+/* first-3-seconds hook. "punch": after a few frames of the cover, cut to the hook alone in large type (number counting
+   up on a marker stroke that sweeps in) with the lead art. "live": the cover itself moves (slow push-in, number pulse,
+   issue list lit in turn). Frame 0 stays the finished cover either way. */
+#punch{position:absolute;inset:0;background:inherit;padding:330px 90px 0;display:none;flex-direction:column;align-items:flex-start;z-index:2}
+#punch .ptag{font-size:30px;font-weight:700;letter-spacing:.18em;color:var(--mut)}
+#punch .pq{margin-top:60px;font-size:96px;font-weight:800;letter-spacing:-.045em;line-height:1.15}
+#punch .phi{margin-top:24px;font-weight:900;letter-spacing:-.05em;line-height:1.1;font-variant-numeric:tabular-nums;white-space:nowrap}
+#punch .phi span{background-image:linear-gradient(transparent 58%,var(--acc) 58%,var(--acc) 92%,transparent 92%);background-repeat:no-repeat;background-size:0% 100%}
+#stage.pm #punch .phi span{background-image:none;color:var(--acc)}
+#punch .part{align-self:center;margin-top:70px;display:flex;flex-direction:column;align-items:center}
+#punch .flash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none}
+#s1 .cvbody{position:absolute;inset:0;padding:300px 96px 0;display:flex;flex-direction:column;transform-origin:50% 45%}
+#s1 .cvlist div.lit{opacity:1;color:inherit}
+#s1 .cvlist div.lit b{color:inherit}
+#sub{position:absolute;left:60px;right:60px;top:1450px;display:flex;justify-content:center;pointer-events:none;z-index:6}
+#sub span{display:none;background:#141414;color:#fff;font-family:'Pretendard Variable',Pretendard,'Noto Sans CJK KR',sans-serif;font-size:58px;font-weight:800;letter-spacing:-.03em;line-height:1.28;padding:16px 30px 18px;border-radius:16px;text-align:center;word-break:keep-all;max-width:100%}
+#stage.pm #sub span,#sub.dark span{box-shadow:0 0 0 4px #FFE600}
+#sub em{font-style:normal;color:#FFD43B}
 </style></head><body>
 <div id="stage">
 
-<div class="scene" id="s1">
+<div class="scene" id="s1"><div class="cvbody">
   <div class="cvtop"><span id="s1ed"></span><span>7AM.BRIEF</span></div>
   <div class="cvrule"></div>
   <div class="cvdate"><div class="md" id="s1md"></div><div><div class="dw" id="s1dw"></div><div class="kd" id="s1kd"></div></div></div>
@@ -84,6 +102,8 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
   <div class="cvhi"><span id="s1hi"></span></div>
   <div class="cvlist" id="s1list"></div>
   <div class="cvart" id="s1ill"></div>
+  </div>
+  <div id="punch"><div class="ptag" id="ptag"></div><div class="pq" id="pq"></div><div class="phi"><span id="phi"></span></div><div class="part" id="part"></div><div class="flash" id="pflash"></div></div>
 </div>
 
 <!-- generic issue scenes x3 -->
@@ -144,6 +164,7 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 </div>
 
 <div class="wipe" id="wipe"></div>
+<div id="sub"><span id="subt"></span></div>
 </div>
 
 <script>
@@ -268,6 +289,24 @@ if(SHORT){
   $('s8s').innerHTML=br(PM?'프로필의 3분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 3분 아침 브리핑에서\n매일 아침 7시 · 팔로우');
 }
 { const a=SHORT?C.issues[SHORT-1].art:(C.issues[0]||{}).art; if(a) $('s1ill').innerHTML=artHtml(a,SHORT?(a.ai?320:300):(a.ai?250:230)); }
+// ---- first-3-seconds hook ----
+const STYLE=C.hook_style||'';
+const PH=SHORT?C.issues[SHORT-1].hook:C.hook;
+const PART=SHORT?C.issues[SHORT-1].art:(C.issues[0]||{}).art;
+if(STYLE==='punch'&&PH){
+  $('ptag').textContent=`${PM?'EVENING':'MORNING'} BRIEF · ${$('s1md').textContent}`;
+  $('pq').innerHTML=br(PH.q);
+  $('phi').parentNode.style.fontSize=fit(one(PH.hi),168,6)+'px';
+  if(PART) $('part').innerHTML=artHtml(PART,PART.ai?400:380);
+}
+// numbers in the number line count up; dates and times (10/25, 07:00) are left as they are
+const HI=one((PH||{}).hi), HIN=[...HI.matchAll(/\d[\d,]*(?:\.\d+)?(?![\d\/:])/g)].filter(m=>!/[\/:]$/.test(HI.slice(0,m.index)));
+const countHi=p=>{ let o='',at=0; for(const m of HIN){ const v=parseFloat(m[0].replace(/,/g,'')), dec=(m[0].split('.')[1]||'').length;
+  let x=(v*p).toFixed(dec); if(m[0].includes(',')) x=Number(x).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});
+  o+=esc(HI.slice(at,m.index))+x; at=m.index+m[0].length; } return o+esc(HI.slice(at)); };
+// burned-in subtitles: [start, end, text] in reel seconds (build.py), numbers in yellow
+const SUBS=C.subs||[];
+const hiNum=s=>esc(s).replace(/[-+]?\d[\d,.]*\s?(?:퍼센트포인트|퍼센트|%p|%|만\s?톤|톤|만|억|천|조|명|원|달러|킬로미터|년|개|배|대)?/g,m=>`<em>${m}</em>`);
 // renumber footers for the scenes actually used
 ORDER.forEach((si,k)=>{ const sp=$(`s${si+1}`).querySelector('.foot span:last-child'); if(sp) sp.textContent=`${k+1}/${ORDER.length}`; });
 
@@ -309,7 +348,23 @@ const issueScene=k=>t=>{ const it=C.issues[k]; const s=`s${k+2}`;
   slide($(s+'a'),t,DS(k+1)*0.42); slide($(s+'b'),t,DS(k+1)*0.55); };
 const SCENES=[
   // 1: opening. Fully composed on every frame so any frame Instagram picks as the cover is a finished card.
-  t=>{},
+  t=>{
+    const body=$('s1').querySelector('.cvbody'), P=$('punch');
+    if(STYLE==='punch'&&PH){
+      const on=t>=0.25, p=clamp((t-0.25)/0.3); P.style.display=on?'flex':'none'; body.style.visibility=on?'hidden':'visible';
+      if(!on) return;
+      P.style.transform=`scale(${1.12-0.12*easeOut(p)})`; $('pflash').style.opacity=0.55*(1-p);
+      slide($('pq'),t,0.3,0.35);
+      $('phi').innerHTML=countHi(easeOut(clamp((t-0.45)/0.7)));
+      $('phi').style.backgroundSize=`${100*easeOut(clamp((t-0.95)/0.35))}% 100%`;
+      if(PART) animArt($('part'),PART,t-0.35);
+    } else if(STYLE==='live'&&t>0){
+      body.style.transform=`scale(${1+0.06*easeOut(clamp(t/6))})`;
+      const hi=$('s1hi'), q=clamp((t-0.3)/0.5); hi.style.display='inline-block'; hi.style.transformOrigin='left center'; hi.style.transform=`scale(${1+0.12*Math.sin(Math.PI*q)})`;
+      const L=[...$('s1list').children]; L.forEach((d,k)=>d.classList.toggle('lit',t>=1+0.55*k&&(k===L.length-1||t<1+0.55*(k+1))));
+      if(PART) animArt($('s1ill'),{...PART,ai:false},t+0.65);
+    }
+  },
   issueScene(0), issueScene(1), issueScene(2),
   t=>{ pop($('s5tag'),t,0.1); typed($('s5h'),C.ai.headline||'',t-0.3,13);
     [...$('wave').children].forEach((b,i)=>{ b.style.height=(30+(t>0.3?150*Math.abs(Math.sin(t*5+i*0.5))*Math.abs(Math.sin(i*0.9+1)):0))+'px'; });
@@ -332,6 +387,8 @@ window.seek=function(T){
   if(i<D.length-1&&rem<WIPE){ w.style.transform=`translateX(${-100+100*(1-rem/WIPE)}%)`; }
   else if(i>0&&t<WIPE){ w.style.transform=`translateX(${100*(t/WIPE)}%)`; }
   else w.style.transform='translateX(-100%)';
+  const sb=SUBS.find(x=>T>=x[0]&&T<x[1]), st=$('subt'); $('sub').classList.toggle('dark',si===6); $('sub').style.top=(si===0&&STYLE==='live')?'1540px':'';
+  st.style.display=sb?'inline-block':'none'; if(sb&&st.dataset.k!==String(sb[0])){ st.dataset.k=sb[0]; st.innerHTML=hiNum(sb[2]); }
 };
 window.seek(0);
 </script>

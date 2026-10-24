@@ -17,14 +17,19 @@ of icon names used in recent reels (one per line) so they are skipped. CHECK_ART
 Hook cover: "hook": {"q": "question line", "hi": "number line"} replaces the opening title with a two-line hook
 (line 2 on an accent bar). Each issue may carry its own "hook" for its short.
 
+First 3 seconds: HOOK_STYLE=punch (default) holds the finished cover for 0.25s, then cuts to the hook alone in large
+type (number counting up, marker stroke, lead art) with a soft whoosh; live keeps the cover and moves it; off is the old
+static opening. With punch/live the voice starts on frame 1, the music has no slow fade-in, and burned-in subtitles
+follow the narration (SUBTITLES=0 turns them off). Frame 0, the reel cover, is the same in every style.
+
 One-issue short: SHORT=n (1-3) builds a 10-15s reel of issue n (hook cover, the issue scene, an end card pointing to
-the full briefing) into the same out_dir as the briefing, reusing its narration (v{n+1}.mp3), AI art and icon choice,
+the full briefing; with a HOOK_STYLE the issue's narration starts under the cover) into the same out_dir as the briefing, reusing its narration (v{n+1}.mp3), AI art and icon choice,
 so a short costs no extra TTS or image calls. Outputs carry a _short{n} suffix (final_short1.mp4, cover_short1.jpg...).
 
 Captions: out_dir/caption.txt (or caption_short{n}.txt) is written from the brief in the fixed account template
 (see CONTENT_RULES.md); issues may set "summary" and "keywords", the brief "question" and "keywords".
 """
-import base64, json, os, pathlib, subprocess, sys, time, unicodedata, urllib.parse, urllib.request, wave
+import base64, json, os, pathlib, re, subprocess, sys, time, unicodedata, urllib.parse, urllib.request, wave
 import numpy as np
 
 HERE = pathlib.Path(__file__).parent
@@ -41,7 +46,14 @@ assert len(brief["scripts"]) == n_scenes, f"scripts must have {n_scenes} entries
 SHORT = int(os.environ.get("SHORT", "0"))
 assert 0 <= SHORT <= len(brief["issues"]), "SHORT must name an issue (1-3)"
 SFX = f"_short{SHORT}" if SHORT else ""
-COVER_S, END_S = 1.6, 2.4  # silent hook cover and end card of a short
+COVER_S, END_S = 1.6, 2.4  # hook cover and end card of a short
+# first 3 seconds: HOOK_STYLE=punch (cut from the cover to the hook in large type), live (the cover moves) or off
+# (the old static cover with the voice 0.3s in). With a style, the voice starts on frame 1, burned-in subtitles
+# follow the narration (SUBTITLES=0 turns them off) and a short's narration starts under its cover.
+HOOK_STYLE = os.environ.get("HOOK_STYLE", brief.get("hook_style", "punch"))
+assert HOOK_STYLE in ("punch", "live", "off"), "HOOK_STYLE must be punch, live or off"
+brief["hook_style"] = "" if HOOK_STYLE == "off" else HOOK_STYLE
+SUBTITLES = HOOK_STYLE != "off" and os.environ.get("SUBTITLES", "1") != "0"
 
 def run(cmd): subprocess.run(cmd, check=True)
 
@@ -184,8 +196,37 @@ for i, fixed in voiced:
                                        "-of", "csv=p=0", str(mp3)]))
     durs.append(round(d, 2)); print("tts", i, durs[-1], flush=True)
 scene_durs = [d if i is None else d + PAD for (i, _), d in zip(voiced, durs)]
-brief["durations"] = scene_durs
+starts = [sum(scene_durs[:k]) for k in range(len(scene_durs))]
+# clips: (reel second the voice starts, scene number of its mp3, seconds of speech)
+clips = [(st + 0.3, i, d) for st, (i, _), d in zip(starts, voiced, durs) if i is not None]
+if brief["hook_style"]:
+    if SHORT:  # the issue's narration starts under the cover and carries on into the issue scene
+        d = durs[1]; scene_durs[1] = max(d + PAD - COVER_S, 1.5); clips = [(0.05, voiced[1][0], d)]
+    else:
+        clips[0] = (0.05,) + clips[0][1:]
+
+def sub_chunks(text, n=14):
+    """Split a script into subtitle lines: sentence by sentence; a long sentence into near-equal word runs,
+    breaking after a comma where one falls late enough."""
+    out = []
+    for sent in re.split(r"(?<=[.?!])\s+", text.strip()):
+        size = len(sent.replace(" ", ""))
+        if size <= n + 4: out.append(sent); continue
+        per = size / -(-size // n); cur = ""
+        for w in sent.split():
+            k = len(cur.replace(" ", ""))
+            if cur and (k + len(w) / 2 > per or (cur.endswith(",") and k >= per * 0.6)): out.append(cur); cur = w
+            else: cur = f"{cur} {w}".strip()
+        out.append(cur)
+    return [c for c in out if c]
+subs = []
+for at, i, d in clips if SUBTITLES else []:
+    cs = sub_chunks(brief["scripts"][i - 1]); w = [len(c) + 2 for c in cs]; acc = 0
+    for c, x in zip(cs, w):
+        subs.append([round(at + d * acc / sum(w), 2), round(at + d * (acc + x) / sum(w), 2), c.rstrip(".,")]); acc += x
+brief["subs"] = subs
 total = sum(scene_durs)
+brief["durations"] = scene_durs
 LIMIT = 16 if SHORT else 62
 if total > LIMIT: print(f"WARN length {total:.1f}s is over the {LIMIT}s target: shorten the scripts (CONTENT_RULES.md)", flush=True)
 
@@ -214,17 +255,21 @@ with sync_playwright() as p:
 # frame 0 is the reel cover; keep a copy so it can be checked before publishing
 run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(frames / "f00000.png"), "-q:v", "2", str(out / f"cover{SFX}.jpg")])
 
-# ---------- 3. narration track (padded) ----------
-parts = []
-for k, ((i, _), L) in enumerate(zip(voiced, scene_durs), 1):
-    seg = out / f"seg{SFX}_{k}.wav"
-    src = ["-f", "lavfi", "-i", f"anullsrc=r={SR}:cl=stereo"] if i is None else ["-i", str(out / f"v{i}.mp3")]
-    run(["ffmpeg", "-y", "-loglevel", "error", *src, "-af", f"adelay=300|300,apad=whole_dur={L}",
-         "-t", str(L), "-ar", str(SR), "-ac", "2", str(seg)])
-    parts.append(seg.name)
-(out / f"list{SFX}.txt").write_text("".join(f"file '{p}'\n" for p in parts))
-run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(out / f"list{SFX}.txt"),
-     "-c:a", "pcm_s16le", str(out / f"narration{SFX}.wav")])
+# ---------- 3. narration track ----------
+voice = np.zeros((int(SR * total), 2))
+for at, i, _ in clips:
+    raw = subprocess.check_output(["ffmpeg", "-loglevel", "error", "-i", str(out / f"v{i}.mp3"), "-f", "s16le",
+                                   "-ar", str(SR), "-ac", "2", "-"])
+    x = np.frombuffer(raw, np.int16).reshape(-1, 2) / 32768; a = int(at * SR); x = x[:max(len(voice) - a, 0)]
+    voice[a:a + len(x)] += x
+if brief["hook_style"] == "punch":  # a soft whoosh into the cut to the hook, and a low thump on it
+    n = int(SR * 0.25); tt = np.arange(n) / SR; rng = np.random.default_rng(3)
+    whoosh = np.convolve(rng.standard_normal(n), np.ones(9) / 9, "same") * (tt / tt[-1]) ** 2 * 0.12
+    thump = np.sin(2 * np.pi * (48 + 70 * np.exp(-tt * 30)) * tt) * np.exp(-tt * 14) * 0.35
+    a = int(0.25 * SR); voice[max(a - n, 0):a] += whoosh[-min(a, n):, None]; voice[a:a + n] += thump[:, None]
+with wave.open(str(out / f"narration{SFX}.wav"), "wb") as w:
+    w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
+    w.writeframes((np.clip(voice, -1, 1) * 32767).astype(np.int16).tobytes())
 
 # ---------- 4. music bed (synthesized, royalty-free) ----------
 def music(LEN, path):
@@ -259,7 +304,7 @@ def music(LEN, path):
                 n2 = int(SR * 0.05); sh = rng.standard_normal(n2) * np.exp(-np.arange(n2)/SR*120)
                 add(sh, t0 + k*beat + h*beat/2, .035 if h else .02, .4)
     kern = np.ones(6) / 6; mix = np.array([np.convolve(c, kern, 'same') for c in mix])
-    fade = int(SR * 1.0); mix[:, :fade] *= np.linspace(0, 1, fade); mix[:, -int(SR*3):] *= np.linspace(1, 0, int(SR*3))
+    fade = int(SR * (0.1 if brief["hook_style"] else 1.0)); mix[:, :fade] *= np.linspace(0, 1, fade); mix[:, -int(SR*3):] *= np.linspace(1, 0, int(SR*3))
     mix /= np.max(np.abs(mix)) * 1.05; pcm = (mix.T * 32767).astype(np.int16)
     with wave.open(str(path), 'wb') as w:
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm.tobytes())
