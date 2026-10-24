@@ -19,9 +19,15 @@ What to write into `brief.json` (hook, script lengths, cover order, caption fiel
   the date in large type, the hook left-aligned with the number line on a yellow marker stroke, the issue list, and the
   lead issue's art. The date comes from `date_short` (`"10.22 THU"` → `10.22` beside `목요일 / 아침 브리핑`); the carousel
   shows `dates` (`"10.19–10.25"`) above `week_label`. The cover font is Pretendard (`fonts/`, SIL OFL), loaded from the repo.
-- A short is the issue's hook cover (1.6s), its scene with the briefing's own narration, and an end card pointing to the
+- A short is the issue's hook cover (1.6s, narration already running), its scene with the briefing's own narration, and an end card pointing to the
   full briefing (2.4s): 10-15s. Run it after the briefing with the same `out` so it reuses `v{n+1}.mp3`, the AI art and
   the icon choice (`art_used.json`); it makes no TTS or image calls of its own.
+- First 3 seconds (`HOOK_STYLE`, default `punch`): frame 0 is still the finished cover, then at 0.25s the reel cuts to
+  the hook alone in large type (the number counts up, the marker stroke sweeps in, the lead art pops) with a soft whoosh.
+  `live` keeps the cover on screen and moves it instead (slow push-in, number pulse, issue list lit in turn); `off` is the
+  old static opening. With `punch`/`live` the voice starts on the first frame, the music starts without a slow fade, and
+  burned-in subtitles follow the narration, numbers in yellow (`SUBTITLES=0` turns them off). A short no longer opens on a
+  silent cover: its narration starts under the cover, so it is 1.6s shorter.
 - Scenes are padded by 0.6s (was 0.9s), and the build prints `WARN length` past 62s (briefing) or 16s (short).
 
 ## Issue art (center of the issue scenes)

@@ -43,13 +43,18 @@ The leading issue goes first in `issues` and gives the briefing its `hook`.
 
 | scene | limit |
 |---|---|
-| opening | 45 characters. Say the hook, then "...1분 정리합니다." No date. |
+| opening | 45 characters. The first sentence is the hook itself, said in 2 seconds: 20 characters or fewer, with its number. Then one line that pays it off, then "오늘 ○○ 이슈, 1분 정리." No date, no list of what is coming ("세 가지와 AI, 증시까지"). |
 | each issue | 55 characters. One fact with its number, one line of why it matters. |
 | AI (morning) | 70 characters, ending "~할 때 쓰면 됩니다." |
 | market | 60 characters. |
 | closing | the one-liner, the brief's question, then "댓글로 남겨 주세요. 내일도 보려면 팔로우." |
 
-An issue script must also stand alone, because the short plays it on its own.
+An issue script must also stand alone, because the short plays it on its own, and its first words play under the
+short's cover: lead with the fact and its number, never a lead-in ("다음 소식입니다").
+
+The first 3 seconds decide whether a viewer from the Reels tab stays (10/24: about 80% skipped, 2-4s average watch).
+The video opens on the hook in large type with subtitles; the script has to match it word for word in spirit, so the
+first thing heard is the same question or number the screen shows.
 `build.py` prints `WARN length` when a briefing passes 62s or a short 16s; shorten and rebuild.
 
 ## Caption fields (build.py writes `caption.txt` / `caption_short{n}.txt`)
