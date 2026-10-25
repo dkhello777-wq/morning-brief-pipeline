@@ -31,6 +31,7 @@ Captions: out_dir/caption.txt (or caption_short{n}.txt) is written from the brie
 """
 import base64, json, os, pathlib, re, subprocess, sys, time, unicodedata, urllib.parse, urllib.request, wave
 import numpy as np
+import music
 
 HERE = pathlib.Path(__file__).parent
 brief = json.load(open(sys.argv[1]))
@@ -271,44 +272,10 @@ with wave.open(str(out / f"narration{SFX}.wav"), "wb") as w:
     w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR)
     w.writeframes((np.clip(voice, -1, 1) * 32767).astype(np.int16).tobytes())
 
-# ---------- 4. music bed (synthesized, royalty-free) ----------
-def music(LEN, path):
-    BPM = 108; beat = 60 / BPM; bar = beat * 4; N = int(SR * LEN); rng = np.random.default_rng(7)
-    def env(n, a, d, s, r, hold):
-        A = int(a * SR); Dd = int(d * SR); R = int(r * SR); H = max(int(hold * SR) - A - Dd, 0)
-        e = np.concatenate([np.linspace(0, 1, A), np.linspace(1, s, Dd), np.full(H, s), np.linspace(s, 0, R)])
-        return np.concatenate([e, np.zeros(max(n - len(e), 0))])[:n]
-    def note(f, dur, a=.01, d=.15, s=.5, r=.25, bright=.4):
-        n = int(SR * (dur + r)); tt = np.arange(n) / SR
-        sig = np.sin(2*np.pi*f*tt) + bright*0.35*np.sin(2*np.pi*2*f*tt) + bright*0.12*np.sin(2*np.pi*3*f*tt)
-        return sig * (1 + 0.004*np.sin(2*np.pi*5.5*tt)) * env(n, a, d, s, r, dur)
-    mix = np.zeros((2, N))
-    def add(sig, at, gain=1.0, pan=0.0):
-        i = int(at * SR); j = min(i + len(sig), N)
-        if i >= N: return
-        s = sig[:j-i] * gain; mix[0, i:j] += s * (1 - max(pan, 0)); mix[1, i:j] += s * (1 + min(pan, 0))
-    midi = lambda m: 440 * 2 ** ((m - 69) / 12)
-    chords = [[62, 66, 69, 74], [57, 61, 64, 69], [59, 62, 66, 71], [55, 59, 62, 67]]; bass = [38, 33, 35, 31]
-    for b_ in range(int(LEN / bar) + 1):
-        ch = chords[b_ % 4]; t0 = b_ * bar
-        for m in ch: add(note(midi(m), bar*0.95, a=.25, d=.4, s=.6, r=.6, bright=.25), t0, .07, (m % 3 - 1) * 0.3)
-        for k in range(8):
-            m = ch[(k*2) % 4] + (12 if k % 3 == 2 else 0)
-            add(note(midi(m), beat*0.35, a=.003, d=.12, s=.3, r=.2, bright=.8), t0 + k*beat/2, .09, .25*np.sin(k))
-        for st in (0, beat*2): add(note(midi(bass[b_ % 4]), beat*1.2, a=.005, d=.2, s=.5, r=.2, bright=.2), t0 + st, .16)
-        for k in range(4):
-            n = int(SR * 0.18); tt = np.arange(n) / SR
-            kick = np.sin(2*np.pi*(55 + 90*np.exp(-tt*40))*tt) * np.exp(-tt*22)
-            if k % 2 == 0: add(kick, t0 + k*beat, .35)
-            for h in range(2):
-                n2 = int(SR * 0.05); sh = rng.standard_normal(n2) * np.exp(-np.arange(n2)/SR*120)
-                add(sh, t0 + k*beat + h*beat/2, .035 if h else .02, .4)
-    kern = np.ones(6) / 6; mix = np.array([np.convolve(c, kern, 'same') for c in mix])
-    fade = int(SR * (0.1 if brief["hook_style"] else 1.0)); mix[:, :fade] *= np.linspace(0, 1, fade); mix[:, -int(SR*3):] *= np.linspace(1, 0, int(SR*3))
-    mix /= np.max(np.abs(mix)) * 1.05; pcm = (mix.T * 32767).astype(np.int16)
-    with wave.open(str(path), 'wb') as w:
-        w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm.tobytes())
-music(total, out / f"bed{SFX}.wav")
+# ---------- 4. music bed (synthesized, royalty-free; music.py rotates styles by date, the evening edition two styles
+# ahead of the morning one; MUSIC=<style> or a brief "music" field forces one) ----------
+style = music.bed(total, out / f"bed{SFX}.wav", music.pick(brief.get("music"), offset=2 if PM else 0), fade_in=0.1 if brief["hook_style"] else 1.0)
+print("music", style, flush=True)
 
 # ---------- 5. mix + mux ----------
 run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / f"narration{SFX}.wav"), "-i", str(out / f"bed{SFX}.wav"), "-filter_complex",
