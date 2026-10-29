@@ -14,6 +14,7 @@ one hook cover, briefings of 60 seconds or less, one-issue shorts, and a fixed c
 | 18:00 | evening briefing (+ story) | `python3 build.py brief_pm.json out_pm` |
 | 21:30 | evening short | `SHORT=n python3 build.py brief_pm.json out_pm` |
 | Sun 20:00 | weekly carousel | `python3 carousel.py week.json out_week` |
+| 11:00, 15:00 | breaking card news, only when there is one | `python3 carousel.py breaking.json out_bk` |
 
 Shorts use the two issues ranked highest by the cover order below (evening: one).
 
@@ -70,6 +71,34 @@ first thing heard is the same question or number the screen shows.
 Five items from the week that touch money: markets, rates, housing, policy, tools. Each has a `num` where one exists.
 `carousel.py` writes the 4:5 slides for a carousel post, a 9:16 slideshow reel (`carousel.mp4`) for tools that
 only publish reels, and the caption.
+
+## Breaking card news (11:00 and 15:00, `breaking.json`, see `breaking_example.json`)
+
+A scheduled check at about 10:47 and 14:47 looks for a breaking story and posts at most one card news per check.
+Most checks should end with nothing posted; that is the expected result, not a failure.
+
+A story is breaking only if it passes all three:
+
+1. **New**: first reported since the last check (11:00 check: since 06:00; 15:00 check: since 10:40), and not already
+   in today's morning briefing or an earlier breaking post.
+2. **Confirmed**: an official announcement (ministry, Bank of Korea, Financial Services Commission, National Assembly
+   vote, company disclosure) or at least two major outlets reporting it independently (Yonhap, KBS, MBC, SBS, JTBC,
+   YTN, Reuters, AP, Bloomberg). Never a single outlet's exclusive, a rumour, or "under review".
+3. **Big enough**, one of:
+   - money and daily life, decided: rates, housing supply or lending rules, taxes, public fees, pensions, minimum
+     wage, large support payments;
+   - market shock: KOSPI or KOSDAQ ±3% intraday, a sidecar or circuit breaker, or the won moving 1.5% or more in a day;
+   - national scale: a declared disaster or one with many deaths, the outbreak of armed conflict involving Korea or
+     a major power, a decision at president or prime minister level, a deal or event at a top-10 Korean company worth
+     trillions of won.
+
+Never breaking: entertainment, sports, individual crimes and accidents, political spats and remarks, polls.
+
+Slides: `kind: "breaking"`, `kicker: "BREAKING"`, `week_label: "속보"`, `dates` = today's `date_short`, `sub` = who
+announced it, `title` = the fact and its number in 2 lines, `cover_foot` = what swiping shows, 3-7 items, `end`.
+Body lines about 22 characters each (break with `\n` yourself), `num` about 8 characters.
+Caption fields: `caption_title`, `summary` (2-3 sentences, numbers and places spelled out), optional per-item
+`caption_line`, `notes`, `save`, `question`, `keywords` (up to 3). Tone and banned words are the same as hooks.
 
 ## Measuring (2-week trial, judged 11/5)
 

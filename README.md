@@ -12,6 +12,7 @@ What to write into `brief.json` (hook, script lengths, cover order, caption fiel
 | one-issue short | `SHORT=2 python3 build.py brief.json out` | `final_short2.mp4`, `cover_short2.jpg`, `caption_short2.txt` |
 | caption only | `CAPTION_ONLY=1 python3 build.py brief.json out` | prints the caption |
 | weekly carousel | `python3 carousel.py week.json out_week` | `slide_01.png`..., `carousel.mp4`, `caption.txt` |
+| breaking card news | `python3 carousel.py breaking.json out_bk` (`"kind": "breaking"`) | same as the carousel, with the 속보 cover and caption |
 
 - `hook: {"q", "hi"}` on the brief turns the opening card into a two-line hook (the number line on an accent bar).
   Without it the old `title` is shown.

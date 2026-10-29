@@ -3,6 +3,8 @@
 Usage: python3 carousel.py week.json out_dir
 week.json schema: see week_example.json (3-7 items; each tag, headline, optional num, body, source;
 "dates" e.g. "10.19–10.25" is shown large on the cover beside week_label).
+A breaking post uses the same slides: "kind": "breaking" plus kicker/sub/cover_foot/end on the cover and end slide, and a
+"summary" (optional "caption_title", "notes", "save", per-item "caption_line") for its caption; see breaking_example.json.
 Output: out_dir/slide_01.png ... (1080x1350, Instagram 4:5 carousel), out_dir/caption.txt,
 and out_dir/carousel.mp4 (the same slides as a 1080x1920 slideshow reel, 3.5s each, for publish tools that only take reels).
 """
@@ -41,11 +43,26 @@ run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-f", "lavfi", "-t", str(SLI
      "-movflags", "+faststart", str(out / "carousel.mp4")])
 
 one = lambda x: " ".join(str(x or "").split())
+FOLLOW = "매일 07:00 세계·시장 / 18:00 국내 이슈를 3분 브리핑으로 → 팔로우하고 받아보기"
+sources = " · ".join(dict.fromkeys(s.strip() for it in week["items"] for s in str(it.get("source") or "").split("·") if s.strip()))
+if week.get("kind") == "breaking":
+    # breaking post (CONTENT_RULES.md "Breaking"): headline, summary, one line per slide, notes, save/question, sources
+    lines = [f"📌 [속보] {one(week.get('caption_title') or week['title'])}", "", one(week["summary"]), ""]
+    lines += [f"{'➊➋➌➍➎➏➐'[i]} {one(it.get('caption_line') or it['headline'])}" + (f" — {one(it['num'])}" if it.get("num") and not it.get("caption_line") else "")
+              for i, it in enumerate(week["items"])]
+    if week.get("notes"): lines += [""] + [one(n) for n in week["notes"]]
+    lines += ["", f"🔖 {one(week.get('save') or '저장해두고 다시 보세요')}"]
+    if week.get("question"): lines.append(f"💬 {one(week['question'])}")
+    lines += [FOLLOW, "출처: " + sources,
+              " ".join("#" + k.replace(" ", "") for k in dict.fromkeys(list(week.get("keywords") or [])[:3] + ["오늘의뉴스", "경제뉴스"]))]
+    (out / "caption.txt").write_text("\n".join(lines) + "\n")
+    print("DONE", n, "slides", out / "slide_01.png", "reel", out / "carousel.mp4", "caption", out / "caption.txt")
+    sys.exit(0)
 lines = [f"📌 {one(week['title'])} ({week.get('week_label', '')})", ""]
 lines += [f"{'➊➋➌➍➎➏➐'[i]} {one(it['headline'])}" + (f" — {one(it['num'])}" if it.get("num") else "") for i, it in enumerate(week["items"])]
 lines += ["", "🔖 저장해두고 월요일 아침에 다시 보세요"]
 if week.get("question"): lines.append(f"💬 {one(week['question'])}")
-lines += ["매일 07:00 세계·시장 / 18:00 국내 이슈를 3분 브리핑으로 → 팔로우하고 받아보기",
+lines += [FOLLOW,
           "출처: " + " · ".join(dict.fromkeys(it.get("source") for it in week["items"] if it.get("source"))),
           " ".join("#" + k.replace(" ", "") for k in dict.fromkeys(list(week.get("keywords") or [])[:3] + ["주간뉴스", "경제뉴스"]))]
 (out / "caption.txt").write_text("\n".join(lines) + "\n")
