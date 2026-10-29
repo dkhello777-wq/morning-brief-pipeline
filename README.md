@@ -29,6 +29,14 @@ What to write into `brief.json` (hook, script lengths, cover order, caption fiel
   old static opening. With `punch`/`live` the voice starts on the first frame, the music starts without a slow fade, and
   burned-in subtitles follow the narration, numbers in yellow (`SUBTITLES=0` turns them off). A short no longer opens on a
   silent cover: its narration starts under the cover, so it is 1.6s shorter.
+- Music (`music.py`, synthesized, nothing downloaded): five styles, `bright` (the original bed), `lofi`, `pulse`,
+  `piano`, `upbeat`, rotate by the KST date so the account doesn't play the same loop every day; the evening edition is
+  two styles ahead of the morning one, and a short uses its briefing's style. `MUSIC=<style>` or a `"music"` field in
+  brief.json / week.json forces one; `python3 music.py out` writes a 20s sample of each.
+- Weekly carousel audio: the reel plays the day's music with a soft swish on each slide change. With `"scripts"` in
+  week.json (one line per slide: cover, each item, end card; see week_example.json) and `TYPECAST_API_KEY` set, every
+  slide is narrated in the briefing voice with the music ducked under it, and stays up as long as its line takes
+  (at least 3.5s). Without scripts or a key the reel is music only, 3.5s a slide.
 - Scenes are padded by 0.6s (was 0.9s), and the build prints `WARN length` past 62s (briefing) or 16s (short).
 
 ## Issue art (center of the issue scenes)
