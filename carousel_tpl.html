@@ -36,12 +36,13 @@ const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
 const br=s=>esc(s).replace(/\n/g,'<br>');
 const N=C.items.length+2;
 const foot=(k,l)=>`<div class="foot"><span>${esc(l)}</span><span>${k}/${N}</span></div>`;
-// cover: the week's dates ("10.19–10.25", or week_label) in large type so it is told apart in the profile grid
+// cover: the week's dates ("10.19–10.25", or week_label) in large type so it is told apart in the profile grid;
+// a breaking post (kind "breaking") sets kicker ("BREAKING"), sub (who announced it) and cover_foot
 const md=C.dates||C.week_label||'';
-let h=`<div class="slide cover"><div class="cvtop"><span>WEEKLY BRIEF</span><span>7AM.BRIEF</span></div><div class="cvrule"></div>
-  <div class="md" style="font-size:${Math.min(236,Math.round(1500/Math.max(md.length,1)))}px">${esc(md)}</div>${C.dates&&C.week_label?`<div class="wk">${esc(C.week_label)} · 주간 정리</div>`:''}
+let h=`<div class="slide cover"><div class="cvtop"><span>${esc(C.kicker||'WEEKLY BRIEF')}</span><span>7AM.BRIEF</span></div><div class="cvrule"></div>
+  <div class="md" style="font-size:${Math.min(236,Math.round(1500/Math.max(md.length,1)))}px">${esc(md)}</div>${C.dates&&C.week_label?`<div class="wk">${esc(C.week_label)} · ${esc(C.sub||'주간 정리')}</div>`:''}
   <div class="ttl">${String(C.title||'').split('\n').map(l=>`<span>${esc(l)}</span>`).join('<br>')}</div>
-  <div class="cvlist">${C.items.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.tag)}</div>`).join('')}</div>${foot(1,'저장해두고 다시 보기 →')}</div>`;
+  <div class="cvlist">${C.items.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.tag)}</div>`).join('')}</div>${foot(1,C.cover_foot||'저장해두고 다시 보기 →')}</div>`;
 C.items.forEach((it,i)=>{ h+=`<div class="slide${i%2?' dark':''}"><div class="tag">${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>
   <div class="h2">${br(it.headline)}</div>${it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="box">${br(it.body)}</div>
   ${foot(i+2,'출처: '+(it.source||''))}</div>`; });
