@@ -105,7 +105,7 @@ if week.get("kind") == "breaking":
     lines += [FOLLOW, "출처: " + sources,
               " ".join("#" + k.replace(" ", "") for k in dict.fromkeys(list(week.get("keywords") or [])[:3] + ["오늘의뉴스", "경제뉴스"]))]
     (out / "caption.txt").write_text("\n".join(lines) + "\n")
-    print("DONE", n, "slides", out / "slide_01.png", "reel", out / "carousel.mp4", "caption", out / "caption.txt")
+    print("DONE", n, "slides", round(total, 1), "seconds", out / "slide_01.png", "reel", out / "carousel.mp4", "caption", out / "caption.txt")
     sys.exit(0)
 lines = [f"📌 {one(week['title'])} ({week.get('week_label', '')})", ""]
 lines += [f"{'➊➋➌➍➎➏➐'[i]} {one(it['headline'])}" + (f" — {one(it['num'])}" if it.get("num") else "") for i, it in enumerate(week["items"])]

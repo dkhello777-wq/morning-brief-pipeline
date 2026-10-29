@@ -99,6 +99,7 @@ announced it, `title` = the fact and its number in 2 lines, `cover_foot` = what 
 Body lines about 22 characters each (break with `\n` yourself), `num` about 8 characters.
 Caption fields: `caption_title`, `summary` (2-3 sentences, numbers and places spelled out), optional per-item
 `caption_line`, `notes`, `save`, `question`, `keywords` (up to 3). Tone and banned words are the same as hooks.
+The reel carries the rotating music bed and no narration: leave out `scripts`.
 
 ## Measuring (2-week trial, judged 11/5)
 
