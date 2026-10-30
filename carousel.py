@@ -5,6 +5,7 @@ week.json schema: see week_example.json (3-7 items; each tag, headline, optional
 "dates" e.g. "10.19–10.25" is shown large on the cover beside week_label).
 A breaking post uses the same slides: "kind": "breaking" plus kicker/sub/cover_foot/end on the cover and end slide, and a
 "summary" (optional "caption_title", "notes", "save", per-item "caption_line") for its caption; see breaking_example.json.
+Any item may set "photo" (see photos.py) for a real photo with its credit line above the headline.
 Output: out_dir/slide_01.png ... (1080x1350, Instagram 4:5 carousel), out_dir/caption.txt,
 and out_dir/carousel.mp4 (the same slides as a 1080x1920 slideshow reel, for publish tools that only take reels).
 The reel has a synthesized royalty-free music bed (music.py, rotating by date like the briefings; MUSIC=<style> or a
@@ -13,9 +14,9 @@ cover, each item, end card) and TYPECAST_API_KEY is set, each slide is narrated 
 or week "voice_id") with the music ducked under it, and stays up as long as its line takes (at least 3.5s).
 Without scripts or a key (or with NO_TTS=1) the reel is music only, 3.5s a slide.
 """
-import json, os, pathlib, subprocess, sys, time, urllib.request, wave
+import base64, json, os, pathlib, subprocess, sys, time, urllib.request, wave
 import numpy as np
-import music
+import music, photos
 
 HERE = pathlib.Path(__file__).parent
 week = json.load(open(sys.argv[1]))
@@ -25,6 +26,14 @@ SLIDE_S = 3.5
 
 def run(cmd): subprocess.run(cmd, check=True)
 
+# real photos (photos.py): an item's "photo" (Commons search, {"file": ...} or a local path) is shown above its headline
+# with the credit line; no free photo (or no network) just leaves the slide as text
+for k, it in enumerate(week["items"], 1):
+    got = photos.get(it.get("photo"), pathlib.Path(sys.argv[1]).parent)
+    if got: it["art"] = {"src": f"data:{got[1]};base64," + base64.b64encode(got[0]).decode(), "credit": got[2]}
+    if it.get("photo"): print("photo", k, got[2] if got else "none", flush=True)
+cr = dict.fromkeys(it["art"]["credit"].removeprefix("사진 ") for it in week["items"] if it.get("art", {}).get("credit"))
+PHOTO = ["📷 사진: " + " / ".join(cr)] if cr else []  # CC BY / BY-SA photos are credited in the caption too
 html = (HERE / "carousel_tpl.html").read_text().replace("__CONTENT__", json.dumps(week, ensure_ascii=False))
 html = html.replace("__FONT__", (HERE / "fonts" / "PretendardVariable.ttf").resolve().as_uri())
 (out / "carousel.html").write_text(html)
@@ -74,7 +83,7 @@ if narrate:
         x = x[:max(len(voice) - a, 0)]; voice[a:a + len(x)] += x
 with wave.open(str(out / "narration.wav"), "wb") as w:
     w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((np.clip(voice, -1, 1) * 32767).astype(np.int16).tobytes())
-style = music.bed(total, out / "bed.wav", week.get("music"), fade_in=0.1, fade_out=2.0, cuts=starts[1:])
+style = music.bed(total, out / "bed.wav", week.get("music"), fade_in=0.1, fade_out=2.0, cuts=starts[1:], topic=week.get("topic"))
 print("music", style, "narrated" if narrate else "music only", flush=True)
 # same mix as the briefings: music ducked under the voice, then loudness-normalized
 run(["ffmpeg", "-y", "-loglevel", "error", "-i", str(out / "narration.wav"), "-i", str(out / "bed.wav"), "-filter_complex",
@@ -104,7 +113,7 @@ if week.get("kind") == "breaking":
     if week.get("notes"): lines += [""] + [one(n) for n in week["notes"]]
     lines += ["", f"🔖 {one(week.get('save') or '저장해두고 다시 보세요')}"]
     if week.get("question"): lines.append(f"💬 {one(week['question'])}")
-    lines += [FOLLOW, "출처: " + sources,
+    lines += [FOLLOW, "출처: " + sources] + PHOTO + [
               " ".join("#" + k.replace(" ", "") for k in dict.fromkeys(list(week.get("keywords") or [])[:3] + (["AI뉴스", "인공지능"] if AI else ["오늘의뉴스", "경제뉴스"])))]
     (out / "caption.txt").write_text("\n".join(lines) + "\n")
     print("DONE", n, "slides", round(total, 1), "seconds", out / "slide_01.png", "reel", out / "carousel.mp4", "caption", out / "caption.txt")
@@ -114,7 +123,7 @@ lines += [f"{'➊➋➌➍➎➏➐'[i]} {one(it['headline'])}" + (f" — {one(i
 lines += ["", "🔖 저장해두고 월요일 아침에 다시 보세요"]
 if week.get("question"): lines.append(f"💬 {one(week['question'])}")
 lines += [FOLLOW,
-          "출처: " + " · ".join(dict.fromkeys(it.get("source") for it in week["items"] if it.get("source"))),
+          "출처: " + " · ".join(dict.fromkeys(it.get("source") for it in week["items"] if it.get("source")))] + PHOTO + [
           " ".join("#" + k.replace(" ", "") for k in dict.fromkeys(list(week.get("keywords") or [])[:3] + (["AI뉴스", "주간AI"] if AI else ["주간뉴스", "경제뉴스"])))]
 (out / "caption.txt").write_text("\n".join(lines) + "\n")
 print("DONE", n, "slides", round(total, 1), "seconds", out / "slide_01.png", "reel", out / "carousel.mp4", "caption", out / "caption.txt")

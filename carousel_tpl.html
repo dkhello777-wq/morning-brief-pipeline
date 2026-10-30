@@ -26,6 +26,11 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 .cover .cvlist{margin-top:64px;display:flex;flex-direction:column;gap:18px;font-size:36px;font-weight:600}
 .cover .cvlist b{color:#8B877D;font-weight:700;margin-right:22px}
 .cover .foot{border-color:#141414}
+/* a real photo on an item slide (carousel.py "photo"): framed like the boxes, credit line in the corner */
+.ph{position:relative;border:5px solid #111;box-shadow:14px 14px 0 #111;overflow:hidden;flex-shrink:0}
+.dark .ph{border-color:#FFE600;box-shadow:14px 14px 0 #FFE600}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.ph span{position:absolute;right:0;bottom:0;background:rgba(0,0,0,.55);color:#fff;font:600 18px/1.3 'Pretendard Variable',Pretendard,sans-serif;padding:6px 12px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .list{display:flex;flex-direction:column;gap:18px;font-size:40px;font-weight:900}
 .foot{margin-top:auto;font-size:28px;font-weight:900;border-top:5px solid currentColor;padding-top:18px;display:flex;justify-content:space-between}
 </style></head><body>
@@ -44,6 +49,7 @@ let h=`<div class="slide cover"><div class="cvtop"><span>${esc(C.kicker||'WEEKLY
   <div class="ttl">${String(C.title||'').split('\n').map(l=>`<span>${esc(l)}</span>`).join('<br>')}</div>
   <div class="cvlist">${C.items.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.tag)}</div>`).join('')}</div>${foot(1,C.cover_foot||'저장해두고 다시 보기 →')}</div>`;
 C.items.forEach((it,i)=>{ h+=`<div class="slide${i%2?' dark':''}"><div class="tag">${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>
+  ${it.art?`<div class="ph" style="height:${it.num?300:380}px"><img src="${it.art.src}"><span>${esc(it.art.credit)}</span></div>`:''}
   <div class="h2">${br(it.headline)}</div>${it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="box">${br(it.body)}</div>
   ${foot(i+2,'출처: '+(it.source||''))}</div>`; });
 h+=`<div class="slide dark"><div class="tag">7am.brief</div><div class="h1">${br(C.end||'저장해두고\n월요일에\n다시 보기')}</div>

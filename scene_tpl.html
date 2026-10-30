@@ -39,6 +39,9 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 .art img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 12px 0 rgba(0,0,0,.15))}
 .art.ai{border:5px solid #111;box-shadow:14px 14px 0 #111;overflow:hidden;margin-bottom:14px}
 .art.ai img{filter:none;object-fit:cover}
+.art.photo{margin-bottom:0}
+.art.photo img{object-position:50% 22%}
+.art.photo .pcred{position:absolute;right:0;bottom:0;max-width:100%;background:rgba(0,0,0,.55);color:#fff;font:600 18px/1.3 'Pretendard Variable',Pretendard,sans-serif;padding:6px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .art .glyph{line-height:1;text-align:center;font-family:'Noto Color Emoji',sans-serif}
 .shadow{height:22px;border-radius:50%;background:rgba(0,0,0,.16);flex-shrink:0}
 #stage.pm .shadow{background:rgba(255,230,0,.2)}
@@ -206,12 +209,20 @@ if(HOOK){ $('s1q').textContent=one(HOOK.q); $('s1hi').textContent=one(HOOK.hi); 
 else{ $('s1q').style.display='none'; $('s1hi').innerHTML=br(C.title||''); $('s1hi').parentNode.style.marginTop='0'; }
 if(!SHORT) $('s1list').innerHTML=C.issues.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.short)}</div>`).join('');
 // ---- illustrations: story art (Fluent 3D emoji / AI image, set by build.py) + code-drawn data graphics ----
+// a real photo (build.py "photo"): a framed wide picture with its credit line, w x h
+function photoHtml(a,w,h){ return `<div class="art ai photo" style="width:${w}px;height:${h}px"><img src="${a.src}"><div class="pcred">${esc(a.credit)}</div></div>`; }
 function artHtml(a,size){
+  if(a.photo) return photoHtml(a,size,size);
   const inner=a.src?`<img src="${a.src}">`:`<div class="glyph" style="font-size:${Math.round(size*0.8)}px">${esc(a.glyph)}</div>`;
   return `<div class="art${a.ai?' ai':''}" style="width:${size}px;height:${size}px">${inner}</div>`+(a.ai?'':`<div class="shadow" style="width:${Math.round(size*0.55)}px"></div>`);
 }
 function ill(d,a){
   d=d||{}; const k=d.kind;
+  if(a&&a.photo){
+    if(k==='bars'||k==='bridge') return photoHtml(a,820,200)+ill(d);
+    if(k==='alert'||k==='number') return photoHtml(a,820,300)+`<div class="big cnt" style="font-size:110px">0</div><div class="sub" style="text-align:center">${esc(d.label)}</div>`;
+    return photoHtml(a,820,d.label?400:470)+(d.label?`<div class="sub" style="text-align:center">${esc(d.label)}</div>`:'');
+  }
   if(a){
     if(k==='bars'||k==='bridge') return artHtml(a,a.ai?190:180)+ill(d);
     if(k==='alert'||k==='number') return artHtml(a,a.ai?260:250)+`<div class="big cnt" style="font-size:110px">0</div><div class="sub" style="text-align:center">${esc(d.label)}</div>`;
@@ -272,7 +283,8 @@ if(!PM){
   $('s5bt').textContent=C.ai.point2||''; $('s5bs').textContent=C.ai.point2_sub||'';
   $('s5stamp').textContent=C.ai.verdict||'';
   $('s5src').textContent='출처: '+(C.ai.source||'');
-  const w=$('wave'); for(let i=0;i<40;i++){const b=document.createElement('div');b.style.cssText='width:12px;height:30px;background:currentColor;border-radius:6px';w.appendChild(b);}
+  const w=$('wave'); if(C.ai.art){ w.style.padding='0'; w.style.border='none'; w.style.boxShadow='none'; w.innerHTML=photoHtml(C.ai.art,820,380); }
+  else for(let i=0;i<40;i++){const b=document.createElement('div');b.style.cssText='width:12px;height:30px;background:currentColor;border-radius:6px';w.appendChild(b);}
 }
 $('s6tag').textContent=(AI?(PM?'AI·반도체주 마감 · ':'AI 빅테크 주가 · '):(PM?'국내 증시 마감 · ':'미국 증시 흐름 · '))+(C.market.date_label||'');
 $('s6h').dataset.text=C.market.headline||'';
@@ -291,7 +303,9 @@ if(SHORT){
   $('s8h').innerHTML=br(AI?(PM?'오늘의 다른\nAI 소식은?':'간밤의 다른\nAI 소식은?'):PM?'오늘의 다른\n국내 이슈는?':'간밤의 다른\n세계 이슈는?');
   $('s8s').innerHTML=br(AI?(PM?'프로필의 1분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 1분 아침 브리핑에서\n매일 아침 7시 · 팔로우'):PM?'프로필의 3분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 3분 아침 브리핑에서\n매일 아침 7시 · 팔로우');
 }
-{ const a=SHORT?C.issues[SHORT-1].art:(C.issues[0]||{}).art; if(a) $('s1ill').innerHTML=artHtml(a,SHORT?(a.ai?320:300):(a.ai?250:230)); }
+{ const a=SHORT?C.issues[SHORT-1].art:(C.issues[0]||{}).art;
+  if(a&&a.photo){ $('s1ill').style.cssText='left:96px;right:96px;top:1200px'; $('s1ill').innerHTML=photoHtml(a,888,420); }  // the lead photo runs wide under the hook, inside the grid crop
+  else if(a) $('s1ill').innerHTML=artHtml(a,SHORT?(a.ai?320:300):(a.ai?250:230)); }
 // ---- first-3-seconds hook ----
 const STYLE=C.hook_style||'';
 const PH=SHORT?C.issues[SHORT-1].hook:C.hook;
@@ -300,7 +314,7 @@ if(STYLE==='punch'&&PH){
   $('ptag').textContent=`${AI?'AI ':''}${PM?'EVENING':'MORNING'} BRIEF · ${$('s1md').textContent}`;
   $('pq').innerHTML=br(PH.q);
   $('phi').parentNode.style.fontSize=fit(one(PH.hi),168,6)+'px';
-  if(PART) $('part').innerHTML=artHtml(PART,PART.ai?400:380);
+  if(PART) $('part').innerHTML=PART.photo?photoHtml(PART,900,520):artHtml(PART,PART.ai?400:380);
 }
 // numbers in the number line count up; dates and times (10/25, 07:00) are left as they are
 const HI=one((PH||{}).hi), HIN=[...HI.matchAll(/\d[\d,]*(?:\.\d+)?(?![\d\/:])/g)].filter(m=>!/[\/:]$/.test(HI.slice(0,m.index)));
@@ -370,7 +384,7 @@ const SCENES=[
   },
   issueScene(0), issueScene(1), issueScene(2),
   t=>{ pop($('s5tag'),t,0.1); typed($('s5h'),C.ai.headline||'',t-0.3,13);
-    [...$('wave').children].forEach((b,i)=>{ b.style.height=(30+(t>0.3?150*Math.abs(Math.sin(t*5+i*0.5))*Math.abs(Math.sin(i*0.9+1)):0))+'px'; });
+    if(C.ai.art) animArt($('wave'),C.ai.art,t); else [...$('wave').children].forEach((b,i)=>{ b.style.height=(30+(t>0.3?150*Math.abs(Math.sin(t*5+i*0.5))*Math.abs(Math.sin(i*0.9+1)):0))+'px'; });
     slide($('s5a'),t,DS(4)*0.3); slide($('s5b'),t,DS(4)*0.42);
     const sp=easeOut(clamp((t-DS(4)*0.62)/0.35)); const st=$('s5stamp'); st.style.opacity=sp>0?1:0; st.style.transform=`rotate(-8deg) scale(${sp>0?3-2*sp:3})`; },
   t=>{ pop($('s6tag'),t,0.1); typed($('s6h'),C.market.headline||'',t-0.3,13);
