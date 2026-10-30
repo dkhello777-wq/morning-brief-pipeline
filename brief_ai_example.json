@@ -1,0 +1,150 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "10.30 FRI",
+  "title": "간밤의\nAI 소식\n1분 정리",
+  "hook": {
+    "q": "AI에 돈 쏟더니\n구글이 −12%?",
+    "hi": "하루 5천억달러↓"
+  },
+  "question": "코딩 테스트 없는 채용, 내 업계에도 올까요?",
+  "keywords": [
+    "AI뉴스",
+    "구글주가",
+    "코딩면접"
+  ],
+  "issues": [
+    {
+      "region": "구글 실적",
+      "short": "구글 주가 −12.6%",
+      "headline": "AI 투자\n청구서에\n구글 −12.6%",
+      "ill": {
+        "kind": "alert",
+        "value": 12.6,
+        "suffix": "%",
+        "label": "하루 하락폭 (역대 최대)"
+      },
+      "icon": [
+        "Money with wings",
+        "Money bag"
+      ],
+      "motion": "spin",
+      "image_prompt": "a giant stack of server racks being fed with gold coins while a small coin purse empties beside it",
+      "stat1": "−90억$",
+      "stat1_label": "3분기 잉여현금흐름",
+      "stat2": "513억$",
+      "stat2_label": "3분기 AI·데이터센터 투자",
+      "source": "CNBC · Reuters",
+      "hook": {
+        "q": "AI에 돈 쏟더니\n구글이 −12%?",
+        "hi": "하루 5천억달러↓"
+      },
+      "summary": "알파벳(구글) 주가가 10월 29일 하루 12.64% 떨어져 상장 이후 최악의 하루를 기록했고, 시가총액 약 5천억 달러가 사라졌습니다. 3분기 AI·데이터센터 투자가 513억 달러로 1년 새 두 배가 넘으면서 잉여현금흐름이 −90억 달러로 두 분기 연속 마이너스였습니다.",
+      "question": "AI 투자, 결국 돈이 될까요?",
+      "keywords": [
+        "구글주가"
+      ]
+    },
+    {
+      "region": "앤트로픽 채용",
+      "short": "코딩 면접 폐지",
+      "headline": "코딩 면접\n이제\n안 본다",
+      "ill": {
+        "kind": "icon"
+      },
+      "icon": [
+        "Laptop",
+        "Desktop computer"
+      ],
+      "motion": "sway",
+      "stat1": "10월",
+      "stat1_label": "팀 채용에서 코딩 면접 폐지",
+      "stat2": "8일",
+      "stat2_label": "신입 2명 주말 시제품 → 출시",
+      "source": "Business Insider · The Register",
+      "hook": {
+        "q": "코딩 면접\n이제 안 본다?",
+        "hi": "10월부터 폐지"
+      },
+      "summary": "앤트로픽의 엔지니어링 매니저 펠릭스 리즈버그가 10월부터 팀 채용에서 코딩 면접을 없앴다고 밝혔습니다. 작은 코딩 문제는 이제 Claude가 더 잘 풀어 실력을 가려내지 못한다는 이유이며, 대신 직접 만든 작은 시제품을 본다고 했습니다.",
+      "question": "AI 시대, 신입은 무엇으로 실력을 보여 줘야 할까요?",
+      "keywords": [
+        "코딩면접",
+        "AI채용"
+      ]
+    },
+    {
+      "region": "구글 새 모델",
+      "short": "제미나이 4 카본",
+      "headline": "구글 새 AI\n보안팀에\n먼저 푼다",
+      "ill": {
+        "kind": "number",
+        "value": 59,
+        "suffix": "점",
+        "label": "Artificial Analysis 지수 1위"
+      },
+      "icon": [
+        "Shield",
+        "Locked with key"
+      ],
+      "motion": "pulse",
+      "stat1": "2배+",
+      "stat1_label": "안전한 코드 작성 (이전 모델 대비)",
+      "stat2": "보안팀\n먼저",
+      "stat2_label": "일반 공개는 단계적으로",
+      "source": "Google DeepMind · Ars Technica",
+      "hook": {
+        "q": "구글 새 AI\n왜 보안팀만?",
+        "hi": "지수 59점 1위"
+      },
+      "summary": "구글 딥마인드가 새 최상위 모델 제미나이 4 카본을 발표했습니다. 외부 평가 Artificial Analysis 지수 59점으로 1위에 올랐고, 해킹 방어 능력이 강해 이번 주 보안 방어 기관부터 먼저 쓰고 일반 공개는 단계적으로 넓힙니다.",
+      "keywords": [
+        "제미나이"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "Suno",
+    "short": "대화창에서 노래 만들기",
+    "headline": "ChatGPT·Claude\n대화창에서\n노래 만들기",
+    "point1": "대화로 설명하면 노래 생성",
+    "point1_sub": "Suno MCP 베타 · 무료 플랜도 신청 가능",
+    "point2": "영상 배경음악이 급할 때 쓰면 됩니다.",
+    "point2_sub": "만든 곡은 Suno 보관함에 저장 · 크레딧 차감",
+    "verdict": "써먹기",
+    "source": "Suno 릴리스 노트"
+  },
+  "market": {
+    "date_label": "10/29 마감 (KST 05:00)",
+    "headline": "구글 급락에\n나스닥\n−1.38%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 26184.72,
+        "pct": -1.38
+      },
+      {
+        "name": "알파벳(구글)",
+        "value": 283.82,
+        "pct": -12.64
+      },
+      {
+        "name": "엔비디아",
+        "value": 213.66,
+        "pct": -0.8
+      }
+    ],
+    "note": "마이크로소프트 −0.16% → AI로 돈 버는 곳과 쓰는 곳이 갈림"
+  },
+  "oneliner": "코딩 실력보다\n문제를 고르는 눈이\n살아남는다",
+  "scripts": [
+    "AI에 돈 쏟더니 구글이 12퍼센트? 하루 5천억 달러. 오늘 AI, 1분 정리.",
+    "알파벳이 12.6퍼센트 빠져 역대 최악의 하루. AI 투자로 현금 90억 달러가 나갔습니다.",
+    "앤트로픽 한 팀이 코딩 면접을 없앴습니다. AI가 더 잘 풀어서, 이제 결과물을 봅니다.",
+    "구글 새 모델 제미나이 4 카본이 외부 지수 1위. 해킹 방어에 강해 보안팀부터 먼저 씁니다.",
+    "수노가 챗GPT나 클로드 대화창에서 바로 노래를 만드는 기능을 베타로 열었습니다. 영상 배경음악이 급할 때 쓰면 됩니다.",
+    "나스닥 1.38, 알파벳 12.6, 엔비디아 0.8퍼센트 하락. AI로 버는 곳과 쓰는 곳이 갈렸습니다.",
+    "오늘의 한 줄. 코딩 실력보다 문제를 고르는 눈이 살아남습니다. 코딩 테스트 없는 채용, 내 업계에도 올까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

@@ -63,28 +63,32 @@ def caption(b, short=0):
     one = lambda x: " ".join(str(x or "").split())
     hook = lambda h, fb: one(f"{h.get('q', '')} {h.get('hi', '')}") if h else one(fb)
     tags = lambda kws: " ".join("#" + k.replace(" ", "").lstrip("#") for k in dict.fromkeys(kws) if k)
-    pm = b.get("edition") == "pm"
-    follow = "매일 07:00 세계·시장 / 18:00 국내 이슈를 3분 브리핑으로 → 팔로우하고 받아보기"
+    pm, ai = b.get("edition") == "pm", b.get("topic") == "ai"
+    follow = ("매일 07:00 간밤의 AI / 18:00 국내 AI·테크를 1분 브리핑으로 → 알아야 써먹습니다, 팔로우" if ai else
+              "매일 07:00 세계·시장 / 18:00 국내 이슈를 3분 브리핑으로 → 팔로우하고 받아보기")
+    base = ["AI뉴스", "인공지능"] if ai else ["오늘의뉴스", "경제뉴스"]
     if short:
         it = b["issues"][short - 1]
         lines = [f"📌 {hook(it.get('hook'), it.get('headline'))}", "", one(it.get("summary") or it.get("headline")), ""]
         q = it.get("question") or b.get("question")
         if q: lines.append(f"💬 {one(q)}")
-        lines += [f"{'오늘의 다른 국내 이슈' if pm else '간밤의 다른 세계 이슈'}는 → 프로필의 3분 브리핑에서",
-                  f"출처: {it.get('source', '')}", tags((it.get("keywords") or [])[:3] + ["오늘의뉴스"])]
+        other = ("오늘의 다른 AI 소식은" if pm else "간밤의 다른 AI 소식은") if ai else ("오늘의 다른 국내 이슈는" if pm else "간밤의 다른 세계 이슈는")
+        lines += [f"{other} → 프로필의 {'1' if ai else '3'}분 브리핑에서",
+                  f"출처: {it.get('source', '')}", tags((it.get("keywords") or [])[:3] + base[:1])]
         return "\n".join(lines) + "\n"
     lines = [f"{'🌙' if pm else '🌅'} {hook(b.get('hook'), b.get('title'))}", ""]
     for n, it in zip("➊➋➌", b["issues"]):
         lines.append(f"{n} {one(it.get('short'))} — {one(it.get('summary') or it.get('headline'))}")
     m = b.get("market") or {}
     if m.get("headline"): lines.append(f"📈 {one(m['headline'])}" + (f" ({one(m['note'])})" if m.get("note") else ""))
-    if (b.get("ai") or {}).get("short"): lines.append(f"🤖 {one(b['ai'].get('company'))} {one(b['ai']['short'])}")
+    if (b.get("ai") or {}).get("short"):
+        lines.append(f"{'🛠 오늘 써먹기:' if ai else '🤖'} {one(b['ai'].get('company'))} {one(b['ai']['short'])}")
     lines.append("")
     if b.get("question"): lines += [f"💬 {one(b['question'])}", ""]
     srcs = [it.get("source") for it in b["issues"]] + [(b.get("ai") or {}).get("source")]
     kws = list(b.get("keywords") or []) + [k for it in b["issues"] for k in (it.get("keywords") or [])[:1]]
     lines += [follow, "출처: " + " · ".join(dict.fromkeys(s for s in srcs if s)),
-              tags(kws[:3] + ["오늘의뉴스", "경제뉴스"])]
+              tags(kws[:3] + base)]
     return "\n".join(lines) + "\n"
 
 if os.environ.get("CAPTION_ONLY") == "1":

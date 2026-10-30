@@ -185,6 +185,8 @@ const esc=s=>String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;');
 
 // ---- static fill ----
 const PM=C.edition==='pm'; if(PM) $('stage').classList.add('pm');
+// topic "ai" (AI 테크 계정, CONTENT_RULES.md): AI wording on the tags, CTA and short end card
+const AI=C.topic==='ai';
 // C.short = n (1-3): a one-issue short = hook cover, issue scene n, end card
 const SHORT=C.short||0;
 const ORDER=SHORT?[0,SHORT,7]:PM?[0,1,2,3,5,6]:[0,1,2,3,4,5,6];
@@ -193,10 +195,10 @@ const one=s=>String(s||'').replace(/\s*\n\s*/g,' ');
 // cover: date_short "10.22 THU" -> "10.22" with "목요일 / 아침 브리핑" beside it
 const DM=/^\s*(\d{1,2})\.(\d{1,2})\s*([A-Za-z]{3})?/.exec(C.date_short||'');
 const DOW=DM&&{MON:'월',TUE:'화',WED:'수',THU:'목',FRI:'금',SAT:'토',SUN:'일'}[(DM[3]||'').toUpperCase()];
-$('s1ed').textContent=PM?'EVENING BRIEF':'MORNING BRIEF';
+$('s1ed').textContent=(AI?'AI ':'')+(PM?'EVENING BRIEF':'MORNING BRIEF');
 $('s1md').textContent=DM?`${+DM[1]}.${DM[2].padStart(2,'0')}`:(C.date_short||'');
 $('s1dw').textContent=DOW?DOW+'요일':'';
-$('s1kd').textContent=SHORT?'15초 이슈':PM?'저녁 브리핑':'아침 브리핑';
+$('s1kd').textContent=SHORT?(AI?'15초 AI':'15초 이슈'):(AI?(PM?'저녁 AI 브리핑':'아침 AI 브리핑'):(PM?'저녁 브리핑':'아침 브리핑'));
 // hook: question line, then the number line on a marker stroke (long number lines shrink to stay on one row)
 const fit=(t,base,max)=>{ const n=Math.max(...String(t||'').split('\n').map(l=>l.length)); return n>max?Math.round(base*max/n):base; };
 const HOOK=SHORT?C.issues[SHORT-1].hook:C.hook;
@@ -264,7 +266,7 @@ C.issues.forEach((it,k)=>{ const s=`s${k+2}`;
   $(s+'ill').innerHTML=ill(it.ill,it.art); if(it.art&&['bars','bridge'].includes((it.ill||{}).kind)) $(s+'ill').classList.add('withart');
 });
 if(!PM){
-  $('s5tag').textContent='새로운 AI 기술 · '+(C.ai.company||'');
+  $('s5tag').textContent=(AI?'오늘 써먹기 · ':'새로운 AI 기술 · ')+(C.ai.company||'');
   $('s5h').dataset.text=C.ai.headline||'';
   $('s5at').textContent=C.ai.point1||''; $('s5as').textContent=C.ai.point1_sub||'';
   $('s5bt').textContent=C.ai.point2||''; $('s5bs').textContent=C.ai.point2_sub||'';
@@ -272,21 +274,22 @@ if(!PM){
   $('s5src').textContent='출처: '+(C.ai.source||'');
   const w=$('wave'); for(let i=0;i<40;i++){const b=document.createElement('div');b.style.cssText='width:12px;height:30px;background:currentColor;border-radius:6px';w.appendChild(b);}
 }
-$('s6tag').textContent=PM?'국내 증시 마감 · '+(C.market.date_label||''):'미국 증시 흐름 · '+(C.market.date_label||'');
+$('s6tag').textContent=(AI?(PM?'AI·반도체주 마감 · ':'AI 빅테크 주가 · '):(PM?'국내 증시 마감 · ':'미국 증시 흐름 · '))+(C.market.date_label||'');
 $('s6h').dataset.text=C.market.headline||'';
-const M=PM?(C.market.rows||[]).slice(0,3).map((r,i)=>[['m1','m2','m3'][i],r]):[['m1',C.market.dow],['m2',C.market.spx],['m3',C.market.ndx]];
+const ROWS=PM||C.market.rows;
+const M=ROWS?(C.market.rows||[]).slice(0,3).map((r,i)=>[['m1','m2','m3'][i],r]):[['m1',C.market.dow],['m2',C.market.spx],['m3',C.market.ndx]];
 ['m1','m2','m3'].forEach((id,i)=>{ if(i>=M.length) $(id).style.display='none'; });
-M.forEach(([id,m])=>{ if(PM) $(id).querySelector('.sub').textContent=m.name||''; $(id+'p').style.color=(m.pct>=0)?'#E8202A':'#1F5FD6'; });
+M.forEach(([id,m])=>{ if(ROWS) $(id).querySelector('.sub').textContent=m.name||''; $(id+'p').style.color=(m.pct>=0)?'#E8202A':'#1F5FD6'; });
 $('m4t').innerHTML=br(C.market.note);
 if(PM) $('s6').querySelector('.foot span:first-child').textContent='상승 = 빨강 · 하락 = 파랑';
 $('s7h').dataset.text=C.oneliner||'';
-$('ctaBig').innerHTML=PM?'지금 팔로우 안 하면<br>내일 저녁엔 못 만나요':'지금 팔로우 안 하면<br>내일 아침엔 못 만나요';
-$('ctaSub').textContent=PM?'♥ 좋아요 · ✓ 매일 저녁 6시':'♥ 좋아요 · ✓ 매일 아침 7시';
+$('ctaBig').innerHTML=AI?'알아야 써먹고<br>써먹어야 살아남는다':PM?'지금 팔로우 안 하면<br>내일 저녁엔 못 만나요':'지금 팔로우 안 하면<br>내일 아침엔 못 만나요';
+$('ctaSub').textContent=(PM?'♥ 좋아요 · ✓ 매일 저녁 6시':'♥ 좋아요 · ✓ 매일 아침 7시')+(AI?' AI 브리핑':'');
 if(SHORT){
   const it=C.issues[SHORT-1];
   $(`s${SHORT+1}tag`).textContent=it.region||'';
-  $('s8h').innerHTML=br(PM?'오늘의 다른\n국내 이슈는?':'간밤의 다른\n세계 이슈는?');
-  $('s8s').innerHTML=br(PM?'프로필의 3분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 3분 아침 브리핑에서\n매일 아침 7시 · 팔로우');
+  $('s8h').innerHTML=br(AI?(PM?'오늘의 다른\nAI 소식은?':'간밤의 다른\nAI 소식은?'):PM?'오늘의 다른\n국내 이슈는?':'간밤의 다른\n세계 이슈는?');
+  $('s8s').innerHTML=br(AI?(PM?'프로필의 1분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 1분 아침 브리핑에서\n매일 아침 7시 · 팔로우'):PM?'프로필의 3분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 3분 아침 브리핑에서\n매일 아침 7시 · 팔로우');
 }
 { const a=SHORT?C.issues[SHORT-1].art:(C.issues[0]||{}).art; if(a) $('s1ill').innerHTML=artHtml(a,SHORT?(a.ai?320:300):(a.ai?250:230)); }
 // ---- first-3-seconds hook ----
@@ -294,7 +297,7 @@ const STYLE=C.hook_style||'';
 const PH=SHORT?C.issues[SHORT-1].hook:C.hook;
 const PART=SHORT?C.issues[SHORT-1].art:(C.issues[0]||{}).art;
 if(STYLE==='punch'&&PH){
-  $('ptag').textContent=`${PM?'EVENING':'MORNING'} BRIEF · ${$('s1md').textContent}`;
+  $('ptag').textContent=`${AI?'AI ':''}${PM?'EVENING':'MORNING'} BRIEF · ${$('s1md').textContent}`;
   $('pq').innerHTML=br(PH.q);
   $('phi').parentNode.style.fontSize=fit(one(PH.hi),168,6)+'px';
   if(PART) $('part').innerHTML=artHtml(PART,PART.ai?400:380);
@@ -335,7 +338,7 @@ function animIll(kind,root,d,t){
     nA.textContent=(p*d.a).toFixed(d.decimals||0)+(d.unit||''); nA.setAttribute('y',400-p*d.a*sc-24);
     nB.textContent=(p*d.b).toFixed(d.decimals||0)+(d.unit||''); nB.setAttribute('y',400-p*d.b*sc-24); }
   else if(kind==='globe'&&root.querySelector('.glb')){ const g=root.querySelector('.glb'); g.style.transformOrigin='230px 230px'; g.style.transform=`rotate(${Math.sin(t*0.8)*6}deg)`; root.querySelector('.mer').setAttribute('rx',90*Math.abs(Math.cos(t*0.9))+4); const dot=root.querySelector('.dot'); dot.setAttribute('r',18+6*Math.abs(Math.sin(t*4))); }
-  else if(kind==='alert'||kind==='number'){ const c=root.querySelector('.cnt'); if(c){ const p=easeOut(clamp((t-0.5)/1.5)); c.textContent=Math.round(p*(d.value||0)).toLocaleString('en-US')+(d.suffix||''); }
+  else if(kind==='alert'||kind==='number'){ const c=root.querySelector('.cnt'); if(c){ const p=easeOut(clamp((t-0.5)/1.5)); const dec=(String(d.value||0).split('.')[1]||'').length; c.textContent=(p*(d.value||0)).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec})+(d.suffix||''); }
     const s=root.querySelector('.spin'); if(s){ s.style.transformOrigin='150px 150px'; s.style.transform=`rotate(${t*20}deg) scale(${0.9+0.1*Math.sin(t*4)})`; } }
   else if(kind==='bridge'){ root.querySelectorAll('.draw').forEach(e=>{ const L=1400; const q=clamp((t-0.4)/1.6); e.style.strokeDasharray=L; e.style.strokeDashoffset=L*(1-q); });
     root.querySelector('.cables').style.opacity=clamp((t-1.8)/0.5); root.querySelector('.wave').style.transform=`translateX(${-(t*40)%120}px)`; }
