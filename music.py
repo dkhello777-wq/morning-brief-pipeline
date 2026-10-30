@@ -1,8 +1,8 @@
 """Synthesized, royalty-free music beds shared by build.py and carousel.py.
 Several styles rotate by date so the account doesn't play the same loop every day:
 bed(seconds, path, style=None) writes a stereo 44.1kHz wav; style None picks STYLES[today's KST date % len],
-MUSIC=<name> (env) or a json "music" field forces one. The AI account (topic "ai") rotates its own three
-electronic styles (AI_STYLES). Everything is generated from numpy, nothing is downloaded.
+MUSIC=<name> (env) or a json "music" field forces one. The AI account (topic "ai") rotates its three
+electronic styles (AI_STYLES) mixed with the original five (AI_ROTATION). Everything is generated from numpy, nothing is downloaded.
 """
 import datetime, os, wave
 import numpy as np
@@ -119,16 +119,18 @@ STYLES = {
     "futureglass": dict(bpm=90, chords=[[64, 67, 71, 74], [60, 64, 67, 71], [62, 65, 69, 72], [59, 62, 66, 69]], bass=[40, 36, 38, 35]),
 }
 AI_STYLES = ["synthwave", "techpulse", "futureglass"]
+# the AI account mixes its electronic beds with the original five so no two days in a row sound alike
+AI_ROTATION = ["synthwave", "pulse", "techpulse", "lofi", "futureglass", "upbeat", "synthwave", "bright", "techpulse", "piano", "futureglass"]
 
 def pick(style=None, when=None, offset=0, topic=None):
     """Explicit style (or MUSIC env) wins; otherwise rotate by KST date: the AI account (topic "ai") rotates
-    AI_STYLES, everything else the original five."""
+    AI_ROTATION (its three electronic beds mixed with the original five), everything else the original five."""
     style = style or os.environ.get("MUSIC") or None
     if style:
         assert style in STYLES, f"music must be one of {', '.join(STYLES)}"
         return style
     when = when or (datetime.datetime.utcnow() + datetime.timedelta(hours=9)).date()  # KST
-    names = AI_STYLES if topic == "ai" else [n for n in STYLES if n not in AI_STYLES]
+    names = AI_ROTATION if topic == "ai" else [n for n in STYLES if n not in AI_STYLES]
     return names[(when.toordinal() + offset) % len(names)]
 
 def bed(LEN, path, style=None, fade_in=0.1, fade_out=3.0, cuts=(), topic=None):
