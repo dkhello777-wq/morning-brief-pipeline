@@ -47,3 +47,14 @@ Avoiding repeats: set `RECENT_ICONS=recent_icons.txt` (one name per line, from r
 used twice in one reel. The icons actually used are written to `out_dir/icons_used.txt`.
 
 Check art before a full build: `CHECK_ART=1 python3 build.py brief.json out_dir` prints what each issue resolved to.
+
+## Copy of every rendered video in Google Drive
+
+[`drive_copy.gs`](drive_copy.gs) is a Google Apps Script that runs in the owner's Google account (not in this repo's
+Actions). Every 10 minutes it reads the public `releases.atom` feed (GitHub API as a fallback), and for each new
+`render-<id>` release that has `status.json` it saves every video in `status.json.videos` plus its caption to
+My Drive > morning-brief > 제작 영상 > `<date>` as `2026-10-31 저녁.mp4`, `2026-10-31 저녁 숏컷1.mp4`,
+`2026-11-01 속보 11시.mp4` and `... 캡션.txt`. A re-made release replaces the same-named files (the old ones go to the trash).
+No secrets: it only reads public release files. Setup: paste it into a new project at https://script.new, run `setup`
+once and allow the permissions; `stop` removes the 10-minute trigger. Copied releases are remembered in the script
+properties; a release that fails 6 runs in a row is skipped and reported through the Apps Script failure e-mail.
