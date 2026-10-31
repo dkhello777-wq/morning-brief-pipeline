@@ -4,7 +4,17 @@ Rules for whoever writes `brief.json` (the scheduled tasks). They put the accoun
 one hook cover, briefings of 60 seconds or less, one-issue shorts, and a fixed caption template.
 `build.py` writes the captions and warns when a reel runs long; the rest is up to the writer.
 
-## Account topic: AI 테크 (from 2026-10-30)
+## Schedule since 2026-10-31
+
+Viewers found the all-AI account too hard, so on 2026-10-31 팀장 moved the 07:00 and 18:00 briefs, their shorts, the
+Sunday carousel and breaking news back to the economy and news topics below (no `"topic"` field). The full-bleed photo
+design stays, and the market scene now has a photo too (`market.photo`). AI news moved to one **12:00 AI brief** a day
+(am structure, `"topic": "ai"`, no shorts), a 1–2 week trial on the same account; its views are then compared with
+the 07:00 and 18:00 briefs to decide whether AI gets its own account. AM shorts now post at 08:27 and 15:27 so nothing
+lands right after the 12:00 brief. The AI section below describes the 12:00 brief (its morning row); ignore its
+evening and Sunday rows.
+
+## AI topic (the 12:00 AI brief)
 
 팀장 decided on 2026-10-30 to narrow the account to AI tech. Concept: **"피할 수 없다, 정면으로 받아들이자. 알아야 써먹고,
 그래야 살아남는다."** Every post answers two things: what happened in AI, and what it means for the viewer's work, money or
@@ -16,7 +26,7 @@ What each slot covers (the rest of this file still applies: hooks, lengths, capt
 
 | slot | issues (3) | AI scene → "오늘 써먹기" | market scene |
 |---|---|---|---|
-| 07:00 morning | overnight global AI: model and product launches (OpenAI, Google, Anthropic, Meta, Microsoft, Apple, Nvidia, xAI, Mistral, DeepSeek...), big-tech AI earnings and spending, AI and jobs/hiring, regulation (US, EU, China) | one tool the viewer can try today, ending "~할 때 쓰면 됩니다." | `market.rows`: Nasdaq plus the two AI stocks that moved most (Nvidia, Alphabet, Microsoft, Meta...) |
+| 12:00 AI brief (was 07:00) | the last 24 hours of global AI: model and product launches (OpenAI, Google, Anthropic, Meta, Microsoft, Apple, Nvidia, xAI, Mistral, DeepSeek...), big-tech AI earnings and spending, AI and jobs/hiring, regulation (US, EU, China) | one tool the viewer can try today, ending "~할 때 쓰면 됩니다." | `market.rows`: Nasdaq plus the two AI stocks that moved most (Nvidia, Alphabet, Microsoft, Meta...) |
 | 18:00 evening | Korea AI and tech: Samsung, SK hynix, Naver, Kakao, LG, startups; government AI policy (AI 기본법, GPU, data centres); AI at Korean workplaces, schools and jobs | none | `market.rows`: KOSPI, Samsung Electronics, SK hynix (or the AI stock that moved most) |
 | Sun weekly carousel | "이번 주 꼭 알아야 할 AI 5" from the week's briefs: launches, money, jobs, one tool | | |
 
