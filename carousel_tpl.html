@@ -62,7 +62,7 @@ const foot=(k,l)=>`<div class="foot"><span>${esc(l)}</span><span>${k}/${N}</span
 const md=C.dates||C.week_label||'';
 const bg=a=>a?`<div class="bg" style="background-image:url(${a.src})"></div><div class="shade"></div>`:'';
 const CA=(C.items[0]||{}).art;  // the cover uses the first item's photo
-let h=`<div class="slide cover${CA?' full':''}">${bg(CA)}<div class="cvtop"><span>${esc(C.kicker||'WEEKLY BRIEF')}</span><span>${C.topic==='ai'?'DAY.BRIEF':'7AM.BRIEF'}</span></div><div class="cvrule"></div>
+let h=`<div class="slide cover${CA?' full':''}">${bg(CA)}<div class="cvtop"><span>${esc(C.kicker||'WEEKLY BRIEF')}</span><span>DAY.BRIEF</span></div><div class="cvrule"></div>
   <div class="md" style="font-size:${Math.min(236,Math.round(1500/Math.max(md.length,1)))}px">${esc(md)}</div>${C.dates&&C.week_label?`<div class="wk">${esc(C.week_label)} · ${esc(C.sub||'주간 정리')}</div>`:''}
   <div class="ttl">${String(C.title||'').split('\n').map(l=>`<span>${esc(l)}</span>`).join('<br>')}</div>
   <div class="cvlist">${C.items.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.tag)}</div>`).join('')}</div>${foot(1,C.cover_foot||'저장해두고 다시 보기 →')}${CA?`<div class="cred">${esc(CA.credit)}</div>`:''}</div>`;
@@ -70,7 +70,7 @@ C.items.forEach((it,i)=>{ const F=!!it.art;
   h+=`<div class="slide${F?' full':i%2?' dark':''}">${bg(it.art)}<div class="tag">${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>${F?'<div class="gap"></div>':''}
   ${F&&it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="h2">${br(it.headline)}</div>${!F&&it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="box">${br(it.body)}</div>
   ${foot(i+2,'출처: '+(it.source||''))}${F?`<div class="cred">${esc(it.art.credit)}</div>`:''}</div>`; });
-h+=`<div class="slide dark"><div class="tag">${C.topic==='ai'?'day.brief':'7am.brief'}</div><div class="h1">${br(C.end||'저장해두고\n월요일에\n다시 보기')}</div>
+h+=`<div class="slide dark"><div class="tag">day.brief</div><div class="h1">${br(C.end||'저장해두고\n월요일에\n다시 보기')}</div>
   <div class="box">매일 아침 7시 세계·시장<br>매일 저녁 6시 국내 이슈<br>3분 브리핑 → 팔로우</div>${foot(N,'정보 제공 목적 · 투자 권유 아님')}</div>`;
 document.getElementById('deck').innerHTML=h;
 window.show=k=>document.querySelectorAll('.slide').forEach((s,i)=>s.classList.toggle('on',i===k));

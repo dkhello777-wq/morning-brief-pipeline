@@ -123,14 +123,14 @@ AI_STYLES = ["synthwave", "techpulse", "futureglass"]
 AI_ROTATION = ["synthwave", "pulse", "techpulse", "lofi", "futureglass", "upbeat", "synthwave", "bright", "techpulse", "piano", "futureglass"]
 
 def pick(style=None, when=None, offset=0, topic=None):
-    """Explicit style (or MUSIC env) wins; otherwise rotate by KST date: the AI account (topic "ai") rotates
-    AI_ROTATION (its three electronic beds mixed with the original five), everything else the original five."""
+    """Explicit style (or MUSIC env) wins; otherwise rotate by KST date through AI_ROTATION (the three electronic
+    beds mixed with the original five), whatever the topic (2026-10-31: 팀장 kept the mix after going back to news)."""
     style = style or os.environ.get("MUSIC") or None
     if style:
         assert style in STYLES, f"music must be one of {', '.join(STYLES)}"
         return style
     when = when or (datetime.datetime.utcnow() + datetime.timedelta(hours=9)).date()  # KST
-    names = AI_ROTATION if topic == "ai" else [n for n in STYLES if n not in AI_STYLES]
+    names = AI_ROTATION
     return names[(when.toordinal() + offset) % len(names)]
 
 def bed(LEN, path, style=None, fade_in=0.1, fade_out=3.0, cuts=(), topic=None):

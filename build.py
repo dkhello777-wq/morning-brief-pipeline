@@ -93,7 +93,7 @@ def caption(b, short=0):
     if b.get("question"): lines += [f"💬 {one(b['question'])}", ""]
     srcs = [it.get("source") for it in b["issues"]] + [(b.get("ai") or {}).get("source")]
     kws = list(b.get("keywords") or []) + [k for it in b["issues"] for k in (it.get("keywords") or [])[:1]]
-    lines += [follow, "출처: " + " · ".join(dict.fromkeys(s for s in srcs if s))] + photo_line(b["issues"] + [b.get("ai") or {}]) + [
+    lines += [follow, "출처: " + " · ".join(dict.fromkeys(s for s in srcs if s))] + photo_line(b["issues"] + [b.get("ai") or {}, b.get("market") or {}]) + [
               tags(kws[:3] + base)]
     return "\n".join(lines) + "\n"
 
@@ -186,6 +186,10 @@ if brief.get("ai") and brief["ai"].get("photo"):  # the 오늘 써먹기 scene: 
     a = photo_art(brief["ai"]["photo"], "photo_ai")
     if a: brief["ai"]["art"] = a
     print("art ai", "PHOTO " + a["credit"] if a else "none (sound-wave box)", flush=True)
+if (brief.get("market") or {}).get("photo"):  # the market scene: a photo (exchange, trading floor) behind the rows
+    a = photo_art(brief["market"]["photo"], "photo_market")
+    if a: brief["market"]["art"] = a
+    print("art market", "PHOTO " + a["credit"] if a else "none (plain card)", flush=True)
 if not SHORT:
     (out / "art_used.json").write_text(json.dumps({str(k): it["icon_used"] for k, it in enumerate(brief["issues"], 1) if it.get("icon_used")}))
     (out / "icons_used.txt").write_text("".join(it["icon_used"] + "\n" for it in brief["issues"] if it.get("icon_used") not in (None, "AI", "PHOTO")))
