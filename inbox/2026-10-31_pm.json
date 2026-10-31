@@ -85,5 +85,6 @@
   "오늘의 한 줄. 한 주 숫자보다 내 계획을 먼저 보세요. 강남 집값 하락, 서울 전체로 번질까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
  ],
  "voice_id": "tc_68d4b115f0486108a7eefb37",
- "shorts_to_build": [1]
+ "shorts_to_build": [1],
+ "render_attempt": 2
 }

@@ -47,7 +47,8 @@ base = f"https://github.com/{REPO}/releases/download/{tag}/"
 status = {"id": rid, "videos": {k: base + v for k, v in videos.items()},
           "captions": {k: (out / v).read_text() for k, v in captions.items()}, "log": log}
 (out / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=1))
-files = [str(f) for f in files if f.exists()] + [str(out / "status.json")]
+files = [str(f) for f in files if f.exists() and f.stat().st_size] + [str(out / "status.json")]  # GitHub refuses empty assets
+subprocess.run(["gh", "release", "delete", tag, "-y", "--cleanup-tag"], cwd=HERE)  # a half-made release from a failed run
 subprocess.run(["gh", "release", "create", tag, "--title", tag, "--notes", f"Rendered from inbox/{rid}.json",
                 "--latest=false", *files], check=True, cwd=HERE)
 print("released", base + "status.json")

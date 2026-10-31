@@ -28,7 +28,7 @@ jobs:
           else ids=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'inbox/*.json' | sed 's#inbox/##; s#\.json$##')
           fi
           todo=""
-          for id in $ids; do gh release view "render-$id" >/dev/null 2>&1 && echo "already rendered: $id" || todo="$todo $id"; done
+          for id in $ids; do gh release view "render-$id" --json assets -q ".assets[].name" 2>/dev/null | grep -qx status.json && echo "already rendered: $id" || todo="$todo $id"; done
           echo "ids=$todo" >> "$GITHUB_OUTPUT"; echo "to render:$todo"
       - name: Install renderer
         if: steps.pick.outputs.ids != ''
