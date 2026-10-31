@@ -1,0 +1,83 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:Pretendard;src:url(fonts/PretendardVariable.ttf);font-weight:100 900}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:#0B0F1A}
+#stage{position:relative;width:1080px;height:1350px;overflow:hidden;font-family:Pretendard,'Noto Sans CJK KR',sans-serif;color:#fff;background:#0B0F1A}
+#stage.reel{height:1920px}
+#bg{position:absolute;inset:0;background-size:cover;background-position:center;transform-origin:60% 40%}
+#shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,15,26,.55) 0%,rgba(11,15,26,.15) 28%,rgba(11,15,26,.55) 55%,rgba(11,15,26,.96) 78%,#0B0F1A 100%),linear-gradient(90deg,rgba(11,15,26,.75) 0%,rgba(11,15,26,0) 60%)}
+.pad{position:absolute;left:64px;right:64px}
+#top{top:52px;display:flex;justify-content:space-between;align-items:center;font-size:26px;font-weight:700;letter-spacing:.04em;opacity:.92}
+#mark{display:flex;align-items:center;gap:14px}
+#mark i{width:44px;height:44px;border-radius:50%;background:#FFE600;display:inline-block;position:relative}
+#mark i:after{content:'';position:absolute;left:8px;right:8px;bottom:12px;height:4px;background:#0B0F1A;border-radius:2px}
+#brand{display:flex;gap:12px;align-items:center;font-size:26px}
+#brand b{background:rgba(255,255,255,.14);padding:6px 14px;border-radius:999px;font-weight:700}
+#num{top:420px}
+#stage.reel #num{top:640px}
+#nums{display:flex;align-items:center;gap:26px;white-space:nowrap}
+#old{position:relative;font-size:104px;font-weight:800;color:rgba(255,255,255,.55);letter-spacing:-.03em}
+#old s{position:absolute;left:-6px;top:52%;height:12px;width:0;background:#FF3B3B;border-radius:6px;transform:rotate(-6deg)}
+#arr{font-size:70px;font-weight:300;opacity:.85}
+#new{font-size:168px;font-weight:900;letter-spacing:-.04em;line-height:1;text-shadow:0 8px 40px rgba(0,0,0,.45)}
+#numlab{margin-top:14px;display:inline-block;font-size:30px;font-weight:600;background:rgba(11,15,26,.72);padding:10px 18px;border-radius:10px;line-height:1.4}
+#body{bottom:160px}
+#stage.reel #body{bottom:330px}
+#tag{font-size:28px;font-weight:700;display:flex;align-items:center;gap:14px;margin-bottom:22px}
+#tag:before{content:'';width:14px;height:14px;border-radius:50%;background:#FFE600}
+#tag span{opacity:.75;font-weight:600}
+#tag em{font-style:normal;width:2px;height:24px;background:rgba(255,255,255,.4)}
+#head{font-size:84px;font-weight:900;line-height:1.16;letter-spacing:-.035em}
+#head .ln{display:block;overflow:hidden}
+#head .ln>span{display:inline-block}
+#head mark{background:none;color:#FFE600;position:relative}
+#foot{bottom:56px;display:flex;justify-content:space-between;font-size:22px;opacity:.6;border-top:1px solid rgba(255,255,255,.22);padding-top:22px}
+#stage.reel #foot{bottom:220px}
+#swipe{font-weight:700}
+</style></head>
+<body><div id="stage">
+<div id="bg"></div><div id="shade"></div>
+<div class="pad" id="top"><div id="mark"><i></i><span>DAY.BRIEF</span></div><div id="brand"><b id="kick"></b></div></div>
+<div class="pad" id="num"><div id="nums"><div id="old"><span id="oldt"></span><s id="strike"></s></div><div id="arr">→</div><div id="new"></div></div><div id="numlab"></div></div>
+<div class="pad" id="body"><div id="tag"></div><div id="head"></div></div>
+<div class="pad" id="foot"><span id="credit"></span><span id="swipe">옆으로 넘겨 보세요 →</span></div>
+</div>
+<script>
+// card: {photo, kicker, old, new, num_label, tag, sub, head ("[[accent]]" marks the accent words, \n breaks), credit}
+const C=window.CARD, REEL=!!window.REEL;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+if(REEL) $('stage').classList.add('reel');
+$('bg').style.backgroundImage=`url(${C.photo})`;
+$('kick').textContent=C.kicker||'AI NEWS';
+$('oldt').textContent=C.old||''; if(!C.old){$('old').style.display='none';$('arr').style.display='none';}
+$('numlab').innerHTML=esc(C.num_label).replace(/\n/g,'<br>'); if(!C.num_label) $('numlab').style.display='none';
+$('tag').innerHTML=`${esc(C.tag)}<em></em><span>${esc(C.sub)}</span>`;
+$('head').innerHTML=String(C.head||'').split('\n').map(l=>`<span class="ln"><span>${esc(l).replace(/\[\[(.+?)\]\]/g,'<mark>$1</mark>')}</span></span>`).join('');
+$('credit').textContent=C.credit||'';
+// the new number counts up from 0 (keeps its prefix/suffix and decimals)
+const NM=/^(.*?)(\d[\d,]*(?:\.\d+)?)(.*)$/.exec(C.new||'');
+const clamp=x=>Math.max(0,Math.min(1,x)), ease=x=>1-Math.pow(1-x,3);
+function newText(p){ if(!NM) return C.new||''; const raw=NM[2].replace(/,/g,''), dec=(raw.split('.')[1]||'').length, v=parseFloat(raw)*p;
+  let s=v.toFixed(dec); if(NM[2].includes(',')) s=Number(s).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec}); return NM[1]+s+NM[3]; }
+// seek(t): the still card is seek(99); the reel plays 0 -> TOTAL
+window.TOTAL=C.seconds||6;
+window.seek=function(t){
+  fitNums();
+  const z=REEL?1.0+0.10*clamp(t/TOTAL):1.04; $('bg').style.transform=`scale(${z}) translateX(${REEL?-18*clamp(t/TOTAL):0}px)`;
+  const a=ease(clamp((t-0.15)/0.5)); $('num').style.opacity=a; $('num').style.transform=`translateY(${(1-a)*40}px)`;
+  $('strike').style.width=(ease(clamp((t-0.55)/0.35))*(($('oldt').offsetWidth||0)+12))+'px';
+  $('new').textContent=newText(ease(clamp((t-0.75)/0.9)));
+  const pop=clamp((t-1.65)/0.25); $('new').style.transform=`scale(${1+0.08*Math.sin(pop*Math.PI)})`; $('new').style.transformOrigin='left center';
+  $('tag').style.opacity=ease(clamp((t-1.0)/0.4));
+  document.querySelectorAll('#head .ln>span').forEach((s,i)=>{ const p=ease(clamp((t-1.15-0.18*i)/0.5)); s.style.transform=`translateY(${(1-p)*110}%)`; });
+  document.querySelectorAll('#head mark').forEach(m=>{ const p=clamp((t-1.9)/0.4); m.style.color=p>0?'#FFE600':'#fff'; m.style.textShadow=`0 0 ${30*Math.sin(p*Math.PI)}px rgba(255,230,0,.8)`; });
+  $('foot').style.opacity=0.6*clamp((t-1.8)/0.4);
+};
+// shrink the number row to fit the card width (measured with the final number)
+let FIT=0; function fitNums(){ if(FIT) return; $('new').textContent=C.new||''; $('nums').style.zoom=1;
+  const w=$('nums').scrollWidth, max=1080-128; FIT=w>max?max/w:1; $('nums').style.zoom=FIT.toFixed(3); }
+window.seek(0);
+</script></body></html>

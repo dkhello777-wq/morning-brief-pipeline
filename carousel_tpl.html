@@ -26,6 +26,27 @@ body{background:#000;font-family:'Noto Sans CJK KR',sans-serif;color:#111;overfl
 .cover .cvlist{margin-top:64px;display:flex;flex-direction:column;gap:18px;font-size:36px;font-weight:600}
 .cover .cvlist b{color:#8B877D;font-weight:700;margin-right:22px}
 .cover .foot{border-color:#141414}
+/* a real photo on an item slide (carousel.py "photo"): framed like the boxes, credit line in the corner */
+.ph{position:relative;border:5px solid #111;box-shadow:14px 14px 0 #111;overflow:hidden;flex-shrink:0}
+.dark .ph{border-color:#FFE600;box-shadow:14px 14px 0 #FFE600}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block}
+.ph span{position:absolute;right:0;bottom:0;background:rgba(0,0,0,.55);color:#fff;font:600 18px/1.3 'Pretendard Variable',Pretendard,sans-serif;padding:6px 12px;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+/* full-bleed photo slide (item or cover with a photo): picture behind a dark gradient, white text, yellow accents */
+.slide{position:relative;overflow:hidden}
+.slide.full{background:#0B0F1A;color:#fff;font-family:'Pretendard Variable',Pretendard,'Noto Sans CJK KR',sans-serif}
+.slide.full>.bg{position:absolute;inset:0;background-size:cover;background-position:50% 28%;z-index:0}
+.slide.full>.shade{position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(11,15,26,.8) 0%,rgba(11,15,26,.3) 25%,rgba(11,15,26,.25) 40%,rgba(11,15,26,.82) 62%,rgba(11,15,26,.96) 100%)}
+.slide.full>*:not(.bg):not(.shade):not(.cred){position:relative;z-index:1}
+.slide.full .tag{background:#FFE600;color:#111;border-radius:999px}
+.slide.full .h2,.slide.full .ttl,.slide.full .md{text-shadow:0 6px 30px rgba(0,0,0,.55)}
+.slide.full .num{background:none;color:#FFE600;padding:0;text-shadow:0 8px 40px rgba(0,0,0,.6)}
+.slide.full .box{background:rgba(11,15,26,.72);color:#fff;border:2px solid rgba(255,255,255,.28);box-shadow:none;border-radius:20px}
+.slide.full .foot{border-color:rgba(255,255,255,.45);color:#fff}
+.slide.full .cred{position:absolute;left:100px;right:100px;bottom:34px;z-index:1;font-size:20px;font-weight:600;opacity:.62;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.slide.full .gap{flex:1;min-height:120px}
+.cover.full .cvtop,.cover.full .wk,.cover.full .cvlist b{color:rgba(255,255,255,.72)}
+.cover.full .cvrule{background:#fff}
+.cover.full .ttl span{background:none;color:#FFE600}
 .list{display:flex;flex-direction:column;gap:18px;font-size:40px;font-weight:900}
 .foot{margin-top:auto;font-size:28px;font-weight:900;border-top:5px solid currentColor;padding-top:18px;display:flex;justify-content:space-between}
 </style></head><body>
@@ -39,14 +60,17 @@ const foot=(k,l)=>`<div class="foot"><span>${esc(l)}</span><span>${k}/${N}</span
 // cover: the week's dates ("10.19–10.25", or week_label) in large type so it is told apart in the profile grid;
 // a breaking post (kind "breaking") sets kicker ("BREAKING"), sub (who announced it) and cover_foot
 const md=C.dates||C.week_label||'';
-let h=`<div class="slide cover"><div class="cvtop"><span>${esc(C.kicker||'WEEKLY BRIEF')}</span><span>7AM.BRIEF</span></div><div class="cvrule"></div>
+const bg=a=>a?`<div class="bg" style="background-image:url(${a.src})"></div><div class="shade"></div>`:'';
+const CA=(C.items[0]||{}).art;  // the cover uses the first item's photo
+let h=`<div class="slide cover${CA?' full':''}">${bg(CA)}<div class="cvtop"><span>${esc(C.kicker||'WEEKLY BRIEF')}</span><span>DAY.BRIEF</span></div><div class="cvrule"></div>
   <div class="md" style="font-size:${Math.min(236,Math.round(1500/Math.max(md.length,1)))}px">${esc(md)}</div>${C.dates&&C.week_label?`<div class="wk">${esc(C.week_label)} · ${esc(C.sub||'주간 정리')}</div>`:''}
   <div class="ttl">${String(C.title||'').split('\n').map(l=>`<span>${esc(l)}</span>`).join('<br>')}</div>
-  <div class="cvlist">${C.items.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.tag)}</div>`).join('')}</div>${foot(1,C.cover_foot||'저장해두고 다시 보기 →')}</div>`;
-C.items.forEach((it,i)=>{ h+=`<div class="slide${i%2?' dark':''}"><div class="tag">${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>
-  <div class="h2">${br(it.headline)}</div>${it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="box">${br(it.body)}</div>
-  ${foot(i+2,'출처: '+(it.source||''))}</div>`; });
-h+=`<div class="slide dark"><div class="tag">7am.brief</div><div class="h1">${br(C.end||'저장해두고\n월요일에\n다시 보기')}</div>
+  <div class="cvlist">${C.items.map((it,i)=>`<div><b>0${i+1}</b>${esc(it.tag)}</div>`).join('')}</div>${foot(1,C.cover_foot||'저장해두고 다시 보기 →')}${CA?`<div class="cred">${esc(CA.credit)}</div>`:''}</div>`;
+C.items.forEach((it,i)=>{ const F=!!it.art;
+  h+=`<div class="slide${F?' full':i%2?' dark':''}">${bg(it.art)}<div class="tag">${'①②③④⑤⑥⑦'[i]} ${esc(it.tag)}</div>${F?'<div class="gap"></div>':''}
+  ${F&&it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="h2">${br(it.headline)}</div>${!F&&it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="box">${br(it.body)}</div>
+  ${foot(i+2,'출처: '+(it.source||''))}${F?`<div class="cred">${esc(it.art.credit)}</div>`:''}</div>`; });
+h+=`<div class="slide dark"><div class="tag">day.brief</div><div class="h1">${br(C.end||'저장해두고\n월요일에\n다시 보기')}</div>
   <div class="box">매일 아침 7시 세계·시장<br>매일 저녁 6시 국내 이슈<br>3분 브리핑 → 팔로우</div>${foot(N,'정보 제공 목적 · 투자 권유 아님')}</div>`;
 document.getElementById('deck').innerHTML=h;
 window.show=k=>document.querySelectorAll('.slide').forEach((s,i)=>s.classList.toggle('on',i===k));

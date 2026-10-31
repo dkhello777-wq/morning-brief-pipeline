@@ -11,7 +11,9 @@ Set NO_TTS=1 for a silent test build (no Typecast call; durations estimated from
 
 Issue art (center of scenes 2-4): each issue may set "icon" (a Fluent Emoji 3D name such as "Fire engine", or a glyph
 such as "🇺🇸"; a list = fallbacks in order) plus optional "motion" (bob|sway|pulse|shake|spin|drive). One issue may set
-"image_prompt" for an AI illustration (needs GEMINI_API_KEY; falls back to its icon). RECENT_ICONS=path to a text file
+"image_prompt" for an AI illustration (needs GEMINI_API_KEY; falls back to its icon). Any issue (and the "ai" tool
+item) may set "photo" (photos.py: a Wikimedia Commons search such as "Jensen Huang", {"file": "File:..."}, or a local
+path): a real photo with its credit line takes the art's place, and the icon is the fallback when no free photo is found. RECENT_ICONS=path to a text file
 of icon names used in recent reels (one per line) so they are skipped. CHECK_ART=1 resolves the art and exits.
 
 Hook cover: "hook": {"q": "question line", "hi": "number line"} replaces the opening title with a two-line hook
@@ -31,7 +33,7 @@ Captions: out_dir/caption.txt (or caption_short{n}.txt) is written from the brie
 """
 import base64, json, os, pathlib, re, subprocess, sys, time, unicodedata, urllib.parse, urllib.request, wave
 import numpy as np
-import music
+import music, photos
 
 HERE = pathlib.Path(__file__).parent
 brief = json.load(open(sys.argv[1]))
@@ -59,32 +61,40 @@ SUBTITLES = HOOK_STYLE != "off" and os.environ.get("SUBTITLES", "1") != "0"
 def run(cmd): subprocess.run(cmd, check=True)
 
 # ---------- captions (fixed account template, CONTENT_RULES.md) ----------
+def photo_line(items):  # CC BY / BY-SA photos are credited in the caption as well as on screen
+    cr = dict.fromkeys(a["credit"].removeprefix("사진 ") for a in (x.get("art") or {} for x in items) if a.get("photo") and a.get("credit"))
+    return ["📷 사진: " + " / ".join(cr)] if cr else []
+
 def caption(b, short=0):
     one = lambda x: " ".join(str(x or "").split())
     hook = lambda h, fb: one(f"{h.get('q', '')} {h.get('hi', '')}") if h else one(fb)
     tags = lambda kws: " ".join("#" + k.replace(" ", "").lstrip("#") for k in dict.fromkeys(kws) if k)
-    pm = b.get("edition") == "pm"
-    follow = "매일 07:00 세계·시장 / 18:00 국내 이슈를 3분 브리핑으로 → 팔로우하고 받아보기"
+    pm, ai = b.get("edition") == "pm", b.get("topic") == "ai"
+    follow = ("매일 12:00 AI 소식을 1분 브리핑으로 → 알아야 써먹습니다, 팔로우" if ai else
+              "매일 07:00 세계·시장 / 12:00 AI / 18:00 국내 이슈 브리핑 → 팔로우하고 받아보기")
+    base = ["AI뉴스", "인공지능"] if ai else ["오늘의뉴스", "경제뉴스"]
     if short:
         it = b["issues"][short - 1]
         lines = [f"📌 {hook(it.get('hook'), it.get('headline'))}", "", one(it.get("summary") or it.get("headline")), ""]
         q = it.get("question") or b.get("question")
         if q: lines.append(f"💬 {one(q)}")
-        lines += [f"{'오늘의 다른 국내 이슈' if pm else '간밤의 다른 세계 이슈'}는 → 프로필의 3분 브리핑에서",
-                  f"출처: {it.get('source', '')}", tags((it.get("keywords") or [])[:3] + ["오늘의뉴스"])]
+        other = "오늘의 다른 AI 소식은" if ai else ("오늘의 다른 국내 이슈는" if pm else "간밤의 다른 세계 이슈는")
+        lines += [f"{other} → 프로필의 {'1' if ai else '3'}분 브리핑에서",
+                  f"출처: {it.get('source', '')}"] + photo_line([it]) + [tags((it.get("keywords") or [])[:3] + base[:1])]
         return "\n".join(lines) + "\n"
     lines = [f"{'🌙' if pm else '🌅'} {hook(b.get('hook'), b.get('title'))}", ""]
     for n, it in zip("➊➋➌", b["issues"]):
         lines.append(f"{n} {one(it.get('short'))} — {one(it.get('summary') or it.get('headline'))}")
     m = b.get("market") or {}
     if m.get("headline"): lines.append(f"📈 {one(m['headline'])}" + (f" ({one(m['note'])})" if m.get("note") else ""))
-    if (b.get("ai") or {}).get("short"): lines.append(f"🤖 {one(b['ai'].get('company'))} {one(b['ai']['short'])}")
+    if (b.get("ai") or {}).get("short"):
+        lines.append(f"{'🛠 오늘 써먹기:' if ai else '🤖'} {one(b['ai'].get('company'))} {one(b['ai']['short'])}")
     lines.append("")
     if b.get("question"): lines += [f"💬 {one(b['question'])}", ""]
     srcs = [it.get("source") for it in b["issues"]] + [(b.get("ai") or {}).get("source")]
     kws = list(b.get("keywords") or []) + [k for it in b["issues"] for k in (it.get("keywords") or [])[:1]]
-    lines += [follow, "출처: " + " · ".join(dict.fromkeys(s for s in srcs if s)),
-              tags(kws[:3] + ["오늘의뉴스", "경제뉴스"])]
+    lines += [follow, "출처: " + " · ".join(dict.fromkeys(s for s in srcs if s))] + photo_line(b["issues"] + [b.get("ai") or {}, b.get("market") or {}]) + [
+              tags(kws[:3] + base)]
     return "\n".join(lines) + "\n"
 
 if os.environ.get("CAPTION_ONLY") == "1":
@@ -136,9 +146,23 @@ chosen = json.loads((out / "art_used.json").read_text()) if (out / "art_used.jso
 rp = os.environ.get("RECENT_ICONS")
 recent = {l.strip().lower() for l in pathlib.Path(rp).read_text().splitlines() if l.strip()} if rp and pathlib.Path(rp).exists() else set()
 used, ai_done = set(), False
+BASE = pathlib.Path(sys.argv[1]).parent
+
+def photo_art(spec, cache):
+    """A real photo (photos.py: Wikimedia Commons search or a given file) as scene art, cached in out_dir so a short
+    reuses its briefing's photo; None when there is no spec or no free photo."""
+    img, meta = out / f"{cache}.img", out / f"{cache}.json"
+    if img.exists() and meta.exists(): got = (img.read_bytes(), *json.loads(meta.read_text()))
+    else:
+        got = photos.get(spec, BASE)
+        if got: img.write_bytes(got[0]); meta.write_text(json.dumps(got[1:], ensure_ascii=False))
+    if not got: return None
+    return {"src": f"data:{got[1]};base64," + base64.b64encode(got[0]).decode(), "ai": True, "photo": True, "credit": got[2]}
+
 for k, it in enumerate(brief["issues"], 1):
-    art = None
-    if it.get("image_prompt") and not ai_done:
+    art = photo_art(it.get("photo"), f"photo{k}")
+    if art: it["icon_used"] = "PHOTO"
+    if it.get("image_prompt") and not ai_done and not art:
         prev = out / f"art{k}.png"  # already generated for this brief (a short after its briefing, or a rerun)
         png = prev.read_bytes() if prev.exists() else ai_image(it["image_prompt"])
         if png:
@@ -146,7 +170,7 @@ for k, it in enumerate(brief["issues"], 1):
             (out / f"art{k}.png").write_bytes(png); it["icon_used"] = "AI"
     cands = it.get("icon") or []
     cands = [cands] if isinstance(cands, str) else cands
-    if SHORT and chosen.get(str(k)) not in (None, "AI"): cands = [chosen[str(k)]] + cands
+    if SHORT and chosen.get(str(k)) not in (None, "AI", "PHOTO"): cands = [chosen[str(k)]] + cands
     for fresh_only in (True, False):
         if art: break
         for c in cands:
@@ -157,10 +181,18 @@ for k, it in enumerate(brief["issues"], 1):
             elif not c.isascii(): art = {"glyph": c}  # flags and other glyphs Fluent lacks: drawn with the emoji font
             if art: used.add(key_); it["icon_used"] = c; break
     if art: art["motion"] = it.get("motion", "bob"); it["art"] = art
-    print("art", k, it.get("icon_used", "none (code-drawn fallback)"), flush=True)
+    print("art", k, it.get("icon_used", "none (code-drawn fallback)"), (art or {}).get("credit", ""), flush=True)
+if brief.get("ai") and brief["ai"].get("photo"):  # the 오늘 써먹기 scene: a photo replaces the sound-wave box
+    a = photo_art(brief["ai"]["photo"], "photo_ai")
+    if a: brief["ai"]["art"] = a
+    print("art ai", "PHOTO " + a["credit"] if a else "none (sound-wave box)", flush=True)
+if (brief.get("market") or {}).get("photo"):  # the market scene: a photo (exchange, trading floor) behind the rows
+    a = photo_art(brief["market"]["photo"], "photo_market")
+    if a: brief["market"]["art"] = a
+    print("art market", "PHOTO " + a["credit"] if a else "none (plain card)", flush=True)
 if not SHORT:
     (out / "art_used.json").write_text(json.dumps({str(k): it["icon_used"] for k, it in enumerate(brief["issues"], 1) if it.get("icon_used")}))
-    (out / "icons_used.txt").write_text("".join(it["icon_used"] + "\n" for it in brief["issues"] if it.get("icon_used") not in (None, "AI")))
+    (out / "icons_used.txt").write_text("".join(it["icon_used"] + "\n" for it in brief["issues"] if it.get("icon_used") not in (None, "AI", "PHOTO")))
 if CHECK_ART: sys.exit(0)
 
 # ---------- 1. TTS ----------
@@ -274,7 +306,7 @@ with wave.open(str(out / f"narration{SFX}.wav"), "wb") as w:
 
 # ---------- 4. music bed (synthesized, royalty-free; music.py rotates styles by date, the evening edition two styles
 # ahead of the morning one; MUSIC=<style> or a brief "music" field forces one) ----------
-style = music.bed(total, out / f"bed{SFX}.wav", music.pick(brief.get("music"), offset=2 if PM else 0), fade_in=0.1 if brief["hook_style"] else 1.0)
+style = music.bed(total, out / f"bed{SFX}.wav", music.pick(brief.get("music"), offset=2 if PM else 0, topic=brief.get("topic")), fade_in=0.1 if brief["hook_style"] else 1.0)
 print("music", style, flush=True)
 
 # ---------- 5. mix + mux ----------

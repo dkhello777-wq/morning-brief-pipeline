@@ -1,0 +1,47 @@
+# Renders the reels on GitHub's servers so the Claude scheduled tasks only write the script (brief json) and publish.
+# A Claude task commits inbox/<id>.json (id like 2026-10-31_pm); this workflow builds it with build.py (or carousel.py
+# for "kind": "breaking"/week files) and attaches the mp4s, covers and captions to a public release named render-<id>.
+# release status.json lists the public video URLs that the publisher hands to vidIQ.
+# Needs the repo secret TYPECAST_API_KEY (Settings > Secrets and variables > Actions); GEMINI_API_KEY is optional.
+name: render
+on:
+  push:
+    paths: ["inbox/*.json"]
+  workflow_dispatch:
+    inputs:
+      id: {description: "inbox file name without .json (e.g. 2026-10-31_pm)", required: true}
+permissions:
+  contents: write
+concurrency: {group: render, cancel-in-progress: false}
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 2}
+      - name: Which briefs are new
+        id: pick
+        env: {GH_TOKEN: "${{ github.token }}", INPUT_ID: "${{ inputs.id }}"}
+        run: |
+          if [ -n "$INPUT_ID" ]; then ids="$INPUT_ID"
+          else ids=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'inbox/*.json' | sed 's#inbox/##; s#\.json$##')
+          fi
+          todo=""
+          for id in $ids; do gh release view "render-$id" --json assets -q ".assets[].name" 2>/dev/null | grep -qx status.json && echo "already rendered: $id" || todo="$todo $id"; done
+          echo "ids=$todo" >> "$GITHUB_OUTPUT"; echo "to render:$todo"
+      - name: Install renderer
+        if: steps.pick.outputs.ids != ''
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-cjk >/dev/null
+          pip install -q playwright numpy && python -m playwright install --with-deps chromium >/dev/null
+      - name: Render and publish release
+        if: steps.pick.outputs.ids != ''
+        env:
+          GH_TOKEN: "${{ github.token }}"
+          TYPECAST_API_KEY: "${{ secrets.TYPECAST_API_KEY }}"
+          GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}"
+          IDS: "${{ steps.pick.outputs.ids }}"
+        run: |
+          [ -n "$TYPECAST_API_KEY" ] || { echo "::error::TYPECAST_API_KEY secret is missing"; exit 1; }
+          for id in $IDS; do python3 render_inbox.py "inbox/$id.json" "work/$id" "$id"; done

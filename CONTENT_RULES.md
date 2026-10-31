@@ -1,8 +1,58 @@
-# 7am.brief content rules
+# day.brief content rules
 
 Rules for whoever writes `brief.json` (the scheduled tasks). They put the account plan into practice:
 one hook cover, briefings of 60 seconds or less, one-issue shorts, and a fixed caption template.
 `build.py` writes the captions and warns when a reel runs long; the rest is up to the writer.
+
+## Schedule since 2026-10-31
+
+Viewers found the all-AI account too hard, so on 2026-10-31 팀장 moved the 07:00 and 18:00 briefs, their shorts, the
+Sunday carousel and breaking news back to the economy and news topics below (no `"topic"` field). The full-bleed photo
+design stays, and the market scene now has a photo too (`market.photo`). AI news moved to one **12:00 AI brief** a day
+(am structure, `"topic": "ai"`, no shorts), a 1–2 week trial on the same account; its views are then compared with
+the 07:00 and 18:00 briefs to decide whether AI gets its own account. AM shorts now post at 08:27 and 15:27 so nothing
+lands right after the 12:00 brief. The AI section below describes the 12:00 brief (its morning row); ignore its
+evening and Sunday rows.
+
+## AI topic (the 12:00 AI brief)
+
+팀장 decided on 2026-10-30 to narrow the account to AI tech. Concept: **"피할 수 없다, 정면으로 받아들이자. 알아야 써먹고,
+그래야 살아남는다."** Every post answers two things: what happened in AI, and what it means for the viewer's work, money or
+career. The tone faces AI head-on: no fear-mongering ("AI가 다 뺏는다"), no hype ("혁명", "미쳤다"); a calm "this is coming,
+here is how to use it". Briefs, week.json and breaking.json set `"topic": "ai"`, which switches the on-screen tags, the
+end card, the caption follow line and the base hashtags (#AI뉴스 #인공지능) to the AI account. See `brief_ai_example.json`.
+
+What each slot covers (the rest of this file still applies: hooks, lengths, captions, proofreading):
+
+| slot | issues (3) | AI scene → "오늘 써먹기" | market scene |
+|---|---|---|---|
+| 12:00 AI brief (was 07:00) | the last 24 hours of global AI: model and product launches (OpenAI, Google, Anthropic, Meta, Microsoft, Apple, Nvidia, xAI, Mistral, DeepSeek...), big-tech AI earnings and spending, AI and jobs/hiring, regulation (US, EU, China) | one tool the viewer can try today, ending "~할 때 쓰면 됩니다." | `market.rows`: Nasdaq plus the two AI stocks that moved most (Nvidia, Alphabet, Microsoft, Meta...) |
+| 18:00 evening | Korea AI and tech: Samsung, SK hynix, Naver, Kakao, LG, startups; government AI policy (AI 기본법, GPU, data centres); AI at Korean workplaces, schools and jobs | none | `market.rows`: KOSPI, Samsung Electronics, SK hynix (or the AI stock that moved most) |
+| Sun weekly carousel | "이번 주 꼭 알아야 할 AI 5" from the week's briefs: launches, money, jobs, one tool | | |
+
+Picking issues (replaces "Cover order" below for the AI account):
+1. Hits your work, money or career: AI changing a job or hiring, a tool that replaces a paid task, AI stocks moving
+   sharply, prices of AI services.
+2. A big launch or a striking number: a new frontier model, a record deal, a benchmark lead, a large layoff or hire.
+3. Policy and regulation.
+4. A rumour, a leak, a single outlet's exclusive or a CEO's prediction never leads; leave it out unless confirmed.
+
+Sources: the company's own blog, docs or filing first; then Reuters, AP, Bloomberg, CNBC, The Verge, TechCrunch, Ars
+Technica, The Register; Korean issues from 연합뉴스, KBS, 전자신문, 디지털타임스, 조선비즈 or the ministry's press release.
+Read the article itself; aggregators and newsletters are only for finding stories.
+
+Hooks in the concept's voice (still neutral and factual, still with a number):
+- tie it to the viewer: "내 직무는?", "이제 ○○도 AI가?", "월 ○만 원 아끼는 법"
+- the turn: "알고 보니", "결국", "AI가 더 잘해서?"
+- banned in addition to the list below: "일자리 다 사라진다", "AI 종말", "미쳤다", "역대급 혁명", and anything that
+  promises a stock will go up.
+
+Closing script: the one-liner, the brief's question, then "댓글로 남겨 주세요. 내일도 보려면 팔로우." The one-liner can
+carry the concept ("알아야 써먹습니다"); the end card already shows "알아야 써먹고 써먹어야 살아남는다".
+Questions at the end of captions ask what the viewer will do, not what they fear: "내 일에는 언제 올까요?",
+"여러분이라면 어디에 써먹겠어요?", "이 기능, 돈 내고 쓸 만할까요?"
+
+Opening line ends "오늘 AI, 1분 정리." (morning) or "오늘 국내 AI, 45초 정리." (evening).
 
 ## Posting schedule (KST)
 
@@ -93,6 +143,22 @@ A story is breaking only if it passes all three:
      trillions of won.
 
 Never breaking: entertainment, sports, individual crimes and accidents, political spats and remarks, polls.
+
+**AI account (`"topic": "ai"`, from 2026-10-30)** replaces the "Confirmed" sources and the "Big enough" list above:
+- Confirmed: the company's official blog, docs, launch page or filing, or two of Reuters, AP, Bloomberg, CNBC,
+  The Verge, TechCrunch, 연합뉴스, KBS reporting it independently.
+- Big enough, one of:
+  - launch: a new flagship model or product from OpenAI, Google, Anthropic, Meta, Microsoft, Apple, xAI, Nvidia,
+    Samsung or Naver that people can use now (not "coming soon", not a research preview for a few partners);
+  - market shock: Nvidia, Microsoft, Alphabet, Meta, Apple, Amazon, Samsung Electronics or SK hynix ±7% in a day,
+    or the Philadelphia semiconductor index or Nasdaq ±3%;
+  - money: an AI deal, investment or acquisition of $10B (about 14조 원) or more, or Korean government AI spending of
+    1조 원 or more;
+  - rules: a law, executive order or regulator decision on AI or AI chips taking effect or passed (US, EU, China,
+    Korea), such as chip export controls or AI 기본법 enforcement rules;
+  - jobs: a company cutting or hiring 1,000+ people and naming AI as the reason.
+- Never breaking for the AI account: benchmark claims alone, leaks and rumours, CEO interviews and predictions,
+  funding rounds under $10B, minor app updates.
 
 Slides: `kind: "breaking"`, `kicker: "BREAKING"`, `week_label: "속보"`, `dates` = today's `date_short`, `sub` = who
 announced it, `title` = the fact and its number in 2 lines, `cover_foot` = what swiping shows, 3-7 items, `end`.
