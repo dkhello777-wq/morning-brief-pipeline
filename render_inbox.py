@@ -4,7 +4,8 @@ Usage: python3 render_inbox.py inbox/<id>.json work_dir <id>
 The inbox file is a brief (build.py) or, with "kind": "breaking" or a week "items" list, a carousel (carousel.py).
 A brief may list "shorts_to_build": [1, 2] for one-issue shorts (default none). RECENT_ICONS come from "recent_icons".
 Everything lands on the public release render-<id>: final*.mp4 / carousel.mp4, cover*.jpg, caption*.txt and
-status.json {"id", "videos": {"main": url, "short1": url, ...}, "captions": {...}, "log": [...]}.
+status.json {"id", "videos": {"main": url, "short1": url, ...}, "captions": {...}, "log": [...],
+"photos": [{"scene", "videos": ["main", "short1"], "file", "page", "author", "license", "license_url", "source"}]}.
 """
 import json, os, pathlib, subprocess, sys
 
@@ -42,10 +43,21 @@ else:
         videos[f"short{n}"] = f"final_short{n}.mp4"; captions[f"short{n}"] = f"caption_short{n}.txt"
     files += sorted(out.glob("preview_*.png"))[:3]
 
+photos = {}  # one row per scene photo, listing the videos it appears in
+for v in videos:
+    f = out / f"photos_{v}.json"
+    try: rows = json.loads(f.read_text()) if f.exists() else []
+    except Exception: rows = []
+    for row in rows:
+        key = (row.get("scene"), row.get("file") or row.get("page") or row.get("source"))
+        photos.setdefault(key, {"scene": row.get("scene"), "videos": [], **{k: x for k, x in row.items() if k != "scene"}})
+        photos[key]["videos"].append(v)
+
 tag = f"render-{rid}"
 base = f"https://github.com/{REPO}/releases/download/{tag}/"
 status = {"id": rid, "videos": {k: base + v for k, v in videos.items()},
-          "captions": {k: (out / v).read_text() for k, v in captions.items()}, "log": log}
+          "captions": {k: (out / v).read_text() for k, v in captions.items()}, "log": log,
+          "photos": list(photos.values())}
 (out / "status.json").write_text(json.dumps(status, ensure_ascii=False, indent=1))
 files = [str(f) for f in files if f.exists() and f.stat().st_size] + [str(out / "status.json")]  # GitHub refuses empty assets
 subprocess.run(["gh", "release", "delete", tag, "-y", "--cleanup-tag"], cwd=HERE)  # a half-made release from a failed run

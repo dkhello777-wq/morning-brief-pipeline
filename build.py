@@ -145,22 +145,23 @@ def ai_image(prompt):
 chosen = json.loads((out / "art_used.json").read_text()) if (out / "art_used.json").exists() else {}
 rp = os.environ.get("RECENT_ICONS")
 recent = {l.strip().lower() for l in pathlib.Path(rp).read_text().splitlines() if l.strip()} if rp and pathlib.Path(rp).exists() else set()
-used, ai_done = set(), False
+used, ai_done, photo_rows = set(), False, []
 BASE = pathlib.Path(sys.argv[1]).parent
 
-def photo_art(spec, cache):
+def photo_art(spec, cache, scene=None):
     """A real photo (photos.py: Wikimedia Commons search or a given file) as scene art, cached in out_dir so a short
     reuses its briefing's photo; None when there is no spec or no free photo."""
     img, meta = out / f"{cache}.img", out / f"{cache}.json"
-    if img.exists() and meta.exists(): got = (img.read_bytes(), *json.loads(meta.read_text()))
+    if img.exists() and meta.exists(): got = (img.read_bytes(), *json.loads(meta.read_text()))  # (img, mime, credit[, record])
     else:
         got = photos.get(spec, BASE)
         if got: img.write_bytes(got[0]); meta.write_text(json.dumps(got[1:], ensure_ascii=False))
     if not got: return None
+    photos.record(photo_rows, scene or cache, got)
     return {"src": f"data:{got[1]};base64," + base64.b64encode(got[0]).decode(), "ai": True, "photo": True, "credit": got[2]}
 
 for k, it in enumerate(brief["issues"], 1):
-    art = photo_art(it.get("photo"), f"photo{k}")
+    art = photo_art(it.get("photo"), f"photo{k}", k)
     if art: it["icon_used"] = "PHOTO"
     if it.get("image_prompt") and not ai_done and not art:
         prev = out / f"art{k}.png"  # already generated for this brief (a short after its briefing, or a rerun)
@@ -183,16 +184,18 @@ for k, it in enumerate(brief["issues"], 1):
     if art: art["motion"] = it.get("motion", "bob"); it["art"] = art
     print("art", k, it.get("icon_used", "none (code-drawn fallback)"), (art or {}).get("credit", ""), flush=True)
 if brief.get("ai") and brief["ai"].get("photo"):  # the 오늘 써먹기 scene: a photo replaces the sound-wave box
-    a = photo_art(brief["ai"]["photo"], "photo_ai")
+    a = photo_art(brief["ai"]["photo"], "photo_ai", "ai")
     if a: brief["ai"]["art"] = a
     print("art ai", "PHOTO " + a["credit"] if a else "none (sound-wave box)", flush=True)
 if (brief.get("market") or {}).get("photo"):  # the market scene: a photo (exchange, trading floor) behind the rows
-    a = photo_art(brief["market"]["photo"], "photo_market")
+    a = photo_art(brief["market"]["photo"], "photo_market", "market")
     if a: brief["market"]["art"] = a
     print("art market", "PHOTO " + a["credit"] if a else "none (plain card)", flush=True)
 if not SHORT:
     (out / "art_used.json").write_text(json.dumps({str(k): it["icon_used"] for k, it in enumerate(brief["issues"], 1) if it.get("icon_used")}))
     (out / "icons_used.txt").write_text("".join(it["icon_used"] + "\n" for it in brief["issues"] if it.get("icon_used") not in (None, "AI", "PHOTO")))
+if SHORT: photo_rows = [r for r in photo_rows if r["scene"] == str(SHORT)]  # a short shows only its issue's scene
+(out / f"photos_{'short%d' % SHORT if SHORT else 'main'}.json").write_text(json.dumps(photo_rows, ensure_ascii=False))
 if CHECK_ART: sys.exit(0)
 
 # ---------- 1. TTS ----------

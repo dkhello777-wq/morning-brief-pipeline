@@ -28,11 +28,14 @@ def run(cmd): subprocess.run(cmd, check=True)
 
 # real photos (photos.py): an item's "photo" (Commons search, {"file": ...} or a local path) is shown above its headline
 # with the credit line; no free photo (or no network) just leaves the slide as text
+photo_rows = []
 for k, it in enumerate(week["items"], 1):
     got = photos.get(it.get("photo"), pathlib.Path(sys.argv[1]).parent)
+    photos.record(photo_rows, k, got)
     if got: it["art"] = {"src": f"data:{got[1]};base64," + base64.b64encode(got[0]).decode(), "credit": got[2]}
     if it.get("photo"): print("photo", k, got[2] if got else "none", flush=True)
 cr = dict.fromkeys(it["art"]["credit"].removeprefix("사진 ") for it in week["items"] if it.get("art", {}).get("credit"))
+(out / "photos_main.json").write_text(json.dumps(photo_rows, ensure_ascii=False))
 PHOTO = ["📷 사진: " + " / ".join(cr)] if cr else []  # CC BY / BY-SA photos are credited in the caption too
 html = (HERE / "carousel_tpl.html").read_text().replace("__CONTENT__", json.dumps(week, ensure_ascii=False))
 html = html.replace("__FONT__", (HERE / "fonts" / "PretendardVariable.ttf").resolve().as_uri())
