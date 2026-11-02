@@ -1,0 +1,178 @@
+{
+  "edition": "pm",
+  "date_short": "11.02 MON",
+  "title": "오늘의\n국내 이슈\n저녁 정리",
+  "hook": {
+    "q": "내 집 대출\n5%라고?",
+    "hi": "올해 6번째 인상"
+  },
+  "question": "주담대 5% 시대, 집 사기 미루시겠어요?",
+  "keywords": [
+    "보금자리론",
+    "가계대출",
+    "시정연설"
+  ],
+  "issues": [
+    {
+      "region": "주택금융공사",
+      "short": "보금자리론 5%",
+      "headline": "보금자리론\n10년 금리\n첫 5%대",
+      "ill": {
+        "kind": "number",
+        "value": 5.0,
+        "decimals": 2,
+        "suffix": "%",
+        "label": "10년 만기 아낌e-보금자리론 · 9일부터 (2014년 출시 뒤 처음)"
+      },
+      "icon": [
+        "House",
+        "Key",
+        "Credit card"
+      ],
+      "motion": "spin",
+      "photo": "apartment complex Seoul",
+      "image_prompt": "a row of apartment towers at dusk with a large glowing percent sign rising above them like a moon",
+      "stat1": "+0.10%p",
+      "stat1_label": "9일부터 인상 · 올해 6번째 (누적 1.35%p)",
+      "stat2": "5.30%",
+      "stat2_label": "50년 만기 · 우대 적용 시 최저 4.30%",
+      "source": "노컷뉴스 · 디지털타임스 · SBS Biz",
+      "hook": {
+        "q": "내 집 대출\n5%라고?",
+        "hi": "올해 6번째 인상"
+      },
+      "summary": "한국주택금융공사가 11월 9일부터 보금자리론 금리를 0.10%포인트 올립니다. 아낌e-보금자리론 기준 10년 만기가 연 5.00%, 50년 만기가 연 5.30%가 되며, 10년 만기가 5%대에 오른 것은 2014년 3월 출시 뒤 처음입니다. 올해만 여섯 번째 인상(누적 1.35%포인트)이고, 8일까지 신청하면 인상 전 금리가 적용됩니다.",
+      "question": "고정금리 5%, 그래도 보금자리론 받으시겠어요?",
+      "keywords": [
+        "보금자리론",
+        "주담대금리"
+      ]
+    },
+    {
+      "region": "5대 은행",
+      "short": "가계대출 반등",
+      "headline": "가계대출\n한 달 새\n2.8조 반등",
+      "ill": {
+        "kind": "number",
+        "value": 2.8,
+        "decimals": 1,
+        "suffix": "조원",
+        "label": "10월 5대 은행 가계대출 증가 (9월엔 1.3조 감소)"
+      },
+      "icon": [
+        "Banknote with dollar sign",
+        "Bank",
+        "Credit card"
+      ],
+      "motion": "spin",
+      "photo": "KB Kookmin Bank",
+      "stat1": "783.6조",
+      "stat1_label": "10월 말 5대 은행 가계대출 잔액",
+      "stat2": "7개월\n연속",
+      "stat2_label": "주담대 증가 · 10월 +1조 7,005억",
+      "source": "디지털타임스 · 글로벌이코노믹",
+      "hook": {
+        "q": "집값 오르니\n대출도 반등?",
+        "hi": "한 달 2.8조 증가"
+      },
+      "summary": "KB국민·신한·하나·우리·NH농협 5대 은행의 가계대출 잔액이 10월 말 783조 6,057억 원으로 한 달 새 2조 7,717억 원 늘었습니다. 9월에 1조 2,852억 원 줄었다가 한 달 만에 다시 증가로 돌아선 것입니다. 주택담보대출은 1조 7,005억 원 늘어 7개월 연속 증가했고, 신용대출도 6,687억 원 늘어 석 달 만에 반등했습니다.",
+      "question": "대출 규제에도 주담대가 늘어요, 집값 더 오를까요?",
+      "keywords": [
+        "가계대출",
+        "주담대"
+      ]
+    },
+    {
+      "region": "국회",
+      "short": "시정연설 중단",
+      "headline": "예산 연설\n야당 항의\n40초 중단",
+      "ill": {
+        "kind": "number",
+        "value": 40,
+        "suffix": "초",
+        "label": "야당 항의로 멈춘 대통령 시정연설"
+      },
+      "icon": [
+        "Megaphone",
+        "Classical building",
+        "Scroll"
+      ],
+      "motion": "sway",
+      "photo": {
+        "file": "File:Fountain in National Assembly Building of South Korea.jpg"
+      },
+      "stat1": "820.9조",
+      "stat1_label": "2027년 예산안 · 올해보다 12.8% 증가",
+      "stat2": "162조",
+      "stat2_label": "미래대응기금 · 여야 최대 쟁점",
+      "source": "뉴스1 · 이투데이 · 뉴스핌",
+      "hook": {
+        "q": "시정연설\n40초 멈춤?",
+        "hi": "예산 820.9조"
+      },
+      "summary": "이재명 대통령이 2일 국회에서 2027년도 예산안(820조 9천억 원, 올해보다 12.8% 증가) 시정연설을 했습니다. 국채 발행을 설명하는 대목에서 국민의힘 의원들이 항의해 연설이 약 40초간 멈췄고, 대통령은 \"계속 방해하는 얘기\"라며 연설을 이어갔습니다. 민주당은 초당적 협력과 12월 2일 법정시한 내 처리를 강조했고, 국민의힘은 초과세수에도 국채를 더 찍는 이유와 162조 원 미래대응기금을 문제 삼았습니다.",
+      "keywords": [
+        "시정연설"
+      ]
+    }
+  ],
+  "ai": {},
+  "market": {
+    "date_label": "11/2 마감 (15:30)",
+    "headline_short": "코스피 +2.24% 반등",
+    "headline": "코스피\n+2.24%\n5859 회복",
+    "rows": [
+      {
+        "name": "코스피",
+        "value": 5859.08,
+        "pct": 2.24
+      },
+      {
+        "name": "코스닥",
+        "value": 734.36,
+        "pct": 1.38
+      }
+    ],
+    "note": "장중 5616까지 밀렸다가 기관 1.2조 매수로 반등 · SK하이닉스 +3.81%",
+    "photo": "SK Hynix"
+  },
+  "oneliner": "금리는 오르고\n대출은 는다,\n내 상환액은?",
+  "scripts": [
+    "내 집 대출 5퍼센트라고? 6번째 인상. 오늘 국내 이슈와 증시, 45초 정리.",
+    "보금자리론 10년 금리, 9일부터 5퍼센트. 출시 뒤 처음이고 올해만 여섯 번째 인상입니다.",
+    "5대 은행 가계대출, 10월 2조 8천억 증가. 주담대 7개월 연속 증가, 상환 부담이 커집니다.",
+    "820조 9천억 예산 시정연설이 야당 항의로 40초 멈췄습니다. 야당은 국채 발행을 따졌습니다.",
+    "코스피 2.24퍼센트 오른 5859, 코스닥 734. 장 초반 급락을 기관 1조 2천억 매수가 되돌렸습니다.",
+    "오늘의 한 줄. 금리는 오르고 대출은 는다, 내 상환액은? 주담대 5퍼센트 시대, 집 사기 미루시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [
+    1
+  ],
+  "recent_icons": [
+    "Fuel pump",
+    "Coin",
+    "Dove",
+    "Mobile phone",
+    "Briefcase",
+    "Graduation cap",
+    "Bank",
+    "Articulated lorry",
+    "Classical building",
+    "Door",
+    "Factory",
+    "Oil drum",
+    "Laptop",
+    "Balance scale",
+    "House with garden",
+    "Anchor",
+    "Bomb",
+    "Speech balloon",
+    "Package",
+    "Page facing up",
+    "Automobile",
+    "Locked with key",
+    "Ballot box with ballot"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37",
+  "note": "저녁 수정본: 50년 만기 우대 최저 4.30%(공식), 시정연설 장면 사진을 국회의사당으로 교체"
+}
