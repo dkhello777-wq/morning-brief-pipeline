@@ -79,7 +79,7 @@ def caption(b, short=0):
         q = it.get("question") or b.get("question")
         if q: lines.append(f"💬 {one(q)}")
         other = "오늘의 다른 AI 소식은" if ai else ("오늘의 다른 국내 이슈는" if pm else "간밤의 다른 세계 이슈는")
-        lines += [f"{other} → 프로필의 {'1' if ai else '3'}분 브리핑에서",
+        lines += [f"{other} → 프로필의 브리핑 본편에서",
                   f"출처: {it.get('source', '')}"] + photo_line([it]) + [tags((it.get("keywords") or [])[:3] + base[:1])]
         return "\n".join(lines) + "\n"
     lines = [f"{'🌙' if pm else '🌅'} {hook(b.get('hook'), b.get('title'))}", ""]

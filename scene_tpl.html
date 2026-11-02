@@ -340,12 +340,12 @@ if(PM) $('s6').querySelector('.foot span:first-child').textContent='상승 = 빨
 if(C.market.art){ fullBg($('s6'),C.market.art); M.forEach(([id,m])=>{ $(id+'p').style.color=(m.pct>=0)?'#FF5A5F':'#5B9BFF'; }); }
 $('s7h').dataset.text=C.oneliner||'';
 $('ctaBig').innerHTML=AI?'알아야 써먹고<br>써먹어야 살아남는다':PM?'지금 팔로우 안 하면<br>내일 저녁엔 못 만나요':'지금 팔로우 안 하면<br>내일 아침엔 못 만나요';
-$('ctaSub').textContent=AI&&!PM?'♥ 좋아요 · ✓ 매일 낮 12시 AI 브리핑':(PM?'♥ 좋아요 · ✓ 매일 저녁 6시':'♥ 좋아요 · ✓ 매일 아침 7시')+(AI?' AI 브리핑':'');
+$('ctaSub').textContent='♥ 좋아요 · ✓ 팔로우';  // no running time or posting hour on screen: the same file also goes to YouTube at other times
 if(SHORT){
   const it=C.issues[SHORT-1];
   $(`s${SHORT+1}tag`).textContent=it.region||'';
   $('s8h').innerHTML=br(AI?(PM?'오늘의 다른\nAI 소식은?':'오늘의 다른\nAI 소식은?'):PM?'오늘의 다른\n국내 이슈는?':'간밤의 다른\n세계 이슈는?');
-  $('s8s').innerHTML=br(AI?(PM?'프로필의 1분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 1분 AI 브리핑에서\n매일 낮 12시 · 팔로우'):PM?'프로필의 3분 저녁 브리핑에서\n매일 저녁 6시 · 팔로우':'프로필의 3분 아침 브리핑에서\n매일 아침 7시 · 팔로우');
+  $('s8s').innerHTML=br(AI?'프로필의 AI 브리핑 본편에서\n팔로우하고 받아보기':PM?'프로필의 저녁 브리핑 본편에서\n팔로우하고 받아보기':'프로필의 아침 브리핑 본편에서\n팔로우하고 받아보기');
 }
 { const a=SHORT?C.issues[SHORT-1].art:(C.issues[0]||{}).art;
   if(a&&a.photo){ fullBg($('s1'),a); $('s1').querySelector('.pcr').style.top='1640px'; }  // the lead photo fills the cover (and the hook screen) behind the text

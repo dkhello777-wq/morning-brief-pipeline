@@ -71,7 +71,7 @@ C.items.forEach((it,i)=>{ const F=!!it.art;
   ${F&&it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="h2">${br(it.headline)}</div>${!F&&it.num?`<div class="num">${esc(it.num)}</div>`:''}<div class="box">${br(it.body)}</div>
   ${foot(i+2,'출처: '+(it.source||''))}${F?`<div class="cred">${esc(it.art.credit)}</div>`:''}</div>`; });
 h+=`<div class="slide dark"><div class="tag">day.brief</div><div class="h1">${br(C.end||'저장해두고\n월요일에\n다시 보기')}</div>
-  <div class="box">매일 아침 7시 세계·시장<br>매일 저녁 6시 국내 이슈<br>3분 브리핑 → 팔로우</div>${foot(N,'정보 제공 목적 · 투자 권유 아님')}</div>`;
+  <div class="box">아침 세계·시장<br>저녁 국내 이슈<br>브리핑 → 팔로우</div>${foot(N,'정보 제공 목적 · 투자 권유 아님')}</div>`;
 document.getElementById('deck').innerHTML=h;
 window.show=k=>document.querySelectorAll('.slide').forEach((s,i)=>s.classList.toggle('on',i===k));
 window.N=N;

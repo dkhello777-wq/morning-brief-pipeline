@@ -106,7 +106,7 @@ run(["ffmpeg", "-y", "-loglevel", "error", *inputs, "-i", str(out / "mix.m4a"),
 one = lambda x: " ".join(str(x or "").split())
 AI = week.get("topic") == "ai"  # AI 테크 계정 (CONTENT_RULES.md)
 FOLLOW = ("매일 07:00 간밤의 AI / 18:00 국내 AI·테크를 1분 브리핑으로 → 알아야 써먹습니다, 팔로우" if AI else
-          "매일 07:00 세계·시장 / 18:00 국내 이슈를 3분 브리핑으로 → 팔로우하고 받아보기")
+          "매일 07:00 세계·시장 / 18:00 국내 이슈 브리핑 → 팔로우하고 받아보기")
 sources = " · ".join(dict.fromkeys(s.strip() for it in week["items"] for s in str(it.get("source") or "").split("·") if s.strip()))
 if week.get("kind") == "breaking":
     # breaking post (CONTENT_RULES.md "Breaking"): headline, summary, one line per slide, notes, save/question, sources
