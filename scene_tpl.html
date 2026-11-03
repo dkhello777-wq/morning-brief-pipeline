@@ -233,7 +233,7 @@ const DOW=DM&&{MON:'월',TUE:'화',WED:'수',THU:'목',FRI:'금',SAT:'토',SUN:'
 $('s1ed').textContent=AI&&!PM?'AI NOON BRIEF':(AI?'AI ':'')+(PM?'EVENING BRIEF':'MORNING BRIEF');  // topic "ai" am-structure = the 12:00 AI edition (10/31)
 $('s1md').textContent=DM?`${+DM[1]}.${DM[2].padStart(2,'0')}`:(C.date_short||'');
 $('s1dw').textContent=DOW?DOW+'요일':'';
-$('s1kd').textContent=SHORT?(AI?'15초 AI':'15초 이슈'):(AI?(PM?'저녁 AI 브리핑':'점심 AI 브리핑'):(PM?'저녁 브리핑':'아침 브리핑'));
+$('s1kd').textContent=SHORT?(AI?'AI 한 컷':'이슈 한 컷'):(AI?(PM?'저녁 AI 브리핑':'점심 AI 브리핑'):(PM?'저녁 브리핑':'아침 브리핑'));
 // hook: question line, then the number line on a marker stroke (long number lines shrink to stay on one row)
 const fit=(t,base,max)=>{ const n=Math.max(...String(t||'').split('\n').map(l=>l.length)); return n>max?Math.round(base*max/n):base; };
 const HOOK=SHORT?C.issues[SHORT-1].hook:C.hook;
