@@ -52,7 +52,7 @@ carry the concept ("알아야 써먹습니다"); the end card already shows "알
 Questions at the end of captions ask what the viewer will do, not what they fear: "내 일에는 언제 올까요?",
 "여러분이라면 어디에 써먹겠어요?", "이 기능, 돈 내고 쓸 만할까요?"
 
-Opening line ends "오늘 AI, 1분 정리." (morning) or "오늘 국내 AI, 45초 정리." (evening).
+Opening line ends "오늘 AI, 핵심만 정리." (morning) or "오늘 국내 AI, 핵심만 정리." (evening). Never state a running time.
 
 ## Posting schedule (KST)
 
@@ -94,7 +94,7 @@ The leading issue goes first in `issues` and gives the briefing its `hook`.
 
 | scene | limit |
 |---|---|
-| opening | 45 characters. The first sentence is the hook itself, said in 2 seconds: 20 characters or fewer, with its number. Then one line that pays it off, then "오늘 ○○ 이슈, 1분 정리." No date, no list of what is coming ("세 가지와 AI, 증시까지"). |
+| opening | 45 characters. The first sentence is the hook itself, said in 2 seconds: 20 characters or fewer, with its number. Then one line that pays it off, then "오늘 ○○ 이슈, 핵심만 정리." (never a running time such as "N초/N분 정리") No date, no list of what is coming ("세 가지와 AI, 증시까지"). |
 | each issue | 55 characters. One fact with its number, one line of why it matters. |
 | AI (morning) | 70 characters, ending "~할 때 쓰면 됩니다." |
 | market | 60 characters. |
