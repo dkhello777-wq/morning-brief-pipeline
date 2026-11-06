@@ -32,9 +32,15 @@ jobs:
           echo "ids=$todo" >> "$GITHUB_OUTPUT"; echo "to render:$todo"
       - name: Install renderer
         if: steps.pick.outputs.ids != ''
+        timeout-minutes: 20
         run: |
-          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fonts-noto-cjk >/dev/null
-          pip install -q playwright numpy && python -m playwright install --with-deps chromium >/dev/null
+          # 11/6: this step hung for 30+ minutes twice (no output), so each part gets a time limit and retries.
+          retry() { for n in 1 2 3; do timeout "$1" "${@:2}" && return 0; echo "::warning::attempt $n failed or timed out: ${*:2}"; sleep 5; done; return 1; }
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          retry 240 sudo apt-get $APT update -qq
+          retry 360 sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -qq ffmpeg fonts-noto-cjk >/dev/null
+          retry 240 pip install -q --timeout 60 playwright numpy
+          retry 420 python -m playwright install --with-deps chromium >/dev/null
       - name: Render and publish release
         if: steps.pick.outputs.ids != ''
         env:
