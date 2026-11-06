@@ -1,0 +1,182 @@
+{
+ "edition": "am",
+ "date_short": "11.06 FRI",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "hook": {
+  "q": "나스닥 하루\n5.52% 급락?",
+  "hi": "조정 진입"
+ },
+ "question": "AI주 급락, 담을 기회일까요 더 기다릴 때일까요?",
+ "keywords": [
+  "미국증시",
+  "영국금리",
+  "한지"
+ ],
+ "issues": [
+  {
+   "region": "미국",
+   "short": "나스닥 −5.52%, 조정 국면 진입",
+   "headline": "나스닥 하루\n−5.52%\n조정 국면 진입",
+   "ill": {
+    "kind": "number",
+    "value": 5.52,
+    "decimals": 2,
+    "suffix": "%↓",
+    "label": "나스닥종합 11/5 종가 24,315.00 · 10월 6일 최고치보다 10% 넘게 하락"
+   },
+   "icon": [
+    "Chart decreasing",
+    "Desktop computer",
+    "Money with wings"
+   ],
+   "motion": "spin",
+   "photo": "Nasdaq MarketSite Times Square",
+   "stat1": "−9.26%",
+   "stat1_label": "엔비디아 11/5 종가 181.60달러 (Fox Business)",
+   "stat2": "12%+ 하락",
+   "stat2_label": "필라델피아 반도체지수 하루 12% 넘게 하락 (Fox Business)",
+   "source": "CNBC · Fox Business · AP",
+   "hook": {
+    "q": "나스닥 하루\n5.52% 급락?",
+    "hi": "조정 진입"
+   },
+   "summary": "5일 미국 증시에서 나스닥종합지수가 5.52% 내린 24,315.00으로 마감해, 10월 6일 기록한 최고치보다 10% 넘게 떨어진 조정 국면에 들어갔습니다. 엔비디아는 9.26% 내렸고 필라델피아 반도체지수는 12% 넘게 떨어졌습니다. CNBC는 중간선거 뒤 데이터센터 건설이 느려질 수 있다는 우려로 AI·반도체주 매도가 이어졌다고 전했습니다.",
+   "question": "AI주 급락, 담을 기회일까요 더 기다릴 때일까요?",
+   "keywords": [
+    "나스닥",
+    "엔비디아"
+   ]
+  },
+  {
+   "region": "영국",
+   "short": "영국 기준금리 4%로 인상",
+   "headline": "영국 기준금리\n0.25%p 인상\n4%로",
+   "ill": {
+    "kind": "number",
+    "value": 4.0,
+    "decimals": 2,
+    "suffix": "%",
+    "label": "영란은행 기준금리 · 3.75%에서 0.25%포인트 인상 (11/5 발표)"
+   },
+   "icon": [
+    "Bank",
+    "Pound banknote",
+    "Chart increasing"
+   ],
+   "motion": "spin",
+   "photo": "Bank of England building London",
+   "stat1": "8 대 1",
+   "stat1_label": "통화정책위원회 표결 · 반대 1명은 동결이 아니라 0.5%포인트 인상 주장",
+   "stat2": "에너지",
+   "stat2_label": "중동 분쟁과 높은 에너지 가격에 따른 물가 압력을 배경으로 꼽음",
+   "source": "영란은행 · Reuters",
+   "hook": {
+    "q": "영국은\n금리 올렸다?",
+    "hi": "4%로 인상"
+   },
+   "summary": "영국 중앙은행인 영란은행이 5일 기준금리를 0.25%포인트 올려 4%로 정했습니다. 통화정책위원회 표결은 8 대 1이었고, 반대한 1명은 동결이 아니라 0.5%포인트 인상을 주장했습니다. 영란은행은 중동 분쟁과 높은 에너지 가격에 따른 물가 압력을 배경으로 들었습니다.",
+   "question": "다른 나라 금리 인상, 우리 대출에도 영향 있을까요?",
+   "keywords": [
+    "영국금리",
+    "영란은행"
+   ]
+  },
+  {
+   "region": "국가유산청",
+   "short": "한지 문화, 유네스코 등재 권고",
+   "headline": "한지 문화\n유네스코\n등재 권고",
+   "ill": {
+    "kind": "icon"
+   },
+   "icon": [
+    "Scroll",
+    "Page facing up",
+    "Classical building"
+   ],
+   "motion": "bob",
+   "photo": "Hanji Korean paper",
+   "stat1": "권고",
+   "stat1_label": "유네스코 평가기구의 인류무형유산 등재 권고 · 아직 확정 아님",
+   "stat2": "11/30~12/5",
+   "stat2_label": "중국 샤먼 정부간위원회에서 최종 결정 (파이낸셜뉴스)",
+   "source": "국가유산청 · 정책브리핑 · 파이낸셜뉴스",
+   "hook": {
+    "q": "한지 문화\n유네스코 오를까?",
+    "hi": "등재 권고"
+   },
+   "summary": "국가유산청은 5일 '한지 제작의 전통 지식과 기술 및 문화적 실천'이 유네스코 평가기구로부터 인류무형유산 등재 권고를 받았다고 밝혔습니다. 등재 여부는 11월 30일부터 12월 5일까지 중국 샤먼에서 열리는 정부간위원회에서 최종 결정됩니다.",
+   "question": "한지, 요즘 어디서 보셨나요?",
+   "keywords": [
+    "한지",
+    "유네스코"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "오픈AI",
+  "short": "보안 특화 GPT-6 Cyber 공개",
+  "headline": "보안 특화 AI\nGPT-6 Cyber\n공개",
+  "point1": "보안 취약점 탐색과 검증을 돕는 모델 · API와 코덱스로 제공",
+  "point1_sub": "승인받은 Daybreak Red 고객 중 일부에게 우선 제공 · 신원 확인·이용 제한 적용 · 일반 공개 아님",
+  "point2": "승인받은 보안팀이 취약점을 찾고 검증할 때 쓰면 됩니다.",
+  "point2_sub": "성능은 회사 자체 평가 · 전체 승인 고객으로의 확대는 계획 단계",
+  "verdict": "활용법",
+  "source": "OpenAI 발표 · Reuters (11/5)",
+  "photo": "OpenAI headquarters San Francisco"
+ },
+ "market": {
+  "date_label": "11/5 마감 (KST 06:00)",
+  "headline": "나스닥 −5.52%\n다우 −3.44%\nAI주 급락",
+  "dow": {
+   "value": 51523.06,
+   "pct": -3.44
+  },
+  "spx": {
+   "value": 7353.73,
+   "pct": -4.36
+  },
+  "ndx": {
+   "value": 24315.0,
+   "pct": -5.52
+  },
+  "note": "엔비디아 −9.26% · 세 지수 모두 2025년 4월 이후 최대 하락 (CNBC)",
+  "photo": "New York Stock Exchange trading floor"
+ },
+ "oneliner": "선거 다음 날은 올랐고\n그다음 날은\n크게 빠졌다",
+ "scripts": [
+  "나스닥 하루 5.52퍼센트 급락. 오늘 세계 이슈, 핵심만 정리.",
+  "나스닥 5.52퍼센트 내려 조정 국면 진입. 엔비디아는 9.26퍼센트 하락했습니다.",
+  "영국 중앙은행, 기준금리 0.25퍼센트포인트 올려 4퍼센트. 에너지발 물가 압력을 이유로 들었습니다.",
+  "한지 문화, 유네스코 인류무형유산 등재 권고. 최종 결정은 이달 말 위원회에서 나옵니다.",
+  "오픈AI, 보안 특화 모델 지피티 식스 사이버 공개. 승인받은 보안팀이 취약점을 찾고 검증할 때 쓰면 됩니다.",
+  "다우 3.44, 에스앤피 4.36, 나스닥 5.52퍼센트 하락. AI와 반도체주 매도가 컸습니다.",
+  "오늘의 한 줄. 선거 다음 날은 올랐고, 그다음 날은 크게 빠졌습니다. AI주 급락, 담을 기회일까요 더 기다릴 때일까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Shield",
+  "Locked with key",
+  "Bank",
+  "Mobile phone",
+  "Laptop",
+  "Gear",
+  "Penguin",
+  "Graduation cap",
+  "Ballot box with ballot",
+  "Factory",
+  "Electric plug",
+  "Money bag",
+  "Desktop computer",
+  "Oil drum"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-06_0600_am_v01.md",
+  "drive_id": "19DcuROfsSHrnljVJUOJzQLWkGWPLvNT3",
+  "job_id": "cardnews-20261106-0600",
+  "version": "v01"
+ }
+}
