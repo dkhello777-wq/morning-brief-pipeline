@@ -1,6 +1,8 @@
 # morning-brief-pipeline
 Builds the 7am.brief morning/evening news reels: `TYPECAST_API_KEY=... python3 build.py brief.json out_dir`.
 
+Since 2026-10-30 the account covers AI tech: set `"topic": "ai"` in the brief (see `brief_ai_example.json`).
+
 What to write into `brief.json` (hook, script lengths, cover order, caption fields, posting schedule) is in
 [CONTENT_RULES.md](CONTENT_RULES.md).
 

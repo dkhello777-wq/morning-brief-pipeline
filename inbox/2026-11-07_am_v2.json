@@ -1,0 +1,182 @@
+{
+ "edition": "am",
+ "date_short": "11.07 SAT",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "hook": {
+  "q": "나스닥\n하루 만에 반등?",
+  "hi": "+1.09%"
+ },
+ "question": "급락 다음 날 반등, 믿어도 될까요?",
+ "keywords": [
+  "미국증시",
+  "식량가격",
+  "입동"
+ ],
+ "issues": [
+  {
+   "region": "미국",
+   "short": "나스닥 반등, 다우는 하락",
+   "headline": "나스닥 반등\n급락 하루 만에\n+1.09%",
+   "ill": {
+    "kind": "number",
+    "value": 1.09,
+    "decimals": 2,
+    "suffix": "% 상승",
+    "label": "나스닥종합 11/6 종가 24,579.42 · 전날 5.52% 급락 뒤 반등"
+   },
+   "icon": [
+    "Chart increasing",
+    "Desktop computer",
+    "Dollar banknote"
+   ],
+   "motion": "spin",
+   "photo": "New York Stock Exchange trading floor",
+   "stat1": "+0.31%",
+   "stat1_label": "S&P 500 11/6 종가 7,376.85",
+   "stat2": "−0.46%",
+   "stat2_label": "다우 11/6 종가 51,286.21 · 세 지수 중 홀로 하락",
+   "source": "Yahoo Finance 종가 · AP · Reuters",
+   "hook": {
+    "q": "나스닥\n하루 만에 반등?",
+    "hi": "+1.09%"
+   },
+   "summary": "6일 미국 증시에서 나스닥종합지수가 1.09% 오른 24,579.42, S&P 500이 0.31% 오른 7,376.85로 마감했습니다. 다우는 0.46% 내린 51,286.21이었습니다. 전날 AI·반도체주 급락으로 나스닥이 5.52% 떨어진 뒤 하루 만에 일부를 되찾았습니다.",
+   "question": "급락 다음 날 반등, 믿어도 될까요?",
+   "keywords": [
+    "나스닥",
+    "미국증시"
+   ]
+  },
+  {
+   "region": "FAO",
+   "short": "10월 세계 식량가격 133.9, 1.2% 하락",
+   "headline": "세계 식량가격\n10월 133.9\n전달보다 1.2%↓",
+   "ill": {
+    "kind": "number",
+    "value": 133.9,
+    "decimals": 1,
+    "suffix": "",
+    "label": "FAO 세계 식량가격지수 · 2026년 10월 (11/6 발표)"
+   },
+   "icon": [
+    "Sheaf of rice",
+    "Bread",
+    "Globe showing Asia-Australia"
+   ],
+   "motion": "bob",
+   "photo": "Wheat field harvest",
+   "stat1": "−1.2%",
+   "stat1_label": "전달 대비 · 월간 하락",
+   "stat2": "+5.9%",
+   "stat2_label": "1년 전 대비 · 국제 원자재 가격 지수로 국내 소비자물가와 같은 비율 아님",
+   "source": "유엔 식량농업기구(FAO) · 11/6 발표",
+   "hook": {
+    "q": "세계 식량값\n내렸다?",
+    "hi": "전달보다 1.2%↓"
+   },
+   "summary": "유엔 식량농업기구(FAO)가 6일 발표한 10월 세계 식량가격지수는 133.9로, 전달보다 1.2% 내렸지만 1년 전보다는 5.9% 높습니다. 국제 식량 원자재 가격 지수로, 국내 소비자물가나 마트 가격이 같은 비율로 움직였다는 뜻은 아닙니다.",
+   "question": "장바구니 물가, 요즘 어떻게 느끼세요?",
+   "keywords": [
+    "식량가격",
+    "FAO"
+   ]
+  },
+  {
+   "region": "기상청",
+   "short": "입동 아침, 내륙 곳곳 영하권",
+   "headline": "입동 아침\n내륙 곳곳\n영하권",
+   "ill": {
+    "kind": "icon"
+   },
+   "icon": [
+    "Thermometer",
+    "Snowflake",
+    "Gloves"
+   ],
+   "motion": "bob",
+   "photo": "Frost on grass morning",
+   "stat1": "한파주의보",
+   "stat1_label": "경기·강원·충북·전남·경북·경남 일부 지역 · 11/6 21시 발효",
+   "stat2": "영하권",
+   "stat2_label": "중부·전북동부·경상권 내륙 일부 오늘 아침 기온 · 기상청 예보",
+   "source": "기상청 · 연합뉴스",
+   "hook": {
+    "q": "입동 아침\n얼마나 춥나?",
+    "hi": "내륙 곳곳 영하권"
+   },
+   "summary": "입동인 7일 아침 중부지방과 전북동부, 경상권 내륙에 영하권으로 내려가는 곳이 있겠다고 기상청이 예보했습니다. 경기·강원·충북·전남·경북·경남 일부 지역에는 6일 밤 9시부터 한파주의보가 내려져 있어 보온과 농작물 관리에 주의가 필요합니다.",
+   "question": "올겨울 첫 추위, 준비는 되셨나요?",
+   "keywords": [
+    "입동",
+    "한파주의보"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "앤트로픽",
+  "short": "클로드 개인금융 기능 베타",
+  "headline": "AI가 내 지출\n분석해 준다\n클로드 개인금융",
+  "point1": "계좌·카드를 연결해 잔액과 거래 내역을 분석 · 조회 전용",
+  "point1_sub": "미국 Pro·Max·Ultra 이용자 대상 베타 · 순차 제공 · 한국 제공 아님",
+  "point2": "송금이나 투자는 할 수 없고, 중요한 숫자는 은행 자료로 확인하라고 안내합니다.",
+  "point2_sub": "회사 발표 내용 · 정확성·보안은 직접 시험하지 않음",
+  "verdict": "지켜보기",
+  "source": "Anthropic 발표 (11/5)",
+  "photo": "Credit cards"
+ },
+ "market": {
+  "date_label": "11/6 마감 (KST 06:00)",
+  "headline": "나스닥 +1.09%\nS&P +0.31%\n다우 −0.46%",
+  "dow": {
+   "value": 51286.21,
+   "pct": -0.46
+  },
+  "spx": {
+   "value": 7376.85,
+   "pct": 0.31
+  },
+  "ndx": {
+   "value": 24579.42,
+   "pct": 1.09
+  },
+  "note": "전날 나스닥 −5.52% 급락 뒤 반등 · 공식 종가 기준",
+  "photo": "Wall Street sign"
+ },
+ "oneliner": "하루 빠지고\n하루 오른 주식,\n추위는 이제 시작",
+ "scripts": [
+  "급락 하루 만에 나스닥 반등. 오늘 세계 이슈, 핵심만 정리.",
+  "나스닥 1.09퍼센트 올라 반등. 다우는 0.46퍼센트 내렸습니다.",
+  "10월 세계 식량가격지수 133.9. 전달보다 1.2퍼센트 내렸지만, 1년 전보다 5.9퍼센트 높습니다.",
+  "입동인 오늘, 내륙 곳곳 영하권. 경기·강원 등 일부 지역엔 한파주의보가 내려졌습니다.",
+  "앤트로픽, 클로드 개인금융 기능을 미국 유료 이용자에 시험 제공. 지출 조회만 되고 송금은 안 됩니다.",
+  "다우 0.46 하락, 에스앤피 0.31, 나스닥 1.09퍼센트 상승. 전날 급락 뒤 기술주가 반등했습니다.",
+  "오늘의 한 줄. 하루 빠지고 하루 오른 주식, 추위는 이제 시작입니다. 급락 다음 날 반등, 믿어도 될까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Bank",
+  "Chart decreasing",
+  "Calendar",
+  "Globe showing Europe-Africa",
+  "Water wave",
+  "Movie camera",
+  "Clapper board",
+  "Money with wings",
+  "Locked with key",
+  "Bug",
+  "Shield",
+  "Handshake",
+  "Laptop",
+  "Briefcase"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-07_0600_am_v01.md",
+  "drive_id": "1CZcGviigiy76lawNO13_mzDAP312s57U",
+  "job_id": "cardnews-20261107-0600",
+  "version": "v01"
+ }
+}

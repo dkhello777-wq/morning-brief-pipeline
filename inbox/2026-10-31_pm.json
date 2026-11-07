@@ -1,0 +1,90 @@
+{
+ "edition": "pm",
+ "date_short": "10.31 SAT",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "hook": {"q": "강남 집값\n12주째 하락?", "hi": "서울 +0.09%"},
+ "question": "강남 집값 하락, 서울 전체로 번질까요?",
+ "keywords": ["강남집값", "한화", "북한드론"],
+ "issues": [
+  {
+   "region": "부동산",
+   "short": "강남 집값",
+   "headline": "강남 12주\n하락에도\n서울은 상승",
+   "ill": {"kind": "number", "value": 12, "suffix": "주 연속", "label": "강남·서초 아파트값 하락 · 서울 전체 +0.09%"},
+   "icon": ["House with garden", "Office building", "Houses"],
+   "motion": "bob",
+   "photo": "Apgujeong Hyundai Apartment Seoul",
+   "image_prompt": "A row of tall apartment towers along a river at dusk with a thin line chart floating in the sky that falls on the left and rises gently on the right, clean editorial illustration, no text, no logos, no people",
+   "stat1": "−0.38%",
+   "stat1_label": "강남구 한 주 하락폭 (서초 −0.35%)",
+   "stat2": "90주\n연속 상승",
+   "stat2_label": "서울 전체, 역대 최장",
+   "source": "한국부동산원 · 아시아경제 · 머니투데이",
+   "hook": {"q": "강남 집값\n12주째 하락?", "hi": "서울 +0.09%"},
+   "summary": "한국부동산원 10월 넷째 주 조사에서 강남구 아파트값은 0.38%, 서초구 0.35%, 송파구 0.22% 내려 강남·서초는 12주, 송파는 8주 연속 하락했습니다. 반면 성북구 0.39%, 서대문구 0.36% 등이 올라 서울 전체는 0.09% 상승하며 90주 연속 올랐습니다. 이재명 대통령은 31일 X에 '자산시장 정상화를 향한 힘든 길에서 지금은 견디는 중'이라고 썼고, 국민의힘은 공급·전월세 대책을 논의할 여야 협의체를 제안한 상태입니다.",
+   "question": "강남 집값 하락, 서울 전체로 번질까요?",
+   "keywords": ["강남집값", "부동산"]
+  },
+  {
+   "region": "한화",
+   "short": "미 군함 수주",
+   "headline": "한화\n미 해군 군함\n첫 수주",
+   "ill": {"kind": "number", "value": 3600, "suffix": "억 원", "label": "중형상륙함 1척 · 3척 추가 옵션"},
+   "icon": ["Anchor", "Ship", "🇺🇸"],
+   "motion": "drive",
+   "photo": "Philly Shipyard Philadelphia",
+   "stat1": "3척",
+   "stat1_label": "추가 건조 옵션 포함",
+   "stat2": "2027년\n4분기",
+   "stat2_label": "필라델피아 필리조선소 건조 시작",
+   "source": "연합뉴스 · 한국경제",
+   "hook": {"q": "한국 조선소가\n미 군함 만든다?", "hi": "3,600억 수주"},
+   "summary": "한화에어로스페이스 미국법인 한화디펜스USA가 30일(현지시간) 미 해군·해병대의 중형상륙함(LSM) 1척 건조 계약을 2억 6,900만 달러, 약 3,600억 원에 따냈습니다. 2024년 필리조선소 인수 뒤 첫 미 해군 함정 신규 건조 수주로, 3척을 추가로 건조할 수 있는 옵션이 포함됐고 2027년 4분기 필라델피아 필리조선소에서 건조를 시작합니다. 미 해군은 중형상륙함 35척을 도입할 계획입니다.",
+   "question": "한국 조선, 미국 군함 시장까지 갈까요?",
+   "keywords": ["한화", "조선"]
+  },
+  {
+   "region": "북한",
+   "short": "북 드론 훈련",
+   "headline": "북, 자폭드론\n한국군 초소\n모형 타격",
+   "ill": {"kind": "icon"},
+   "icon": ["Bomb", "Military helmet", "Crossed swords"],
+   "motion": "shake",
+   "photo": "Korean Demilitarized Zone",
+   "stat1": "30여 종",
+   "stat1_label": "공개된 무인기 (스텔스 무인전투기 첫 공개)",
+   "stat2": "600㎜\n방사포",
+   "stat2_label": "'저격수' 사격 첫 공개",
+   "source": "조선중앙통신 · 연합뉴스",
+   "hook": {"q": "북한 자폭드론\n표적은 한국군?", "hi": "무인기 30여 종"},
+   "summary": "북한이 김정은 국무위원장이 참관한 '무인항공기술발전-2026' 전시회에서 자폭드론으로 한국군 최전방 초소(GP)와 미군 M1 전차, K9 자주포 모형을 타격하는 장면을 30일 공개했습니다. 스텔스 무인전투기 등 30여 종의 무인기와 '저격수'로 이름 붙인 600㎜ 방사포 사격도 처음 공개됐고, 김 위원장은 '힘이 곧 평화'라고 말했습니다. 우리 정부는 지뢰 사건에 원칙 있게 대응하되 평화공존 정책은 유지하겠다고 밝혔습니다.",
+   "question": "북한 드론 위협, 우리 대비는 충분할까요?",
+   "keywords": ["북한", "자폭드론"]
+  }
+ ],
+ "ai": {},
+ "market": {
+  "date_label": "주말 휴장 · 이번 주 정리",
+  "headline_short": "코스피 한 주 +3.25%",
+  "headline": "코스피\n하루 −3.48%\n한 주 +3.25%",
+  "rows": [
+   {"name": "코스피 (10/30)", "value": 5730.74, "pct": -3.48},
+   {"name": "코스닥 (10/30)", "value": 724.38, "pct": -3.83},
+   {"name": "코스피 주간 (10/23 대비)", "value": 5730.74, "pct": 3.25}
+  ],
+  "note": "6월 고점 9,385 대비 −38.9% · 월요일 반도체 수급부터 확인",
+  "photo": "Korea Exchange building Yeouido Seoul"
+ },
+ "oneliner": "한 주 숫자보다\n내 계획을\n먼저 보세요",
+ "scripts": [
+  "강남 집값 12주째 하락, 서울은 0.09퍼센트 상승. 오늘 국내 이슈와 증시, 45초 정리.",
+  "강남 아파트값 12주째 하락, 서울 전체는 90주째 상승. 대통령은 지금은 견디는 중이라 했습니다.",
+  "한화, 미 해군 상륙함 3600억 원 첫 수주. 3척 추가 옵션도 있어 미국 군함 시장의 발판입니다.",
+  "북한이 자폭드론으로 한국군 초소 모형을 때리는 장면을 공개했습니다. 무인기 30여 종을 선보였습니다.",
+  "주말 휴장. 금요일 코스피 3.48퍼센트 급락한 5730, 코스닥 724. 한 주로는 3.25퍼센트 올랐습니다.",
+  "오늘의 한 줄. 한 주 숫자보다 내 계획을 먼저 보세요. 강남 집값 하락, 서울 전체로 번질까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "shorts_to_build": [1],
+ "render_attempt": 2
+}
