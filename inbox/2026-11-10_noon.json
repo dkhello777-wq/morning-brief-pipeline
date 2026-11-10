@@ -1,0 +1,208 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.10 TUE",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "hook": {
+  "q": "엔비디아 −4%\nAMD는 +13%?",
+  "hi": "나스닥 +2.7%"
+ },
+ "question": "100만 토큰 10센트 모델, 여러분 일에 어디에 써먹겠어요?",
+ "keywords": [
+  "AI뉴스",
+  "엔비디아",
+  "뮤즈엠버"
+ ],
+ "issues": [
+  {
+   "region": "AI 칩주",
+   "short": "엔비디아 −4.27%, AMD +13.26%",
+   "headline": "엔비디아 −4.27%\nAMD +13.26%\n칩주 엇갈린 하루",
+   "ill": {
+    "kind": "number",
+    "value": 13.26,
+    "suffix": "%",
+    "label": "AMD 9일 하루 상승률 · 오펜하이머 매수 의견 상향 뒤 (Yahoo Finance · The Motley Fool)"
+   },
+   "icon": [
+    "Money with wings",
+    "Desktop computer",
+    "Coin"
+   ],
+   "motion": "spin",
+   "photo": "Advanced Micro Devices headquarters",
+   "image_prompt": "two stylized silicon chips on a trading desk, one glowing green and rising, one dim red and sinking, abstract market chart lines in the background, no people, no text, no logos",
+   "stat1": "$178.67",
+   "stat1_label": "엔비디아 9일 종가 · −4.27% · 이사회 조사 착수 뒤 하락 (Reuters · Yahoo Finance)",
+   "stat2": "+2.74%",
+   "stat2_label": "나스닥 25,253.14 마감 · 지난주 하락분 일부 되돌림",
+   "source": "Reuters · Yahoo Finance · The Motley Fool",
+   "hook": {
+    "q": "엔비디아 −4%\nAMD는 +13%?",
+    "hi": "나스닥 +2.7%"
+   },
+   "summary": "9일 미국 정규장에서 엔비디아는 4.27% 내린 178.67달러에 마감했습니다. 로이터는 이사회가 젠슨 황 CEO 관련 내부 조사에 착수한 뒤 주가가 4% 넘게 내렸다고 전했습니다. 반면 AMD는 오펜하이머의 매수 의견 상향 뒤 13.26% 오른 508.58달러로 마감했고(Yahoo Finance · The Motley Fool), 나스닥은 2.74% 오른 25,253.14로 지난주 하락분을 일부 되돌렸습니다.",
+   "question": "AI 칩주 급변, 여러분 투자 판단에 어떻게 반영하세요?",
+   "keywords": [
+    "엔비디아",
+    "AMD"
+   ]
+  },
+  {
+   "region": "메타 새 모델",
+   "short": "뮤즈 엠버, 입력 100만 토큰에 10센트",
+   "headline": "메타 뮤즈 엠버\n100만 토큰에\n10센트",
+   "ill": {
+    "kind": "number",
+    "value": 10,
+    "suffix": "센트",
+    "label": "입력 100만 토큰당 · 출력은 50센트 · 20만 토큰 이하 기준 (Meta 개발자 블로그)"
+   },
+   "icon": [
+    "Gear",
+    "Electric plug",
+    "Robot"
+   ],
+   "motion": "spin",
+   "photo": "Meta Platforms headquarters",
+   "stat1": "36점",
+   "stat1_label": "Artificial Analysis 지능 지수 · 클로드 하이쿠 5.5와 동점",
+   "stat2": "약 1/3",
+   "stat2_label": "지능 지수 과제당 비용 · 하이쿠 5.5의 약 3분의 1 (Artificial Analysis)",
+   "source": "Meta 개발자 블로그 · Artificial Analysis · TechCrunch",
+   "hook": {
+    "q": "100만 토큰에\n10센트라고?",
+    "hi": "지능 지수 36점"
+   },
+   "summary": "메타가 9일 뮤즈 모델군에서 가장 작고 효율적인 모델 뮤즈 엠버를 내놨습니다. 코딩 작업, 도구 호출, 문서 분석 같은 반복적인 에이전트 작업용으로 텍스트·이미지·오디오·비디오 입력을 지원합니다. 가격은 20만 토큰 이하 기준 입력 100만 토큰당 0.10달러, 출력 0.50달러입니다. Artificial Analysis는 지능 지수 36점으로 클로드 하이쿠 5.5와 같지만 과제당 비용은 약 3분의 1이라고 평가했습니다. 메타 모델 API와 뮤즈 코드에서 쓸 수 있습니다.",
+   "question": "값싼 모델로 반복 업무를 맡기면, 내 일은 어디로 갈까요?",
+   "keywords": [
+    "뮤즈엠버",
+    "메타AI"
+   ]
+  },
+  {
+   "region": "구글 AI 칩",
+   "short": "8세대 TPU 두 종 추가",
+   "headline": "구글 TPU\n보안형 8tx\n연산 2배 8i 맥스",
+   "ill": {
+    "kind": "number",
+    "value": 2,
+    "suffix": "배",
+    "label": "TPU 8i 맥스 · 연산·SRAM·HBM 대역폭 각각 2배 (TPU 8i 대비 · Google)"
+   },
+   "icon": [
+    "Desktop computer",
+    "Locked with key",
+    "Shield"
+   ],
+   "motion": "bob",
+   "photo": "Googleplex",
+   "stat1": "8tx",
+   "stat1_label": "사용 중에도 데이터·가중치 암호화 유지 · 규제 산업·정부용",
+   "stat2": "약 100곳",
+   "stat2_label": "TPU 고객 수 · 두 시스템 출시 시점·가격은 미공개",
+   "source": "Google 공식 블로그 (11/9)",
+   "hook": {
+    "q": "구글 TPU\n또 두 종?",
+    "hi": "연산 2배"
+   },
+   "summary": "구글이 9일 8세대 TPU 두 종을 추가했습니다. TPU 8tx는 민감한 데이터와 모델 가중치를 사용 중에도 보호·격리하는 기밀 추론용으로 규제 산업과 정부를 겨냥하고, TPU 8i 맥스는 TPU 8i보다 연산·SRAM·HBM 대역폭이 각각 2배로 긴 문맥을 다루는 에이전트 작업용입니다. 구글은 TPU 고객이 100곳 가까이 된다고 밝혔고, 두 시스템의 출시 시점과 가격은 공개하지 않았습니다.",
+   "keywords": [
+    "구글TPU"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "바이트댄스",
+  "short": "시드림 5.5, 100번 고쳐도 안정적인 편집",
+  "headline": "시드림 5.5\n100번 고쳐도\n안 흔들리는 편집",
+  "point1": "같은 이미지를 100회 연속 편집해도 안정적으로 유지 · 투명 배경(알파) 바로 생성",
+  "point1_sub": "돌라(Dola) 채팅·BytePlus 플레이그라운드에서 체험 · 무료 여부는 공식 글에 표기 없음",
+  "point2": "썸네일·합성용 투명 배경 이미지를 뽑을 때 쓰면 됩니다.",
+  "point2_sub": "글자 심각 깨짐 0.4% · 바이트댄스 자체 평가 수치",
+  "verdict": "써먹기",
+  "source": "ByteDance Seed 공식 블로그 (11/9)",
+  "icon": [
+   "Framed picture",
+   "Artist palette",
+   "Paintbrush"
+  ]
+ },
+ "market": {
+  "date_label": "11/9 마감 (KST 11/10 06:00)",
+  "headline": "나스닥 +2.74%\nAMD +13.26%\n엔비디아 −4.27%",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 25253.14,
+    "pct": 2.74
+   },
+   {
+    "name": "AMD",
+    "value": 508.58,
+    "pct": 13.26
+   },
+   {
+    "name": "엔비디아",
+    "value": 178.67,
+    "pct": -4.27
+   }
+  ],
+  "note": "11/9 정규장 종가 · S&P 500 +2.35%, 다우 +2.15% · 지난주 하락 뒤 반등",
+  "photo": "Nvidia headquarters Santa Clara",
+  "icon": [
+   "Money bag",
+   "Coin"
+  ]
+ },
+ "oneliner": "같은 AI 칩인데\n하루에 희비가\n갈린다",
+ "scripts": [
+  "엔비디아 4퍼센트 빠지고 에이엠디 13퍼센트 뛴 날. 오늘 AI, 핵심만 정리.",
+  "엔비디아 이사회 조사 뒤 4.27퍼센트 하락, 에이엠디 매수 상향 뒤 13.26퍼센트 상승.",
+  "메타 뮤즈 엠버, 입력 100만 토큰에 10센트. 지능 지수 36점, 반복 에이전트 작업용입니다.",
+  "구글, 8세대 TPU 두 종 추가. 암호화 상태로 추론하는 보안형, 연산 2배 맥스형. 출시일 미공개.",
+  "바이트댄스 시드림 5.5, 100번 고쳐도 안정적인 편집, 투명 배경도 바로 생성. 썸네일용 투명 배경을 뽑을 때 쓰면 됩니다.",
+  "나스닥 2.74퍼센트 상승, 에이엠디 13.26 상승, 엔비디아 4.27퍼센트 하락. 지난주 하락 뒤 반등.",
+  "오늘의 한 줄. 같은 AI 칩인데 하루에 희비가 갈립니다. 100만 토큰 10센트 모델, 여러분 일에 어디에 써먹겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Chart increasing",
+  "Bull",
+  "Dollar banknote",
+  "Fog",
+  "Clipboard",
+  "Classical building",
+  "World map",
+  "Handshake",
+  "Dove",
+  "Robot",
+  "Brain",
+  "Locked with key",
+  "Factory",
+  "Rescue worker's helmet",
+  "Ship",
+  "Anchor",
+  "Speech balloon",
+  "Busts in silhouette",
+  "Hourglass not done",
+  "Magnifying glass tilted right",
+  "Shield",
+  "Office building",
+  "Microphone",
+  "Balance scale",
+  "Scroll",
+  "Speaking head",
+  "Studio microphone",
+  "Coin",
+  "Ice",
+  "Candle",
+  "Fuel pump",
+  "Bear",
+  "Briefcase",
+  "Seedling",
+  "Megaphone"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37"
+}
