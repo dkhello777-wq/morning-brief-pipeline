@@ -1,0 +1,203 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.14 SAT",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "hook": {
+  "q": "아웃룩·팀즈\n12시간 먹통?",
+  "hi": "74개국 영향"
+ },
+ "question": "회사 메일과 메신저가 하루 멈추면, 여러분은 어떻게 일하시겠어요?",
+ "keywords": [
+  "AI뉴스",
+  "마이크로소프트",
+  "구글검색"
+ ],
+ "issues": [
+  {
+   "region": "MS 글로벌 장애",
+   "short": "아웃룩·팀즈·코파일럿 12시간 넘게 장애",
+   "headline": "아웃룩·팀즈\n코파일럿\n12시간 넘게 장애",
+   "ill": {
+    "kind": "number",
+    "value": 74,
+    "suffix": "개국",
+    "label": "다운디텍터에 장애 신고가 접수된 국가·지역 수 (Al Jazeera)"
+   },
+   "icon": [
+    "Envelope",
+    "Incoming envelope",
+    "Satellite antenna"
+   ],
+   "motion": "pulse",
+   "photo": "Microsoft Redmond campus",
+   "image_prompt": "a dark open-plan office at night where rows of computer monitors show blank blue screens and a single desk lamp glows, no people, no text, no logos",
+   "stat1": "4.3만+",
+   "stat1_label": "13일 07:00 GMT 기준 아웃룩 장애 신고 4만 3천 건+ (다운디텍터 · Al Jazeera)",
+   "stat2": "서버 문제",
+   "stat2_label": "MS: 다수 서버가 예기치 않게 불능 · 악성 행위 증거 없음 (Reuters · TechCrunch)",
+   "source": "Reuters · Al Jazeera · TechCrunch (11/13)",
+   "hook": {
+    "q": "아웃룩·팀즈\n12시간 먹통?",
+    "hi": "74개국 영향"
+   },
+   "summary": "마이크로소프트 아웃룩·팀즈·코파일럿이 12일 16시(GMT) 무렵부터 13일까지 12시간 넘게 세계 곳곳에서 장애를 겪었다고 로이터와 알자지라가 전했습니다. 다운디텍터에는 1시간 안에 74개국·지역에서 신고가 들어왔고, 13일 07시(GMT) 기준 아웃룩 장애 신고가 4만 3천 건을 넘었습니다. 호주·일본 정부 기관, 미 하원, 유로넥스트, 해운사 머스크, 인도 항공사 등이 영향을 받았습니다. 마이크로소프트는 다수 서버가 예기치 않게 불능 상태가 됐다며 원인을 조사 중이고, 악성 행위의 증거는 없다고 밝혔습니다. 오픈AI와 앤트로픽도 마이크로소프트 연동 기능에 문제가 생겼다고 알렸습니다.",
+   "question": "회사 메일이 하루 멈추면, 여러분은 어떻게 일하시겠어요?",
+   "keywords": [
+    "마이크로소프트",
+    "클라우드장애"
+   ]
+  },
+  {
+   "region": "AI 칩 실적",
+   "short": "세레브라스 매출 55%↑, 주가 +11.22%",
+   "headline": "세레브라스\n분기 매출 55%↑\n주가 +11.22%",
+   "ill": {
+    "kind": "number",
+    "value": 11.22,
+    "suffix": "%",
+    "label": "13일 하루 상승률 · 종가 108.72달러 (The Motley Fool)"
+   },
+   "icon": [
+    "Abacus",
+    "Dollar banknote",
+    "Electric plug"
+   ],
+   "motion": "spin",
+   "photo": "Cerebras Wafer Scale Engine",
+   "stat1": "2.1억$",
+   "stat1_label": "3분기 매출(GAAP) 2억 1,080만$ · 1년 전보다 55% 증가 · 분기 최대 (Cerebras 실적 공시)",
+   "stat2": "~9.6억$",
+   "stat2_label": "2026년 핵심 매출 전망 9.4억~9.6억$ · 기존 8.8억~8.9억$에서 상향 (Reuters)",
+   "source": "Cerebras 실적 공시(8-K) · Reuters · The Motley Fool",
+   "hook": {
+    "q": "세레브라스가 누구?\n하루 +11%",
+    "hi": "매출 55%↑"
+   },
+   "summary": "AI 칩 회사 세레브라스가 12일 3분기 실적을 발표했습니다. 매출(GAAP)은 1년 전보다 55% 늘어난 2억 1,080만 달러로 분기 최대이고, 2026년 핵심 매출 전망은 8억 8천만~8억 9천만 달러에서 9억 4천만~9억 6천만 달러로 올렸습니다. 앤드루 펠드먼 CEO는 실적 발표에서 마이크로소프트와 클라우드 계약을 맺었고 세부 내용은 내년에 공개한다고 말했습니다(Reuters). 3분기 GAAP 순손실은 1억 6,120만 달러였습니다. 13일 주가는 11.22% 오른 108.72달러에 마감했습니다.",
+   "question": "엔비디아 말고 다른 AI 칩 회사, 눈여겨보시나요?",
+   "keywords": [
+    "세레브라스",
+    "AI칩"
+   ]
+  },
+  {
+   "region": "미 연준 보고서",
+   "short": "연준 설문 87%가 AI를 금융 위험으로",
+   "headline": "연준 설문\n87%가 AI를\n금융 위험으로",
+   "ill": {
+    "kind": "number",
+    "value": 87,
+    "suffix": "%",
+    "label": "금융안정보고서 설문에서 AI를 주요 위험으로 꼽은 응답 비율 · 5월엔 50% (Reuters)"
+   },
+   "icon": [
+    "Ledger",
+    "Bank",
+    "🇺🇸"
+   ],
+   "motion": "sway",
+   "photo": "Marriner S. Eccles Federal Reserve Board Building",
+   "stat1": "5배",
+   "stat1_label": "AI 관련 부채 발행 6,800억$ (2026년 10월까지) · 2023년 전체의 약 5배 (Reuters)",
+   "stat2": "52%",
+   "stat2_label": "2위 위험자산의 큰 조정 · 조사는 9~10월, 엔비디아 CEO 사임 전 (Reuters)",
+   "source": "Reuters · Investing.com (11/13, 연준 금융안정보고서)",
+   "hook": {
+    "q": "AI가 금융 위험\n1위라고?",
+    "hi": "응답 87%"
+   },
+   "summary": "미국 연방준비제도가 13일 낸 반기 금융안정보고서의 설문에서 응답자의 87%가 AI를 금융 시스템의 주요 위험으로 꼽았다고 로이터가 전했습니다. 5월 조사에서는 50%였습니다. 사이버 공격, 복잡한 AI 관련 금융, AI 수익 둔화가 광범위한 시장 조정으로 이어질 가능성이 걱정으로 거론됐고, 2위는 위험자산의 큰 조정(52%)이었습니다. 보고서는 AI 관련 부채 발행이 2026년 10월까지 6,800억 달러로 2023년 전체의 약 5배라며 1990년대 말 통신 투자 붐과 비교했습니다. 조사는 9~10월에 이뤄져 엔비디아 CEO 사임은 반영되지 않았습니다.",
+   "keywords": [
+    "연준",
+    "AI투자"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "구글",
+  "short": "검색 AI 모드에 제미나이 4 하이드로젠",
+  "headline": "구글 검색\n복잡한 질문도\n한 번에",
+  "point1": "조건이 여러 개 섞인 긴 질문·오타도 이해 · 비교표·이미지·맞춤 도구로 답",
+  "point1_sub": "구글 검색 AI 모드 · 전 세계 모든 검색 이용자 · 11/12부터 · AI 모드 지원 언어 전부",
+  "point2": "조건이 여러 개 붙은 질문을 한 번에 물어볼 때 쓰면 됩니다.",
+  "point2_sub": "하위 주제별로 동시 검색해 더 많은 사이트 연결 · 제미나이 3.8 플래시보다 2.5배 빠른 모델 (TechCrunch)",
+  "verdict": "써먹기",
+  "source": "Google 공식 블로그 (11/12) · TechCrunch",
+  "icon": [
+   "Magnifying glass tilted left",
+   "Mobile phone",
+   "Light bulb"
+  ]
+ },
+ "market": {
+  "date_label": "11/13(금) 마감 · 주간 정리",
+  "headline": "AMD −8.75%\n세레브라스 +11.22%\n주간 나스닥 +2.3%",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 25136.27,
+    "pct": -0.91
+   },
+   {
+    "name": "AMD",
+    "value": 534.06,
+    "pct": -8.75
+   },
+   {
+    "name": "세레브라스",
+    "value": 108.72,
+    "pct": 11.22
+   }
+  ],
+  "note": "11/13 정규장 종가 · 엔비디아 −2.01%, 브로드컴 −4.8% · 주간 나스닥 +2.3%, S&P 500 +2.5% (TheStreet · AP) · 월요일 개장 전까지 변동 없음",
+  "photo": "AMD headquarters Santa Clara",
+  "icon": [
+   "Purse",
+   "Coin"
+  ]
+ },
+ "oneliner": "클라우드가\n멈춘 날\n내 일의 백업을\n생각하자",
+ "scripts": [
+  "아웃룩, 팀즈 12시간 먹통? 74개국에 영향. 오늘 AI, 핵심만 정리.",
+  "마이크로소프트 아웃룩, 팀즈가 74개국에서 12시간 넘게 멈췄습니다. 사이버 공격 증거는 없다고 합니다.",
+  "세레브라스 3분기 매출 55퍼센트 증가, 전망 상향, 마이크로소프트와 계약. 주가 11.22퍼센트 상승.",
+  "미 연준 설문, 87퍼센트가 AI를 금융 위험으로 꼽았습니다. 5월엔 50퍼센트였습니다.",
+  "구글 검색 AI 모드에 제미나이 4 하이드로젠. 오타 섞인 긴 질문도 이해. 조건 여러 개인 질문을 한 번에 물어볼 때 쓰면 됩니다.",
+  "금요일 나스닥 0.91, 에이엠디 8.75퍼센트 하락, 세레브라스 11.22 상승. 주간 나스닥 2.3퍼센트 상승.",
+  "오늘의 한 줄. 클라우드가 멈춘 날, 내 일의 백업을 생각하자. 회사 메일과 메신저가 하루 멈추면, 여러분은 어떻게 일하시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Glasses",
+  "Factory",
+  "Scroll",
+  "Automobile",
+  "Bank",
+  "Electric plug",
+  "Credit card",
+  "Airplane",
+  "Clapper board",
+  "Coin",
+  "Mechanical arm",
+  "Bar chart",
+  "Page facing up",
+  "Headphone",
+  "Receipt",
+  "Money with wings",
+  "Gear",
+  "Desktop computer",
+  "Framed picture",
+  "Money bag",
+  "Magnifying glass tilted right",
+  "Robot",
+  "Balance scale",
+  "Speaking head",
+  "Dollar banknote",
+  "Briefcase",
+  "Seedling",
+  "Megaphone",
+  "Cloud"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37"
+}
