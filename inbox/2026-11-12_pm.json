@@ -1,0 +1,159 @@
+{
+  "edition": "pm",
+  "date_short": "11.12 THU",
+  "title": "오늘의\n국내 이슈\n저녁 정리",
+  "hook": {
+    "q": "코스피·코스닥\n동반 하락",
+    "hi": "코스닥 −1.22%"
+  },
+  "question": "반도체 투자, 우리 증시에 힘이 될까요?",
+  "keywords": [
+    "코스피",
+    "HBM",
+    "APEC"
+  ],
+  "issues": [
+    {
+      "region": "국내 증시",
+      "short": "코스피 −0.61%, 코스닥 −1.22% 하락 마감",
+      "headline": "코스피·코스닥\n나란히\n하락 마감",
+      "ill": {
+        "kind": "icon",
+        "label": "11/12 정규장 종가 · 전 거래일 대비"
+      },
+      "icon": [
+        "Chart decreasing",
+        "Bank",
+        "Coin"
+      ],
+      "motion": "pulse",
+      "stat1": "하락",
+      "stat1_label": "코스피 −0.61% · 5,342.73",
+      "stat2": "하락",
+      "stat2_label": "코스닥 −1.22% · 696.53",
+      "source": "연합뉴스 · 뉴시스 (11/12)",
+      "hook": {
+        "q": "코스피·코스닥\n동반 하락",
+        "hi": "코스닥 −1.22%"
+      },
+      "summary": "11월 12일 코스피는 0.61% 내린 5,342.73, 코스닥은 1.22% 내린 696.53으로 마감했습니다(연합뉴스·뉴시스). 보도에 따르면 기관 매도와 차익실현 부담 속에 두 시장 모두 하락했습니다.",
+      "question": "오늘 증시 하락, 어떻게 보셨나요?",
+      "keywords": [
+        "코스피",
+        "코스닥"
+      ]
+    },
+    {
+      "region": "삼성전자",
+      "short": "아산 온양 HBM 패키징 공장 착공",
+      "headline": "삼성 HBM\n패키징 공장\n착공",
+      "ill": {
+        "kind": "icon",
+        "label": "아산 온양캠퍼스 착공식 (11/12)"
+      },
+      "icon": [
+        "Building construction",
+        "Factory",
+        "Gear"
+      ],
+      "motion": "bob",
+      "stat1": "6조",
+      "stat1_label": "패키징 공장 신설 계획",
+      "stat2": "40조",
+      "stat2_label": "장비 순차 투자 계획",
+      "source": "연합뉴스 · 뉴시스 · Reuters (11/12)",
+      "hook": {
+        "q": "삼성 HBM 공장\n첫 삽",
+        "hi": "장비 40조 원 계획"
+      },
+      "summary": "삼성전자가 11월 12일 충남 아산 온양캠퍼스에서 고대역폭 메모리(HBM) 패키징 공장 착공식을 열었습니다. 공장에 6조 원, 이후 장비에 40조 원을 순차 투자할 계획입니다(연합뉴스·뉴시스·Reuters). 두 금액은 이미 집행한 돈이 아니라 투자 계획입니다.",
+      "question": "반도체 투자, 우리 증시에 힘이 될까요?",
+      "keywords": [
+        "삼성전자",
+        "HBM"
+      ]
+    },
+    {
+      "region": "정상외교",
+      "short": "이 대통령, 16~19일 필리핀·중국 방문 예정",
+      "headline": "이 대통령\n필리핀·중국\n순방 예정",
+      "ill": {
+        "kind": "icon",
+        "label": "11/12 국가안보실 브리핑 · 16~19일 일정"
+      },
+      "icon": [
+        "Airplane",
+        "Globe showing Asia-Australia",
+        "Handshake"
+      ],
+      "motion": "sway",
+      "stat1": "16일",
+      "stat1_label": "필리핀 아세안 정상회의",
+      "stat2": "19일",
+      "stat2_label": "중국 APEC 본회의",
+      "source": "Reuters · SBS · YTN (11/12)",
+      "hook": {
+        "q": "이 대통령\n어디로 가나?",
+        "hi": "필리핀·중국 순방"
+      },
+      "summary": "이재명 대통령은 11월 16일부터 19일까지 필리핀과 중국을 방문해 아세안 관련 정상회의와 APEC에 참석할 예정입니다(11/12 국가안보실 브리핑, Reuters·SBS·YTN). 별도 양자회담은 아직 확정되지 않았습니다.",
+      "question": "이번 순방에서 무엇을 기대하시나요?",
+      "keywords": [
+        "정상외교",
+        "APEC"
+      ]
+    }
+  ],
+  "market": {
+    "date_label": "11/12(목) 정규장 마감",
+    "headline": "코스피 −0.61%\n코스닥 −1.22%\n나란히 하락",
+    "headline_short": "코스피 −0.61%, 코스닥 −1.22% 나란히 하락",
+    "rows": [
+      {
+        "name": "코스피",
+        "value": 5342.73,
+        "pct": -0.61
+      },
+      {
+        "name": "코스닥",
+        "value": 696.53,
+        "pct": -1.22
+      }
+    ],
+    "note": "11/12 정규장 종가 · 전 거래일 대비 · 코스피 −32.63p, 코스닥 −8.57p",
+    "photo": "Korea Exchange"
+  },
+  "oneliner": "증시는 쉬어 가고\nAI 반도체 투자는\n첫 삽",
+  "scripts": [
+    "코스피·코스닥 동반 하락, 삼성 HBM 공장 착공. 오늘 국내 이슈, 핵심만 정리.",
+    "코스피 0.61퍼센트, 코스닥 1.22퍼센트 하락 마감. 기관 매도와 차익실현 부담.",
+    "삼성전자, 아산 온양 HBM 패키징 공장 착공. 공장 6조, 장비 40조 원 순차 투자 계획.",
+    "이재명 대통령, 16일부터 19일까지 필리핀·중국 방문 예정. 아세안 정상회의와 APEC 참석.",
+    "코스피 32.63포인트 내린 5,342.73, 코스닥 8.57포인트 내린 696.53에 마감.",
+    "오늘의 한 줄. 증시는 쉬어 가고, AI 반도체 투자는 첫 삽. 반도체 투자, 우리 증시에 힘이 될까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [
+    1
+  ],
+  "recent_icons": [
+    "House",
+    "Calendar",
+    "Memo",
+    "Shield",
+    "Bell",
+    "Scroll",
+    "Snowflake",
+    "Shopping cart",
+    "Clapper board",
+    "Mechanical arm",
+    "Page facing up",
+    "Headphone"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37",
+  "gpt_script": {
+    "file": "2026-11-12_1700_pm_v01.md",
+    "drive_id": "1wfM04TbarvRhVmxNqFZBqUR99hzW81-u",
+    "job_id": "cardnews-20261112-1700",
+    "version": "v01"
+  }
+}

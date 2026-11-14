@@ -1,0 +1,185 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.07 SAT",
+  "title": "간밤의\nAI 소식\n핵심 정리",
+  "hook": {
+    "q": "AI 더 쓰는데\n지출은 그대로?",
+    "hi": "두 달 +1.5%"
+  },
+  "question": "AI 요금이 더 싸지면, 여러분은 어디에 더 쓰시겠어요?",
+  "keywords": [
+    "AI뉴스",
+    "오픈AI",
+    "AI규제"
+  ],
+  "issues": [
+    {
+      "region": "기업 AI 지출",
+      "short": "AI 지출 8~9월 +1.5%",
+      "headline": "AI는 더 쓰는데\n기업 지출은\n두 달 +1.5%",
+      "ill": {
+        "kind": "number",
+        "value": 1.5,
+        "decimals": 1,
+        "suffix": "%",
+        "label": "8~9월 토큰 지출 증가율(램프 집계) · 7월은 전달보다 42% 증가"
+      },
+      "icon": [
+        "Credit card",
+        "Receipt",
+        "Abacus"
+      ],
+      "motion": "spin",
+      "photo": "Open plan office workers laptops",
+      "image_prompt": "a wide office desk with many glowing laptop screens stacked higher and higher while a single small coin stays flat on the desk, soft daylight, no people, no text, no logos",
+      "stat1": "12~15달러",
+      "stat1_label": "중간 기업의 직원 1인당 월 AI 지출 · 상위 10%는 600~1,000달러",
+      "stat2": "약 1만달러",
+      "stat2_label": "상위 1% 기업의 직원 1인당 월 지출 · 8~9월 여름 고점 아래로 소폭 하락",
+      "source": "TechCrunch · Ramp",
+      "hook": {
+        "q": "AI 더 쓰는데\n지출은 그대로?",
+        "hi": "두 달 +1.5%"
+      },
+      "summary": "기업 지출 데이터를 집계하는 램프(Ramp)의 자료에서 기업들의 AI 토큰 지출이 8~9월 두 달 동안 1.5%만 늘었습니다. 7월에는 전달보다 42% 늘었던 것과 대비되며, 사용량은 계속 늘었는데 지출은 제자리였습니다. 중간 기업은 직원 1인당 월 12~15달러, 상위 10%는 600~1,000달러, 상위 1%는 약 1만 달러를 쓰고 있습니다. 램프 수석 이코노미스트 아라 카라지안은 테크크런치에 오픈AI와 앤트로픽의 가격 인하로 AI를 쓰는 비용이 싸졌기 때문이라고 설명했고, 10월에는 지출이 다시 8.9% 늘었다고 했습니다.",
+      "question": "AI 요금이 더 싸지면, 여러분은 어디에 더 쓰시겠어요?",
+      "keywords": [
+        "AI지출",
+        "램프"
+      ]
+    },
+    {
+      "region": "오픈AI 투자 유치",
+      "short": "오픈AI 110억달러 조달",
+      "headline": "오픈AI\n1조 2,500억달러 가치\n110억달러 먼저 조달",
+      "ill": {
+        "kind": "number",
+        "value": 110,
+        "suffix": "억달러",
+        "label": "이번 라운드 1차 마감 금액(CNBC 확인) · 몇 주 안에 최대 90억달러 추가 가능"
+      },
+      "icon": [
+        "Money bag",
+        "Dollar banknote",
+        "Office building"
+      ],
+      "motion": "spin",
+      "photo": "Sarah Friar",
+      "stat1": "1조 2,500억달러",
+      "stat1_label": "이번 라운드 기업가치(프리머니) · CFO 세라 프라이어가 CNBC에서 밝힘",
+      "stat2": "2027년",
+      "stat2_label": "상장 시점으로 계속 검토 · 6월 SEC에 비공개 상장 서류 제출",
+      "source": "CNBC · Reuters",
+      "hook": {
+        "q": "급락장에도\n110억달러?",
+        "hi": "1.25조달러"
+      },
+      "summary": "오픈AI가 기업가치 1조 2,500억 달러로 새 투자 라운드의 1차분 110억 달러를 마감했다고 CNBC가 6일 확인했고, 몇 주 안에 최대 90억 달러를 더 조달할 수 있습니다. 최고재무책임자 세라 프라이어는 CNBC 인터뷰에서 \"The demand for AI is real\"(AI 수요는 진짜다)이라며 중간선거 뒤 데이터센터 반대 여론에도 인프라 투자를 계속하고, 2027년 상장을 계속 검토한다고 말했습니다. 테크크런치는 오픈AI가 제안 기업가치를 1조 4천억 달러에서 1조 2,500억 달러로 낮추고 조달 목표도 약 100억 달러 줄였다고 전했습니다.",
+      "keywords": [
+        "오픈AI",
+        "AI투자"
+      ]
+    },
+    {
+      "region": "미국 AI 규제",
+      "short": "민주당, 1월 AI 법안 추진",
+      "headline": "미 민주당\n1월 의회 장악 뒤\nAI 법안 쏟아낸다",
+      "ill": {
+        "kind": "icon"
+      },
+      "icon": [
+        "Classical building",
+        "Memo",
+        "🇺🇸"
+      ],
+      "motion": "sway",
+      "photo": "United States Capitol",
+      "stat1": "법안 3갈래",
+      "stat1_label": "데이터센터 전기요금 소비자 보호 · 첨단 AI 독립 안전 검사 · AI 피해 기업 책임 규정(Reuters)",
+      "stat2": "트럼프 반대",
+      "stat2_label": "AI 의무 규제 요구 거듭 거부 · 6일 \"슈퍼 인텔리전스 100% 찬성\" 글",
+      "source": "Reuters · CNBC",
+      "hook": {
+        "q": "AI 법안\n쏟아진다?",
+        "hi": "1월 의회 교체"
+      },
+      "summary": "로이터는 미국 민주당이 내년 1월 의회를 장악한 뒤 AI와 데이터센터를 겨냥한 법안을 대거 내놓을 계획이라고 의원·보좌진·활동가들을 인용해 6일 보도했습니다. 데이터센터로 오르는 전기요금에서 소비자를 보호하고, 첨단 AI를 독립 전문가가 안전 기준으로 검사하게 하며, AI가 피해를 줬을 때 기업 책임을 명확히 하는 법안이 거론됩니다. 다만 트럼프 대통령은 AI 의무 규제 요구를 거듭 거부해 왔고, 6일 트루스소셜에 \"슈퍼 인텔리전스(SI)에 100% 찬성\"이라고 썼으며, 해싯 국가경제위원장은 CNBC에서 향후 몇 년 예정된 데이터센터는 주민투표 영향을 받지 않는다고 말했습니다.",
+      "keywords": [
+        "AI규제",
+        "미국의회"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "커서(Cursor)",
+    "short": "말로 설명하면 웹앱 배포까지",
+    "headline": "커서에서\n설명만 하면\n웹앱 만들어 배포",
+    "point1": "원하는 앱을 글로 설명하면 앱 제작·DB·로그인·호스팅까지 자동",
+    "point1_sub": "유료 플랜(클라우드 에이전트 켜진 경우) · 11/5 체인지로그 · 개인 플랜은 공개 링크 공유 가능",
+    "point2": "팀 내부용 신청 폼이나 작은 도구가 급할 때 쓰면 됩니다.",
+    "point2_sub": "게시 전 보안 검사 통과해야 공개 · GitHub 저장소에서도 배포 가능",
+    "verdict": "써먹기",
+    "source": "Cursor 체인지로그 (11/5)",
+    "photo": "Laptop computer coding",
+    "icon": [
+      "Laptop",
+      "Link",
+      "Rocket"
+    ]
+  },
+  "market": {
+    "date_label": "11/6 마감 (KST 06:00)",
+    "headline": "AMD +11.04%\n나스닥 +1.09%\n주간은 −3.4%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 24579.42,
+        "pct": 1.09
+      },
+      {
+        "name": "AMD",
+        "value": 449.04,
+        "pct": 11.04
+      },
+      {
+        "name": "엔비디아",
+        "value": 186.64,
+        "pct": 2.78
+      }
+    ],
+    "note": "3대 지수 4주 연속 주간 하락 · 나스닥 주간 −3.4%, S&P 500 −2.7%(UPI) · 전날 급락 일부 회복",
+    "photo": "AMD headquarters Santa Clara"
+  },
+  "oneliner": "AI는 더 쓰고\n값은 내려가고\n돈은 누가 벌까",
+  "scripts": [
+    "AI 더 쓰는데 지출은 그대로? 두 달 1.5퍼센트. 오늘 AI, 핵심만 정리.",
+    "램프 집계, 기업 AI 지출 8, 9월 두 달 1.5퍼센트만 증가. 가격 인하 영향이란 분석입니다.",
+    "오픈AI, 1조 2천5백억 달러 가치로 110억 달러 조달. CFO는 데이터센터 투자 계속 방침.",
+    "미 민주당, 1월 의회 장악 뒤 AI 법안 대거 추진. 전기요금, 안전 검사, 기업 책임이 골자.",
+    "커서가 글로 설명하면 웹앱을 만들어 데이터베이스와 로그인까지 붙여 링크로 배포. 팀 내부용 작은 도구가 급할 때 쓰면 됩니다.",
+    "나스닥 1.09, AMD 11.04, 엔비디아 2.78퍼센트 상승. 반등했지만 주간은 3.4퍼센트 하락.",
+    "오늘의 한 줄. AI는 더 쓰고, 값은 내려가고, 돈은 누가 벌까. AI 요금이 더 싸지면, 여러분은 어디에 더 쓰시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Money with wings",
+    "Locked with key",
+    "Handshake",
+    "Purse",
+    "Package",
+    "Hourglass not done",
+    "Mobile phone",
+    "Ballot box with ballot",
+    "Graduation cap",
+    "Fuel pump",
+    "Telephone receiver",
+    "Coin",
+    "Balance scale",
+    "Magnifying glass tilted left",
+    "Desktop computer",
+    "High voltage",
+    "Shield"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

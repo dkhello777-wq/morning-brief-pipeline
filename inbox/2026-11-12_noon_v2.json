@@ -1,0 +1,181 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.12 THU",
+  "title": "간밤의\nAI 소식\n핵심 정리",
+  "hook": {
+    "q": "AI 거품 걱정?\n코어위브 +25%",
+    "hi": "매출 168%↑"
+  },
+  "question": "항공권 예약, AI 에이전트에 맡기고 싶으세요?",
+  "keywords": [
+    "AI뉴스",
+    "코어위브",
+    "오픈AI"
+  ],
+  "issues": [
+    {
+      "region": "AI 클라우드 실적",
+      "short": "코어위브 +24.71%",
+      "headline": "코어위브\n매출 168%↑\n주가 +24.71%",
+      "ill": {
+        "kind": "number",
+        "value": 24.71,
+        "suffix": "%",
+        "label": "코어위브 11일 하루 상승률 · 2025년 4월 이후 최대 (CNBC)"
+      },
+      "icon": [
+        "Electric plug",
+        "Office building",
+        "Dollar banknote"
+      ],
+      "motion": "spin",
+      "photo": "data center server racks",
+      "image_prompt": "rows of glowing server racks in a vast data center with a bright upward light beam, no people, no text, no logos",
+      "stat1": "약 37억$",
+      "stat1_label": "3분기 매출 · 1년 전보다 168% 증가 (CNBC)",
+      "stat2": "~133억$",
+      "stat2_label": "2026년 매출 전망 130억~133억$로 상향",
+      "source": "CNBC · Reuters (11/11)",
+      "hook": {
+        "q": "AI 거품 걱정?\n코어위브 +25%",
+        "hi": "매출 168%↑"
+      },
+      "summary": "AI 전용 클라우드 회사 코어위브 주가가 11월 11일 하루 24.71% 올라 2025년 4월 이후 가장 큰 상승을 기록했습니다. 3분기 매출이 1년 전보다 168% 늘어 약 37억 달러였고, 2026년 매출 전망을 130억~133억 달러로 올렸습니다. 마이클 인트레이터 CEO는 CNBC에 \"인프라 수요는 여전히 압도적\"이라고 말했습니다. 로이터는 코어위브 실적이 AI 투자 지속성에 대한 투자자 우려를 식혔다고 전했고, 이날 나스닥은 1.60%, 엔비디아는 2.87% 올랐습니다.",
+      "question": "AI 인프라 주식, 지금이 바닥일까요 아니면 아직일까요?",
+      "keywords": [
+        "코어위브",
+        "AI주식"
+      ]
+    },
+    {
+      "region": "오픈AI 실적",
+      "short": "분기 매출 100억$, 영업손실 109억$",
+      "headline": "오픈AI\n매출 100억$\n손실 109억$",
+      "ill": {
+        "kind": "number",
+        "value": 100,
+        "suffix": "억$",
+        "label": "3분기 매출 · 처음으로 분기 100억 달러 (Bloomberg 보도)"
+      },
+      "icon": [
+        "Credit card",
+        "Briefcase",
+        "Robot"
+      ],
+      "motion": "spin",
+      "photo": "Sam Altman",
+      "stat1": "50%↑",
+      "stat1_label": "3분기 매출, 전 분기 대비 약 50% 증가 (Bloomberg 보도)",
+      "stat2": "−109억$",
+      "stat2_label": "3분기 영업손실 · 전 분기 −101억$ (WSJ 보도)",
+      "source": "TechCrunch · Quartz (Bloomberg·WSJ 보도 인용, 11/11)",
+      "hook": {
+        "q": "매출 100억$\n손실은 109억$?",
+        "hi": "매출 50%↑"
+      },
+      "summary": "오픈AI의 3분기 매출이 처음으로 100억 달러를 넘었다고 블룸버그가 익명 소식통을 인용해 보도했고, 테크크런치가 이를 전했습니다. 전 분기보다 약 50% 늘었고 연환산 매출은 500억 달러입니다. 다만 월스트리트저널 보도에 따르면 영업손실은 전 분기 101억 달러에서 109억 달러로 커졌습니다. 경쟁사 앤트로픽은 3분기 매출 170억 달러를 보고했으며, 두 회사의 연환산 매출 계산 방식은 다릅니다.",
+      "question": "매출보다 손실이 큰 AI 회사, 여러분은 어떻게 보세요?",
+      "keywords": [
+        "오픈AI",
+        "AI실적"
+      ]
+    },
+    {
+      "region": "AI 에이전트 차단",
+      "short": "유나이티드항공, AI 봇 접근 제한",
+      "headline": "항공권 예약\nAI 에이전트\n막는다",
+      "ill": {
+        "kind": "icon"
+      },
+      "icon": [
+        "Airplane",
+        "Ticket",
+        "Locked with key"
+      ],
+      "motion": "sway",
+      "stat1": "보안",
+      "stat1_label": "계정 유출·무단 사용 우려",
+      "stat2": "엇갈림",
+      "stat2_label": "아마존 차단, 월마트 제휴",
+      "source": "Reuters · CNBC (11/11)",
+      "hook": {
+        "q": "항공권 예약\nAI는 안 된다?",
+        "hi": "유나이티드 차단"
+      },
+      "summary": "유나이티드항공이 11월 11일 데이터 보안을 이유로 AI 봇의 자사 디지털 플랫폼 접근을 제한하겠다고 밝혔다고 로이터가 전했습니다. 제3자 AI 비서에 계정 정보를 공유하면 민감 정보 유출, 의도치 않은 구매, 계정 변경, 마일리지 무단 사용이 생길 수 있다는 설명입니다. 예약·발권·유통 정책도 바꿔 여행사와 중개 사이트를 통한 간접 접근까지 제한합니다. 기업 대응은 엇갈려, 아마존은 메타의 AI 에이전트 뮤즈를 차단했고 월마트는 제휴했으며, 익스피디아와 부킹은 오픈AI와 협업하고 있습니다.",
+      "keywords": [
+        "AI에이전트",
+        "유나이티드항공"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "어도비",
+    "short": "프리미어 AI 어시스턴트 베타",
+    "headline": "프리미어에\n말로 시키는\nAI 어시스턴트",
+    "point1": "전체 클립에 효과 적용 · 마스크한 피사체 추적 · 시퀀스 전체 색·노출 조정을 말로 지시",
+    "point1_sub": "프리미어·일러스트레이터·인디자인·애프터이펙트·Frame.io 베타 · 크리에이티브 클라우드 구독에 포함",
+    "point2": "영상 편집의 반복 작업을 맡길 때 쓰면 됩니다.",
+    "point2_sub": "포토샵은 베타 앱에서만 · 외부 AI 에이전트 연동(MCP)은 2027년 초 비공개 베타",
+    "verdict": "써먹기",
+    "source": "Adobe 뉴스룸·공식 블로그 (11/10, Adobe MAX)",
+    "photo": "Adobe headquarters San Jose",
+    "icon": [
+      "Clapper board",
+      "Movie camera",
+      "Film frames"
+    ]
+  },
+  "market": {
+    "date_label": "11/11 마감 (KST 11/12 06:00)",
+    "headline": "코어위브 +24.71%\n엔비디아 +2.87%\n나스닥 +1.60%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 25466.19,
+        "pct": 1.6
+      },
+      {
+        "name": "코어위브",
+        "value": 60.77,
+        "pct": 24.71
+      },
+      {
+        "name": "엔비디아",
+        "value": 173.73,
+        "pct": 2.87
+      }
+    ],
+    "note": "11/11 정규장 종가 · S&P 500 +1.31%, 다우 +0.49% · 미국 채권시장은 재향군인의 날 휴장 (Reuters)",
+    "photo": "Nasdaq MarketSite",
+    "icon": [
+      "Coin",
+      "Money bag"
+    ]
+  },
+  "oneliner": "AI 수요는 넘치고\n손실도 넘치고\n문 닫는 곳도 생긴다",
+  "scripts": [
+    "코어위브 하루 25퍼센트 급등? 매출 168퍼센트 증가. 오늘 AI, 핵심만 정리.",
+    "코어위브 3분기 매출 168퍼센트 증가, 주가 24.71퍼센트 급등. 나스닥도 1.6퍼센트 올랐습니다.",
+    "오픈AI 3분기 매출 처음 100억 달러. 영업손실은 109억 달러로 매출보다 큽니다.",
+    "유나이티드항공, AI 에이전트의 예약 접근 차단. 계정 정보 유출과 마일리지 무단 사용 우려입니다.",
+    "어도비 프리미어에 AI 어시스턴트 베타. 말로 시키면 전체 클립 효과와 색 보정까지. 편집 반복 작업을 맡길 때 쓰면 됩니다.",
+    "나스닥 1.6, 코어위브 24.71, 엔비디아 2.87퍼센트 상승. 에스앤피 500도 1.31퍼센트 올랐습니다.",
+    "오늘의 한 줄. AI 수요는 넘치고, 손실도 넘치고, 문 닫는 곳도 생깁니다. 항공권 예약, AI 에이전트에 맡기고 싶으세요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Mechanical arm",
+    "Bar chart",
+    "Page facing up",
+    "Headphone",
+    "Receipt",
+    "Money with wings",
+    "Gear",
+    "Desktop computer",
+    "Framed picture",
+    "Money bag"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}
