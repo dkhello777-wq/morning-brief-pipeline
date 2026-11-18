@@ -37,10 +37,14 @@ jobs:
           # 11/6: this step hung for 30+ minutes twice (no output), so each part gets a time limit and retries.
           # 11/18: failed 4 times in a row (~18 min each) with no visible reason, so each attempt now logs a plain line
           # with time and exit code, apt skips recommended packages, and the step limit is 30 minutes.
-          retry() { for n in 1 2 3; do echo "[$(date -u +%T)] try $n: ${*:2}"; timeout "$1" "${@:2}" && return 0; echo "[$(date -u +%T)] attempt $n failed (exit $?): ${*:2}"; sleep 5; done; return 1; }
+          retry() { for n in 1 2 3; do echo "[$(date -u +%T)] try $n: ${*:2}"; timeout "$1" "${@:2}" && return 0 || rc=$?; echo "[$(date -u +%T)] attempt $n failed (exit $rc): ${*:2}"; sleep 5; done; return 1; }
           APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          # 11/19: apt install hit its 480s limit 3 times with no output; the usual cause on these runners is the
+          # man-db trigger rebuilding the manual index, so it is turned off and apt now prints progress lines.
+          sudo rm -f /var/lib/man-db/auto-update
+          echo "man-db man-db/auto-update boolean false" | sudo debconf-set-selections
           retry 240 sudo apt-get $APT update -qq
-          retry 480 sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -qq --no-install-recommends ffmpeg fonts-noto-cjk
+          retry 480 sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -q -o Dpkg::Use-Pty=0 --no-install-recommends ffmpeg fonts-noto-cjk
           retry 240 pip install -q --timeout 60 playwright numpy
           retry 420 python -m playwright install --with-deps chromium >/dev/null
       - name: Render and publish release
