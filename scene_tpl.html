@@ -361,7 +361,8 @@ if(STYLE==='punch'&&PH){
   if(PART&&!PART.photo) $('part').innerHTML=artHtml(PART,PART.ai?400:380);
 }
 // numbers in the number line count up; dates and times (10/25, 07:00) are left as they are
-const HI=one((PH||{}).hi), HIN=[...HI.matchAll(/\d[\d,]*(?:\.\d+)?(?![\d\/:])/g)].filter(m=>!/[\/:]$/.test(HI.slice(0,m.index)));
+// clock times (10시) never count, and a hook with "count": false keeps every number fixed from frame 1
+const HI=one((PH||{}).hi), HIN=(PH||{}).count===false?[]:[...HI.matchAll(/\d[\d,]*(?:\.\d+)?(?![\d\/:시])/g)].filter(m=>!/[\/:]$/.test(HI.slice(0,m.index)));
 const countHi=p=>{ let o='',at=0; for(const m of HIN){ const v=parseFloat(m[0].replace(/,/g,'')), dec=(m[0].split('.')[1]||'').length;
   let x=(v*p).toFixed(dec); if(m[0].includes(',')) x=Number(x).toLocaleString('en-US',{minimumFractionDigits:dec,maximumFractionDigits:dec});
   o+=esc(HI.slice(at,m.index))+x; at=m.index+m[0].length; } return o+esc(HI.slice(at)); };
