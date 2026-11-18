@@ -1,0 +1,207 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.18 WED",
+  "title": "간밤의\nAI 소식\n핵심 정리",
+  "hook": {
+    "q": "황 없는 엔비디아\n매출 두 배?",
+    "hi": "매출 +103%"
+  },
+  "question": "코딩 AI 값이 절반 아래로 내려오면, 여러분은 어디에 먼저 써먹겠어요?",
+  "keywords": [
+    "AI뉴스",
+    "엔비디아",
+    "앤트로픽"
+  ],
+  "issues": [
+    {
+      "region": "엔비디아 실적",
+      "short": "엔비디아 3분기 매출 1,158억$ · 1년 새 +103%",
+      "headline": "황 없는 엔비디아\n매출 두 배\n1,158억$",
+      "ill": {
+        "kind": "number",
+        "value": 103,
+        "suffix": "%",
+        "label": "3분기 매출 증가율 (1년 전 대비) · 10월 25일 마감 분기"
+      },
+      "icon": [
+        "Chart increasing",
+        "Rocket",
+        "🇺🇸"
+      ],
+      "motion": "spin",
+      "photo": "Nvidia headquarters Santa Clara",
+      "image_prompt": "a glowing green stock chart line climbing above rows of dark data center server racks, no people, no text, no logos",
+      "stat1": "1,300억$",
+      "stat1_label": "4분기 매출 전망 (±3%) · 중국 데이터센터 매출은 전망에서 제외",
+      "stat2": "1,076억$",
+      "stat2_label": "데이터센터 매출 · 1년 새 +110%",
+      "source": "NVIDIA 보도자료 · SEC 8-K (11/17)",
+      "hook": {
+        "q": "황 없는 엔비디아\n매출 두 배?",
+        "hi": "매출 +103%"
+      },
+      "summary": "엔비디아가 17일(현지시간) 10월 25일 마감 3분기 매출 1,158억 달러를 발표했습니다. 직전 분기보다 20%, 1년 전보다 103% 늘었고, 데이터센터 매출은 1,076억 달러로 1년 새 110% 증가했습니다. 4분기 매출은 1,300억 달러(±3%)로 전망했으며 중국 데이터센터 컴퓨팅 매출은 전망에 넣지 않았습니다. 젠슨 황 사임 뒤 임시 CEO를 맡은 콜레트 크레스 CFO가 발표했고, 새 CEO 물색은 진행 중입니다.",
+      "question": "황 없는 엔비디아, 계속 두 배 성장할까요?",
+      "keywords": [
+        "엔비디아실적"
+      ]
+    },
+    {
+      "region": "마이크로소프트 새 모델",
+      "short": "MS 자체 AI 모델 7종 · 성능 98%에 비용 40%",
+      "headline": "MS 자체 모델 7종\n성능 98%에\n비용은 40%",
+      "ill": {
+        "kind": "number",
+        "value": 40,
+        "suffix": "%",
+        "label": "MAI 코드 2 비용 · GPT 6.1 솔 대비 (MS 자체 벤치마크 4종 평균 · 프로모션 가격 기준)"
+      },
+      "icon": [
+        "Laptop",
+        "Gear",
+        "🇺🇸"
+      ],
+      "motion": "bob",
+      "photo": "Microsoft Redmond campus",
+      "stat1": "7종",
+      "stat1_label": "MAI 모델 · 코딩·보안·이미지·음성 등 (이그나이트 2026)",
+      "stat2": "한정 고객",
+      "stat2_label": "보안 모델 MAI 사이버 2 플래시 · 일부 고객에게 먼저 제공 계획 (Reuters)",
+      "source": "Microsoft AI · GitHub 체인지로그 · Reuters (11/17)",
+      "hook": {
+        "q": "성능 98%에\n값은 40%?",
+        "hi": "자체 모델 7종"
+      },
+      "summary": "마이크로소프트가 17일(현지시간) 샌프란시스코 이그나이트 행사에서 자체 MAI 모델 7종을 공개했습니다. 코딩 모델 MAI 코드 2는 회사 자체 벤치마크 4종 평균에서 GPT 6.1 솔 성능의 98%를 비용 40%에 낸다고 밝혔고(프로모션 가격 기준), 보안 모델 MAI 사이버 2 플래시는 한정된 고객에게 먼저 제공할 계획이라고 로이터가 전했습니다. MAI 코드 2는 깃허브 코파일럿 유료 플랜에서 바로 쓸 수 있습니다.",
+      "question": "성능 98%에 값 40%, 코딩 AI 갈아타시겠어요?",
+      "keywords": [
+        "마이크로소프트",
+        "MAI"
+      ]
+    },
+    {
+      "region": "앤트로픽 상장",
+      "short": "앤트로픽 IPO · 주당 70~78$ · 목요일 나스닥 거래 예정",
+      "headline": "앤트로픽 상장\n주당 70~78$\n목요일 거래 예정",
+      "ill": {
+        "kind": "number",
+        "value": 78,
+        "suffix": "$",
+        "label": "공모 희망가 상단 · 하단 70$ (S-1 신고서)"
+      },
+      "icon": [
+        "Bell",
+        "Ticket",
+        "🇺🇸"
+      ],
+      "motion": "spin",
+      "photo": "Nasdaq MarketSite Times Square",
+      "stat1": "8.25억 주",
+      "stat1_label": "공모 주식 수 (S-1 신고서)",
+      "stat2": "ANT",
+      "stat2_label": "나스닥 티커 · 상단 기준 최대 643억$ 조달",
+      "source": "CBS News · TradingView (S-1 신고서 기준, 11/17)",
+      "hook": {
+        "q": "앤트로픽 상장\n주당 70~78$?",
+        "hi": "최대 643억$"
+      },
+      "summary": "클로드 개발사 앤트로픽이 미국 시간 18일(수) 밤 공모가를 확정하고 19일(목) 나스닥에서 티커 ANT로 거래를 시작할 예정입니다. 증권신고서(S-1)상 희망가는 주당 70~78달러, 공모 주식은 8억2,500만 주로, 상단이면 최대 643억 달러를 조달합니다. 공모가와 거래 시작은 예정이며 확정 결과는 미국 시간 수요일 밤 이후에 나옵니다.",
+      "question": "앤트로픽 공모주, 여러분이라면 들어가시겠어요?",
+      "keywords": [
+        "앤트로픽",
+        "IPO"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "마이크로소프트·깃허브",
+    "short": "코파일럿에 MAI 코드 2 플래시",
+    "headline": "깃허브 코파일럿\n새 코딩 모델\n무료 플랜도",
+    "point1": "모델 목록에서 MAI 코드 2 플래시 선택 → 코드 작성·수정",
+    "point1_sub": "플래시는 코파일럿 Free·Student·Pro 등 전 플랜 · MAI 코드 2는 Pro 이상 유료 플랜",
+    "point2": "간단한 코드 수정이나 자동화 스크립트 짤 때 쓰면 됩니다.",
+    "point2_sub": "VS 코드·github.com·모바일 앱의 모델 선택기에서 고르기 · 11/17 제공 시작",
+    "verdict": "써먹기",
+    "source": "GitHub 체인지로그 · Microsoft AI (11/17)",
+    "icon": [
+      "Keyboard",
+      "Desktop computer"
+    ]
+  },
+  "market": {
+    "date_label": "11/17 마감 (KST 11/18 06:00)",
+    "headline": "나스닥 −0.74%\n세일즈포스 −9.45%\nMS −2.27%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 24328.38,
+        "pct": -0.74
+      },
+      {
+        "name": "세일즈포스",
+        "value": 194.52,
+        "pct": -9.45
+      },
+      {
+        "name": "마이크로소프트",
+        "value": 506.24,
+        "pct": -2.27
+      }
+    ],
+    "note": "11/17 정규장 종가 · 소프트웨어주 동반 약세 · 엔비디아 정규장 −0.44%, 실적은 마감 뒤 발표",
+    "photo": "Salesforce Tower San Francisco",
+    "icon": [
+      "Money with wings",
+      "Chart decreasing",
+      "Coin"
+    ]
+  },
+  "oneliner": "칩 매출은 두 배\n모델 값은 내려가고\n이제 주식시장으로",
+  "scripts": [
+    "황 없는 엔비디아 매출 두 배? 1년 새 103퍼센트. 오늘 AI, 핵심만 정리.",
+    "엔비디아 3분기 매출 1,158억 달러, 1년 새 두 배. 다음 분기는 1,300억 달러 전망, 중국 제외.",
+    "마이크로소프트 자체 모델 7종. 코딩 모델이 GPT 6.1 솔 성능 98퍼센트를 값 40퍼센트에, 회사 주장.",
+    "클로드 만든 앤트로픽, 미국 수요일 밤 공모가 확정 예정. 주당 70에서 78달러, 목요일 나스닥 거래.",
+    "깃허브 코파일럿에서 MAI 코드 2 플래시 선택, 무료 플랜도 됩니다. 간단한 코드 수정이나 자동화 스크립트 짤 때 쓰면 됩니다.",
+    "나스닥 0.74, 세일즈포스 9.45, 마이크로소프트 2.27퍼센트 하락. 엔비디아 실적은 마감 뒤 발표.",
+    "오늘의 한 줄. 칩 매출은 두 배, 모델 값은 내려가고, 이제 주식시장으로. 코딩 AI 값이 절반 아래로 내려오면, 여러분은 어디에 먼저 써먹겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Classical building",
+    "Brain",
+    "High voltage",
+    "Bookmark tabs",
+    "Chart decreasing",
+    "Money bag",
+    "Credit card",
+    "Locked with key",
+    "Movie camera",
+    "Coin",
+    "Television",
+    "Hourglass done",
+    "Handshake",
+    "Speech balloon",
+    "Dollar banknote",
+    "Envelope",
+    "Abacus",
+    "Ledger",
+    "Magnifying glass tilted left",
+    "Purse",
+    "Glasses",
+    "Factory",
+    "Scroll",
+    "Automobile",
+    "Bank",
+    "Electric plug",
+    "Airplane",
+    "Clapper board",
+    "Mechanical arm",
+    "Bar chart",
+    "Page facing up",
+    "Headphone",
+    "Receipt"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}
