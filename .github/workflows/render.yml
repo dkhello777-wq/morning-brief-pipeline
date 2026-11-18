@@ -43,8 +43,18 @@ jobs:
           # man-db trigger rebuilding the manual index, so it is turned off and apt now prints progress lines.
           sudo rm -f /var/lib/man-db/auto-update
           echo "man-db man-db/auto-update boolean false" | sudo debconf-set-selections
+          # 11/19: the logs showed the ec2 Ubuntu mirror crawling (~10 s per small package, the 61 MB CJK font never
+          # finished), so apt uses the Azure mirror GitHub's own runners use, and the Korean font comes from GitHub instead.
+          if [ -f /etc/apt/apt-mirrors.txt ]; then echo "http://azure.archive.ubuntu.com/ubuntu/	priority:1" | sudo tee /etc/apt/apt-mirrors.txt >/dev/null; fi
+          sudo sed -i 's#http://[a-z0-9.-]*archive.ubuntu.com/ubuntu#http://azure.archive.ubuntu.com/ubuntu#g' /etc/apt/sources.list /etc/apt/sources.list.d/*.sources 2>/dev/null || true
           retry 240 sudo apt-get $APT update -qq
-          retry 480 sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -q -o Dpkg::Use-Pty=0 --no-install-recommends ffmpeg fonts-noto-cjk
+          retry 480 sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -q -o Dpkg::Use-Pty=0 --no-install-recommends ffmpeg
+          mkdir -p ~/.local/share/fonts
+          ok=1; for w in Regular Bold Black; do
+            retry 120 curl -fsSL -o ~/.local/share/fonts/NotoSansCJKkr-$w.otf "https://github.com/notofonts/noto-cjk/raw/main/Sans/OTF/Korean/NotoSansCJKkr-$w.otf" || ok=0
+          done
+          if [ $ok = 0 ]; then retry 480 sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -q -o Dpkg::Use-Pty=0 --no-install-recommends fonts-noto-cjk; fi
+          fc-cache -f >/dev/null; fc-list | grep -c "Noto Sans CJK KR"
           retry 240 pip install -q --timeout 60 playwright numpy
           retry 420 python -m playwright install --with-deps chromium >/dev/null
       - name: Render and publish release
