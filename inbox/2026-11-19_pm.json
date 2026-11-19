@@ -1,0 +1,160 @@
+{
+ "edition": "pm",
+ "date_short": "11.19 THU",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "hook": {
+  "q": "수능일 증시\n코스피\n5,100선 회복",
+  "hi": "코스피 +1.39%"
+ },
+ "question": "한중 FTA 후속 타결, 어떤 분야가 기대되세요?",
+ "keywords": [
+  "코스피",
+  "한중FTA",
+  "APEC"
+ ],
+ "no_countup": true,
+ "issues": [
+  {
+   "region": "국내증시",
+   "short": "코스피 1.39% 오른 5,137.89, 5,100선 회복",
+   "headline": "수능일 증시\n코스피\n5,100선 회복",
+   "ill": {
+    "kind": "icon",
+    "label": "11/19 정규장(10:00~16:30) 종가 · 전 거래일 대비"
+   },
+   "icon": [
+    "Chart increasing",
+    "Pencil",
+    "Bank"
+   ],
+   "motion": "pulse",
+   "stat1": "5,137.89",
+   "stat1_label": "코스피 +1.39% · 장중 5,000선 밑으로 내려갔다 반등",
+   "stat2": "+3.32%",
+   "stat2_label": "코스닥 684.81",
+   "source": "연합뉴스 · 매일일보 (11/19)",
+   "hook": {
+    "q": "수능일 증시\n코스피 반등",
+    "hi": "5,100선 회복",
+    "count": false
+   },
+   "summary": "수능일인 19일 1시간 늦게 열린 국내 증시에서 코스피는 장중 5,000선 밑으로 내려갔다가 반등해 전 거래일보다 1.39% 오른 5,137.89에 마감했습니다. 코스닥은 3.32% 오른 684.81이었습니다.",
+   "question": "5,100선 회복한 코스피, 어떻게 보세요?",
+   "keywords": [
+    "코스피",
+    "코스닥"
+   ]
+  },
+  {
+   "region": "한중 FTA",
+   "short": "한중 FTA 서비스·투자 후속 협상 실질 타결",
+   "headline": "한중 FTA\n후속 협상\n실질 타결",
+   "ill": {
+    "kind": "icon",
+    "label": "공동제작 대상 영화 → 드라마·애니·예능·다큐 (산업통상부)"
+   },
+   "icon": [
+    "Clapper board",
+    "Handshake",
+    "Television"
+   ],
+   "motion": "sway",
+   "stat1": "공동제작 확대",
+   "stat1_label": "영화 → 드라마·애니메이션·예능·다큐멘터리",
+   "stat2": "서명·발효 전",
+   "stat2_label": "실질 타결 단계 · 문안 법률 검토 뒤 정식 서명·발효 절차",
+   "source": "산업통상부 (11/18)",
+   "hook": {
+    "q": "한중 FTA\n후속 협상 타결",
+    "hi": "공동제작 확대",
+    "count": false
+   },
+   "summary": "산업통상부는 18일 한중 정상회담에서 한중 자유무역협정 서비스·투자 후속 협상의 실질 타결을 선언했다고 밝혔습니다. 시청각 프로그램 공동제작 부속서에 합의해 영화에 한정됐던 공동제작 대상을 드라마, 애니메이션, 예능, 다큐멘터리 등으로 넓혔습니다. 정식 서명과 발효는 아직 남아 있습니다.",
+   "question": "한중 FTA 후속 타결, 어떤 분야가 기대되세요?",
+   "keywords": [
+    "한중FTA",
+    "K콘텐츠"
+   ]
+  },
+  {
+   "region": "APEC",
+   "short": "선전 APEC 정상회의, 정상선언 채택",
+   "headline": "선전 APEC\n정상선언\n채택",
+   "ill": {
+    "kind": "icon",
+    "label": "무역·연결·혁신 분야 성과 문서 3건도 통과 (중국 외교부)"
+   },
+   "icon": [
+    "Globe showing Asia-Australia",
+    "Scroll",
+    "Classical building"
+   ],
+   "motion": "sway",
+   "photo": "Shenzhen skyline",
+   "stat1": "정상선언",
+   "stat1_label": "2026 APEC 정상선언 만장일치 채택",
+   "stat2": "성과 문서 3건",
+   "stat2_label": "무역·연결·혁신 분야 · 내년 개최국 베트남",
+   "source": "중국 외교부 (11/19)",
+   "hook": {
+    "q": "선전 APEC\n정상선언 채택",
+    "hi": "성과 문서 3건",
+    "count": false
+   },
+   "summary": "중국 선전에서 열린 아시아태평양경제협력체(APEC) 정상회의가 19일 정상선언을 채택했습니다. 개최국 중국 외교부는 무역과 연결, 혁신 분야의 성과 문서 3건도 함께 통과됐다고 밝혔습니다.",
+   "question": "이번 APEC, 어떤 성과를 기대하시나요?",
+   "keywords": [
+    "APEC",
+    "선전"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/19(목) 정규장 마감 (수능일 16:30)",
+  "headline": "코스피 +1.39%\n코스닥 +3.32%\n5,100선 회복",
+  "headline_short": "코스피 +1.39%, 코스닥 +3.32%, 5,100선 회복",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5137.89,
+    "pct": 1.39
+   },
+   {
+    "name": "코스닥",
+    "value": 684.81,
+    "pct": 3.32
+   }
+  ],
+  "note": "11/19 정규장 종가 · 전 거래일 대비 (연합뉴스 16:35)"
+ },
+ "oneliner": "증시는 5,100선 회복\n한중 FTA는 실질 타결",
+ "scripts": [
+  "수능일 국내 증시, 코스피가 5천백선을 되찾았습니다. 오늘 국내 이슈, 핵심만 정리.",
+  "코스피 장중 5천선 밑으로 내려갔다가 1.39퍼센트 오른 5천137.89에 마감.",
+  "한중 FTA 후속 협상 실질 타결. 공동제작 대상, 영화에서 드라마·애니·예능·다큐로 확대. 서명·발효는 아직.",
+  "중국 선전 APEC, 정상선언 채택. 중국 외교부는 무역·혁신 등 분야 성과 문서도 통과됐다고 밝혀.",
+  "코스피 1.39퍼센트 오른 5천137.89, 코스닥 3.32퍼센트 오른 684.81.",
+  "오늘의 한 줄. 증시는 5천백선 회복, 한중 FTA는 실질 타결. 어떤 분야가 기대되세요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Bank",
+  "Credit card",
+  "Chart increasing",
+  "Chart increasing",
+  "Desktop computer",
+  "Ship",
+  "Handshake",
+  "Globe showing Asia-Australia",
+  "Classical building"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-19_1700_pm.md",
+  "drive_id": "1bIeceADuW8_uGJejesDlVNC1RvoIp9YM",
+  "job_id": "cardnews-20261119-1700",
+  "version": "v01"
+ }
+}
