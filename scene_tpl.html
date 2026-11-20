@@ -315,7 +315,7 @@ function ill(d,a){
 C.issues.forEach((it,k)=>{ const s=`s${k+2}`;
   $(s+'tag').textContent=['①','②','③'][k]+' '+(it.region||'');
   $(s+'h').dataset.text=it.headline||'';
-  $(s+'an').textContent=it.stat1||''; $(s+'al').textContent=it.stat1_label||'';
+  $(s+'an').textContent=it.stat1||''; { const st=String(it.stat1||''); if(!/\s/.test(st)&&st.length>=7){ $(s+'an').style.fontSize=(st.length>=10?60:72)+'px'; $(s+'an').style.whiteSpace='nowrap'; } } $(s+'al').textContent=it.stat1_label||'';
   $(s+'bn').innerHTML=br(it.stat2); $(s+'bl').textContent=it.stat2_label||'';
   $(s+'src').textContent='출처: '+(it.source||'');
   if(it.art&&it.art.photo){ fullBg($(s),it.art); $(s+'ill').innerHTML=fullIll(it.ill); }
