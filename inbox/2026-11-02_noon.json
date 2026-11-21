@@ -1,0 +1,179 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.02 MON",
+  "title": "간밤의\nAI 소식\n1분 정리",
+  "hook": {
+    "q": "챗GPT 유료 한도\n코딩과 합친다?",
+    "hi": "12월부터 통합"
+  },
+  "question": "챗GPT 한도 통합, 유료로 계속 쓸 만할까요?",
+  "keywords": [
+    "AI뉴스",
+    "챗GPT",
+    "오픈AI"
+  ],
+  "issues": [
+    {
+      "region": "오픈AI 요금제",
+      "short": "챗GPT·코덱스 한도 통합",
+      "headline": "챗GPT·코덱스\n사용량 한도\n12월부터 통합",
+      "ill": {
+        "kind": "icon"
+      },
+      "icon": [
+        "Mobile phone",
+        "Hourglass done",
+        "Laptop"
+      ],
+      "motion": "sway",
+      "photo": "OpenAI headquarters San Francisco",
+      "stat1": "12월",
+      "stat1_label": "플러스·프로·비즈니스 요금제부터",
+      "stat2": "토큰\n단위",
+      "stat2_label": "일반 채팅은 차감 없음 · 한도 넘으면 대기·업그레이드·크레딧",
+      "source": "OpenAI 도움말 · TokenPost",
+      "hook": {
+        "q": "챗GPT 유료 한도\n코딩과 합친다?",
+        "hi": "12월부터 통합"
+      },
+      "summary": "오픈AI가 12월부터 플러스·프로·비즈니스 요금제의 챗GPT와 코딩 에이전트 코덱스 사용량을 하나의 한도로 합칩니다. 사용량은 토큰 단위로 세고 고급 모델과 복잡한 작업이 더 많이 깎이며, 일반 채팅은 차감하지 않습니다. 한도에 닿으면 초기화를 기다리거나 상위 요금제로 올리거나 크레딧을 사면 되는데, 요금제별 한도 크기는 아직 공개되지 않았습니다.",
+      "question": "챗GPT 한도 통합, 유료로 계속 쓸 만할까요?",
+      "keywords": [
+        "챗GPT",
+        "코덱스"
+      ]
+    },
+    {
+      "region": "오픈AI 투자",
+      "short": "투자 목표 300억→200억 달러",
+      "headline": "오픈AI 투자 목표\n300억→200억\n달러로 축소",
+      "ill": {
+        "kind": "bars",
+        "a": 300,
+        "b": 200,
+        "decimals": 0,
+        "unit": "억 달러",
+        "a_label": "당초 목표",
+        "b_label": "조정 목표"
+      },
+      "icon": [
+        "Briefcase",
+        "Bank",
+        "Money bag"
+      ],
+      "motion": "spin",
+      "photo": "Sam Altman",
+      "image_prompt": "a giant glass piggy bank half filled with coins standing in front of a wall of dark server racks",
+      "stat1": "1.25조달러",
+      "stat1_label": "기업가치 목표 (1.4조에서 하향)",
+      "stat2": "110억달러",
+      "stat2_label": "지금까지 확보한 투자금 (WSJ)",
+      "source": "Financial Times · WSJ · TechCrunch",
+      "hook": {
+        "q": "오픈AI 투자\n왜 줄였을까?",
+        "hi": "목표 200억달러"
+      },
+      "summary": "파이낸셜타임스는 10월 31일 오픈AI가 이번 투자 유치 목표를 300억 달러에서 200억 달러로 낮췄고 기업가치 목표도 1조 4000억 달러에서 1조 2500억 달러로 내렸다고 보도했습니다. 월스트리트저널은 지금까지 확보한 금액이 110억 달러라고 전했습니다. 빅테크의 AI 투자비에 대한 시장 불안과 앤트로픽의 11월 상장 추진이 배경으로 꼽히며, 오픈AI는 논평하지 않았습니다.",
+      "question": "AI 회사 몸값 조정, 거품 빠지는 신호일까요?",
+      "keywords": [
+        "오픈AI",
+        "AI투자"
+      ]
+    },
+    {
+      "region": "삼성 사장단",
+      "short": "사장단 50명, 올트먼 간담회",
+      "headline": "삼성 사장단 50명\n올트먼과\nAI 경영 논의",
+      "ill": {
+        "kind": "number",
+        "value": 2300,
+        "suffix": "명",
+        "label": "6월부터 AI 교육 대상 임원 (전 임직원은 2027년 2월까지)"
+      },
+      "icon": [
+        "Graduation cap",
+        "Office building",
+        "🇰🇷"
+      ],
+      "motion": "bob",
+      "photo": "Samsung Electronics Seocho building Seoul",
+      "stat1": "10/31",
+      "stat1_label": "용인 삼성인력개발원 · 'AI가 바꿀 다음 10년'",
+      "stat2": "2027년\n2월",
+      "stat2_label": "전 임직원 AI 교육 완료 목표",
+      "source": "아주경제 · 이투데이",
+      "hook": {
+        "q": "삼성 사장 50명\n왜 모였을까?",
+        "hi": "임원 2,300명"
+      },
+      "summary": "삼성 사장단 50여 명이 10월 31일 용인 삼성인력개발원에서 샘 올트먼 오픈AI 최고경영자와 'AI가 바꿀 다음 10년, 기업의 선택'을 주제로 간담회를 했습니다. 삼성은 6월부터 임원 약 2,300명을 대상으로 AI 교육을 진행했고 2027년 2월까지 전 임직원 교육을 마칠 계획입니다. 삼성전자는 지난해 10월 오픈AI와 AI 인프라 협력 의향서를 맺고 스타게이트용 메모리 공급을 추진해 왔습니다.",
+      "question": "우리 회사 임원들은 AI를 얼마나 쓰고 있나요?",
+      "keywords": [
+        "삼성",
+        "AI교육"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "마이크로소프트",
+    "short": "엑셀 코파일럿 재무 기능",
+    "headline": "엑셀 코파일럿에\n재무 기능\n25개 정식 추가",
+    "point1": "엑셀 안에서 재무 분석·계정 조정·분개 작성",
+    "point1_sub": "재무 스킬 25개+ 정식 출시 · 회계 기능(조정·분개)은 선공개(Frontier)",
+    "point2": "엑셀에서 월말 결산 장부를 맞출 때 쓰면 됩니다.",
+    "point2_sub": "바뀐 내용과 이유를 기록하는 감사 추적 옵션 · 10/29 공식 블로그",
+    "verdict": "써먹기",
+    "source": "마이크로소프트 공식 블로그",
+    "photo": "Microsoft Redmond campus"
+  },
+  "market": {
+    "date_label": "10/30 마감 (KST 05:00) · 주간 정리",
+    "headline": "AMD −10.9%\n엔비디아 −4.2%\n반도체 급락",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 25437.0,
+        "pct": -2.86
+      },
+      {
+        "name": "AMD",
+        "value": 504.8,
+        "pct": -10.88
+      },
+      {
+        "name": "엔비디아",
+        "value": 204.64,
+        "pct": -4.22
+      }
+    ],
+    "note": "주간 나스닥 −2%, 엔비디아 −3% → 인텔 전망이 반도체 전체를 끌어내렸다",
+    "photo": "AMD headquarters Santa Clara"
+  },
+  "oneliner": "돈줄이 조여질 때\n써먹는 사람이\n남는다",
+  "scripts": [
+    "챗GPT 유료 한도, 코딩과 합친다? 12월부터 통합. 오늘 AI, 1분 정리.",
+    "오픈AI가 12월부터 챗GPT와 코덱스 사용량을 하나로 합칩니다. 일반 채팅은 안 깎입니다.",
+    "오픈AI 투자 목표가 300억에서 200억 달러로 줄었습니다. 기업가치도 1조 2500억 달러로.",
+    "삼성 사장단 50여 명이 올트먼과 AI 경영을 논의했습니다. 임원 2,300명 교육을 전 직원으로.",
+    "마이크로소프트가 엑셀 코파일럿에 재무 기능 25개 넘게 정식으로 넣었습니다. 엑셀에서 월말 결산 장부를 맞출 때 쓰면 됩니다.",
+    "나스닥 2.86, AMD 10.88, 엔비디아 4.22퍼센트 하락. 인텔 전망에 반도체가 다 내렸습니다.",
+    "오늘의 한 줄. 돈줄이 조여질 때 써먹는 사람이 남습니다. 챗GPT 한도 통합, 유료로 계속 쓸 만할까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Oil drum",
+    "Laptop",
+    "Balance scale",
+    "House with garden",
+    "Anchor",
+    "Bomb",
+    "Speech balloon",
+    "Package",
+    "Page facing up",
+    "Automobile",
+    "Locked with key",
+    "Ballot box with ballot"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

@@ -1,0 +1,184 @@
+{
+ "edition": "am",
+ "date_short": "11.13 FRI",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "hook": {
+  "q": "젠슨 황\n엔비디아 떠난다",
+  "hi": "CEO 즉시 사임"
+ },
+ "question": "젠슨 황 없는 엔비디아, 어떻게 보시나요?",
+ "keywords": [
+  "엔비디아",
+  "미국증시",
+  "AI안전"
+ ],
+ "issues": [
+  {
+   "region": "엔비디아",
+   "short": "젠슨 황, CEO·사장·이사직 사임",
+   "headline": "젠슨 황\n엔비디아 CEO\n사임",
+   "ill": {
+    "kind": "icon",
+    "label": "엔비디아 이사회 공식 발표 (11/12) · 즉시 효력"
+   },
+   "icon": [
+    "Office building",
+    "Bust in silhouette",
+    "Memo"
+   ],
+   "motion": "pulse",
+   "photo": "Jensen Huang",
+   "stat1": "사임",
+   "stat1_label": "CEO·사장·이사직 · 즉시 효력",
+   "stat2": "임시",
+   "stat2_label": "크레스 CFO가 임시 CEO 겸임",
+   "source": "엔비디아 공식 발표 (11/12)",
+   "hook": {
+    "q": "젠슨 황\n엔비디아 떠난다",
+    "hi": "CEO 즉시 사임"
+   },
+   "summary": "엔비디아 이사회가 11월 12일 젠슨 황이 최고경영자(CEO)·사장·이사직에서 사임했다고 발표했습니다. 효력은 즉시 발생합니다. 콜렛 크레스 최고재무책임자(CFO)가 정식 후임자를 찾을 때까지 임시 CEO를 겸임하며, 이사회는 내부·외부 후보를 모두 검토합니다(엔비디아 공식 발표).",
+   "question": "젠슨 황 없는 엔비디아, 어떻게 보시나요?",
+   "keywords": [
+    "엔비디아",
+    "젠슨황"
+   ]
+  },
+  {
+   "region": "미국",
+   "short": "미국 3대 지수 하락 마감",
+   "headline": "미국 증시\n3대 지수\n하락 마감",
+   "ill": {
+    "kind": "number",
+    "value": 0.39,
+    "decimals": 2,
+    "suffix": "% 하락",
+    "label": "나스닥종합 · 11/12 정규장 종가 · 전 거래일 대비"
+   },
+   "icon": [
+    "Chart decreasing",
+    "Oil drum",
+    "Dollar banknote"
+   ],
+   "motion": "pulse",
+   "photo": "New York Stock Exchange facade",
+   "stat1": "-0.35%",
+   "stat1_label": "S&P 500 · 7,592.40",
+   "stat2": "-0.36%",
+   "stat2_label": "다우 · 52,297.09",
+   "source": "AP · Reuters · 11/12 정규장 마감",
+   "hook": {
+    "q": "CEO 사임 날\n미국 증시는?",
+    "hi": "나스닥 -0.39%"
+   },
+   "summary": "미국 12일 정규장에서 나스닥종합은 -0.39%인 25,366.09, S&P 500은 -0.35%인 7,592.40, 다우는 -0.36%인 52,297.09에 마감했습니다(전 거래일 대비). 장중에는 엔비디아 하락이 부담이 됐고 에너지주 상승이 낙폭을 일부 줄였습니다(AP·Reuters).",
+   "question": "엔비디아 하락, 증시에 얼마나 이어질까요?",
+   "keywords": [
+    "미국증시",
+    "나스닥"
+   ]
+  },
+  {
+   "region": "과기정통부",
+   "short": "국민 80명 'AI 안전 지킴이' 출범",
+   "headline": "AI 오류\n국민이 찾는다\n'AI 안전 지킴이'",
+   "ill": {
+    "kind": "number",
+    "value": 80,
+    "decimals": 0,
+    "suffix": "명",
+    "label": "AI 안전 지킴이 · 과기정통부·AI안전연구소 (11/12)"
+   },
+   "icon": [
+    "Shield",
+    "Magnifying glass tilted right",
+    "Robot"
+   ],
+   "motion": "sway",
+   "stat1": "제보",
+   "stat1_label": "사실왜곡·편향·보안 취약점",
+   "stat2": "평가",
+   "stat2_label": "검증 사례, 안전성 평가 활용",
+   "source": "과기정통부 · 뉴스1 (11/12)",
+   "hook": {
+    "q": "AI 오류\n누가 찾나?",
+    "hi": "국민 80명"
+   },
+   "summary": "과학기술정보통신부와 인공지능안전연구소가 11월 12일 국민 80명으로 구성된 'AI 안전 지킴이'를 출범했습니다. 사실 왜곡과 편향, 보안 취약점 등 AI 오류 사례를 찾아 제보하고, 검증된 사례는 AI 안전성 평가와 연구에 활용할 예정입니다(과기정통부·뉴스1).",
+   "question": "AI 답변이 틀린 걸 본 적 있으신가요?",
+   "keywords": [
+    "AI안전",
+    "과기정통부"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "구글",
+  "short": "빠르고 싼 새 모델 제미나이 4 하이드로전 공개",
+  "headline": "구글\n제미나이 4\n하이드로전",
+  "point1": "코딩·에이전트 작업용 빠른 모델 · 100만 토큰 문맥",
+  "point1_sub": "입력 100만 토큰당 1.50달러 · 출력 7.50달러 (Google 공식 블로그, 11/12)",
+  "point2": "제미나이 앱·구글 검색에서 모두 쓸 수 있습니다.",
+  "point2_sub": "무료 사용자는 자동 모델 선택으로 적용 · 순차 배포",
+  "verdict": "써보기",
+  "source": "Google 공식 블로그 (11/12)",
+  "icon": [
+   "Robot",
+   "High voltage",
+   "Laptop"
+  ]
+ },
+ "market": {
+  "date_label": "11/12(목) 정규장 마감",
+  "headline": "나스닥 -0.39%\nS&P -0.35%\n다우 -0.36%",
+  "dow": {
+   "value": 52297.09,
+   "pct": -0.36
+  },
+  "spx": {
+   "value": 7592.4,
+   "pct": -0.35
+  },
+  "ndx": {
+   "value": 25366.09,
+   "pct": -0.39
+  },
+  "note": "11/12(목) 정규장 공식 종가 · 전 거래일 11/11 대비",
+  "photo": "Wall Street sign"
+ },
+ "oneliner": "엔비디아의\n얼굴이 바뀌었다",
+ "scripts": [
+  "젠슨 황, 엔비디아 CEO 즉시 사임. 오늘 세계 이슈, 핵심만 정리.",
+  "엔비디아 젠슨 황, CEO와 이사직 사임. 크레스 재무책임자가 임시 CEO를 겸임합니다.",
+  "미국 12일 정규장, 나스닥 0.39퍼센트 하락. 엔비디아 하락 부담 속 3대 지수 하락 마감.",
+  "국민 80명 'AI 안전 지킴이' 출범. AI 오류와 편향을 찾아 제보합니다.",
+  "구글, 빠른 새 모델 제미나이 4 하이드로전 공개. 제미나이 앱과 검색에도 적용.",
+  "다우 0.36퍼센트 하락, 에스앤피 0.35퍼센트 하락, 나스닥 0.39퍼센트 하락.",
+  "오늘의 한 줄. 엔비디아의 얼굴이 바뀌었다. 젠슨 황 없는 엔비디아, 어떻게 보시나요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Locked with key",
+  "Oil drum",
+  "Chart decreasing",
+  "Factory",
+  "Airplane",
+  "Snowflake",
+  "Shopping cart",
+  "Clapper board",
+  "Briefcase",
+  "Dove",
+  "Mechanical arm",
+  "Headphone"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-13_0600_am_v01.md",
+  "drive_id": "1DIZ9yr9N1XSdnRt75av5dsXuQFR0FVKr",
+  "job_id": "cardnews-20261113-0600",
+  "version": "v01"
+ }
+}

@@ -1,0 +1,198 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.05 THU",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "hook": {
+  "q": "AI 투자 신중했던\n애플이 사상 최고?",
+  "hi": "시총 5조달러↑"
+ },
+ "question": "학교 구글 검색을 지키려면 AI도 받아야 한다는 조건, 어떻게 보세요?",
+ "keywords": [
+  "AI뉴스",
+  "애플",
+  "데이터센터"
+ ],
+ "issues": [
+  {
+   "region": "애플 사상 최고",
+   "short": "애플 +5.31%, 엔비디아 −3.17%",
+   "headline": "애플 사상 최고\n시총 5조달러\n엔비디아 −3.17%",
+   "ill": {
+    "kind": "number",
+    "value": 349.51,
+    "decimals": 2,
+    "suffix": "달러",
+    "label": "애플 11/4 종가 · +5.31% · 장중 354.33달러 사상 최고 · 시가총액 5조달러 넘어"
+   },
+   "icon": [
+    "Mobile phone",
+    "Money bag",
+    "Desktop computer"
+   ],
+   "motion": "spin",
+   "photo": "Apple Store Fifth Avenue New York",
+   "image_prompt": "a sleek glass cube storefront glowing at dusk on a city street, a rising bar chart made of light reflected in its glass, no people, no text, no logos",
+   "stat1": "−3.17%",
+   "stat1_label": "엔비디아 11/4 종가 200.13달러 · 하루 −3.17%",
+   "stat2": "−9.90%",
+   "stat2_label": "데이터센터 운영사 코어위브 종가 48.42달러 · Yahoo: 민주당 승리 후 데이터센터 허가 심사 강화 직면",
+   "source": "CNBC · Reuters · Yahoo Finance 종가",
+   "hook": {
+    "q": "AI 투자 신중했던\n애플이 사상 최고?",
+    "hi": "시총 5조달러↑"
+   },
+   "summary": "애플 주가가 11월 4일 5.31% 오른 349.51달러로 마감했고, 장중 354.33달러로 사상 최고가를 기록해 시가총액이 5조 달러를 넘었습니다. CNBC는 민주당의 승리로 데이터센터 건설이 느려지고 메모리 가격 압박이 완화될 수 있어, AI 인프라 투자에 신중했던 애플이 수혜주로 꼽혔다고 전했습니다. 반면 엔비디아는 3.17% 내린 200.13달러, 데이터센터 운영사 코어위브는 9.90% 내린 48.42달러로 마감했습니다.",
+   "question": "AI를 짓는 회사와 쓰는 회사, 어느 쪽이 더 오래 갈까요?",
+   "keywords": [
+    "애플",
+    "엔비디아"
+   ]
+  },
+  {
+   "region": "미국 중간선거",
+   "short": "데이터센터 주민투표 41건",
+   "headline": "데이터센터\n주민투표 41건\n거의 다 반대",
+   "ill": {
+    "kind": "number",
+    "value": 41,
+    "suffix": "건",
+    "label": "10개 주 데이터센터 관련 주민투표(Ballotpedia) · 결과 나온 투표는 노스다코타 하우드 1건 빼고 모두 데이터센터 반대 쪽"
+   },
+   "icon": [
+    "Ballot box with ballot",
+    "Factory",
+    "Electric plug"
+   ],
+   "motion": "sway",
+   "photo": "Data center server room",
+   "stat1": "56%",
+   "stat1_label": "데이터센터가 투표에 결정적이거나 중요한 요인이었다는 유권자 (CNBC 유권자 조사)",
+   "stat2": "텍사스",
+   "stat2_label": "히노호사 주지사 당선 · 데이터센터 즉시 유예 공약 · 오하이오도 브라운 승리",
+   "source": "CNBC · The Verge",
+   "hook": {
+    "q": "데이터센터에\n주민 반대표?",
+    "hi": "주민투표 41건"
+   },
+   "summary": "CNBC에 따르면 11월 3일 미국 중간선거에서 10개 주 41건의 데이터센터 관련 주민투표가 치러졌고(Ballotpedia 집계), 4일까지 결과가 나온 투표는 노스다코타 하우드 1건을 빼고 모두 데이터센터 규제에 찬성하거나 개발 측 안을 부결했습니다. 오하이오에서는 민주당 셰러드 브라운이 현직 상원의원 존 후스테드를 데이터센터의 얼굴이라고 공격해 이겼고, 텍사스에서는 데이터센터 즉시 유예를 공약한 지나 히노호사가 그레그 애벗 주지사를 꺾었습니다. CNBC 유권자 조사에서는 56%가 데이터센터를 결정적이거나 중요한 요인으로 꼽았습니다.",
+   "question": "데이터센터 규제, AI 발전을 늦출까요, 바로잡을까요?",
+   "keywords": [
+    "데이터센터",
+    "미국중간선거"
+   ]
+  },
+  {
+   "region": "구글 교육",
+   "short": "AI 끄면 검색도 꺼진다",
+   "headline": "구글 학교 계정\nAI 끄면\n검색도 꺼진다",
+   "ill": {
+    "kind": "icon"
+   },
+   "icon": [
+    "Graduation cap",
+    "Laptop",
+    "Magnifying glass tilted left"
+   ],
+   "motion": "sway",
+   "photo": "Chromebook",
+   "stat1": "기본 꺼짐",
+   "stat1_label": "K-12 학생 계정 AI 도구 기본 비활성 · 관리자가 켜야 함 · 앞으로 몇 달 안에 적용",
+   "stat2": "4개 묶음",
+   "stat2_label": "제미나이·제미나이 노트북·클래스룸 제미나이·구글 검색을 한 묶음으로만 켜거나 끔",
+   "source": "Ars Technica · The New York Times",
+   "hook": {
+    "q": "학교서 AI 끄면\n검색도 꺼진다?",
+    "hi": "4개 한 묶음"
+   },
+   "summary": "구글이 K-12 학교용 교육 제품에서 AI 도구를 기본으로 꺼 두고 관리자가 직접 켜도록 바꾼다고 밝혔습니다. 다만 구글이 AI 도구로 묶은 제미나이, 제미나이 노트북, 클래스룸 제미나이, 구글 검색 네 가지는 한꺼번에 켜거나 꺼야 해서, AI를 거부한 학교는 학생 계정의 구글 검색도 쓸 수 없게 됩니다. 구글 교육 담당 부사장 크리스 필립스는 뉴욕타임스에 검색과 AI는 깊이 통합돼 있어 AI를 켜지 않은 학교의 학생은 검색을 쓸 수 없고 학교의 안내 메시지를 보게 된다고 말했습니다. AI를 켜는 학교는 일반 제미나이와 답을 바로 주지 않는 가이디드 러닝 중에서 고를 수 있고, 변경은 앞으로 몇 달 안에 적용됩니다.",
+   "question": "검색을 지키려면 AI도 받아야 하는 조건, 학교가 받아들여야 할까요?",
+   "keywords": [
+    "구글",
+    "AI교육"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "오픈AI",
+  "short": "챗GPT GIF 만들기",
+  "headline": "챗GPT에서\n움직이는 GIF\n바로 만들기",
+  "point1": "글이나 사진 한 장으로 GIF 생성 · 속도 조절, 프레임 하나씩 수정",
+  "point1_sub": "이미지 2.6 모델과 함께 · 모든 챗GPT·코덱스 사용자에 웹·데스크톱·모바일 순차 적용",
+  "point2": "채팅방 반응 GIF나 밈이 필요할 때 쓰면 됩니다.",
+  "point2_sub": "주당 이미지 생성 40억 장 넘어(9월 30억) · API엔 GPT-Image-2.6 플레어·선버스트",
+  "verdict": "써먹기",
+  "source": "OpenAI 발표 · The Verge (11/4)",
+  "photo": "ChatGPT app smartphone"
+ },
+ "market": {
+  "date_label": "11/4 마감 (KST 06:00)",
+  "headline": "애플 +5.31%\n엔비디아 −3.17%\nAI주 갈림",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 25736.51,
+    "pct": 1.44
+   },
+   {
+    "name": "애플",
+    "value": 349.51,
+    "pct": 5.31
+   },
+   {
+    "name": "엔비디아",
+    "value": 200.13,
+    "pct": -3.17
+   }
+  ],
+  "note": "코어위브 −9.90% · 마이크로소프트도 장중 신고가 · Reuters: AI주 엇갈려",
+  "photo": "Apple Park Cupertino"
+ },
+ "oneliner": "AI를 짓는 회사와\nAI를 쓰는 회사,\n표와 돈은 갈렸다",
+ "scripts": [
+  "AI 투자 신중했던 애플이 사상 최고? 시총 5조 달러. 오늘 AI, 핵심만 정리.",
+  "애플 5.31퍼센트 오른 349.51달러, 장중 사상 최고. 엔비디아는 3.17퍼센트 하락.",
+  "미 중간선거 데이터센터 주민투표 41건. 결과 나온 투표는 1건 빼고 모두 데이터센터 반대 쪽.",
+  "구글, 학교 계정 AI 기본 끄기. 단, 검색도 AI 묶음이어서 AI를 끄면 구글 검색까지 꺼집니다.",
+  "챗GPT가 글이나 사진으로 움직이는 GIF를 만들고 프레임까지 고칩니다. 채팅방 반응 GIF가 필요할 때 쓰면 됩니다.",
+  "나스닥 1.44, 애플 5.31퍼센트 상승, 엔비디아 3.17퍼센트 하락. 코어위브는 9.9퍼센트 하락.",
+  "오늘의 한 줄. AI를 짓는 회사와 AI를 쓰는 회사, 표와 돈은 갈렸습니다. 학교 구글 검색을 지키려면 AI도 받아야 한다는 조건, 어떻게 보세요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Coin",
+  "Receipt",
+  "Money with wings",
+  "Balance scale",
+  "Classical building",
+  "Money bag",
+  "Magnifying glass tilted left",
+  "Scroll",
+  "Ship",
+  "Oil drum",
+  "Handshake",
+  "🇮🇷",
+  "Mobile phone",
+  "Laptop",
+  "Shopping bags",
+  "Ballot box with ballot",
+  "🇺🇸",
+  "Desktop computer",
+  "Gear",
+  "Factory",
+  "High voltage",
+  "Electric plug",
+  "🇬🇧",
+  "Shield",
+  "Locked with key",
+  "Shopping cart",
+  "Fuel pump",
+  "Cityscape",
+  "Houses",
+  "Key",
+  "Speech balloon",
+  "🇮🇱",
+  "Brain"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

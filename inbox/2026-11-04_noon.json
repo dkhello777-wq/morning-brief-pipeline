@@ -1,0 +1,181 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.04 WED",
+  "title": "간밤의\nAI 소식\n핵심 정리",
+  "hook": {
+    "q": "AMD 데이터센터\n1년 새 +97%?",
+    "hi": "매출 134억달러"
+  },
+  "question": "AI 데이터센터, 우리 동네에 들어오면 찬성하시겠어요?",
+  "keywords": [
+    "AI뉴스",
+    "AMD",
+    "AI데이터센터"
+  ],
+  "issues": [
+    {
+      "region": "AMD 실적",
+      "short": "AMD 데이터센터 +97%",
+      "headline": "AMD 데이터센터\n매출 +97%\n4분기 전망 170억달러",
+      "ill": {
+        "kind": "number",
+        "value": 134,
+        "suffix": "억달러",
+        "label": "3분기 매출 · 1년 전보다 45% 증가 · 분기 기준 최대"
+      },
+      "icon": [
+        "Desktop computer",
+        "Gear",
+        "Factory"
+      ],
+      "motion": "spin",
+      "photo": "Lisa Su",
+      "image_prompt": "a glowing server rack doubling in height like a growth chart, coins pouring from its top into a wide basin",
+      "stat1": "85억달러",
+      "stat1_label": "3분기 데이터센터 매출 · 1년 전보다 97% 증가 · 사상 최대",
+      "stat2": "약 170억달러",
+      "stat2_label": "4분기 매출 전망(±3%) · 1년 전보다 약 66% 증가 전망",
+      "source": "AMD 실적 발표 · Yahoo Finance",
+      "hook": {
+        "q": "AMD 데이터센터\n1년 새 +97%?",
+        "hi": "매출 134억달러"
+      },
+      "summary": "AMD가 3일 3분기 매출 134억 달러(1년 전보다 45% 증가)로 분기 기준 최대 실적을 발표했습니다. 데이터센터 부문 매출은 85억 달러로 97% 늘어 사상 최대였고, EPYC 서버 CPU 수요와 인스팅트 MI450 GPU 출시가 이끌었습니다. 비GAAP 주당순이익은 2.09달러로 74% 늘었고, 4분기 매출은 약 170억 달러(±3%)로 1년 전보다 약 66% 증가를 전망했습니다. 정규장에서 3.65% 오른 483.90달러로 마감한 주가는 발표 직후 시간외 거래에서 약 6.4% 더 올랐습니다(동부시간 오후 4시 19분 기준).",
+      "question": "AI 칩 2위 경쟁, AMD가 격차를 줄일까요?",
+      "keywords": [
+        "AMD",
+        "AI반도체"
+      ]
+    },
+    {
+      "region": "영국 AI 데이터센터",
+      "short": "브룩필드 200억 파운드 계획",
+      "headline": "영국 발전소에\n1GW AI 데이터센터\n200억 파운드 추산",
+      "ill": {
+        "kind": "number",
+        "value": 200,
+        "suffix": "억 파운드+",
+        "label": "브룩필드 추산 총투자(반도체 포함) · 최종 투자 결정은 아직"
+      },
+      "icon": [
+        "High voltage",
+        "Factory",
+        "Electric plug",
+        "🇬🇧"
+      ],
+      "motion": "bob",
+      "photo": "Drax Power Station",
+      "stat1": "100MW",
+      "stat1_label": "1단계 목표 · 2028년 1분기 가동 목표 · 1단계 투자 25억 파운드",
+      "stat2": "+500MW",
+      "stat2_label": "2028~2031년 추가 목표 · 이후 1GW 이상 확보 추진",
+      "source": "Drax 발표 · CNBC",
+      "hook": {
+        "q": "영국 발전소에\n200억 파운드?",
+        "hi": "1단계 100MW"
+      },
+      "summary": "영국 에너지 기업 드랙스는 3일 자산운용사 브룩필드, 그 산하 네오클라우드 래디언트와 함께 노스요크셔 드랙스 발전소 부지에 AI 데이터센터를 공동 개발하는 계약을 맺었다고 밝혔습니다. 1단계로 2028년 1분기부터 최대 100메가와트를 가동하고 2028~2031년 500메가와트를 추가한 뒤 1기가와트 이상을 확보하는 것이 목표이며, 브룩필드는 반도체를 포함한 총투자가 200억 파운드(약 268억 달러)를 넘을 수 있다고 추산했습니다. 1단계 투자는 25억 파운드이고, 인허가와 세입자 확보가 조건이며 최종 투자 결정은 아직 내려지지 않았습니다. 드랙스 주가는 이날 장 초반 8.8% 올랐습니다.",
+      "question": "AI 데이터센터, 우리 동네에 들어오면 찬성하시겠어요?",
+      "keywords": [
+        "AI데이터센터",
+        "브룩필드"
+      ]
+    },
+    {
+      "region": "영국 NCSC",
+      "short": "AI 랜섬웨어, 2028년까지",
+      "headline": "AI 악성코드\n기반시설 공격\n2028년까지 가능성 높다",
+      "ill": {
+        "kind": "icon"
+      },
+      "icon": [
+        "Shield",
+        "Locked with key",
+        "🇬🇧"
+      ],
+      "motion": "pulse",
+      "photo": "GCHQ Cheltenham building",
+      "stat1": "2028년",
+      "stat1_label": "AI 악성코드가 쓰인 랜섬웨어 공격이 영국 핵심 기반시설에 일어날 가능성 높음 (NCSC 보고서)",
+      "stat2": "£60M+£70M",
+      "stat2_label": "국가 사이버 실드 1단계 6천만 파운드 · 취약점 실시간 감시 센터 7천만 파운드 (지난주 재무장관 발표)",
+      "source": "NCSC 보도자료 · AP",
+      "hook": {
+        "q": "AI 해킹\n2028년까지?",
+        "hi": "핵심시설 2028년"
+      },
+      "summary": "영국 정보기관 GCHQ 산하 국가사이버보안센터(NCSC)는 3일 연례 보고서에서 2028년까지 AI 기반 악성코드가 영국 핵심 국가 기반시설을 노린 랜섬웨어 공격에 쓰일 가능성이 높다고 경고했습니다. 리처드 혼 NCSC 최고경영자는 AI가 새로운 공격법을 발명해서가 아니라 오랫동안 방치된 취약점을 전에 없던 규모로 찾아내 악용할 수 있기 때문이라며, 값싼 기술에 보안을 희생하던 시대는 끝났다고 했습니다. 보고서는 러시아·중국 등 국가 행위자도 AI를 일상적으로 쓸 것으로 봤고, 영국 정부는 지난주 국가 사이버 실드 1단계에 6천만 파운드, 취약점 실시간 감시 센터에 7천만 파운드 투자를 발표했습니다.",
+      "keywords": [
+        "AI보안",
+        "랜섬웨어"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "구글",
+    "short": "클래스룸 가이디드 러닝",
+    "headline": "구글 클래스룸\n답 대신\n풀이 코치",
+    "point1": "정답 대신 단계별 질문으로 학생 사고를 이끄는 AI 학습 도구",
+    "point1_sub": "11/3부터 전 세계 Google Classroom에서 이용 · 교사가 과제로 배정 · 수업 자료 기반 1:1 학습 · 교사에게 실시간 학급 진도 제공",
+    "point2": "학생이 답을 베끼지 않고 풀이 과정을 익히게 할 때 쓰면 됩니다.",
+    "point2_sub": "Google 검색에는 미국 일부 학교 시범 운영 이달 말 시작 · 학교 관리자가 학생 계정의 AI 제품을 켜고 끌 수 있음",
+    "verdict": "써먹기",
+    "source": "Google 공식 블로그 (11/3)",
+    "photo": "Google office Mountain View"
+  },
+  "market": {
+    "date_label": "11/3 마감 (KST 06:00)",
+    "headline": "반도체 반등\n나스닥 +0.83%\nAMD +3.65%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 25372.01,
+        "pct": 0.83
+      },
+      {
+        "name": "AMD",
+        "value": 483.9,
+        "pct": 3.65
+      },
+      {
+        "name": "마이크로소프트",
+        "value": 520.99,
+        "pct": 2.74
+      }
+    ],
+    "note": "애플 −1.90% → 애플에서 반도체로 돈이 옮겨간 날, AMD는 실적 뒤 시간외 추가 상승",
+    "photo": "Nasdaq MarketSite Times Square"
+  },
+  "oneliner": "데이터센터 97%,\n투자 200억 파운드,\n그다음은 보안이다",
+  "scripts": [
+    "AMD 데이터센터 1년 새 97퍼센트? 매출 134억 달러. 오늘 AI, 핵심만 정리.",
+    "AMD 3분기 매출 134억 달러, 데이터센터 97퍼센트 증가. 4분기 전망은 170억 달러.",
+    "브룩필드, 영국 발전소에 AI 데이터센터 계획. 총투자 200억 파운드 넘을 수도, 최종 결정은 아직.",
+    "영국 사이버보안센터, 2028년까지 AI 악성코드 랜섬웨어가 기반시설을 칠 가능성 높다고 경고.",
+    "구글 클래스룸에 답 대신 질문으로 이끄는 가이디드 러닝이 열렸습니다. 학생이 풀이 과정을 익히게 할 때 쓰면 됩니다.",
+    "나스닥 0.83, AMD 3.65, 마이크로소프트 2.74퍼센트 상승. 애플은 내리고 반도체가 올랐습니다.",
+    "오늘의 한 줄. 데이터센터 97퍼센트, 투자 200억 파운드, 그다음은 보안입니다. AI 데이터센터, 우리 동네에 들어오면 찬성하시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Shopping cart",
+    "Cityscape",
+    "Speech balloon",
+    "Money bag",
+    "Brain",
+    "Electric plug",
+    "Oil drum",
+    "Ballot box with ballot",
+    "House",
+    "Banknote with dollar sign",
+    "Megaphone",
+    "Mobile phone",
+    "Briefcase",
+    "Graduation cap",
+    "Fuel pump",
+    "Coin",
+    "Dove"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

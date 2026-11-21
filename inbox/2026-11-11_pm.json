@@ -1,0 +1,165 @@
+{
+ "edition": "pm",
+ "date_short": "11.11 WED",
+ "title": "오늘의\n국내외 이슈\n저녁 정리",
+ "hook": {
+  "q": "취업자는 늘었는데\n청년은?",
+  "hi": "30개월째 하락"
+ },
+ "question": "청년 고용, 어떻게 풀어야 할까요?",
+ "keywords": [
+  "고용동향",
+  "청년고용",
+  "챗GPT"
+ ],
+ "issues": [
+  {
+   "region": "국가데이터처",
+   "short": "10월 취업자 13만9천 명 증가, 청년 고용률은 하락",
+   "headline": "10월 취업자\n13만9천 명 증가\n청년은 하락",
+   "ill": {
+    "kind": "number",
+    "value": 42.9,
+    "decimals": 1,
+    "suffix": "%",
+    "label": "10월 청년(15~29세) 고용률 · 전년 동월 대비 1.7%p 하락 (국가데이터처)"
+   },
+   "icon": [
+    "Briefcase",
+    "Chart decreasing",
+    "Student"
+   ],
+   "motion": "pulse",
+   "stat1": "증가",
+   "stat1_label": "10월 취업자 13만9천 명 · 전년 동월 대비",
+   "stat2": "하락",
+   "stat2_label": "청년 고용률 30개월 연속 · 전년 동월 대비",
+   "source": "국가데이터처 · 뉴시스 · 머니투데이 (11/11)",
+   "hook": {
+    "q": "취업자는 늘었는데\n청년은?",
+    "hi": "30개월째 하락"
+   },
+   "summary": "10월 취업자는 1년 전보다 13만9천 명 늘어난 2,917만9천 명이었습니다(국가데이터처, 11/11). 15~29세 청년 고용률은 42.9%로 1.7%포인트 내려, 전년 동월 대비 30개월 연속 하락했습니다.",
+   "question": "청년 고용, 어떻게 풀어야 할까요?",
+   "keywords": [
+    "고용동향",
+    "청년고용"
+   ]
+  },
+  {
+   "region": "오픈AI",
+   "short": "챗GPT에서 기업 정보 관리하는 베타 공개",
+   "headline": "챗GPT 안에서\n기업 정보 관리\n베타 공개",
+   "ill": {
+    "kind": "icon",
+    "label": "Businesses in ChatGPT · OpenAI 공식 발표 (11/10)"
+   },
+   "icon": [
+    "Office building",
+    "Bar chart",
+    "Speech balloon"
+   ],
+   "motion": "bob",
+   "stat1": "베타",
+   "stat1_label": "기업 정보 관리 · 언급·클릭 집계",
+   "stat2": "미국",
+   "stat2_label": "상담 에이전트는 미국 일부 업종부터",
+   "source": "OpenAI 공식 발표 (11/10)",
+   "hook": {
+    "q": "챗GPT에\n우리 가게 정보?",
+    "hi": "베타 공개"
+   },
+   "summary": "오픈AI가 11월 10일 챗GPT 안에서 기업이 소유 확인 후 정보를 관리하고 언급·클릭 같은 집계 통계를 보는 베타 서비스 'Businesses in ChatGPT'를 공개했습니다. 통계는 개별 대화 내용 공개가 아니며, 상담 에이전트는 미국의 일부 전자상거래·온라인 서비스 기업부터 제공됩니다.",
+   "question": "가게·회사 정보, 챗GPT에도 관리하실 건가요?",
+   "keywords": [
+    "챗GPT",
+    "오픈AI"
+   ]
+  },
+  {
+   "region": "러시아·우크라이나",
+   "short": "아부다비 회담 첫날 약 4시간, 포로 교환 등 논의",
+   "headline": "러·우 아부다비\n첫날 회담\n포로 교환 논의",
+   "ill": {
+    "kind": "number",
+    "value": 4,
+    "decimals": 0,
+    "suffix": "시간",
+    "label": "현지 11/10 첫날 회담 약 4시간 · 미국 중재 (AP)"
+   },
+   "icon": [
+    "Dove",
+    "Globe showing Europe-Africa",
+    "Speech balloon"
+   ],
+   "motion": "sway",
+   "stat1": "논의",
+   "stat1_label": "포로 교환·억류 민간인 귀환 등 · 합의 아님",
+   "stat2": "신중",
+   "stat2_label": "루비오 국무장관: 24시간 안에 해결될 사안 아님",
+   "source": "AP · Reuters (11/10~11)",
+   "hook": {
+    "q": "러·우 회담\n성과 있었나?",
+    "hi": "포로 교환 등 논의"
+   },
+   "summary": "러시아와 우크라이나가 현지시간 11월 10일 미국 중재로 아부다비에서 약 4시간 회담하며 포로 교환과 억류 민간인·아동 귀환, 안전 보장 등을 논의했습니다(AP). 마코 루비오 미 국무장관은 긍정적으로 평가하면서도 24시간 안에 해결될 사안은 아니라고 말했습니다. 최종 합의나 휴전은 아닙니다.",
+   "question": "이번 협상, 성과가 있을까요?",
+   "keywords": [
+    "우크라이나",
+    "평화협상"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/11(수) 정규장 마감",
+  "headline": "코스닥 +5.62%\n코스피 +2.60%\n나란히 상승",
+  "headline_short": "코스닥 +5.62%, 코스피 +2.60% 나란히 상승",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5375.36,
+    "pct": 2.6
+   },
+   {
+    "name": "코스닥",
+    "value": 705.1,
+    "pct": 5.62
+   }
+  ],
+  "note": "11/11 정규장 종가 · 전 거래일 대비 · 코스피 +136.23p, 코스닥 +37.49p",
+  "photo": "Korea Exchange"
+ },
+ "oneliner": "취업자는 늘고\n청년 고용률은\n하락",
+ "scripts": [
+  "취업자는 늘었는데 청년 고용률은 하락. 오늘 국내외 이슈, 핵심만 정리.",
+  "10월 취업자 13만9천 명 증가. 청년 고용률은 전년 대비 30개월 연속 하락.",
+  "오픈AI, 챗지피티 안에서 기업 정보를 관리하는 베타 공개. 상담 에이전트는 미국부터.",
+  "러시아·우크라이나, 아부다비에서 약 네 시간 회담. 포로 교환 등 논의.",
+  "코스피 2.60퍼센트 오른 5,375.36, 코스닥 5.62퍼센트 오른 705.10에 마감.",
+  "오늘의 한 줄. 취업자는 늘고, 청년 고용률은 하락. 청년 고용, 어떻게 풀어야 할까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "House",
+  "Calendar",
+  "Memo",
+  "Shield",
+  "Bell",
+  "Scroll",
+  "Snowflake",
+  "Shopping cart",
+  "Clapper board",
+  "Mechanical arm",
+  "Page facing up",
+  "Headphone"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-11_1700_pm_v01.md",
+  "drive_id": "1hjZMOicttox3fcTuK2-tEBKAc63nyZsO",
+  "job_id": "cardnews-20261111-1700",
+  "version": "v01"
+ }
+}

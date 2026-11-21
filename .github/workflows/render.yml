@@ -1,0 +1,69 @@
+# Renders the reels on GitHub's servers so the Claude scheduled tasks only write the script (brief json) and publish.
+# A Claude task commits inbox/<id>.json (id like 2026-10-31_pm); this workflow builds it with build.py (or carousel.py
+# for "kind": "breaking"/week files) and attaches the mp4s, covers and captions to a public release named render-<id>.
+# release status.json lists the public video URLs that the publisher hands to vidIQ.
+# Needs the repo secret TYPECAST_API_KEY (Settings > Secrets and variables > Actions); GEMINI_API_KEY is optional.
+name: render
+on:
+  push:
+    paths: ["inbox/*.json"]
+  workflow_dispatch:
+    inputs:
+      id: {description: "inbox file name without .json (e.g. 2026-10-31_pm)", required: true}
+permissions:
+  contents: write
+concurrency: {group: render, cancel-in-progress: false}
+jobs:
+  render:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: {fetch-depth: 2}
+      - name: Which briefs are new
+        id: pick
+        env: {GH_TOKEN: "${{ github.token }}", INPUT_ID: "${{ inputs.id }}"}
+        run: |
+          if [ -n "$INPUT_ID" ]; then ids="$INPUT_ID"
+          else ids=$(git diff --name-only --diff-filter=AM HEAD~1 HEAD -- 'inbox/*.json' | sed 's#inbox/##; s#\.json$##')
+          fi
+          todo=""
+          for id in $ids; do gh release view "render-$id" --json assets -q ".assets[].name" 2>/dev/null | grep -qx status.json && echo "already rendered: $id" || todo="$todo $id"; done
+          echo "ids=$todo" >> "$GITHUB_OUTPUT"; echo "to render:$todo"
+      - name: Install renderer
+        if: steps.pick.outputs.ids != ''
+        timeout-minutes: 30
+        run: |
+          # 11/6: this step hung for 30+ minutes twice (no output), so each part gets a time limit and retries.
+          # 11/18: failed 4 times in a row (~18 min each) with no visible reason, so each attempt now logs a plain line
+          # with time and exit code, apt skips recommended packages, and the step limit is 30 minutes.
+          retry() { for n in 1 2 3; do echo "[$(date -u +%T)] try $n: ${*:2}"; timeout "$1" "${@:2}" && return 0 || rc=$?; echo "[$(date -u +%T)] attempt $n failed (exit $rc): ${*:2}"; sleep 5; done; return 1; }
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=30 -o Acquire::https::Timeout=30"
+          # 11/19: apt install hit its 480s limit 3 times with no output; the usual cause on these runners is the
+          # man-db trigger rebuilding the manual index, so it is turned off and apt now prints progress lines.
+          sudo rm -f /var/lib/man-db/auto-update
+          echo "man-db man-db/auto-update boolean false" | sudo debconf-set-selections
+          # 11/19: the logs showed the ec2 Ubuntu mirror crawling (~10 s per small package, the 61 MB CJK font never
+          # finished), so apt uses the Azure mirror GitHub's own runners use, and the Korean font comes from GitHub instead.
+          if [ -f /etc/apt/apt-mirrors.txt ]; then echo "http://azure.archive.ubuntu.com/ubuntu/	priority:1" | sudo tee /etc/apt/apt-mirrors.txt >/dev/null; fi
+          sudo sed -i 's#http://[a-z0-9.-]*archive.ubuntu.com/ubuntu#http://azure.archive.ubuntu.com/ubuntu#g' /etc/apt/sources.list /etc/apt/sources.list.d/*.sources 2>/dev/null || true
+          retry 240 sudo apt-get $APT update -qq
+          retry 480 sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -q -o Dpkg::Use-Pty=0 --no-install-recommends ffmpeg
+          mkdir -p ~/.local/share/fonts
+          ok=1; for w in Regular Bold Black; do
+            retry 120 curl -fsSL -o ~/.local/share/fonts/NotoSansCJKkr-$w.otf "https://github.com/notofonts/noto-cjk/raw/main/Sans/OTF/Korean/NotoSansCJKkr-$w.otf" || ok=0
+          done
+          if [ $ok = 0 ]; then retry 480 sudo DEBIAN_FRONTEND=noninteractive apt-get $APT install -y -q -o Dpkg::Use-Pty=0 --no-install-recommends fonts-noto-cjk; fi
+          fc-cache -f >/dev/null; fc-list | grep -c "Noto Sans CJK KR"
+          retry 240 pip install -q --timeout 60 playwright numpy
+          retry 420 python -m playwright install --with-deps chromium >/dev/null
+      - name: Render and publish release
+        if: steps.pick.outputs.ids != ''
+        env:
+          GH_TOKEN: "${{ github.token }}"
+          TYPECAST_API_KEY: "${{ secrets.TYPECAST_API_KEY }}"
+          GEMINI_API_KEY: "${{ secrets.GEMINI_API_KEY }}"
+          IDS: "${{ steps.pick.outputs.ids }}"
+        run: |
+          [ -n "$TYPECAST_API_KEY" ] || { echo "::error::TYPECAST_API_KEY secret is missing"; exit 1; }
+          for id in $IDS; do python3 render_inbox.py "inbox/$id.json" "work/$id" "$id"; done

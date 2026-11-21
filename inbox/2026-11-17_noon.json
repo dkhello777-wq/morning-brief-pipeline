@@ -1,0 +1,203 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.17 TUE",
+  "title": "간밤의\nAI 소식\n핵심 정리",
+  "hook": {
+    "q": "AI칩 빌려 쓰기\n미국이 막는다?",
+    "hi": "5개국 허가제"
+  },
+  "question": "AI 모델 값이 더 싸지면, 여러분은 어디에 먼저 써먹겠어요?",
+  "keywords": [
+    "AI뉴스",
+    "반도체규제",
+    "큐원4"
+  ],
+  "issues": [
+    {
+      "region": "미국 AI칩 규제",
+      "short": "미 상무부, AI칩 원격접속 규제 · 반도체주 급락",
+      "headline": "AI칩 빌려 쓰기\n막는 미국\n반도체주 급락",
+      "ill": {
+        "kind": "number",
+        "value": 90,
+        "suffix": "일",
+        "label": "시행까지 · 미 상무부 BIS 잠정 최종규칙 (The Hill)"
+      },
+      "icon": [
+        "Classical building",
+        "Satellite antenna",
+        "🇺🇸"
+      ],
+      "motion": "sway",
+      "photo": "Herbert C. Hoover Building Washington",
+      "image_prompt": "rows of glowing server racks inside a dark data center with a heavy padlocked gate in front of them, no people, no text, no logos",
+      "stat1": "5개국",
+      "stat1_label": "인도네시아·말레이시아·싱가포르·태국·브라질 수출에 허가 필요",
+      "stat2": "−2.49%",
+      "stat2_label": "나스닥 11/16 마감 · 24,509.76",
+      "source": "미 상무부 BIS · The Hill · Yahoo Finance",
+      "hook": {
+        "q": "AI칩 빌려 쓰기\n미국이 막는다?",
+        "hi": "5개국 허가제"
+      },
+      "summary": "미국 상무부 산업안보국(BIS)이 16일(현지시간) 해외 데이터센터를 통한 첨단 AI칩 원격 접속을 겨냥한 잠정 최종규칙을 발표했습니다. 중국 등 제한 국가에 본사를 둔 기업에 상당한 컴퓨팅 파워를 제공하는 해외 데이터센터로 가는 칩과, 인도네시아·말레이시아·싱가포르·태국·브라질로 가는 첨단 칩 수출에 허가가 필요해지며 90일 뒤 시행됩니다. 같은 날 나스닥은 2.49% 내린 24,509.76에 마감했고 마이크론은 7.62%, 엔비디아는 4.12% 하락했습니다.",
+      "question": "클라우드로 빌려 쓰는 AI칩까지 규제하면, 내 서비스 비용은 어떻게 될까요?",
+      "keywords": [
+        "반도체규제",
+        "수출통제"
+      ]
+    },
+    {
+      "region": "알리바바 새 모델",
+      "short": "큐원4 맥스 정식 출시 · API 값 25% 인하",
+      "headline": "알리바바\n큐원4 맥스\nAPI 값 25% 내려",
+      "ill": {
+        "kind": "number",
+        "value": 43,
+        "suffix": "점",
+        "label": "Artificial Analysis 지능 지수 · 전작 큐원3.8 맥스 34점"
+      },
+      "icon": [
+        "Brain",
+        "Laptop",
+        "🇨🇳"
+      ],
+      "motion": "bob",
+      "photo": "Alibaba Group headquarters Hangzhou",
+      "stat1": "1.5달러",
+      "stat1_label": "입력 100만 토큰당 · 출력 4.5달러 (전작 2달러·6달러)",
+      "stat2": "2.4조",
+      "stat2_label": "전체 파라미터 · 가중치 비공개 · 문맥 100만 토큰",
+      "source": "Qwen 블로그 · Artificial Analysis · The Next Web",
+      "hook": {
+        "q": "알리바바 새 AI\n값은 25% 내려?",
+        "hi": "지수 43점"
+      },
+      "summary": "알리바바 큐원 팀이 16일 차세대 최상위 모델 큐원4 맥스(Qwen4-Max)를 정식 출시했습니다. 전체 2.4조 파라미터의 MoE 모델로 문맥 100만 토큰, 텍스트·이미지·영상 입력을 지원하며 API 가격은 입력 100만 토큰당 1.5달러, 출력 4.5달러로 전작(2달러·6달러)보다 25% 낮습니다. Artificial Analysis 지능 지수는 43점으로 전작 34점에서 9점 올랐고, 가중치는 공개하지 않았습니다.",
+      "question": "중국 모델이 더 싸다면, 업무에 써 보시겠어요?",
+      "keywords": [
+        "큐원4",
+        "알리바바"
+      ]
+    },
+    {
+      "region": "오픈AI·AMD 인프라",
+      "short": "오픈AI, AMD 칩 457MW 6년 계약",
+      "headline": "오픈AI\nAMD 칩 457MW\n6년 계약",
+      "ill": {
+        "kind": "number",
+        "value": 457,
+        "suffix": "MW",
+        "label": "텐서웨이브가 오픈AI에 제공하는 IT 용량 · 미국 여러 데이터센터"
+      },
+      "icon": [
+        "High voltage",
+        "Battery",
+        "🇺🇸"
+      ],
+      "motion": "bob",
+      "photo": "AMD headquarters Santa Clara",
+      "stat1": "2027 상반기",
+      "stat1_label": "가동 시작 · 2028년 초 전체 완료 예정",
+      "stat2": "MI455X",
+      "stat2_label": "AMD 인스팅트 GPU · 헬리오스 랙 · 오픈AI 전용",
+      "source": "Business Wire (텐서웨이브 발표)",
+      "hook": {
+        "q": "오픈AI, AMD와\n6년 457MW?",
+        "hi": "6년 계약"
+      },
+      "summary": "AMD 기반 AI 클라우드 기업 텐서웨이브가 16일 오픈AI와 6년 계약을 맺고 미국 여러 데이터센터에서 457메가와트의 IT 용량을 제공한다고 발표했습니다. AMD 인스팅트 MI455X GPU와 헬리오스 랙 시스템으로 구성된 오픈AI 전용 인프라로, 2027년 상반기부터 가동을 시작해 2028년 초 전체 배치를 마칠 예정입니다. 양측은 이번 계약이 앞서 발표한 오픈AI·AMD 전략적 파트너십의 일부라고 설명했으며 계약 금액은 공개하지 않았습니다.",
+      "keywords": [
+        "오픈AI",
+        "AMD"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "구글",
+    "short": "제미나이 노트북, 자료를 사이트로",
+    "headline": "'사이트 만들어 줘'\n자료가 대시보드로\n제미나이 노트북",
+    "point1": "노트북에 넣은 자료로 설명 사이트·대시보드·일정표를 만들어 줌",
+    "point1_sub": "11/16부터 웹 전 세계 출시 · 18세 이상 · 모바일은 추후 · 무료 여부 미표기",
+    "point2": "시험 자료나 분기 매출을 한눈에 정리할 때 쓰면 됩니다.",
+    "point2_sub": "채팅창에 'make me a site' 입력 · 새 탭에서 열기 · 링크로 공유",
+    "verdict": "써먹기",
+    "source": "Google 블로그 (11/16)",
+    "photo": "Googleplex",
+    "icon": [
+      "Bookmark tabs",
+      "Laptop"
+    ]
+  },
+  "market": {
+    "date_label": "11/16 마감 (KST 11/17 06:00)",
+    "headline": "나스닥 −2.49%\n마이크론 −7.62%\n엔비디아 −4.12%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 24509.76,
+        "pct": -2.49
+      },
+      {
+        "name": "엔비디아",
+        "value": 156.14,
+        "pct": -4.12
+      },
+      {
+        "name": "마이크론",
+        "value": 719.02,
+        "pct": -7.62
+      }
+    ],
+    "note": "11/16 정규장 종가 · 인텔 −7.02% · 엔비디아 3분기 실적 11/17 미 장 마감 뒤(KST 11/18 새벽) 발표",
+    "photo": "Micron Technology headquarters Boise",
+    "icon": [
+      "Chart decreasing",
+      "Coin",
+      "Dollar banknote"
+    ]
+  },
+  "oneliner": "칩은 빌려도\n규제는 따라오고\n모델 값은 내려간다",
+  "scripts": [
+    "AI칩 빌려 쓰기도 막는다? 미 규제에 반도체주 급락. 오늘 AI, 핵심만 정리.",
+    "미 상무부, 해외 데이터센터 AI칩 빌려 쓰기 규제. 90일 뒤 시행, 나스닥 2.49퍼센트 하락.",
+    "알리바바 큐원4 맥스 정식 출시. 입력 100만 토큰에 1.5달러, 전작보다 25퍼센트 싸졌습니다.",
+    "오픈AI, AMD 칩 데이터센터 457메가와트를 6년간 씁니다. 텐서웨이브 계약, 2027년 가동.",
+    "구글 제미나이 노트북에 사이트 만들어 줘, 치면 자료가 대시보드 사이트로. 시험 자료나 분기 매출을 정리할 때 쓰면 됩니다.",
+    "나스닥 2.49, 엔비디아 4.12, 마이크론 7.62퍼센트 하락. 엔비디아 실적은 수요일 새벽 발표.",
+    "오늘의 한 줄. 칩은 빌려도 규제는 따라오고, 모델 값은 내려갑니다. AI 모델 값이 더 싸지면, 여러분은 어디에 먼저 써먹겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Money bag",
+    "Credit card",
+    "Locked with key",
+    "Movie camera",
+    "Coin",
+    "Television",
+    "Hourglass done",
+    "Handshake",
+    "Speech balloon",
+    "Dollar banknote",
+    "Envelope",
+    "Abacus",
+    "Ledger",
+    "Magnifying glass tilted left",
+    "Purse",
+    "Glasses",
+    "Factory",
+    "Scroll",
+    "Automobile",
+    "Bank",
+    "Electric plug",
+    "Airplane",
+    "Clapper board",
+    "Mechanical arm",
+    "Bar chart",
+    "Page facing up",
+    "Headphone",
+    "Receipt"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

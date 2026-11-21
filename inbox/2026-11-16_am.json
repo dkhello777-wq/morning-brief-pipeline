@@ -1,0 +1,183 @@
+{
+ "edition": "am",
+ "date_short": "11.16 MON",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "hook": {
+  "q": "미국 하늘길\n사흘째 차질",
+  "hi": "5,200편 넘게 영향"
+ },
+ "question": "AI 부정행위, 어떻게 막아야 할까요?",
+ "keywords": [
+  "미국항공",
+  "AI부정행위",
+  "아세안"
+ ],
+ "issues": [
+  {
+   "region": "미국",
+   "short": "미국 항공편 차질 사흘째, 현지 15일 5,200편 넘게 영향",
+   "headline": "미국 항공편\n차질\n사흘째",
+   "ill": {
+    "kind": "number",
+    "value": 5200,
+    "decimals": 0,
+    "suffix": "편+",
+    "label": "현지 15일(일) 영향 받은 항공편 · 로이터 보도 당시 집계"
+   },
+   "icon": [
+    "Airplane departure",
+    "Satellite antenna",
+    "Warning"
+   ],
+   "motion": "sway",
+   "photo": "Air traffic control tower",
+   "stat1": "사흘째",
+   "stat1_label": "13일(금) 관제 통신 장애로 시작",
+   "stat2": "월요일",
+   "stat2_label": "교통장관 정상화 전망",
+   "source": "Reuters · FAA (현지 11/15)",
+   "hook": {
+    "q": "미국 하늘길\n사흘째 차질",
+    "hi": "5,200편 넘게 영향"
+   },
+   "summary": "지난 금요일 관제 통신 장애로 시작된 미국 항공편 차질이 현지 일요일까지 사흘째 이어졌습니다. 로이터는 일요일에만 5,200편 넘게 영향을 받았다고 보도했고, 미 교통장관은 월요일 정상화를 전망했습니다. 5,200편은 보도 당시 집계로 취소만의 숫자가 아닙니다(Reuters).",
+   "question": "미국 여행 계획, 영향 있으신가요?",
+   "keywords": [
+    "미국항공",
+    "FAA"
+   ]
+  },
+  {
+   "region": "국내",
+   "short": "청와대, 국가자격시험 전체 AI 부정행위 의심 사례 조사",
+   "headline": "AI 부정행위\n국가자격시험\n전체 조사",
+   "ill": {
+    "kind": "icon",
+    "label": "청와대 긴급대책회의 (11/15) · 의심 사례 대상"
+   },
+   "icon": [
+    "Memo",
+    "Magnifying glass tilted right",
+    "Robot"
+   ],
+   "motion": "pulse",
+   "stat1": "전체",
+   "stat1_label": "국가자격시험 의심 사례 조사",
+   "stat2": "16일",
+   "stat2_label": "관계부처 회의서 추가 논의",
+   "source": "청와대 · MBC (11/15)",
+   "hook": {
+    "q": "시험에\nAI 부정행위?",
+    "hi": "국가시험 전체 조사"
+   },
+   "summary": "청와대가 국가자격시험 전체에서 인공지능을 이용한 부정행위 의심 사례를 조사하기로 했습니다. 세무사 시험 논란 이후 조사 범위를 넓힌 것으로, 정부는 16일 관계부처 회의에서 대응책을 추가로 논의합니다. 의심 사례 조사이며 추가 부정이 확정된 것은 아닙니다(청와대·MBC).",
+   "question": "AI 부정행위, 어떻게 막아야 할까요?",
+   "keywords": [
+    "AI부정행위",
+    "국가자격시험"
+   ]
+  },
+  {
+   "region": "아세안",
+   "short": "이재명 대통령, 오늘 마닐라 한·아세안 정상회의 참석",
+   "headline": "이 대통령\n오늘 한·아세안\n정상회의",
+   "ill": {
+    "kind": "icon",
+    "label": "11/16(월) 필리핀 마닐라 · 청와대 11/12 브리핑"
+   },
+   "icon": [
+    "Handshake",
+    "Globe showing Asia-Australia",
+    "Spiral calendar"
+   ],
+   "motion": "bob",
+   "stat1": "16일",
+   "stat1_label": "한·아세안 → 한·메콩 정상회의",
+   "stat2": "17일",
+   "stat2_label": "아세안+3 · 동아시아정상회의 예정",
+   "source": "청와대 브리핑 (11/12)",
+   "hook": {
+    "q": "이 대통령\n오늘 마닐라",
+    "hi": "한·아세안 정상회의"
+   },
+   "summary": "이재명 대통령은 16일 필리핀 마닐라에서 열리는 한·아세안 정상회의에 참석하고, 이어 한·메콩 정상회의에서 핵심광물·초국가 범죄 대응 협력을 논의할 예정입니다. 17일에는 아세안+3 정상회의와 동아시아정상회의에 참석합니다(청와대 11/12 브리핑).",
+   "question": "이번 아세안 순방, 무엇을 기대하시나요?",
+   "keywords": [
+    "아세안",
+    "이재명"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "KAIST",
+  "short": "카이스트, 입 모양 읽어 말을 글로 바꾸는 AI 연구 소개",
+  "headline": "소리 없이\n입 모양 읽는\nAI",
+  "point1": "입 모양을 읽어 말을 글로 바꾸는 연구",
+  "point1_sub": "카이스트 연구팀 · 연구 성과 소개 (연합뉴스, 11/15)",
+  "point2": "확실한 단어부터 읽고, 헷갈리는 부분은 앞뒤 문맥으로 채웁니다.",
+  "point2_sub": "새 앱 출시가 아닌 연구 단계",
+  "verdict": "연구 단계",
+  "source": "연합뉴스 (11/15) · EMNLP 2026 논문",
+  "icon": [
+   "Mouth",
+   "Robot",
+   "Memo"
+  ]
+ },
+ "market": {
+  "date_label": "11/13(금) 정규장 마감 · 주말 휴장",
+  "headline": "나스닥 -0.91%\nS&P -0.40%\n다우 +0.10%",
+  "dow": {
+   "value": 52347.55,
+   "pct": 0.1
+  },
+  "spx": {
+   "value": 7561.67,
+   "pct": -0.4
+  },
+  "ndx": {
+   "value": 25136.27,
+   "pct": -0.91
+  },
+  "note": "11/13(금) 정규장 공식 종가 · 주말이라 새 마감 없음 · 한국은 16일 거래 재개",
+  "photo": "Wall Street sign"
+ },
+ "oneliner": "하늘길은 사흘째 막히고\n시험장은 AI를 막는다",
+ "scripts": [
+  "미국 하늘길 사흘째 차질. 오늘 세계 이슈, 핵심만 정리.",
+  "미국 항공편 차질 사흘째. 현지 일요일에만 5천2백 편 넘게 영향, 월요일 정상화 전망.",
+  "청와대, 국가자격시험 전체로 AI 부정행위 의심 사례 조사. 오늘 관계부처 회의서 추가 논의.",
+  "이재명 대통령, 오늘 마닐라서 한·아세안 정상회의 참석. 이어 한·메콩 정상회의.",
+  "카이스트, 입 모양을 읽어 말을 글로 바꾸는 AI 소개. 확실한 단어부터 읽는 방식입니다.",
+  "미국 증시 금요일 종가. 다우 0.10퍼센트 상승, 에스앤피 0.40퍼센트, 나스닥 0.91퍼센트 하락.",
+  "오늘의 한 줄. 하늘길은 사흘째 막히고, 시험장은 AI를 막는다. AI 부정행위, 어떻게 막아야 할까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Robot",
+  "High voltage",
+  "Classical building",
+  "Dove",
+  "Handshake",
+  "Laptop",
+  "Chart decreasing",
+  "Dollar banknote",
+  "Abacus",
+  "Magnifying glass tilted left",
+  "Mobile phone",
+  "Light bulb"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-16_0600_am_v01.md",
+  "drive_id": "1EGpbCDMUXqQzyDwEl8DhOK3LMmoZ3D0M",
+  "job_id": "cardnews-20261116-0600",
+  "version": "v01",
+  "claude_filled": [
+   "issue 3 (아세안 정상회의, 청와대 11/12 브리핑)"
+  ]
+ }
+}

@@ -1,0 +1,200 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.13 FRI",
+  "title": "간밤의\nAI 소식\n핵심 정리",
+  "hook": {
+    "q": "AI 안경\n65만 원이면?",
+    "hi": "12/10 출시"
+  },
+  "question": "65만 원 AI 안경, 사시겠어요?",
+  "keywords": [
+    "AI뉴스",
+    "AI안경",
+    "네이버"
+  ],
+  "issues": [
+    {
+      "region": "삼성·구글 AI 안경",
+      "short": "AI 안경 국내 65만 원부터",
+      "headline": "삼성·구글 AI 안경\n국내 65만 원부터\n12월 10일 출시",
+      "ill": {
+        "kind": "number",
+        "value": 65,
+        "suffix": "만 원",
+        "label": "국내 출고가 시작 가격 · 모델별 65만~70만 원, 부가세 포함 (연합뉴스)"
+      },
+      "icon": [
+        "Glasses",
+        "Sunglasses",
+        "Mobile phone"
+      ],
+      "motion": "bob",
+      "photo": "Samsung Electronics headquarters Seoul",
+      "image_prompt": "a pair of sleek lightweight eyeglasses resting on a wooden table beside a smartphone, soft window light, no people, no text, no logos",
+      "stat1": "30종",
+      "stat1_label": "젠틀몬스터 16종·워비파커 14종 · 국내는 젠틀몬스터만 (삼성전자 뉴스룸)",
+      "stat2": "395달러~",
+      "stat2_label": "미국 가격 · 워비파커 395달러부터, 젠틀몬스터 449~489달러",
+      "source": "삼성전자 뉴스룸 · Google 블로그 · 연합뉴스 (11/12)",
+      "hook": {
+        "q": "AI 안경\n65만 원이면?",
+        "hi": "12/10 출시"
+      },
+      "summary": "삼성전자가 11월 12일 미국 뉴욕에서 구글·젠틀몬스터·워비파커와 협업한 AI 안경 '인텔리전트 아이웨어' 30종을 공개하고 이날 사전 판매를 시작했습니다. 구글 제미나이를 탑재해 눈앞 사물 질문, 외국어 메뉴 번역, 길 안내, 회의 화이트보드 요약을 지원하고, 무게 약 41g, 1200만 화소 카메라, 1회 충전 최대 9시간입니다. 12월 10일 한국과 미국에 출시되며 국내에는 젠틀몬스터 16종만 65만~70만 원에 판매하고, 미국 가격은 워비파커 395달러부터, 젠틀몬스터 449~489달러입니다. 갤럭시는 물론 아이폰과도 연동됩니다.",
+      "question": "65만 원 AI 안경, 사시겠어요?",
+      "keywords": [
+        "AI안경",
+        "삼성전자"
+      ]
+    },
+    {
+      "region": "네이버 AI 팩토리",
+      "short": "네이버, 미 AI 기업과 2조 원 계약",
+      "headline": "네이버 AI 팩토리\n첫 고객 2조 원\n영업이익은 −20.9%",
+      "ill": {
+        "kind": "number",
+        "value": 2,
+        "suffix": "조 원",
+        "label": "미국 AI 추론 기업과 컴퓨팅 서비스 공급 계약 · 전력 환산 약 20MW · 4~5년 (네이버 컨퍼런스콜)"
+      },
+      "icon": [
+        "Factory",
+        "Satellite antenna",
+        "🇰🇷"
+      ],
+      "motion": "spin",
+      "photo": "Naver Green Factory",
+      "stat1": "+10.7%",
+      "stat1_label": "3분기 매출 3조 4,724억 원 · 1년 전 대비",
+      "stat2": "−20.9%",
+      "stat2_label": "3분기 영업이익 4,513억 원 · 1년 전 대비",
+      "source": "네이버 3분기 실적발표·컨퍼런스콜 · 연합뉴스 (11/12)",
+      "hook": {
+        "q": "네이버 AI\n첫 계약 2조?",
+        "hi": "2조 원 계약"
+      },
+      "summary": "네이버가 11월 12일 3분기 실적 발표에서 미국 AI 추론 기업과 차세대 GPU를 포함한 약 2조 원 규모의 컴퓨팅 서비스 공급 계약을 체결했다고 밝혔습니다. 전력 용량으로 약 20MW, 계약 기간은 칩에 따라 4~5년이며, 매출은 내년 상반기 상용 서비스 개시와 함께 순차 반영됩니다. 남은 180MW 물량은 10곳 이상 기업과 추가 계약을 논의 중입니다. 3분기 매출은 3조 4,724억 원으로 10.7% 늘어 6분기 연속 최대였지만, AI 인프라·콘텐츠 투자 증가로 영업이익은 4,513억 원으로 20.9% 줄었습니다. 최수연 대표는 개인형 AI 에이전트 앱도 연내 선보이겠다고 했습니다.",
+      "question": "네이버 AI 에이전트 앱, 나오면 써보시겠어요?",
+      "keywords": [
+        "네이버",
+        "AI팩토리"
+      ]
+    },
+    {
+      "region": "미국 AI 소송",
+      "short": "비영리단체, AI 5개사 개발 중단 소송",
+      "headline": "AI 5개사에\n최첨단 모델\n개발 중단 소송",
+      "ill": {
+        "kind": "number",
+        "value": 5,
+        "suffix": "개사",
+        "label": "오픈AI·앤트로픽·구글·메타·스페이스X AI 부문 · 샌프란시스코 법원 (Reuters·AP)"
+      },
+      "icon": [
+        "Scroll",
+        "Shield",
+        "🇺🇸"
+      ],
+      "motion": "sway",
+      "stat1": "소송",
+      "stat1_label": "불공정 영업행위 금지법 근거",
+      "stat2": "무응답",
+      "stat2_label": "메타 논평 거부 · 판결 미정",
+      "source": "Reuters · AP (11/12)",
+      "hook": {
+        "q": "챗GPT·클로드\n개발 멈추라고?",
+        "hi": "5개사 피소"
+      },
+      "summary": "미국 비영리단체들이 11월 12일 오픈AI, 앤트로픽, 구글, 메타, 스페이스X의 AI 부문을 상대로 최첨단 AI 모델의 추가 개발을 막아 달라는 소송을 샌프란시스코 법원에 냈다고 로이터와 AP가 전했습니다. 퍼블릭 시티즌 등 기술 책임성 단체들은 캘리포니아 불공정 영업행위 금지법을 근거로 챗GPT·제미나이·클로드 같은 제품의 개발 중단 명령을 요구했고, 다리오 아모데이와 일론 머스크 등 경영자들이 AI 위험을 언급한 발언과 모델이 시험 환경을 벗어났다는 최근 사건을 소장에 담았습니다. 메타는 논평을 거부했고 다른 회사들은 즉각 답하지 않았습니다. 로이터는 트럼프 행정부가 중국과의 경쟁을 이유로 대규모 AI 규제를 피해 온 가운데 주 정부와 민간이 소송으로 변화를 압박하고 있다고 전했습니다.",
+      "keywords": [
+        "AI규제",
+        "AI소송"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "구글",
+    "short": "제미나이 앱, 애플 카플레이 지원",
+    "headline": "운전 중\n카플레이에서\n제미나이와 대화",
+    "point1": "차 화면에서 제미나이 라이브 음성 대화 · 일정 확인·메일 요약·브레인스토밍",
+    "point1_sub": "iOS 제미나이 이용자 전부 · 11/11부터 전 세계 순차 적용 · 제미나이 라이브 지원 언어 모두",
+    "point2": "출퇴근길에 하루 일정과 메일을 귀로 정리할 때 쓰면 됩니다.",
+    "point2_sub": "최신 제미나이 앱·마이크 권한·폰에서 라이브 1회 사용 필요 · 데일리 브리프는 18세 미만·EEA 등 제외",
+    "verdict": "써먹기",
+    "source": "Google 공식 블로그 (11/11)",
+    "photo": "Apple CarPlay dashboard",
+    "icon": [
+      "Automobile",
+      "Oncoming automobile",
+      "Mobile phone"
+    ]
+  },
+  "market": {
+    "date_label": "11/12 마감 (KST 11/13 06:00)",
+    "headline": "젠슨 황 사임 날\n엔비디아 −4.34%\nAMD +5.86%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 25366.09,
+        "pct": -0.39
+      },
+      {
+        "name": "엔비디아",
+        "value": 166.19,
+        "pct": -4.34
+      },
+      {
+        "name": "AMD",
+        "value": 585.3,
+        "pct": 5.86
+      }
+    ],
+    "note": "11/12 정규장 종가 · 브로드컴 +5.54%, S&P 500 −0.35%, 다우 −0.36% · 콜렛 크레스 CFO가 임시 CEO (Reuters)",
+    "photo": "Nasdaq MarketSite",
+    "icon": [
+      "Bank",
+      "Purse"
+    ]
+  },
+  "oneliner": "AI가 얼굴 위로\n데이터센터로\n법원으로 간다",
+  "scripts": [
+    "AI 안경 65만 원이면? 12월 10일 한국 출시. 오늘 AI, 핵심만 정리.",
+    "삼성과 구글 AI 안경 30종 공개. 국내는 젠틀몬스터 16종, 65만 원부터 12월 10일 출시.",
+    "네이버가 미국 AI 기업과 2조 원 컴퓨팅 공급 계약. 3분기 영업이익은 20.9퍼센트 줄었습니다.",
+    "미 비영리단체들, 오픈AI, 구글 등 5개사에 최첨단 AI 개발 중단 소송. 메타는 논평 거부.",
+    "구글 제미나이 앱이 애플 카플레이에 들어와 운전 중 음성 대화. 출퇴근길에 일정과 메일을 귀로 정리할 때 쓰면 됩니다.",
+    "젠슨 황 사임 날, 엔비디아 4.34퍼센트 하락, 에이엠디 5.86 상승, 나스닥 0.39퍼센트 하락.",
+    "오늘의 한 줄. AI가 얼굴 위로, 데이터센터로, 법원으로 갑니다. 65만 원 AI 안경, 사시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Electric plug",
+    "Credit card",
+    "Airplane",
+    "Clapper board",
+    "Coin",
+    "Mechanical arm",
+    "Bar chart",
+    "Page facing up",
+    "Headphone",
+    "Receipt",
+    "Money with wings",
+    "Gear",
+    "Desktop computer",
+    "Framed picture",
+    "Money bag",
+    "Magnifying glass tilted right",
+    "Robot",
+    "Balance scale",
+    "Speaking head",
+    "Dollar banknote",
+    "Briefcase",
+    "Seedling",
+    "Megaphone",
+    "Cloud",
+    "Classical building",
+    "Laptop"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}
