@@ -1,0 +1,160 @@
+{
+ "edition": "pm",
+ "date_short": "11.21 SAT",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "울산 AI 데이터센터\n현장 점검",
+  "hi": "2027년 하반기 가동 목표",
+  "count": false
+ },
+ "question": "지방 AI 데이터센터, 기대되시나요?",
+ "keywords": [
+  "AI데이터센터",
+  "울산",
+  "코스피"
+ ],
+ "issues": [
+  {
+   "region": "울산",
+   "short": "이재명 대통령, 울산 SK AI 데이터센터 건설 현장 점검",
+   "headline": "울산 AI\n데이터센터\n현장 점검",
+   "ill": {
+    "kind": "icon",
+    "label": "SK·아마존웹서비스 공동 추진 · 건설 중 (연합뉴스·로이터)"
+   },
+   "icon": [
+    "Building construction",
+    "Cloud",
+    "Satellite antenna"
+   ],
+   "motion": "drive",
+   "stat1": "2027년 하반기",
+   "stat1_label": "첫 가동 계획 · 지금은 건설 중",
+   "stat2": "SK·AWS",
+   "stat2_label": "SK가 짓고, AWS가 국내 고객용 AI·클라우드 기반 마련",
+   "source": "연합뉴스 · 로이터 · SK (11/21)",
+   "hook": {
+    "q": "울산 AI 데이터센터\n현장 점검",
+    "hi": "2027년 하반기 가동 목표",
+    "count": false
+   },
+   "summary": "이재명 대통령은 21일 울산 SK 인공지능 데이터센터 건설 현장을 찾아 사업 진행 상황을 점검했습니다. 인공지능 투자 속도를 높이고, 수도권에 집중된 투자를 지역으로 넓혀야 한다고 강조했습니다. SK와 아마존웹서비스가 함께 추진하는 이 데이터센터는 2027년 하반기 첫 가동을 계획하고 있습니다.",
+   "question": "지방 AI 데이터센터, 기대되시나요?",
+   "keywords": [
+    "AI데이터센터",
+    "울산"
+   ]
+  },
+  {
+   "region": "국내증시",
+   "short": "토요일 휴장, 금요일 코스피 −5.21%·코스닥 −5.71%",
+   "headline": "금요일 증시\n코스피·코스닥\n5%대 하락",
+   "ill": {
+    "kind": "icon",
+    "label": "토요일 휴장 · 직전 거래일 11/20 정규장 종가"
+   },
+   "icon": [
+    "Calendar",
+    "Coin",
+    "Bank"
+   ],
+   "motion": "shake",
+   "stat1": "4,869.96",
+   "stat1_label": "코스피 −5.21% · 11/20(금) 종가",
+   "stat2": "645.68",
+   "stat2_label": "코스닥 −5.71% · 두 시장 매도 사이드카",
+   "source": "연합뉴스 · 한국거래소 (11/20)",
+   "hook": {
+    "q": "금요일 증시\n5%대 하락",
+    "hi": "코스피 −5.21%",
+    "count": false
+   },
+   "summary": "국내 증시는 토요일인 21일 쉬었습니다. 직전 거래일인 20일 코스피는 5.21% 내린 4,869.96, 코스닥은 5.71% 내린 645.68에 마감했고, 두 시장 모두 프로그램 매도 주문을 잠시 멈추는 매도 사이드카가 발동됐습니다.",
+   "question": "다음 주 증시, 어떻게 보세요?",
+   "keywords": [
+    "코스피",
+    "사이드카"
+   ]
+  },
+  {
+   "region": "유엔 기후총회",
+   "short": "튀르키예 유엔 기후총회, 시한 넘겨 협상 계속",
+   "headline": "유엔 기후총회\n시한 넘겨\n협상 계속",
+   "ill": {
+    "kind": "icon",
+    "label": "튀르키예 안탈리아 · 제31차 당사국총회 (UNFCCC · AP)"
+   },
+   "icon": [
+    "Globe showing Europe-Africa",
+    "Thermometer",
+    "Hourglass not done"
+   ],
+   "motion": "sway",
+   "stat1": "COP31",
+   "stat1_label": "유엔 기후변화 당사국총회 · 튀르키예",
+   "stat2": "연장 협상",
+   "stat2_label": "화석연료 감축 이견으로 최종 합의 지연 (AP)",
+   "source": "UNFCCC · AP (11/21)",
+   "hook": {
+    "q": "유엔 기후총회\n시한 넘겨",
+    "hi": "연장 협상",
+    "count": false
+   },
+   "summary": "튀르키예에서 열린 제31차 유엔 기후총회는 당초 일정을 넘겨 협상이 이어졌습니다. AP 통신은 화석연료 감축 문제를 둘러싼 이견으로 최종 합의가 늦어지고 있다고 전했습니다.",
+   "question": "기후 협상, 합의될까요?",
+   "keywords": [
+    "기후총회",
+    "COP31"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/20(금) 정규장 마감 · 토요일 휴장",
+  "headline": "코스피 −5.21%\n코스닥 −5.71%",
+  "headline_short": "코스피 −5.21%, 코스닥 −5.71%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 4869.96,
+    "pct": -5.21
+   },
+   {
+    "name": "코스닥",
+    "value": 645.68,
+    "pct": -5.71
+   }
+  ],
+  "note": "11/20(금) 15:30 정규장 종가 · 전 거래일 대비 · 11/21(토) 휴장"
+ },
+ "oneliner": "AI 인프라는 지방으로\n기후 협상은 연장전",
+ "scripts": [
+  "울산 AI 데이터센터, 내년 하반기 가동 목표. 오늘 국내 이슈, 핵심만 정리.",
+  "이재명 대통령, 울산 AI 데이터센터 현장 점검. AI 투자 속도와 지역 균형 발전 강조.",
+  "토요일 휴장. 금요일 코스피 5.21퍼센트, 코스닥 5.71퍼센트 하락 마감.",
+  "튀르키예 유엔 기후총회, 시한 넘겨 협상 계속. 화석연료 감축 이견으로 합의 늦어져.",
+  "금요일 종가, 코스피 4천869.96, 코스닥 645.68. 두 시장 모두 매도 사이드카 발동.",
+  "오늘의 한 줄. AI 인프라는 지방으로, 기후 협상은 연장전. 지방 AI 데이터센터, 기대되시나요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Chart decreasing",
+  "Bear",
+  "Dollar banknote",
+  "Desktop computer",
+  "Clipboard",
+  "Classical building",
+  "Trophy",
+  "Laptop",
+  "Mobile phone"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-21_1700_pm.md",
+  "drive_id": "13D6tXcQhtRJFoHqusoi4umzJLA9oQnbi",
+  "job_id": "cardnews-20261121-1700",
+  "version": "v01"
+ }
+}
