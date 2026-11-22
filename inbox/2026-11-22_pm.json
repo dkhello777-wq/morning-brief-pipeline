@@ -1,0 +1,189 @@
+{
+ "edition": "pm",
+ "date_short": "11.22 SUN",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "유엔 기후총회\n최신 초안",
+  "hi": "화석연료 전환 명시 없어",
+  "count": false
+ },
+ "question": "이번 기후 협상, 합의될까요?",
+ "keywords": [
+  "기후총회",
+  "보훈병원",
+  "AI데이터센터"
+ ],
+ "issues": [
+  {
+   "region": "유엔 기후총회",
+   "short": "COP31 최신 합의문 초안, 화석연료 전환 명시 없어",
+   "headline": "COP31 최신 초안\n화석연료 전환\n명시 없어",
+   "ill": {
+    "kind": "icon",
+    "label": "튀르키예 안탈리아 · 일요일 공개 초안 (AP)"
+   },
+   "icon": [
+    "Scroll",
+    "Oil drum",
+    "Hourglass not done"
+   ],
+   "motion": "sway",
+   "stat1": "초안",
+   "stat1_label": "일요일 새벽 공개 · 최종 채택은 미확인",
+   "stat2": "석탄·석유·가스",
+   "stat2_label": "벗어나자는 문구 명시 안 돼 (AP)",
+   "source": "AP · UNFCCC (11/22)",
+   "hook": {
+    "q": "COP31 최신 초안",
+    "hi": "화석연료 전환 명시 없어",
+    "count": false
+   },
+   "summary": "튀르키예에서 열린 유엔 기후총회 소식입니다. AP는 일요일 공개된 최신 합의문 초안에 석탄·석유·가스에서 벗어나자는 문구가 명시되지 않았다고 보도했습니다. 최종 채택은 아직 확인되지 않았습니다.",
+   "question": "이번 기후 협상, 합의될까요?",
+   "keywords": [
+    "기후총회",
+    "COP31"
+   ]
+  },
+  {
+   "region": "대구",
+   "short": "대구보훈병원 서관동 증축 23일 착공 예정 · 105병상",
+   "headline": "대구보훈병원\n105병상 증축\n내일 착공",
+   "ill": {
+    "kind": "icon",
+    "label": "서관동 증축 · 만성질환·호스피스 병동 (국가보훈부)"
+   },
+   "icon": [
+    "Hospital",
+    "Building construction",
+    "Bed"
+   ],
+   "motion": "drive",
+   "stat1": "105병상",
+   "stat1_label": "증축 규모 · 23일 착공 예정",
+   "stat2": "호스피스",
+   "stat2_label": "만성질환 진료와 호스피스·완화의료에 쓰일 예정",
+   "source": "국가보훈부 · 머니투데이 (11/22)",
+   "hook": {
+    "q": "대구보훈병원\n증축 착공",
+    "hi": "105병상",
+    "count": false
+   },
+   "summary": "국가보훈부는 대구보훈병원 서관동 증축 공사가 내일 시작될 예정이라고 밝혔습니다. 증축 규모는 105병상으로, 만성질환 진료와 호스피스·완화의료에 쓰일 예정입니다.",
+   "question": "보훈 의료시설 확충, 어떻게 보세요?",
+   "keywords": [
+    "보훈병원",
+    "대구"
+   ]
+  },
+  {
+   "region": "AI 인프라",
+   "short": "비수도권 AI 데이터센터 50MW 이하 전력망 영향평가 면제안 입법예고",
+   "headline": "AI 데이터센터\n전력평가 면제안\n입법예고",
+   "ill": {
+    "kind": "icon",
+    "label": "비수도권 · 계약전력 50MW 이하 (과기정통부·기후에너지환경부)"
+   },
+   "icon": [
+    "Electric plug",
+    "High voltage",
+    "Desktop computer"
+   ],
+   "motion": "bob",
+   "stat1": "50MW↓",
+   "stat1_label": "비수도권 AI 데이터센터 계약전력 기준",
+   "stat2": "입법예고",
+   "stat2_label": "전력망 영향평가 면제 시행령안 · 현재 시행 중 아님",
+   "source": "과기정통부 · 기후에너지환경부 (11/20)",
+   "hook": {
+    "q": "AI 데이터센터\n전력평가 면제안",
+    "hi": "50MW 이하",
+    "count": false
+   },
+   "summary": "정부는 금요일, 비수도권 AI 데이터센터의 계약전력이 50메가와트 이하일 때 전력망 영향평가를 면제하는 시행령안을 입법예고했습니다. 현재 시행 중인 제도는 아닙니다.",
+   "question": "지방 AI 데이터센터, 기대되시나요?",
+   "keywords": [
+    "AI데이터센터",
+    "전력망"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/20(금) 정규장 마감 · 일요일 휴장",
+  "headline": "코스피 −5.21%\n코스닥 −5.71%",
+  "headline_short": "코스피 −5.21%, 코스닥 −5.71%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 4869.96,
+    "pct": -5.21
+   },
+   {
+    "name": "코스닥",
+    "value": 645.68,
+    "pct": -5.71
+   }
+  ],
+  "note": "11/20(금) 15:30 정규장 종가 · 전 거래일 대비 · 11/22(일) 휴장"
+ },
+ "oneliner": "기후 협상은 막판\n보훈병원은 착공",
+ "scripts": [
+  "유엔 기후총회 최신 초안, 화석연료 전환 명시 없어. 오늘 국내 이슈, 핵심만 정리.",
+  "AP, 일요일 공개된 기후총회 최신 초안에 화석연료 전환 문구 명시 안 돼. 최종 채택은 미확인.",
+  "대구보훈병원 서관동 증축, 내일 착공 예정. 105병상 규모로 만성질환·호스피스 진료에 쓰여.",
+  "비수도권 AI 데이터센터, 50메가와트 이하면 전력망 영향평가 면제. 시행령안 입법예고 단계.",
+  "일요일 휴장. 금요일 코스피 5.21퍼센트, 코스닥 5.71퍼센트 하락 마감.",
+  "오늘의 한 줄. 기후 협상은 막판, 보훈병원은 착공. 이번 기후 협상, 합의될까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Artist palette",
+  "Balance scale",
+  "Ballot box with ballot",
+  "Bank",
+  "Bar chart",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chart decreasing",
+  "Cloud",
+  "Coin",
+  "Computer mouse",
+  "Control knobs",
+  "Desktop computer",
+  "Factory",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Locked with key",
+  "Mobile phone",
+  "Money with wings",
+  "Package",
+  "Paintbrush",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Speech balloon",
+  "Stopwatch",
+  "Teacher",
+  "Thermometer",
+  "🇺🇸"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-22_1700_pm.md",
+  "drive_id": "1Uyv7uFaPhEJHT7PsJlWqmr-9D9zjcZev",
+  "job_id": "cardnews-20261122-1700",
+  "version": "v01"
+ }
+}
