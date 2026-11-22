@@ -1,0 +1,216 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.22 SUN",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "hook": {
+  "q": "27시간짜리 일\nAI 혼자 끝낸다?",
+  "hi": "110일마다 2배",
+  "count": false
+ },
+ "question": "하루 넘게 걸리는 일도 혼자 끝내는 AI, 여러분 업무에서는 무엇을 맡기시겠어요?",
+ "keywords": [
+  "AI뉴스",
+  "METR",
+  "리만가설"
+ ],
+ "issues": [
+  {
+   "region": "AI 능력 측정",
+   "short": "AI가 혼자 끝내는 작업 길이 최대 27시간 · 110일마다 2배",
+   "headline": "AI 혼자 끝내는 일\n110일마다\n두 배",
+   "ill": {
+    "kind": "number",
+    "value": 27,
+    "suffix": "시간",
+    "label": "현재 최상위 모델이 혼자 끝내는 작업 길이 추정 · 검증 가능 과제 기준 (METR)"
+   },
+   "icon": [
+    "Stopwatch",
+    "Alarm clock",
+    "Hourglass done"
+   ],
+   "motion": "bob",
+   "photo": "programmer working late at computer",
+   "stat1": "3.61개월",
+   "stat1_label": "작업 길이가 2배 되는 기간 · 95% 신뢰구간 2.08~4.94개월",
+   "stat2": "측정 한계",
+   "stat2_label": "모델을 이기는 사람 기준선 찾기 어렵고 비싸져 (METR)",
+   "source": "METR 블로그 (11/20)",
+   "hook": {
+    "q": "27시간짜리 일\nAI 혼자 끝낸다?",
+    "hi": "110일마다 2배",
+    "count": false
+   },
+   "summary": "AI 평가기관 METR(메터)가 20일(현지시간) 4분기 능력 평가를 냈습니다. 현재 공개된 최상위 모델이 혼자 끝낼 수 있는 작업 길이는 검증 가능한 과제 기준 최대 27시간으로 추정되고, 이 길이는 약 3.61개월(110일)마다 두 배로 늘고 있습니다. METR는 여러 분야에서 모델을 이기는 사람 기준선을 찾기가 어렵고 비싸져 측정 자체가 힘들어지고 있으며, 앞으로 몇 년 안에 AI 연구개발이 급격히 빨라질 가능성을 현재 공개된 근거로는 배제할 수 없다고 했습니다.",
+   "question": "하루 넘게 걸리는 일도 혼자 끝내는 AI, 여러분 업무에서는 무엇을 맡기시겠어요?",
+   "keywords": [
+    "METR",
+    "AI에이전트"
+   ]
+  },
+  {
+   "region": "리만 가설",
+   "short": "앤트로픽 수학자 '클로드와 리만 가설 증명' 주장 · 검증은 아직",
+   "headline": "167년 난제\n클로드와 풀었다?\n검증은 아직",
+   "ill": {
+    "kind": "icon"
+   },
+   "icon": [
+    "Abacus",
+    "Scroll",
+    "Graduation cap"
+   ],
+   "motion": "bob",
+   "photo": "mathematics chalkboard formulas",
+   "image_prompt": "a vast chalkboard filled with abstract hand-drawn symbols and curves, one glowing line of light threading through the dense marks, no people, no readable text, no logos",
+   "stat1": "25만 쪽+",
+   "stat1_label": "출력하면 25만 쪽 넘는 Lean 코드 증명 · 알푀게 (The Decoder)",
+   "stat2": "검증 전",
+   "stat2_label": "수학계 검증 남아 · 같은 날 AI 없이 쓴 별도 증명 초안도 공개",
+   "source": "Interesting Engineering · The Decoder (11/20~21)",
+   "hook": {
+    "q": "리만 가설\n증명됐다고?",
+    "hi": "167년 난제",
+    "count": false
+   },
+   "summary": "앤트로픽 수학자 레벤트 알푀게가 20일(현지시간) 클로드와 함께 일반화 리만 가설의 증명을 발견했다고 믿는다고 밝혔습니다. 1859년 리만이 제기한 이 가설은 클레이 수학연구소 밀레니엄 문제 7개 중 하나로, 아직 공식적으로는 풀리지 않은 문제입니다. 그는 증명을 Lean 코드로만 공개했고(출력하면 25만 쪽 이상), 마지막 단계에서 클로드가 자신을 훨씬 앞서갔다고 썼습니다. 수학계 검증은 남아 있습니다. 같은 날 스탠퍼드 수학자 라비 바킬은 알레산드로 마술로가 AI 없이 쓴 별도 증명 초안을 공개했는데, 이미 문제점 제보가 들어왔다고 밝혔습니다.",
+   "keywords": [
+    "리만가설",
+    "클로드"
+   ]
+  },
+  {
+   "region": "미중 AI 합의",
+   "short": "베선트 '트럼프·시진핑, 군사 AI 결정에 사람 개입 합의'",
+   "headline": "군사 AI 결정\n사람이 끼어야\n미중 합의",
+   "ill": {
+    "kind": "icon"
+   },
+   "icon": [
+    "Handshake",
+    "Shield",
+    "Globe showing Asia-Australia"
+   ],
+   "motion": "sway",
+   "photo": "United States Treasury Building Washington",
+   "stat1": "H200",
+   "stat1_label": "중국이 허가받아 살 수 있는 가장 앞선 엔비디아 칩 · 주문은 드물어 (베선트)",
+   "stat2": "원격 접근 제한",
+   "stat2_label": "상무부, 해외 데이터센터 통한 중국의 AI 칩 접근 추가 제한 (11/16)",
+   "source": "Reuters · CNBC (11/20)",
+   "hook": {
+    "q": "군사 AI\n미중이 합의?",
+    "hi": "선전 정상회담",
+    "count": false
+   },
+   "summary": "스콧 베선트 미국 재무장관이 20일(현지시간) CNBC 인터뷰에서, 트럼프 대통령과 시진핑 주석이 선전 회담에서 초지능이 내리는 군사 결정에는 항상 사람이 개입해야 하고 주요 군사 행동을 자율적으로 하게 두지 않기로 합의했다고 말했다고 로이터가 전했습니다. 베선트는 엔비디아 H200이 중국이 허가를 받아 살 수 있는 가장 앞선 칩이며 중국의 주문은 드물다고 했고, 상무부는 16일 해외 데이터센터를 통한 중국의 미국 AI 칩 원격 접근을 추가로 제한했습니다.",
+   "keywords": [
+    "미중정상회담",
+    "군사AI"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "시그널",
+  "short": "AI 비서가 내 대화 못 읽게 · 화면 캡처 차단",
+  "headline": "AI 비서가\n내 메시지 읽는 걸\n시그널이 차단",
+  "point1": "iOS 27·안드로이드에서 AI 비서의 화면 캡처 차단 · 기본으로 켜짐",
+  "point1_sub": "무료 · Siri AI 온스크린 인식, 제미나이, 메타 뮤즈 등 대상 · 설정에서 끌 수 있음 (Signal 블로그 11/20)",
+  "point2": "메신저 대화를 AI 비서에게 보이고 싶지 않을 때 쓰면 됩니다.",
+  "point2_sub": "맥은 미지원 · 파일 접근 같은 다른 경로는 못 막음 · 시그널: 부분적 해법",
+  "verdict": "써먹기",
+  "source": "Signal 블로그 · The Register (11/20)",
+  "photo": "smartphone messaging app in hand",
+  "icon": [
+   "Locked with key",
+   "Mobile phone",
+   "Speech balloon"
+  ]
+ },
+ "market": {
+  "date_label": "11/20(금) 마감 · 주간 정리",
+  "headline": "나스닥 −5.28%\n한 주로는 2020년\n3월 뒤 최악",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 22617.73,
+    "pct": -5.28
+   },
+   {
+    "name": "엔비디아",
+    "value": 125.53,
+    "pct": -14.01
+   },
+   {
+    "name": "AMD",
+    "value": 424.39,
+    "pct": -13.25
+   }
+  ],
+  "note": "11/20 정규장 종가 · 나스닥 2020년 3월 이후 최악의 주 (Reuters) · 앤트로픽 −8.5%, 공모가 83달러 위에서 한 주 마감 · 메타 −5.93%",
+  "photo": "stock exchange trading floor",
+  "icon": [
+   "Receipt",
+   "Ledger"
+  ]
+ },
+ "oneliner": "하루 넘는 일도 AI 혼자\n난제도 건드린다\n내 대화는 내가 지킨다",
+ "scripts": [
+  "27시간짜리 일 AI 혼자 끝낸다? 110일마다 2배. 오늘 AI, 핵심만 정리.",
+  "메터 측정, AI가 혼자 끝내는 작업 길이 최대 27시간. 110일마다 두 배로 늘고 있습니다.",
+  "앤트로픽 수학자가 클로드와 리만 가설을 증명했다고 주장. 코드로 공개했고, 검증은 남았습니다.",
+  "베선트 미 재무장관, 트럼프와 시진핑이 군사 AI 결정에 사람이 늘 개입하기로 합의했다고.",
+  "시그널이 AI 비서의 화면 캡처를 막는 기능을 켰습니다. 메신저 대화를 AI 비서에게 보이고 싶지 않을 때 쓰면 됩니다.",
+  "금요일 나스닥 5.28퍼센트 하락, 한 주로는 2020년 3월 뒤 최악. 엔비디아 14.01, 에이엠디 13.25퍼센트 하락.",
+  "오늘의 한 줄. 하루 넘는 일도 AI 혼자, 난제도 건드린다, 내 대화는 내가 지킨다. 하루 넘게 걸리는 일도 혼자 끝내는 AI, 여러분 업무에서는 무엇을 맡기시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Chart decreasing",
+  "Calendar",
+  "Money with wings",
+  "School",
+  "Teacher",
+  "Laptop",
+  "Globe showing Europe-Africa",
+  "Thermometer",
+  "Hourglass not done",
+  "Building construction",
+  "Cloud",
+  "Satellite antenna",
+  "Coin",
+  "Bank",
+  "Bear",
+  "High voltage",
+  "Office building",
+  "Memo",
+  "Rocket",
+  "Shield",
+  "Brain",
+  "Package",
+  "Magnifying glass tilted left",
+  "Balance scale",
+  "Bar chart",
+  "🇺🇸",
+  "Desktop computer",
+  "Computer mouse",
+  "Factory",
+  "Ballot box with ballot",
+  "Control knobs",
+  "Paintbrush",
+  "Artist palette",
+  "Dollar banknote",
+  "Clipboard",
+  "Classical building",
+  "Trophy",
+  "Mobile phone",
+  "Ship",
+  "Chart increasing",
+  "Bell",
+  "Robot",
+  "Check mark button"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "no_countup": true
+}
