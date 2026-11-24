@@ -1,0 +1,230 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.24 TUE",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "hook": {
+  "q": "AI가 대신하는 일\n82만 개 감소?",
+  "hi": "2년 새 −82만",
+  "count": false
+ },
+ "question": "내 일은 AI가 대신하는 쪽일까요, 돕는 쪽일까요?",
+ "keywords": [
+  "AI뉴스",
+  "AI일자리",
+  "시에라"
+ ],
+ "issues": [
+  {
+   "region": "AI와 일자리",
+   "short": "AI가 대신할 수 있는 미국 일자리 2년 새 82만 개 감소 · 돕는 일자리는 140만 개 증가",
+   "headline": "AI가 대신하는 일\n−82만\n돕는 일 +140만",
+   "ill": {
+    "kind": "alert",
+    "value": 82,
+    "suffix": "만 개",
+    "label": "AI가 대신할 수 있는 일자리 감소 · 2023~2025 미국 (버닝글래스)"
+   },
+   "icon": [
+    "Briefcase",
+    "Ladder",
+    "Necktie"
+   ],
+   "motion": "bob",
+   "image_prompt": "a tall office staircase where the lowest steps have faded away and a narrow footbridge spans toward a brighter upper floor, no people, no text, no logos",
+   "stat1": "+140만",
+   "stat1_label": "AI가 주로 사람을 돕는 일자리 · 2023~2025 증가",
+   "stat2": "80%",
+   "stat2_label": "AI가 대체하기 쉬운 일자리 중 학사 학위 없는 사람 비중",
+   "source": "Burning Glass Institute·RAISE US 보고서 · Digital Trends (11/23)",
+   "hook": {
+    "q": "AI가 대신하는 일\n82만 개 감소?",
+    "hi": "2년 새 −82만",
+    "count": false
+   },
+   "summary": "미국 노동시장 분석기관 버닝글래스 연구소가 초당파 단체 RAISE US를 위해 쓴 보고서 'Fewer Rungs, New Bridges'(줄어든 발판, 새 다리)가 23일(현지시간) 공개됐습니다. AI 노출이 큰 직업 가운데 AI가 일의 상당 부분을 할 수 있는 일자리는 2023~2025년 82만 개 줄었고, AI가 주로 사람을 돕는 일자리는 140만 개 늘었습니다. 사무직 산업 고용은 이전 성장 추세가 예상한 수준보다 약 150만 명 적고, AI가 대체하기 쉬운 일자리의 80%는 학사 학위가 없는 사람이 맡고 있다고 보고서는 밝혔습니다.",
+   "question": "내 일은 AI가 대신하는 쪽일까요, 돕는 쪽일까요?",
+   "keywords": [
+    "AI일자리",
+    "신입채용"
+   ]
+  },
+  {
+   "region": "시에라 투자 유치",
+   "short": "고객 상담 AI 시에라, 17억 5천만 달러 투자 · 기업가치 300억 달러",
+   "headline": "고객 상담 AI\n6개월 만에\n가치 2배",
+   "ill": {
+    "kind": "number",
+    "value": 300,
+    "suffix": "억달러",
+    "label": "시에라 기업가치 · 5월 150억 달러의 2배"
+   },
+   "icon": [
+    "Telephone receiver",
+    "Headphone",
+    "Dollar banknote"
+   ],
+   "motion": "spin",
+   "stat1": "17.5억$",
+   "stat1_label": "시리즈 F 투자 · 그린오크스·라이트스피드 주도",
+   "stat2": "4억$+",
+   "stat2_label": "연환산 매출(ARR) · 창업 2년 반 만에",
+   "source": "Sierra 블로그 · TechCrunch (11/23)",
+   "hook": {
+    "q": "상담 AI 회사\n반년 만에 2배?",
+    "hi": "300억 달러",
+    "count": false
+   },
+   "summary": "전 세일즈포스 공동 CEO 브렛 테일러가 세운 고객 상담 AI 에이전트 회사 시에라가 23일(현지시간) 그린오크스와 라이트스피드 주도로 17억 5천만 달러를 투자받으며 기업가치 300억 달러를 인정받았다고 밝혔습니다. 지난 5월 150억 달러에서 6개월 만에 두 배이고, 연환산 매출은 창업 2년 반 만에 4억 달러를 넘었습니다. 시에라는 사용량이나 토큰이 아니라 성과에 따라 요금을 받는다고 설명했습니다.",
+   "question": "AI 상담원과 통화해 보셨나요, 어땠나요?",
+   "keywords": [
+    "시에라",
+    "AI에이전트"
+   ]
+  },
+  {
+   "region": "유엔 AI 안전 정상회의",
+   "short": "유엔 사무총장, 다자간 AI 위험관리 프레임워크 논의 제안",
+   "headline": "AI 안전 규칙\n유엔이\n공통 틀 제안",
+   "ill": {
+    "kind": "icon"
+   },
+   "icon": [
+    "Balance scale",
+    "Memo",
+    "Handshake"
+   ],
+   "motion": "sway",
+   "photo": "Antonio Guterres",
+   "stat1": "다자 틀",
+   "stat1_label": "AI 위험관리 프레임워크 · 회원국 논의 시작 촉구",
+   "stat2": "111개국",
+   "stat2_label": "7월 첫 글로벌 AI 거버넌스 대화에서 AI 논의에 처음 참여한 나라 수",
+   "source": "UN News (11/23)",
+   "hook": {
+    "q": "AI 안전 규칙\n유엔이 만든다?",
+    "hi": "23일 바베이도스",
+    "count": false
+   },
+   "summary": "안토니우 구테흐스 유엔 사무총장이 23일 바베이도스 브리지타운에서 유엔과 바베이도스가 함께 연 AI 안전 특별 정상회의를 마치며, 회원국들에 다자간 AI 위험관리 프레임워크 논의를 시작하자고 제안했습니다. 공통의 안전 조치와 시험 방식, 명확한 안전장치와 기준, 기본 투명성 요건, 고급 AI 모델에 대한 독립 평가와 감독, 각국의 이행 지원을 담자는 내용이며 AI 역량 강화를 위한 글로벌 기금도 제안했습니다. 구테흐스는 AI가 인류 역사상 가장 큰 권력 이동을 일으키고 있다며, AI 모델의 진화가 안전을 통제할 역량보다 빨라서는 안 된다고 말했습니다.",
+   "keywords": [
+    "유엔",
+    "AI안전"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "오픈AI",
+  "short": "챗GPT 대화 탭에 GPT-6.2 솔 적용",
+  "headline": "챗GPT 기본 대화\nGPT-6.2 솔로\n업그레이드",
+  "point1": "복잡한 지시·온라인 정보 찾기·사진 속 글자 읽기 개선",
+  "point1_sub": "플러스(월 20달러)·프로·비즈니스·엔터프라이즈 순차 적용 · 무료·고 플랜은 제외",
+  "point2": "사진 속 표지판이나 라벨 글자를 읽히거나, 조건을 걸어 온라인에서 고를 때 쓰면 됩니다.",
+  "point2_sub": "Chat 탭만 바뀜 · Work·코덱스 모델은 그대로 · 가격 인하 알림 같은 후속 제안도 개선",
+  "verdict": "써먹기",
+  "source": "ChatGPT 공식 X · MacRumors (11/23)",
+  "icon": [
+   "Label",
+   "Mobile phone",
+   "Speech balloon"
+  ]
+ },
+ "market": {
+  "date_label": "11/23 마감 (KST 06:00)",
+  "headline": "젠슨 황 복귀 날\n나스닥\n+6.51%",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 24089.56,
+    "pct": 6.51
+   },
+   {
+    "name": "엔비디아",
+    "value": 165.05,
+    "pct": 31.48
+   },
+   {
+    "name": "코어위브",
+    "value": 48.33,
+    "pct": 22.32
+   }
+  ],
+  "note": "11/23 정규장 종가 · 엔비디아 이사회 젠슨 황 CEO 복귀 발표일 · 앤트로픽 −1.43% (StockTitan) · 26일 추수감사절 휴장",
+  "photo": "Nvidia headquarters Santa Clara",
+  "icon": [
+   "Bank",
+   "Dollar banknote"
+  ]
+ },
+ "oneliner": "줄어든 사다리\n새로 놓인 다리\n건널 준비는 내가",
+ "scripts": [
+  "AI가 대신하는 일 82만 개 감소? 돕는 일 140만 증가. 오늘 AI, 핵심만 정리.",
+  "AI가 대신할 수 있는 미국 일자리 2년 새 82만 개 감소. 돕는 일자리는 140만 개 늘었습니다.",
+  "고객 상담 AI 시에라, 17억 5천만 달러 투자에 기업가치 300억 달러. 반년 만에 두 배.",
+  "유엔 구테흐스 사무총장, 각국에 다자간 AI 위험관리 틀 논의 제안. 공통 시험과 독립 평가를 담자고.",
+  "챗GPT 플러스 이상 대화창에 GPT-6.2 솔 적용. 사진 속 라벨 글자 읽기나 조건 걸어 온라인서 고를 때 쓰면 됩니다.",
+  "나스닥 6.51, 엔비디아 31.48, 코어위브 22.32퍼센트 상승. 젠슨 황 복귀가 발표된 날입니다.",
+  "오늘의 한 줄. 줄어든 사다리, 새로 놓인 다리, 건널 준비는 내가. 내 일은 AI가 대신하는 쪽일까요, 돕는 쪽일까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Balance scale",
+  "Bar chart",
+  "Bed",
+  "Books",
+  "Building construction",
+  "Busts in silhouette",
+  "Camera",
+  "Chair",
+  "Chart increasing",
+  "Classical building",
+  "Coin",
+  "Credit card",
+  "Cross mark",
+  "Crown",
+  "Desktop computer",
+  "Electric plug",
+  "Factory",
+  "Gauge",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Ledger",
+  "Link",
+  "Locked with key",
+  "Magnifying glass tilted left",
+  "Microscope",
+  "Mobile phone",
+  "Money bag",
+  "Office building",
+  "Oil drum",
+  "Open file folder",
+  "Page with curl",
+  "Pill",
+  "Receipt",
+  "Ring buoy",
+  "Robot",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Statue of Liberty",
+  "Stopwatch",
+  "Test tube",
+  "Thermometer",
+  "Umbrella",
+  "Video game",
+  "Warning"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "no_countup": true
+}
