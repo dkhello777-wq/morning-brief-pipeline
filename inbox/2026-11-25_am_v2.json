@@ -1,0 +1,222 @@
+{
+ "edition": "am",
+ "date_short": "11.25 WED",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "EU 하이브리드차\n수입 상한",
+  "hi": "한국 6만 7,924대",
+  "count": false
+ },
+ "question": "기술주 숨 고르기, 오래갈까요?",
+ "keywords": [
+  "하이브리드차",
+  "미국GDP",
+  "뉴욕증시"
+ ],
+ "issues": [
+  {
+   "region": "유럽연합",
+   "short": "EU, 12/1부터 하이브리드 승용차 수입 상한 · 한국 배정 6만 7,924대",
+   "headline": "EU 하이브리드차\n수입 상한\n한국 6.8만 대",
+   "ill": {
+    "kind": "icon",
+    "label": "잠정 세이프가드 · 2026.12.1~2027.6.18 · 한도 넘으면 수입 불허 (EU 집행위·산업통상부)"
+   },
+   "icon": [
+    "Automobile",
+    "Battery",
+    "Stop sign"
+   ],
+   "motion": "drive",
+   "stat1": "67,924대",
+   "stat1_label": "한국 배정 물량 · 12/1~내년 6/18",
+   "stat2": "한도 초과",
+   "stat2_label": "넘는 물량은 수입 불허 · 관세 인상 아님",
+   "source": "EU 집행위원회 · 산업통상부 (11/24)",
+   "hook": {
+    "q": "EU 하이브리드차\n수입 상한",
+    "hi": "한국 6만 7,924대",
+    "count": false
+   },
+   "summary": "유럽연합이 12월 1일부터 하이브리드 승용차 수입에 상한을 둡니다. 내년 6월 18일까지 한국에 배정된 물량은 6만 7,924대로, 한도를 넘으면 수입할 수 없습니다.",
+   "question": "우리 자동차 수출, 영향 있을까요?",
+   "keywords": [
+    "하이브리드차",
+    "EU"
+   ]
+  },
+  {
+   "region": "미국 경제",
+   "short": "오늘 밤 22:30, 미국 3분기 GDP 2차 추정·10월 PCE 물가 발표 예정",
+   "headline": "오늘 밤 10시 반\n미국 성장률\n물가 발표",
+   "ill": {
+    "kind": "icon",
+    "label": "미 경제분석국 · 11/25 22:30 한국시간 (미 동부 08:30)"
+   },
+   "icon": [
+    "Alarm clock",
+    "Chart increasing",
+    "Receipt"
+   ],
+   "motion": "bob",
+   "stat1": "22:30",
+   "stat1_label": "오늘 한국시간 · 미 동부 08:30",
+   "stat2": "GDP·PCE",
+   "stat2_label": "3분기 성장률 2차 추정 · 10월 개인소비지출 물가",
+   "source": "미 경제분석국 (BEA) 일정",
+   "hook": {
+    "q": "오늘 밤\n미국 지표",
+    "hi": "GDP·PCE",
+    "count": false
+   },
+   "summary": "오늘 밤 열 시 반에는 미국의 3분기 성장률 두 번째 추정치와 10월 개인소비지출 물가지수가 발표될 예정입니다.",
+   "question": "미국 물가, 어떻게 나올까요?",
+   "keywords": [
+    "미국GDP",
+    "PCE"
+   ]
+  },
+  {
+   "region": "뉴욕증시 일정",
+   "short": "뉴욕증시, 26일 추수감사절 휴장 · 27일 오후 1시 조기 마감",
+   "headline": "뉴욕증시\n26일 휴장\n27일 조기 마감",
+   "ill": {
+    "kind": "icon",
+    "label": "미국 추수감사절 · 현지 시각 기준 (NYSE)"
+   },
+   "icon": [
+    "Turkey",
+    "Calendar",
+    "Hourglass done"
+   ],
+   "motion": "sway",
+   "stat1": "26일",
+   "stat1_label": "현지 추수감사절 휴장",
+   "stat2": "오후 1시",
+   "stat2_label": "27일 현지 조기 마감",
+   "source": "NYSE 휴장 일정",
+   "hook": {
+    "q": "뉴욕증시\n이번 주 일정",
+    "hi": "26일 휴장",
+    "count": false
+   },
+   "summary": "뉴욕증시는 현지 26일 추수감사절에 쉬고, 27일에는 오후 1시에 일찍 문을 닫습니다.",
+   "question": "연휴 앞둔 증시, 어떻게 보세요?",
+   "keywords": [
+    "뉴욕증시",
+    "추수감사절"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "앤트로픽",
+  "short": "클로드 아티팩트를 맥·윈도우 앱으로 설치하는 기능 베타 공개",
+  "headline": "클로드로 만든 도구\n내 컴퓨터\n앱처럼",
+  "point1": "클로드에서 만든 도구가 별도 창·아이콘으로 열립니다",
+  "point1_sub": "맥·윈도우용 클로드 앱에서 베타로 순차 제공",
+  "point2": "열려면 인터넷 연결과 클로드 로그인이 필요합니다",
+  "point2_sub": "컴퓨터 접근은 앱마다 권한 허락 · 앱 요청은 사용량 한도에 포함 · 앤트로픽은 앱을 검토하지 않음",
+  "verdict": "베타 공개",
+  "source": "앤트로픽 공식 안내 (11/24)",
+  "icon": [
+   "Desktop computer",
+   "Window",
+   "Puzzle piece"
+  ]
+ },
+ "market": {
+  "date_label": "현지 11/24(화) 정규장 마감",
+  "headline": "다우 +0.85%\nS&P −0.50%\n나스닥 −1.48%",
+  "dow": {
+   "value": 50018.7,
+   "pct": 0.85
+  },
+  "spx": {
+   "value": 7201.09,
+   "pct": -0.5
+  },
+  "ndx": {
+   "value": 23733.54,
+   "pct": -1.48
+  },
+  "note": "현지 11/24(화) 정규장 종가 · 전 거래일 대비 · 26일 추수감사절 휴장"
+ },
+ "oneliner": "반등 뒤 숨 고르기\n유럽은 수입 문턱",
+ "scripts": [
+  "뉴욕증시 기술주 약세, 유럽은 하이브리드차 수입 상한. 오늘 세계 이슈, 핵심만 정리.",
+  "유럽연합, 12월 1일부터 하이브리드 승용차 수입 상한. 한국 배정은 내년 6월 18일까지 약 6만 8천 대.",
+  "오늘 밤 열 시 반, 미국 3분기 성장률 두 번째 추정치와 10월 개인소비지출 물가지수 발표 예정.",
+  "뉴욕증시는 현지 26일 추수감사절 휴장. 27일에는 오후 1시 조기 마감.",
+  "앤트로픽, 클로드에서 만든 도구를 맥·윈도우 앱처럼 여는 기능 베타 공개. 인터넷 연결과 로그인 필요.",
+  "뉴욕증시 종가. 다우 0.85퍼센트 상승, 에스앤피 0.50퍼센트, 나스닥 1.48퍼센트 하락.",
+  "오늘의 한 줄. 반등 뒤 숨 고르기, 유럽은 수입 문턱. 기술주 숨 고르기, 오래갈까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Bank",
+  "Bar chart",
+  "Bed",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chair",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Cloud",
+  "Coin",
+  "Credit card",
+  "Crown",
+  "Desktop computer",
+  "Electric plug",
+  "Factory",
+  "Gauge",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Link",
+  "Locked with key",
+  "Magnifying glass tilted left",
+  "Microscope",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Prohibited",
+  "Raising hands",
+  "Robot",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Spiral calendar",
+  "Stopwatch",
+  "Teacher",
+  "Test tube",
+  "Thermometer",
+  "Video game"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-25_0600_am.md",
+  "drive_id": "1h96pJdNmJzqHLnfxIM7-B_Oh4YH6at9g",
+  "job_id": "cardnews-20261125-0600",
+  "version": "v01"
+ }
+}
