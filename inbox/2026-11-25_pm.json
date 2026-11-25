@@ -1,0 +1,194 @@
+{
+ "edition": "pm",
+ "date_short": "11.25 WED",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "코스피\n하루 만에\n5천 선 반납",
+  "hi": "코스피 −6.16%",
+  "count": false
+ },
+ "question": "내일 금통위, 금리 어떻게 될까요?",
+ "keywords": [
+  "코스피",
+  "대출금리",
+  "K소비재"
+ ],
+ "issues": [
+  {
+   "region": "대출금리",
+   "short": "10월 예금은행 신규 대출 평균 금리 연 4.64% · 전월보다 0.07%p 상승",
+   "headline": "10월 은행\n신규 대출금리\n연 4.64%",
+   "ill": {
+    "kind": "icon",
+    "label": "신규취급액 기준 가중평균 · 기준금리·잔액 기준과 다름 (한국은행)"
+   },
+   "icon": [
+    "Receipt",
+    "Bar chart",
+    "Bank"
+   ],
+   "motion": "bob",
+   "stat1": "연 4.64%",
+   "stat1_label": "10월 예금은행 신규 대출 평균 금리",
+   "stat2": "+0.07%p",
+   "stat2_label": "9월보다 상승 · 새로 실행된 대출 기준",
+   "source": "한국은행 (11/25)",
+   "hook": {
+    "q": "10월 은행\n대출금리",
+    "hi": "연 4.64%",
+    "count": false
+   },
+   "summary": "한국은행에 따르면 10월 예금은행의 신규 대출 평균 금리는 연 4.64%로 전달보다 0.07%포인트 올랐습니다. 새로 실행된 대출을 기준으로 한 수치이며, 내일은 한국은행의 기준금리 결정이 예정돼 있습니다.",
+   "question": "내일 금통위, 금리 어떻게 될까요?",
+   "keywords": [
+    "대출금리",
+    "한국은행"
+   ]
+  },
+  {
+   "region": "K-소비재 수출",
+   "short": "뷰티·푸드 등 K-소비재 수출 286.5억 달러(1.1~11.19) · 21.5% 증가 역대 최대",
+   "headline": "K-소비재 수출\n286억 5천만 달러\n역대 최대",
+   "ill": {
+    "kind": "icon",
+    "label": "1월 1일~11월 19일 · 전년 동기 대비 · 미국 22년 만에 최대 수출국 (관세청)"
+   },
+   "icon": [
+    "Lipstick",
+    "Package",
+    "Globe showing Americas"
+   ],
+   "motion": "sway",
+   "stat1": "286.5억 달러",
+   "stat1_label": "1.1~11.19 K-소비재 수출 · 같은 기간 역대 최대",
+   "stat2": "+21.5%",
+   "stat2_label": "지난해 같은 기간보다 · 미국 22년 만에 최대 시장",
+   "source": "관세청 (11/25)",
+   "hook": {
+    "q": "K-소비재 수출\n역대 최대",
+    "hi": "+21.5%",
+    "count": false
+   },
+   "summary": "관세청에 따르면 화장품과 식품 등을 포함한 K-소비재 수출이 이달 19일까지 286억 5천만 달러로 지난해 같은 기간보다 21.5% 늘어 역대 최대입니다. 미국은 22년 만에 최대 수출국이 됐습니다.",
+   "question": "K-소비재, 어디까지 갈까요?",
+   "keywords": [
+    "K소비재",
+    "수출"
+   ]
+  },
+  {
+   "region": "미국 델",
+   "short": "델, 회계연도 2027 AI 최적화 서버 매출 전망 740억→780억 달러 상향",
+   "headline": "델 AI 서버\n연간 매출 전망\n780억 달러로",
+   "ill": {
+    "kind": "icon",
+    "label": "회계연도 2027 회사 전망 · 확정 매출 아님 (델 실적 공시)"
+   },
+   "icon": [
+    "Gear",
+    "Computer disk",
+    "Desktop computer"
+   ],
+   "motion": "drive",
+   "stat1": "780억 달러",
+   "stat1_label": "FY2027 AI 최적화 서버 매출 전망 (이전 740억)",
+   "stat2": "회사 전망",
+   "stat2_label": "확정 매출 아님 · 11/24 실적 발표",
+   "source": "델 테크놀로지스 공시 (11/24)",
+   "hook": {
+    "q": "델 AI 서버\n전망 상향",
+    "hi": "780억 달러",
+    "count": false
+   },
+   "summary": "미국 델은 AI에 최적화한 서버의 연간 매출 전망을 740억 달러에서 780억 달러로 높였습니다. 확정 매출이 아닌 회사 전망입니다.",
+   "question": "AI 서버 수요, 계속될까요?",
+   "keywords": [
+    "델",
+    "AI서버"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/25(수) 정규장 마감",
+  "headline": "코스피 −6.16%\n코스닥 −2.29%",
+  "headline_short": "코스피 −6.16%, 코스닥 −2.29%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 4697.51,
+    "pct": -6.16
+   },
+   {
+    "name": "코스닥",
+    "value": 650.64,
+    "pct": -2.29
+   }
+  ],
+  "note": "11/25 15:30 정규장 종가 · 전 거래일 대비 · 삼성전자 −9.87% · SK하이닉스 −11.05% · 원·달러 1,343.2원(15:30)"
+ },
+ "oneliner": "증시는 하루 만에 후퇴\nK-소비재는 역대 최대",
+ "scripts": [
+  "코스피, 하루 만에 5천 선 반납. 오늘 국내 이슈, 핵심만 정리.",
+  "한국은행, 10월 은행 신규 대출 평균 금리 연 4.64퍼센트. 전달보다 0.07퍼센트포인트 상승.",
+  "관세청, 화장품·식품 등 K-소비재 수출 이달 19일까지 286억 5천만 달러. 21.5퍼센트 늘어 역대 최대.",
+  "미국 델, AI 최적화 서버 연간 매출 전망 740억에서 780억 달러로 상향. 확정 아닌 회사 전망.",
+  "코스피 6.16퍼센트 내린 4,697.51, 코스닥 2.29퍼센트 내린 650.64 마감. 삼성전자·SK하이닉스 급락.",
+  "오늘의 한 줄. 증시는 하루 만에 후퇴, K-소비재는 역대 최대. 내일 금통위, 금리 어떻게 될까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Bank",
+  "Bed",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Cloud",
+  "Coin",
+  "Credit card",
+  "Desktop computer",
+  "Electric plug",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Locked with key",
+  "Microscope",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Robot",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Stopwatch",
+  "Teacher",
+  "Test tube",
+  "Thermometer"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-25_1700_pm.md",
+  "drive_id": "1HNLG2lDFYJ8QMm_rO1Uso_2ZUiUfv4DE",
+  "job_id": "cardnews-20261125-1700",
+  "version": "v01"
+ }
+}
