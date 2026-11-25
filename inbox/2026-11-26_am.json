@@ -1,0 +1,222 @@
+{
+ "edition": "am",
+ "date_short": "11.26 THU",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "미국, 한국산\n관세안 제시",
+  "hi": "최대 15%",
+  "count": false
+ },
+ "question": "미국 관세안, 우리 수출 영향은?",
+ "keywords": [
+  "관세",
+  "금통위",
+  "미국물가"
+ ],
+ "issues": [
+  {
+   "region": "한국은행",
+   "short": "오늘 한국은행 금통위 기준금리 결정 · 현재 연 3.00%",
+   "headline": "오늘 한국은행\n기준금리 결정",
+   "ill": {
+    "kind": "icon",
+    "label": "현재 금리는 10/22 동결된 연 3.00% · 결과는 오늘 발표 (한국은행)"
+   },
+   "icon": [
+    "Bank",
+    "Spiral calendar",
+    "Balance scale"
+   ],
+   "motion": "bob",
+   "stat1": "연 3.00%",
+   "stat1_label": "현재 기준금리 · 10월 22일 동결",
+   "stat2": "11/26",
+   "stat2_label": "오늘 통화정책방향 결정회의",
+   "source": "한국은행 · KDI (10/22 결정)",
+   "hook": {
+    "q": "오늘\n기준금리 결정",
+    "hi": "현재 연 3.00%",
+    "count": false
+   },
+   "summary": "한국은행은 오늘 금융통화위원회에서 기준금리를 결정합니다. 현재 기준금리는 지난 10월 22일 동결된 연 3.00%입니다.",
+   "question": "오늘 금리, 어떻게 될까요?",
+   "keywords": [
+    "기준금리",
+    "금통위"
+   ]
+  },
+  {
+   "region": "미국 경제",
+   "short": "미 3분기 성장률 연율 4.3%로 상향(속보치 3.4%) · 10월 PCE 물가 +3.8%, 근원 +3.3%",
+   "headline": "미국 3분기 성장률\n4.3%로 상향",
+   "ill": {
+    "kind": "icon",
+    "label": "전분기 대비 연율 · 2차 추정 · PCE는 전년 동월 대비 (미 경제분석국)"
+   },
+   "icon": [
+    "Chart increasing",
+    "Shopping cart",
+    "Thermometer"
+   ],
+   "motion": "sway",
+   "stat1": "4.3%",
+   "stat1_label": "3분기 실질 GDP · 연율 (속보치 3.4%)",
+   "stat2": "+3.8%",
+   "stat2_label": "10월 PCE 물가 · 1년 전 대비 (근원 +3.3%)",
+   "source": "미 경제분석국 (11/25)",
+   "hook": {
+    "q": "미국 성장률\n상향",
+    "hi": "연율 4.3%",
+    "count": false
+   },
+   "summary": "미국의 3분기 실질 성장률은 연율 4.3%로, 속보치 3.4%에서 상향됐습니다. 10월 개인소비지출 물가는 1년 전보다 3.8%, 식품과 에너지를 뺀 근원 물가는 3.3% 올랐습니다.",
+   "question": "미국 물가, 언제 잡힐까요?",
+   "keywords": [
+    "미국GDP",
+    "PCE"
+   ]
+  },
+  {
+   "region": "미국 무역대표부",
+   "short": "USTR, 한국산 전 제품에 최대 15% 관세 검토 · 협의 불충분 판단 시 최대 25% 대안 · 확정 아님",
+   "headline": "미국, 한국산에\n최대 15% 관세안\n확정 아님",
+   "ill": {
+    "kind": "icon",
+    "label": "무역법 301조 제안 · 일부 품목 예외 · 의견 마감 1/5, 공청회 1/25 (미 무역대표부)"
+   },
+   "icon": [
+    "Globe showing Americas",
+    "Package",
+    "Scroll"
+   ],
+   "motion": "drive",
+   "stat1": "최대 15%",
+   "stat1_label": "기본안 · 기존 최혜국·301조 관세 반영 방식",
+   "stat2": "최대 25%",
+   "stat2_label": "협의·약속 불충분 판단 시 대안 · 두 숫자 합산 아님",
+   "source": "미 무역대표부 (11/25)",
+   "hook": {
+    "q": "미국, 한국산\n관세안 제시",
+    "hi": "최대 15%",
+    "count": false
+   },
+   "summary": "미 무역대표부는 한국산 제품에 최대 15% 관세를 검토하는 안을 내놨습니다. 협의와 기존 약속이 충분치 않다고 판단하면 최대 25% 대안도 있습니다. 아직 확정은 아니며 의견 제출 마감은 내년 1월 5일입니다.",
+   "question": "미국 관세안, 우리 수출 영향은?",
+   "keywords": [
+    "관세",
+    "301조"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "구글",
+  "short": "구글 연구진, AI 비서가 사용자의 한쪽 설명에 휘둘리는지 모의 실험으로 평가",
+  "headline": "AI 비서\n한쪽 설명에\n휘둘릴까",
+  "point1": "사용자 설명의 관점에 따라 AI 판단이 흔들렸습니다",
+  "point1_sub": "여러 AI 에이전트가 등장하는 모의 상황으로 평가",
+  "point2": "사람보다 더 많은 설명이 있어야 맞혔습니다",
+  "point2_sub": "되묻는 질문도 충분히 활용하지 못함 · 평가 도구·데이터 공개",
+  "verdict": "연구 결과",
+  "source": "구글 리서치 블로그 (11/25)",
+  "icon": [
+   "Speech balloon",
+   "Magnifying glass tilted left",
+   "Robot"
+  ]
+ },
+ "market": {
+  "date_label": "현지 11/25(수) 정규장 마감",
+  "headline": "다우 +0.33%\nS&P −0.25%\n나스닥 −0.62%",
+  "dow": {
+   "value": 50182.95,
+   "pct": 0.33
+  },
+  "spx": {
+   "value": 7182.78,
+   "pct": -0.25
+  },
+  "ndx": {
+   "value": 23585.8,
+   "pct": -0.62
+  },
+  "note": "현지 11/25(수) 정규장 종가 · 전 거래일 대비 · 나스닥 장중 한때 −4% 넘게 · 26일 추수감사절 휴장"
+ },
+ "oneliner": "관세안은 15%\n금리는 오늘 결정",
+ "scripts": [
+  "미국, 한국산 관세안 제시. 오늘 세계 이슈, 핵심만 정리.",
+  "한국은행, 오늘 기준금리 결정. 현재 기준금리는 연 3퍼센트.",
+  "미국 3분기 성장률 연율 4.3퍼센트로 상향. 10월 소비지출 물가는 1년 전보다 3.8퍼센트 상승.",
+  "미 무역대표부, 한국산 제품에 최대 15퍼센트 관세 검토. 협의 불충분 시 최대 25퍼센트 대안. 아직 확정 아님.",
+  "구글 연구진, 모의 실험에서 AI 비서가 사용자의 한쪽 설명에 휘둘리는 경향 확인. 신기능 아닌 연구 결과.",
+  "뉴욕증시 종가. 다우 0.33퍼센트 상승, 에스앤피 0.25퍼센트, 나스닥 0.62퍼센트 하락. 나스닥은 한때 4퍼센트 넘게 급락.",
+  "오늘의 한 줄. 관세안은 15퍼센트, 금리는 오늘 결정. 미국 관세안, 우리 수출 영향은? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Bank",
+  "Bar chart",
+  "Bed",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chair",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Cloud",
+  "Coin",
+  "Credit card",
+  "Crown",
+  "Desktop computer",
+  "Electric plug",
+  "Factory",
+  "Gauge",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Link",
+  "Locked with key",
+  "Magnifying glass tilted left",
+  "Microscope",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Prohibited",
+  "Raising hands",
+  "Robot",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Spiral calendar",
+  "Stopwatch",
+  "Teacher",
+  "Test tube",
+  "Thermometer",
+  "Video game"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-26_0600_am.md",
+  "drive_id": "1ocSWrme4gVtiLh4j2VfRuOC7xIkfeaRN",
+  "job_id": "cardnews-20261126-0600",
+  "version": "v01"
+ }
+}
