@@ -1,0 +1,194 @@
+{
+ "edition": "pm",
+ "date_short": "11.26 THU",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "코스피 4,711 마감\n상승분 대부분 반납",
+  "hi": "코스피 +0.29%",
+  "count": false
+ },
+ "question": "금리 인상, 내 대출엔 어떨까요?",
+ "keywords": [
+  "기준금리",
+  "한국은행",
+  "코스피"
+ ],
+ "issues": [
+  {
+   "region": "기준금리",
+   "short": "한국은행, 기준금리 연 3.00% → 3.25% 인상 (0.25%p)",
+   "headline": "한은 기준금리\n연 3.25%로\n인상",
+   "ill": {
+    "kind": "icon",
+    "label": "금통위 11/26 결정 · 0.25%p 인상 · 위원 5명 찬성, 2명 동결 의견 (한국은행)"
+   },
+   "icon": [
+    "Bank",
+    "Up arrow",
+    "Money bag"
+   ],
+   "motion": "bob",
+   "stat1": "연 3.25%",
+   "stat1_label": "새 기준금리 · 이전 연 3.00%",
+   "stat2": "+0.25%p",
+   "stat2_label": "11/26 금융통화위원회 결정",
+   "source": "한국은행 통화정책방향 (11/26)",
+   "hook": {
+    "q": "한은 기준금리\n인상",
+    "hi": "연 3.25%",
+    "count": false
+   },
+   "summary": "한국은행 금융통화위원회는 기준금리를 연 3.00%에서 3.25%로 0.25%포인트 올렸습니다.",
+   "question": "금리 인상, 내 대출엔 어떨까요?",
+   "keywords": [
+    "기준금리",
+    "금통위"
+   ]
+  },
+  {
+   "region": "한은 성장 전망",
+   "short": "한은, 2027년 성장률 기본 4.1% · AI 투자 지연 등 비관 시나리오면 3.4%",
+   "headline": "내년 성장률\n기본 4.1%\n비관 땐 3.4%",
+   "ill": {
+    "kind": "icon",
+    "label": "비관 시나리오: AI 수익화 지연·데이터센터 건설 제약·중국 메모리 공급 확대 가정 · 새 기본 전망 아님 (한국은행)"
+   },
+   "icon": [
+    "Chart decreasing",
+    "Brain",
+    "Factory"
+   ],
+   "motion": "sway",
+   "stat1": "4.1%",
+   "stat1_label": "2027년 기본 전망 (2028년 3.0%)",
+   "stat2": "3.4%",
+   "stat2_label": "비관 시나리오 시 2027년 (2028년 2.1%)",
+   "source": "한국은행 경제전망 (11/26) · 연합인포맥스",
+   "hook": {
+    "q": "내년 성장률\n비관 시나리오",
+    "hi": "4.1% → 3.4%",
+    "count": false
+   },
+   "summary": "한국은행은 내년 성장률을 4.1%로 전망했지만, AI 투자가 늦어지고 중국산 메모리 공급이 예상보다 빠르게 늘면 3.4%까지 낮아질 수 있다고 분석했습니다. 내후년은 기본 3.0%, 비관 시 2.1%입니다.",
+   "question": "AI 투자 둔화, 현실이 될까요?",
+   "keywords": [
+    "경제전망",
+    "반도체"
+   ]
+  },
+  {
+   "region": "미국 FCC",
+   "short": "美 FCC, 스페이스X 우주 데이터센터 위성 최대 100만 기 조건부 허가 · 발사 아님",
+   "headline": "스페이스X\n우주 데이터센터\n100만 기 허가",
+   "ill": {
+    "kind": "icon",
+    "label": "현지 11/25 일부 조건부 허가 · 2033년 11월 25일까지 최소 1기 궤도 운용해야 유지 (미 FCC)"
+   },
+   "icon": [
+    "Satellite",
+    "Rocket",
+    "Globe showing Americas"
+   ],
+   "motion": "drive",
+   "stat1": "100만 기",
+   "stat1_label": "데이터센터용 위성 최대 허가 수",
+   "stat2": "2033년",
+   "stat2_label": "11월 25일까지 최소 1기 운용해야 허가 유지",
+   "source": "미 연방통신위원회(FCC) 결정문 (11/25)",
+   "hook": {
+    "q": "우주 데이터센터\n위성 허가",
+    "hi": "최대 100만 기",
+    "count": false
+   },
+   "summary": "미국 연방통신위원회는 스페이스X에 데이터센터용 위성을 최대 100만 기까지 운용하도록 조건부 허가를 내줬습니다. 지금 발사했다는 뜻은 아니며, 허가를 유지하려면 2033년 11월까지 최소 한 기를 궤도에 올려 운용해야 합니다.",
+   "question": "우주 데이터센터, 실현될까요?",
+   "keywords": [
+    "스페이스X",
+    "우주데이터센터"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/26(목) 정규장 마감",
+  "headline": "코스피 +0.29%\n코스닥 +0.78%",
+  "headline_short": "코스피 +0.29%, 코스닥 +0.78%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 4711.21,
+    "pct": 0.29
+   },
+   {
+    "name": "코스닥",
+    "value": 655.71,
+    "pct": 0.78
+   }
+  ],
+  "note": "11/26 15:30 정규장 종가 · 코스피 장중 고가 4,817.77 · SK하이닉스 +2.23% · 외국인 코스피 약 1,100억 원 순매도 · 원·달러 1,342.7원(15:30)"
+ },
+ "oneliner": "금리는 오르고\n증시는 숨 고르기",
+ "scripts": [
+  "코스피, 반등했지만 상승분 대부분 반납. 오늘 국내 이슈, 핵심만 정리.",
+  "한국은행, 기준금리 연 3퍼센트에서 3.25퍼센트로 0.25퍼센트포인트 인상.",
+  "한은, 내년 성장률 4.1퍼센트 전망. AI 투자 지연 등 비관 시나리오면 3.4퍼센트까지 낮아질 수 있다고 분석.",
+  "미국 연방통신위원회, 스페이스X 데이터센터용 위성 최대 100만 기 조건부 허가. 발사했다는 뜻은 아님.",
+  "코스피 0.29퍼센트 오른 4,711.21, 코스닥 0.78퍼센트 오른 655.71 마감. 외국인은 약 1,100억 원 순매도.",
+  "오늘의 한 줄. 금리는 오르고, 증시는 숨 고르기. 금리 인상, 내 대출엔 어떨까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Bank",
+  "Bed",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Cloud",
+  "Coin",
+  "Credit card",
+  "Desktop computer",
+  "Electric plug",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Locked with key",
+  "Microscope",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Robot",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Stopwatch",
+  "Teacher",
+  "Test tube",
+  "Thermometer"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-26_1700_pm.md",
+  "drive_id": "1RzbhBj2khlWuD8wtjH-_5BmTAFnNj579",
+  "job_id": "cardnews-20261126-1700",
+  "version": "v01"
+ }
+}
