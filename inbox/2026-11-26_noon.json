@@ -1,0 +1,215 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.26 THU",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "챗GPT 한도\n12월에 합쳐진다?",
+  "hi": "12월 확대",
+  "count": false
+ },
+ "question": "챗GPT 한도, 어디에 먼저 쓰시겠어요?",
+ "keywords": [
+  "AI뉴스",
+  "챗GPT",
+  "단백질설계"
+ ],
+ "issues": [
+  {
+   "region": "오픈AI 챗GPT",
+   "short": "오픈AI, 챗GPT 대화·업무 화면 통합 시작 · 12월 사용량 한도 통합 확대 예정",
+   "headline": "챗GPT 대화·업무\n통합 시작\n한도도 하나로",
+   "ill": {
+    "kind": "icon",
+    "label": "프로 구독자 일부부터 적용 시작 · 12월 확대 예정 (오픈AI 지원 문서)"
+   },
+   "icon": [
+    "Hourglass not done",
+    "Credit card",
+    "Mobile phone"
+   ],
+   "motion": "spin",
+   "stat1": "12월",
+   "stat1_label": "사용량 한도 통합 확대 예정 · 오픈AI 지원 문서",
+   "stat2": "프로 일부",
+   "stat2_label": "먼저 적용 시작 · 인스턴트 대화는 한도에서 제외",
+   "source": "TechCrunch · 오픈AI 지원 문서 (11/25)",
+   "hook": {
+    "q": "챗GPT 한도\n12월에 합쳐진다?",
+    "hi": "12월 확대",
+    "count": false
+   },
+   "summary": "오픈AI가 챗GPT의 대화(Chat)와 업무(Work) 화면을 하나로 합치는 작업을 시작했습니다. 프로 구독자 일부부터 적용되고 있고, 지원 문서에 따르면 사용량 한도를 함께 쓰는 방식은 12월에 더 넓게 적용될 예정입니다. 오픈AI 대변인은 테크크런치에 대부분의 사용자는 한도 초기화를 더 자주 기다리지 않을 것으로 보지만, 가장 많이 쓰는 일부 사용자는 한도에 더 빨리 닿을 수 있다고 말했습니다. 인스턴트 모델 대화는 한도에서 빠집니다.",
+   "question": "챗GPT 한도, 어디에 먼저 쓰시겠어요?",
+   "keywords": [
+    "챗GPT",
+    "사용량한도"
+   ]
+  },
+  {
+   "region": "오픈AI 단백질 설계",
+   "short": "오픈AI, GPT-6.2가 설계한 단백질 322개 중 35개(10.9%)가 5개 표적에 결합",
+   "headline": "AI가 설계한 단백질\n322개 중 35개\n표적에 붙었다",
+   "ill": {
+    "kind": "number",
+    "value": 10.9,
+    "suffix": "%",
+    "label": "실험실 결합 확인 비율 · 설계 322개 중 35개 (오픈AI)"
+   },
+   "icon": [
+    "Dna",
+    "Microscope",
+    "Test tube"
+   ],
+   "motion": "bob",
+   "image_prompt": "glowing folded protein ribbons locking into five differently shaped receptor slots on a dark grid, abstract, no people, no text, no logos",
+   "stat1": "35개",
+   "stat1_label": "실험실에서 결합 확인 · 설계 322개 중",
+   "stat2": "5개 표적",
+   "stat2_label": "결합 시험을 한 표적 단백질 수",
+   "source": "오픈AI 공식 발표 (11/24)",
+   "hook": {
+    "q": "AI가 설계한\n단백질이 붙었다?",
+    "hi": "10.9% 결합",
+    "count": false
+   },
+   "summary": "오픈AI가 GPT-6 계열 모델이 전용 생물학 모델 없이도 단백질 구조를 설계할 수 있다는 실험 결과를 공개했습니다. GPT-6.2가 설계한 소형 결합 단백질 322개를 실험실에서 시험한 결과 35개(10.9%)가 5개 표적에 결합했습니다. 단백질 제작과 시험은 오나바가 맡았고, 후보를 고르는 단계에는 전용 구조 모델이 쓰였습니다. 오픈AI는 이 결과가 모델이 처음부터 끝까지 혼자 결합 단백질을 만들어낸다는 뜻은 아니라고 밝혔습니다.",
+   "question": "AI 신약 설계, 언제쯤 체감될까요?",
+   "keywords": [
+    "단백질설계",
+    "오픈AI"
+   ]
+  },
+  {
+   "region": "영국 AI 규제",
+   "short": "영국 금융행위감독청, 자율형 AI 감독 방향 공개 · 기술 제공업체도 인가 대상일 수 있다",
+   "headline": "AI 에이전트도\n금융 인가\n대상일 수 있다",
+   "ill": {
+    "kind": "icon",
+    "label": "FCA '자율형 AI 접근법' 안내 · 11월 24일 공개, 계속 갱신 예정 (영국 FCA)"
+   },
+   "icon": [
+    "Scroll",
+    "Office building",
+    "🇬🇧"
+   ],
+   "motion": "sway",
+   "photo": "City of London financial district",
+   "stat1": "11/24",
+   "stat1_label": "FCA 자율형 AI 접근법 안내 공개",
+   "stat2": "책임은 회사",
+   "stat2_label": "규제 준수 책임은 회사와 임원에게 남는다",
+   "source": "영국 금융행위감독청(FCA) 공식 안내 (11/24)",
+   "hook": {
+    "q": "AI 에이전트도\n금융 인가 대상?",
+    "hi": "11/24 공개",
+    "count": false
+   },
+   "summary": "영국 금융행위감독청이 금융 분야에서 자율형 AI를 만들거나 쓰는 회사에 대한 감독 방향을 공개했습니다. 규제 준수 책임은 회사와 임원에게 남는다고 못 박았고, 스스로를 기술 제공업체라고 부른다고 해서 인가 의무를 피할 수 있는 것은 아니라고 밝혔습니다. 인가 없이 금융 서비스를 제공하는 경우에는 조치할 권한이 있다고도 덧붙였습니다.",
+   "keywords": [
+    "AI규제",
+    "FCA"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "미드저니",
+  "short": "애니 그림 모델 니지 8 공개 · 캐릭터를 다른 배경으로 옮기는 편집 기능",
+  "headline": "애니 캐릭터\n배경만 바꿔\n다시 그린다",
+  "point1": "애니 그림 모델 니지 8 공개",
+  "point1_sub": "디스코드는 프롬프트 뒤에 --niji 8, 웹은 버전 메뉴에서 선택 · 요금 안내는 공개 글에 없음",
+  "point2": "캐릭터를 다른 배경에 옮겨 그릴 때 쓰면 됩니다.",
+  "point2_sub": "참고 이미지 한두 장으로 편집 · 선명한 원본일수록 결과가 좋다고 안내",
+  "verdict": "써먹기",
+  "source": "미드저니 니지 공식 블로그 (11/24)",
+  "icon": [
+   "Artist palette",
+   "Framed picture",
+   "Paintbrush"
+  ]
+ },
+ "market": {
+  "date_label": "11/25 마감 (KST 06:00)",
+  "headline": "나스닥 −0.62%\n오라클 −5.1%\n엔비디아 −3.91%",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 23585.8,
+    "pct": -0.62
+   },
+   {
+    "name": "오라클",
+    "value": 103.88,
+    "pct": -5.1
+   },
+   {
+    "name": "엔비디아",
+    "value": 149.3,
+    "pct": -3.91
+   }
+  ],
+  "note": "나스닥 장중 한때 4.6% 하락 · 오라클 장중 52주 최저 99.34달러 · 26일 추수감사절 휴장",
+  "photo": "Oracle headquarters Austin Texas",
+  "icon": [
+   "Chart decreasing",
+   "Coin"
+  ]
+ },
+ "oneliner": "한도가 합쳐지는 달\n무엇부터 물을지\n정해 두자",
+ "scripts": [
+  "챗GPT 한도 12월에 합쳐진다? 프로 일부 먼저. 오늘 AI, 핵심만 정리.",
+  "오픈AI, 챗GPT 대화와 업무 화면 통합 시작. 12월부터 사용량 한도도 하나로 합칠 예정입니다.",
+  "오픈AI, GPT-6.2 설계 단백질 322개 중 35개 결합. 전용 모델 도움은 아직 필요.",
+  "영국 금융행위감독청, 자율형 AI 감독 방향 공개. 기술업체도 인가 대상일 수 있다고 밝혔습니다.",
+  "미드저니, 애니 그림 모델 니지 8 공개. 참고 이미지로 편집도 됩니다. 캐릭터를 다른 배경에 옮겨 그릴 때 쓰면 됩니다.",
+  "나스닥 0.62, 오라클 5.1, 엔비디아 3.91퍼센트 하락. 장중에는 한때 4.6퍼센트까지 밀렸습니다.",
+  "오늘의 한 줄. 한도가 합쳐지는 달, 무엇부터 물을지 정해 두자. 챗GPT 한도, 어디에 먼저 쓰시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Alarm clock",
+  "Automobile",
+  "Balance scale",
+  "Bar chart",
+  "Battery",
+  "Bell",
+  "Calendar",
+  "Chair",
+  "Chart increasing",
+  "Classical building",
+  "Crown",
+  "Desktop computer",
+  "Factory",
+  "Gauge",
+  "Gear",
+  "Globe showing Americas",
+  "Globe showing Asia-Australia",
+  "Handshake",
+  "Hourglass done",
+  "Link",
+  "Lipstick",
+  "Magnifying glass tilted left",
+  "Money with wings",
+  "Musical notes",
+  "Oncoming automobile",
+  "Prohibited",
+  "Puzzle piece",
+  "Raising hands",
+  "Receipt",
+  "Robot",
+  "Shield",
+  "Shopping cart",
+  "Spiral calendar",
+  "Sport utility vehicle",
+  "Stop sign",
+  "Studio microphone",
+  "Taxi",
+  "Turkey",
+  "Video game",
+  "Wastebasket",
+  "Window",
+  "🇺🇸"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37"
+}
