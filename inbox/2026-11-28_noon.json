@@ -1,0 +1,218 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.28 SAT",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "챗GPT 아스트라\n한도 40% 빨리?",
+  "hi": "리셋 1회 보상",
+  "count": false
+ },
+ "question": "AI 구독, 한도가 빨리 닳아도 계속 쓰시겠어요?",
+ "keywords": [
+  "AI뉴스",
+  "챗GPT",
+  "메모리주"
+ ],
+ "issues": [
+  {
+   "region": "오픈AI 과금 버그",
+   "short": "오픈AI, GPT-6.2 할인 버그 수정 · 아스트라 한도 40%·솔 25% 더 빨리 도달 · 리셋 1회 보상",
+   "headline": "챗GPT 할인 버그\n고치자 한도\n40% 더 빨리",
+   "ill": {
+    "kind": "number",
+    "value": 40,
+    "suffix": "%",
+    "label": "GPT-6.2 아스트라 한도 도달 속도 · 지난주 대비 (솔 25%)"
+   },
+   "icon": [
+    "Hourglass not done",
+    "Credit card",
+    "Speech balloon"
+   ],
+   "motion": "spin",
+   "photo": "OpenAI headquarters San Francisco",
+   "image_prompt": "a glass hourglass with glowing blue sand running out quickly beside a laptop keyboard on a dark desk, no people, no text, no logos",
+   "stat1": "40%",
+   "stat1_label": "아스트라 한도 더 빨리 도달 (솔 25%) · 지난주 대비",
+   "stat2": "리셋 1회",
+   "stat2_label": "Go·Plus·Pro·Business 보상 · 차액 소급 청구 없음",
+   "source": "The Decoder · ITdaily (오픈AI 엔지니어 X 공지, 11/26)",
+   "hook": {
+    "q": "챗GPT 아스트라\n한도 40% 빨리?",
+    "hi": "리셋 1회 보상",
+    "count": false
+   },
+   "summary": "오픈AI가 GPT-6.2 출시 과정에서 대부분 사용자에게 잘못된 할인을 적용한 과금 버그를 고쳤습니다. 오픈AI 엔지니어 티보 소티오에 따르면 지난주보다 GPT-6.2 아스트라는 40%, 솔은 25% 빨리 한도에 닿고, 차액을 소급 청구하지는 않습니다. 보상으로 Go·Plus·Pro·Business 구독자에게 한도 리셋 1회를 주고, Business 사용자는 연말까지 패스트 모드를 무료로 씁니다.",
+   "question": "AI 구독, 한도가 빨리 닳아도 계속 쓰시겠어요?",
+   "keywords": [
+    "챗GPT",
+    "오픈AI"
+   ]
+  },
+  {
+   "region": "키옥시아·엔비디아",
+   "short": "키옥시아·엔비디아, SSD 144개로 GPU 메모리 확장 개념 검증 · 벡터 2조 개 처리 가능성",
+   "headline": "SSD 144개로\nGPU 메모리\n늘린다",
+   "ill": {
+    "kind": "number",
+    "value": 2,
+    "suffix": "조 개",
+    "label": "SSD 확장 메모리로 처리 가능성 보인 512바이트 벡터 수 (키옥시아)"
+   },
+   "icon": [
+    "Computer disk",
+    "Floppy disk",
+    "Brain"
+   ],
+   "motion": "bob",
+   "stat1": "144개",
+   "stat1_label": "7.68TB SSD · 원시 용량 약 1.1PB · GB200 NVL72 랙 1대",
+   "stat2": "2조 개",
+   "stat2_label": "512바이트 벡터 처리 가능성 · 성능 수치·상용화 시점 미공개",
+   "source": "키옥시아 보도자료 (11/26)",
+   "hook": {
+    "q": "GPU 메모리\nSSD로 늘린다?",
+    "hi": "벡터 2조 개",
+    "count": false
+   },
+   "summary": "키옥시아가 11월 26일 엔비디아 SCADA 소프트웨어와 자사 7.68TB SSD 144개(원시 용량 약 1.1PB)를 엔비디아 GB200 NVL72 랙에 묶어 GPU 메모리를 확장하는 개념 검증을 발표했습니다. 512바이트 벡터 2조 개 규모 데이터베이스를 처리할 가능성을 보였다고 밝혔고, 성능 수치와 상용화 시점은 공개하지 않았습니다.",
+   "question": "비싼 메모리 대신 SSD, 통할까요?",
+   "keywords": [
+    "키옥시아",
+    "엔비디아"
+   ]
+  },
+  {
+   "region": "캐나다 AI 기금",
+   "short": "캐나다 정부, 중소기업 AI 컴퓨팅 접근 기금에 7억 캐나다달러 추가 · 총 10억 달러 · 첫 공모 의료·생명과학",
+   "headline": "캐나다 AI 컴퓨팅\n중소기업 기금\n10억 달러로",
+   "ill": {
+    "kind": "number",
+    "value": 10,
+    "suffix": "억 달러",
+    "label": "AI 컴퓨팅 접근 기금 총액 (캐나다달러) · 초기 3억에서 확대"
+   },
+   "icon": [
+    "Maple leaf",
+    "Money bag",
+    "Desktop computer"
+   ],
+   "motion": "sway",
+   "photo": "Parliament Hill Ottawa",
+   "stat1": "+7억",
+   "stat1_label": "캐나다달러 추가 투입 · 11/26 발표",
+   "stat2": "89개사",
+   "stat2_label": "초기 단계 약정 1억 1,800만 달러 넘어 · 첫 공모는 의료·생명과학",
+   "source": "캐나다 혁신과학경제개발부 보도자료 (11/26)",
+   "hook": {
+    "q": "캐나다 중소기업\nAI 컴퓨팅 지원",
+    "hi": "총 10억 달러",
+    "count": false
+   },
+   "summary": "캐나다 혁신과학경제개발부가 11월 26일 중소기업의 고성능 컴퓨팅 비용을 돕는 AI 컴퓨팅 접근 기금에 7억 캐나다달러를 추가해 총 10억 달러로 늘렸다고 밝혔습니다. 초기 3억 달러 단계에서는 89개 기업에 1억 1,800만 달러 넘게 약정됐고, 새 단계의 첫 공모는 의료·생명과학 분야로 지금 접수 중입니다.",
+   "keywords": [
+    "캐나다",
+    "AI컴퓨팅"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "클라우드플레어",
+  "short": "클라우드플레어 '에이전트용 검색' 베타 · 내 사이트를 AI 에이전트가 검색하게 하는 스위치",
+  "headline": "내 사이트\nAI 에이전트 검색\n한 번에 켜기",
+  "point1": "도메인 설정에서 켜면 AI 에이전트용 검색 창구가 생깁니다",
+  "point1_sub": "모든 요금제 · 베타 · 결과는 마크다운으로 돌려줌",
+  "point2": "내 블로그·홈페이지 글을 AI 에이전트가 찾아 쓰게 하고 싶을 때 쓰면 됩니다.",
+  "point2_sub": "월 1,000건 의미 검색 포함 · 초과 1,000건당 0.75달러 · 과금은 12/1부터",
+  "verdict": "써먹기",
+  "source": "Cloudflare 변경 로그·요금 문서 (11/25)",
+  "photo": "Cloudflare headquarters San Francisco",
+  "icon": [
+   "Cloud",
+   "Magnifying glass tilted right",
+   "Globe with meridians"
+  ]
+ },
+ "market": {
+  "date_label": "11/27 단축장 마감 (KST 03:00)",
+  "headline": "메모리주 급등\n나스닥\n+2.31%",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 24129.5,
+    "pct": 2.31
+   },
+   {
+    "name": "샌디스크",
+    "value": 85.36,
+    "pct": 15.96
+   },
+   {
+    "name": "마이크론",
+    "value": 646.95,
+    "pct": 7.6
+   }
+  ],
+  "note": "추수감사절 다음 날 단축장(13:00 ET 마감) · 나스닥 주간 +6.7% · 웨스턴디지털 +7.22%",
+  "photo": "Micron Technology headquarters Boise Idaho",
+  "icon": [
+   "Computer disk",
+   "Dollar banknote"
+  ]
+ },
+ "oneliner": "쓰는 값은 올라도\n쓸 길은\n늘어난다",
+ "scripts": [
+  "챗GPT 아스트라, 한도 40퍼센트 빨리? 버그 탓. 오늘 AI, 핵심만 정리.",
+  "오픈AI 할인 버그 수정, 아스트라 한도 40퍼센트 더 빨리 소진. 보상은 리셋 한 번.",
+  "키옥시아와 엔비디아, 에스에스디 144개로 지피유 메모리 확장 실증. 벡터 2조 개, 상용화 미정.",
+  "캐나다, 중소기업 AI 컴퓨팅 기금 7억 캐나다달러 추가, 총 10억. 첫 공모는 의료와 생명과학.",
+  "클라우드플레어, 내 사이트를 AI 에이전트가 검색하게 하는 스위치 공개. 내 글을 AI가 찾아 쓰게 할 때 쓰면 됩니다.",
+  "단축장 나스닥 2.31퍼센트 상승, 주간 6.7퍼센트. 샌디스크 15.96, 마이크론 7.6퍼센트 급등.",
+  "오늘의 한 줄. 쓰는 값은 올라도 쓸 길은 늘어난다. AI 구독, 한도가 빨리 닳아도 계속 쓰시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Fire",
+  "Flag in hole",
+  "Seedling",
+  "Tear-off calendar",
+  "Trophy",
+  "Party popper",
+  "Spiral calendar",
+  "Briefcase",
+  "Megaphone",
+  "Mechanical arm",
+  "Video camera",
+  "Puzzle piece",
+  "Airplane",
+  "Luggage",
+  "World map",
+  "Page facing up",
+  "Clipboard",
+  "Magnifying glass tilted left",
+  "Bell",
+  "Turkey",
+  "Night with stars",
+  "Receipt",
+  "Chains",
+  "Japanese castle",
+  "Stethoscope",
+  "Pill",
+  "Prohibited",
+  "Satellite",
+  "Rocket",
+  "Milky way",
+  "Crab",
+  "Gear",
+  "Laptop",
+  "Up arrow",
+  "Factory",
+  "Balance scale",
+  "Chart increasing",
+  "Globe showing Americas"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "id": "2026-11-28_noon"
+}
