@@ -1,0 +1,211 @@
+{
+ "edition": "am",
+ "date_short": "11.24 TUE",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "뉴욕증시\n큰 폭 반등",
+  "hi": "나스닥 +6.51%",
+  "count": false
+ },
+ "question": "이번 반등, 이어질까요?",
+ "keywords": [
+  "뉴욕증시",
+  "엔비디아",
+  "미국경기"
+ ],
+ "issues": [
+  {
+   "region": "엔비디아",
+   "short": "엔비디아 이사회, 젠슨 황 CEO 즉시 복귀 결정",
+   "headline": "엔비디아\n젠슨 황\nCEO 복귀",
+   "ill": {
+    "kind": "icon",
+    "label": "이사회 만장일치 · 11/23 발표 (엔비디아)"
+   },
+   "icon": [
+    "Crown",
+    "Chair",
+    "Video game"
+   ],
+   "motion": "bob",
+   "stat1": "만장일치",
+   "stat1_label": "이사회 표결 · 사장·CEO·이사 복귀",
+   "stat2": "즉시",
+   "stat2_label": "효력 발생 · 독립 이사 위원회 조사는 계속",
+   "source": "엔비디아 (11/23)",
+   "hook": {
+    "q": "엔비디아\n젠슨 황 복귀",
+    "hi": "이사회 만장일치",
+    "count": false
+   },
+   "summary": "엔비디아 이사회가 젠슨 황을 최고경영자로 즉시 복귀시켰습니다. 이사회는 만장일치로 결정했고, 독립 이사 위원회의 조사는 끝까지 진행한다고 밝혔습니다.",
+   "question": "젠슨 황 복귀, 어떻게 보세요?",
+   "keywords": [
+    "엔비디아",
+    "젠슨황"
+   ]
+  },
+  {
+   "region": "사이버 보안",
+   "short": "크라우드스트라이크, 지스케일러 인수 합의 · 약 439억 달러",
+   "headline": "크라우드스트라이크\n지스케일러\n인수 합의",
+   "ill": {
+    "kind": "icon",
+    "label": "주식 교환 방식 · 인수 완료 전 (SEC 제출 공동 발표)"
+   },
+   "icon": [
+    "Shield",
+    "Link",
+    "Handshake"
+   ],
+   "motion": "sway",
+   "stat1": "약 439억 달러",
+   "stat1_label": "지스케일러 기업가치 (발표 기준)",
+   "stat2": "1.135주",
+   "stat2_label": "지스케일러 1주당 크라우드스트라이크 주식 · 합의 단계",
+   "source": "크라우드스트라이크·지스케일러 공동 발표 (11/23)",
+   "hook": {
+    "q": "보안 기업\n대형 인수 합의",
+    "hi": "약 439억 달러",
+    "count": false
+   },
+   "summary": "사이버 보안 기업 크라우드스트라이크가 지스케일러를 주식 교환 방식으로 인수하기로 합의했습니다. 발표된 기업가치는 약 439억 달러로, 아직 인수가 끝난 것은 아닙니다.",
+   "question": "보안 업계 큰 합병, 어떻게 보세요?",
+   "keywords": [
+    "크라우드스트라이크",
+    "인수합병"
+   ]
+  },
+  {
+   "region": "미국 경기",
+   "short": "미국 11월 종합 PMI 속보치 54.6 · 10월 55.9에서 둔화",
+   "headline": "미국 경기지표\n55.9→54.6\n성장 둔화",
+   "ill": {
+    "kind": "icon",
+    "label": "S&P Global 미국 종합 PMI 속보치 · 50 위는 확장"
+   },
+   "icon": [
+    "Factory",
+    "Chart increasing",
+    "Gauge"
+   ],
+   "motion": "drive",
+   "stat1": "54.6",
+   "stat1_label": "11월 종합 PMI 속보치 · 50 위는 확장",
+   "stat2": "55.9",
+   "stat2_label": "10월 수치 · 7월 이후 가장 느린 성장",
+   "source": "S&P Global (11/23)",
+   "hook": {
+    "q": "미국 경기지표\n속보치",
+    "hi": "55.9→54.6",
+    "count": false
+   },
+   "summary": "미국의 11월 종합 구매관리자지수 속보치는 54.6으로 10월 55.9에서 내려왔습니다. 기업 활동은 여전히 늘었지만 성장 속도는 둔화했습니다.",
+   "question": "미국 경기, 식고 있을까요?",
+   "keywords": [
+    "미국경기",
+    "PMI"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "국가데이터처",
+  "short": "말로 물으면 국가통계 표·차트 찾아주는 AI 서비스, 정부혁신박람회서 공개",
+  "headline": "말로 물으면\n국가통계 찾아주는\nAI",
+  "point1": "일상 언어로 질문하면 통계표와 차트를 보여줍니다",
+  "point1_sub": "AI 기반 국가통계포털(KOSIS) 검색·활용 서비스",
+  "point2": "11월 25~27일 고양 킨텍스 박람회에서 체험",
+  "point2_sub": "2026 대한민국 정부혁신 박람회 · 현장 체험 프로그램",
+  "verdict": "박람회 공개",
+  "source": "국가데이터처 (11/23)",
+  "icon": [
+   "Magnifying glass tilted left",
+   "Bar chart",
+   "Robot"
+  ]
+ },
+ "market": {
+  "date_label": "현지 11/23(월) 정규장 마감",
+  "headline": "다우 +3.01%\nS&P +4.73%\n나스닥 +6.51%",
+  "dow": {
+   "value": 49595.31,
+   "pct": 3.01
+  },
+  "spx": {
+   "value": 7237.17,
+   "pct": 4.73
+  },
+  "ndx": {
+   "value": 24089.56,
+   "pct": 6.51
+  },
+  "note": "현지 11/23(월) 정규장 종가 · 전 거래일 대비 · 26일 추수감사절 휴장, 27일 오후 1시 조기 마감"
+ },
+ "oneliner": "증시는 반등\n경기는 숨 고르기",
+ "scripts": [
+  "뉴욕증시 큰 폭 반등. 엔비디아는 젠슨 황 복귀. 오늘 세계 이슈, 핵심만 정리.",
+  "엔비디아 이사회, 젠슨 황을 최고경영자로 복귀시켜. 만장일치 결정으로 즉시 효력.",
+  "크라우드스트라이크, 지스케일러를 주식 교환 방식으로 인수 합의. 기업가치 약 439억 달러.",
+  "미국 11월 종합 구매관리자지수 속보치 54.6. 기업 활동은 늘었지만 성장 속도는 둔화.",
+  "국가데이터처, 말하듯 질문하면 국가통계 표와 차트를 찾아주는 AI 서비스, 내일부터 킨텍스서 선보여.",
+  "뉴욕증시 종가. 다우 3.01퍼센트, 에스앤피 4.73퍼센트, 나스닥 6.51퍼센트 상승. 26일은 추수감사절 휴장.",
+  "오늘의 한 줄. 증시는 반등, 경기는 숨 고르기. 이번 반등, 이어질까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Bank",
+  "Bed",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Cloud",
+  "Coin",
+  "Credit card",
+  "Desktop computer",
+  "Electric plug",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Locked with key",
+  "Microscope",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Robot",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Stopwatch",
+  "Teacher",
+  "Test tube",
+  "Thermometer"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-24_0600_am.md",
+  "drive_id": "1CsBUhh1P4ceNwT-wnQDzgCuIzPNvkDYc",
+  "job_id": "cardnews-20261124-0600",
+  "version": "v01"
+ }
+}

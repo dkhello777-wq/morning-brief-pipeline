@@ -1,0 +1,182 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.06 FRI",
+  "title": "간밤의\nAI 소식\n핵심 정리",
+  "hook": {
+    "q": "선거 끝나자\n나스닥 −5.5%?",
+    "hi": "시총 3조달러↓"
+  },
+  "question": "AI 주식 급락, 여러분 투자 계획은 바뀌었나요?",
+  "keywords": [
+    "AI뉴스",
+    "나스닥급락",
+    "엔비디아"
+  ],
+  "issues": [
+    {
+      "region": "미국 증시",
+      "short": "나스닥 −5.52%, 조정 진입",
+      "headline": "선거 끝나자\n나스닥 −5.52%\nAI주 급락",
+      "ill": {
+        "kind": "alert",
+        "value": 5.52,
+        "suffix": "%",
+        "label": "나스닥 11/5 하루 하락폭 · 2025년 4월 이후 19개월 만의 최대 · 조정 국면 진입(Reuters)"
+      },
+      "icon": [
+        "Money with wings",
+        "Dollar banknote",
+        "🇺🇸"
+      ],
+      "motion": "shake",
+      "photo": "New York Stock Exchange trading floor",
+      "image_prompt": "a wide empty stock exchange trading floor at dusk, dozens of dark monitors with red downward lines, scattered paper on the floor, no people, no text, no logos",
+      "stat1": "−9.26%",
+      "stat1_label": "엔비디아 11/5 종가 181.60달러 · 올해 수익률 마이너스 전환(CNBC)",
+      "stat2": "−17.26%",
+      "stat2_label": "AMD 11/5 종가 404.40달러 · 필라델피아 반도체지수 −12.2%(Reuters)",
+      "source": "Reuters · CNBC",
+      "hook": {
+        "q": "선거 끝나자\n나스닥 −5.5%?",
+        "hi": "시총 3조달러↓"
+      },
+      "summary": "11월 5일 미국 나스닥 종합지수가 5.52% 떨어진 24,315.00으로 마감해 2025년 4월 이후 19개월 만에 가장 큰 하루 하락을 기록하고 조정 국면에 들어갔습니다. 로이터는 민주당이 미국 의회를 장악한 뒤 AI 규제가 강해질 수 있다는 우려로 반도체주가 급락했다고 전했고, 엔비디아는 9.26% 떨어진 181.60달러, AMD는 17.26% 떨어진 404.40달러로 마감했습니다. S&P 500 기업 시가총액은 하루에 3조 달러가 사라졌습니다.",
+      "question": "AI 주식 급락, 여러분 투자 계획은 바뀌었나요?",
+      "keywords": [
+        "나스닥급락",
+        "엔비디아"
+      ]
+    },
+    {
+      "region": "오픈AI 새 모델",
+      "short": "GPT-6 사이버, 보안 전용 모델",
+      "headline": "오픈AI\n해킹 찾는 AI\n위험등급 최고",
+      "ill": {
+        "kind": "number",
+        "value": 948,
+        "suffix": "개",
+        "label": "리눅스 권한 상승 취약점 공격 코드 개발(오픈AI 발표)"
+      },
+      "icon": [
+        "Locked with key",
+        "Bug",
+        "Shield"
+      ],
+      "motion": "pulse",
+      "photo": "OpenAI headquarters San Francisco",
+      "stat1": "48.5%",
+      "stat1_label": "ExploitGym 점수 · 이전 모델 GPT-5.6 사이버는 32.1%",
+      "stat2": "81개",
+      "stat2_label": "파이어폭스 미공개 고위험 취약점 발견 · 모질라가 수정 배포 중",
+      "source": "OpenAI · The Verge",
+      "hook": {
+        "q": "해킹도 AI가?\n취약점 948개",
+        "hi": "공격코드 948개"
+      },
+      "summary": "오픈AI가 11월 5일 보안 연구 전용 모델 GPT-6 사이버를 공개했습니다. 취약점을 공격해 보는 벤치마크 ExploitGym에서 48.5%로 이전 GPT-5.6 사이버(32.1%)를 앞섰고, 자체 안전 기준인 준비성 프레임워크의 사이버보안 등급을 '높음'에서 최고 단계인 '치명적(Critical)'으로 올렸습니다. 리눅스에서 권한 상승 공격 코드 948개를 만들고 파이어폭스에서 미공개 고위험 취약점 81개를 찾았으며, 승인된 보안 고객(Daybreak Red) 일부에만 먼저 제공됩니다.",
+      "keywords": [
+        "GPT6사이버",
+        "AI보안"
+      ]
+    },
+    {
+      "region": "메타 인수",
+      "short": "AI 코딩 스타트업 컨덕터 인수",
+      "headline": "메타, 코딩 AI\n컨덕터 인수\n에이전트 여럿 지휘",
+      "ill": {
+        "kind": "icon"
+      },
+      "icon": [
+        "Handshake",
+        "Laptop",
+        "Briefcase"
+      ],
+      "motion": "bob",
+      "photo": "Meta Platforms headquarters Menlo Park",
+      "stat1": "11/20",
+      "stat1_label": "컨덕터 클라우드 서비스 종료 · 이후 사용자 클라우드 데이터 삭제 시작",
+      "stat2": "2024년",
+      "stat2_label": "컨덕터 창업 · 핵심 제품은 지난여름 출시 · 인수 조건 비공개",
+      "source": "TechCrunch · Axios",
+      "hook": {
+        "q": "코딩 AI 지휘자\n메타가 샀다",
+        "hi": "2024년 창업"
+      },
+      "summary": "메타가 AI 코딩 스타트업 컨덕터(Conductor)를 인수했습니다. 컨덕터는 개발자가 여러 AI 코딩 에이전트를 각각 분리된 작업 공간에 배치해 한 프로젝트를 동시에 진행하게 해 주는 도구로, 에이전트는 앤트로픽·오픈AI 등 외부 모델을 씁니다. 메타는 테크크런치에 인수를 확인했지만 조건은 밝히지 않았고, 컨덕터 클라우드 서비스는 11월 20일 종료되며 이후 사용자 클라우드 데이터가 삭제됩니다.",
+      "keywords": [
+        "메타",
+        "AI코딩"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "구글",
+    "short": "구글 비즈 15초 AI 영상 무료",
+    "headline": "구글 비즈에서\n15초 AI 영상\n월 3편 무료",
+    "point1": "글로 설명하면 15초 영상 생성 · 참고 이미지를 올리면 인물·장면 유지",
+    "point1_sub": "구글 계정이면 누구나 · 월 3편까지 무료 · 새 영상 모델 Omni 1.2 Flash",
+    "point2": "짧은 홍보 영상이나 SNS 클립이 급할 때 쓰면 됩니다.",
+    "point2_sub": "vids.new 에서 바로 시작 · 11/5 구글 공식 블로그",
+    "verdict": "써먹기",
+    "source": "Google 공식 블로그 (11/5)",
+    "photo": "Googleplex Mountain View",
+    "icon": [
+      "Movie camera",
+      "Clapper board"
+    ]
+  },
+  "market": {
+    "date_label": "11/5 마감 (KST 06:00)",
+    "headline": "AI주 급락\n나스닥\n−5.52%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 24315.0,
+        "pct": -5.52
+      },
+      {
+        "name": "엔비디아",
+        "value": 181.6,
+        "pct": -9.26
+      },
+      {
+        "name": "AMD",
+        "value": 404.4,
+        "pct": -17.26
+      }
+    ],
+    "note": "S&P 500 −4.36%, 다우 −3.44% · 필라델피아 반도체지수 −12.2%(Reuters)",
+    "photo": "Nvidia headquarters Santa Clara"
+  },
+  "oneliner": "AI에 건 돈,\n시장은 이제\n성적표를 묻는다",
+  "scripts": [
+    "선거 끝나자 나스닥 5.5퍼센트? 하루 시가총액 3조 달러 증발. 오늘 AI, 핵심만 정리.",
+    "나스닥 5.52퍼센트 하락, 19개월 만의 최대. 엔비디아 9퍼센트, AMD 17퍼센트 빠졌습니다.",
+    "오픈AI, 보안 전용 GPT 6 사이버 공개. 리눅스 취약점 948개 입증, 승인 보안 고객 일부에 먼저 제공.",
+    "메타가 AI 코딩 스타트업 컨덕터 인수. 코딩 에이전트 여럿을 한 번에 지휘하는 도구를 샀습니다.",
+    "구글 비즈가 15초 AI 영상을 월 3편 무료로 만들어 줍니다. 짧은 홍보 영상이나 SNS 클립이 급할 때 쓰면 됩니다.",
+    "나스닥 5.52, 엔비디아 9.26, AMD 17.26퍼센트 하락. 반도체지수는 12.2퍼센트 빠졌습니다.",
+    "오늘의 한 줄. AI에 건 돈, 시장은 이제 성적표를 묻습니다. AI 주식 급락, 여러분 투자 계획은 바뀌었나요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Purse",
+    "Package",
+    "Hourglass not done",
+    "Mobile phone",
+    "Ballot box with ballot",
+    "Graduation cap",
+    "Fuel pump",
+    "Telephone receiver",
+    "Coin",
+    "Balance scale",
+    "Magnifying glass tilted left",
+    "Desktop computer",
+    "High voltage",
+    "Shield",
+    "Ship"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37",
+  "render_attempt": 2
+}

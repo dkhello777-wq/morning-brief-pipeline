@@ -1,0 +1,177 @@
+{
+ "edition": "am",
+ "date_short": "11.22 SUN",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "유엔 기후총회\n폐막일 넘겨 연장",
+  "hi": "최종 합의 아직",
+  "count": false
+ },
+ "question": "이번 기후 협상, 합의될까요?",
+ "keywords": [
+  "기후총회",
+  "AI교육",
+  "나스닥"
+ ],
+ "issues": [
+  {
+   "region": "뉴욕증시",
+   "short": "나스닥 한 주 −10.02%, 2020년 3월 이후 최악의 주",
+   "headline": "나스닥\n한 주 −10%\n주말 휴장",
+   "ill": {
+    "kind": "icon",
+    "label": "11/13 종가 25,136.27 → 11/20 종가 22,617.73 (Yahoo Finance)"
+   },
+   "icon": [
+    "Chart decreasing",
+    "Calendar",
+    "Money with wings"
+   ],
+   "motion": "shake",
+   "stat1": "−10.02%",
+   "stat1_label": "나스닥 종합 한 주 등락 · 공식 종가 기준",
+   "stat2": "2020년 3월 뒤",
+   "stat2_label": "가장 나쁜 한 주 (로이터)",
+   "source": "Yahoo Finance · Reuters (현지 11/20)",
+   "hook": {
+    "q": "나스닥 한 주\n10% 하락",
+    "hi": "2020년 3월 이후 최악",
+    "count": false
+   },
+   "summary": "미국 증시는 주말 휴장입니다. 나스닥 종합지수는 지난 한 주 동안 25,136.27에서 22,617.73으로 10.02% 내렸습니다. 로이터는 2020년 3월 이후 가장 나쁜 한 주였다고 전했습니다.",
+   "question": "나스닥 한 주 10% 하락, 어떻게 보세요?",
+   "keywords": [
+    "나스닥",
+    "뉴욕증시"
+   ]
+  },
+  {
+   "region": "AI 교육",
+   "short": "교육부, MS·구글·AWS와 교사 AI 공동연수 (11/21~12/5)",
+   "headline": "교사부터\nAI 실습\n공동연수 시작",
+   "ill": {
+    "kind": "icon",
+    "label": "교사연구회·시도교육청 담당자 대상 · 기업 사옥에서 실습형 (교육부)"
+   },
+   "icon": [
+    "School",
+    "Teacher",
+    "Laptop"
+   ],
+   "motion": "drive",
+   "stat1": "약 240명",
+   "stat1_label": "교사연구회 참가 희망 교사·교육청 담당자",
+   "stat2": "11/21~12/5",
+   "stat2_label": "MS·구글·AWS 연계 공동연수 기간",
+   "source": "교육부 (11/21 배포)",
+   "hook": {
+    "q": "교사부터\nAI 실습",
+    "hi": "약 240명 공동연수",
+    "count": false
+   },
+   "summary": "교육부가 마이크로소프트, 구글, 아마존웹서비스와 함께 11월 21일부터 12월 5일까지 인공지능·융합교육 교사 공동연수를 엽니다. 교사연구회 참가 희망 교사와 시도교육청 담당자 등 약 240명이 인공지능 도구를 써 보고 수업 자료를 직접 만드는 실습형 과정입니다.",
+   "question": "교실 속 AI, 어떻게 보세요?",
+   "keywords": [
+    "AI교육",
+    "교육부"
+   ]
+  },
+  {
+   "region": "유엔 기후총회",
+   "short": "COP31, 폐막 예정일 넘겨 협상 계속",
+   "headline": "유엔 기후총회\n폐막일 넘겨\n협상 계속",
+   "ill": {
+    "kind": "icon",
+    "label": "튀르키예 안탈리아 · 11/20 폐막 예정 (UNFCCC)"
+   },
+   "icon": [
+    "Globe showing Europe-Africa",
+    "Thermometer",
+    "Hourglass not done"
+   ],
+   "motion": "sway",
+   "stat1": "합의 아직",
+   "stat1_label": "한국시간 22일 새벽 기준 최종 합의 확인 안 됨",
+   "stat2": "화석연료",
+   "stat2_label": "합의문에 감축 문구 넣을지 놓고 이견 (가디언·BBC)",
+   "source": "UNFCCC · The Guardian · BBC (11/21)",
+   "hook": {
+    "q": "유엔 기후총회\n폐막일 넘겨",
+    "hi": "최종 합의 아직",
+    "count": false
+   },
+   "summary": "튀르키예 안탈리아에서 열린 제31차 유엔 기후총회 협상이 예정된 폐막일인 20일을 넘겼습니다. 화석연료 감축을 최종 합의문에 어떻게 담을지를 놓고 이견이 이어졌고, 한국시간 22일 새벽까지 최종 합의는 확인되지 않았습니다.",
+   "question": "이번 기후 협상, 합의될까요?",
+   "keywords": [
+    "기후총회",
+    "COP31"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "싱킹머신즈랩",
+  "short": "노트북에서 돌리는 공개 모델 '인클링 2 미니' 공개",
+  "headline": "노트북에서\n돌리는 AI\n인클링 2 미니",
+  "point1": "가중치를 공개해 내려받아 내 컴퓨터에서 실행 가능",
+  "point1_sub": "약 20GB · 메모리 32GB 이상 애플 실리콘 맥 등 (모델 카드, 11/20)",
+  "point2": "중간 층을 세 번 반복해 같은 크기로 더 깊게 추론하는 구조입니다.",
+  "point2_sub": "총 264억 매개변수 · 아파치 2.0 라이선스",
+  "verdict": "내 PC에서 실행",
+  "source": "Thinking Machines Lab · 모델 카드 (11/20)",
+  "icon": [
+   "Package",
+   "Brain",
+   "Desktop computer"
+  ]
+ },
+ "market": {
+  "date_label": "현지 11/20(금) 정규장 마감 · 주말 휴장",
+  "headline": "다우 −1.93%\nS&P −3.70%\n나스닥 −5.28%",
+  "dow": {
+   "value": 48147.33,
+   "pct": -1.93
+  },
+  "spx": {
+   "value": 6910.39,
+   "pct": -3.7
+  },
+  "ndx": {
+   "value": 22617.73,
+   "pct": -5.28
+  },
+  "note": "현지 11/20(금) 정규장 종가 · 전 거래일 대비 · 주말 휴장"
+ },
+ "oneliner": "증시는 쉬어가고\n기후 협상은 연장전",
+ "scripts": [
+  "유엔 기후총회, 폐막일 넘겨 협상 계속. 오늘 세계 이슈, 핵심만 정리.",
+  "미국 증시 주말 휴장. 나스닥은 한 주 10.02퍼센트 하락, 2020년 3월 뒤 가장 나쁜 주.",
+  "교육부, 마이크로소프트·구글·AWS와 교사 AI 공동연수. 약 240명이 실습.",
+  "튀르키예 유엔 기후총회, 화석연료 문구 놓고 이견. 오늘 새벽까지 최종 합의는 확인 안 돼.",
+  "싱킹머신즈랩, 노트북에서 돌리는 공개 모델 인클링 2 미니 내놔. 약 20기가바이트.",
+  "금요일 종가 기준 다우 1.93퍼센트, 에스앤피 3.70퍼센트, 나스닥 5.28퍼센트 하락.",
+  "오늘의 한 줄. 증시는 쉬어가고, 기후 협상은 연장전. 이번 협상, 합의될까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Bear",
+  "Chart decreasing",
+  "Money with wings",
+  "High voltage",
+  "Office building",
+  "Memo",
+  "Rocket",
+  "Shield",
+  "Globe showing Europe-Africa"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-22_0600_am.md",
+  "drive_id": "1j_NEYe_ygchFt1Dd92FlXSqOG109R9EL",
+  "job_id": "cardnews-20261122-0600",
+  "version": "v01"
+ }
+}

@@ -1,0 +1,186 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.19 THU",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "hook": {
+  "q": "앤트로픽 상장\n83달러 확정?",
+  "hi": "813억달러 조달"
+ },
+ "question": "클로드 만든 회사가 상장하는 날, 여러분이라면 주식을 사시겠어요, 지켜보시겠어요?",
+ "keywords": [
+  "AI뉴스",
+  "앤트로픽상장",
+  "제미나이네온"
+ ],
+ "issues": [
+  {
+   "region": "앤트로픽 상장",
+   "short": "앤트로픽 공모가 83달러 확정 · 813억달러 조달",
+   "headline": "앤트로픽 상장\n공모가 83달러\n813억달러 조달",
+   "ill": {
+    "kind": "number",
+    "value": 83,
+    "suffix": "$",
+    "label": "확정 공모가 · 희망가 70~78$ 상단을 넘어 (앤트로픽 보도자료)"
+   },
+   "icon": [
+    "Bell",
+    "Money bag",
+    "🇺🇸"
+   ],
+   "motion": "spin",
+   "photo": "Nasdaq MarketSite Times Square",
+   "image_prompt": "a golden bell on a stage above a sea of glowing screens showing rising numbers, no people, no text, no logos",
+   "stat1": "9.8억 주",
+   "stat1_label": "공모 주식 수 · 당초 8.25억 주에서 늘려 (CNBC)",
+   "stat2": "ANT",
+   "stat2_label": "나스닥 티커 · 11/19(목) 거래 시작 예정",
+   "source": "Anthropic 보도자료 · CNBC · AP (11/18)",
+   "hook": {
+    "q": "앤트로픽 상장\n83달러 확정?",
+    "hi": "813억달러 조달"
+   },
+   "summary": "클로드 개발사 앤트로픽이 18일(현지시간) 공모가를 주당 83달러로 확정했습니다. 희망가 70~78달러를 넘긴 가격이며, 공모 주식도 당초 8억 2,500만 주에서 9억 8,000만 주로 늘려 813억 달러를 조달합니다. CNBC는 6월 스페이스X 상장을 넘는 역대 최대 규모 IPO로 전했고, AP는 기업가치를 1조 5,000억 달러로 봤습니다. 19일(목) 나스닥에서 티커 ANT로 거래가 시작될 예정입니다.",
+   "question": "앤트로픽 주식, 첫날 사시겠어요, 지켜보시겠어요?",
+   "keywords": [
+    "앤트로픽상장",
+    "IPO"
+   ]
+  },
+  {
+   "region": "구글 새 모델",
+   "short": "제미나이 4 네온 출시 · 지능 지수 61점 3위",
+   "headline": "구글 새 모델\n제미나이 4 네온\n지수 61점 3위",
+   "ill": {
+    "kind": "number",
+    "value": 61,
+    "suffix": "점",
+    "label": "Artificial Analysis 지능 지수 · 전체 3위 (구글 발표 · xhigh 설정)"
+   },
+   "icon": [
+    "Brain",
+    "Laptop",
+    "🇺🇸"
+   ],
+   "motion": "bob",
+   "photo": "Googleplex",
+   "stat1": "3달러",
+   "stat1_label": "입력 100만 토큰당 · 출력 15달러 · 문맥 100만 토큰",
+   "stat2": "Pro·Ultra",
+   "stat2_label": "제미나이 앱 유료 구독자 · API는 유료 등급",
+   "source": "Google 블로그 (11/18)",
+   "hook": {
+    "q": "구글 또 새 모델\n네온은 뭐가 달라?",
+    "hi": "지수 61점 3위"
+   },
+   "summary": "구글이 18일(현지시간) 새 모델 제미나이 4 네온을 출시했습니다. 구글은 Artificial Analysis 지능 지수에서 61점으로 전체 3위라고 밝혔고, 가장 어려운 장기 작업용 카본과 빠른 일상 작업용 하이드로젠 사이에서 깊이와 효율의 균형을 맞춘 모델이라고 설명했습니다. API 가격은 입력 100만 토큰당 3달러, 출력 15달러이며, 제미나이 앱에서는 구글 AI 프로·울트라 유료 구독자가 모델 선택 메뉴에서 고를 수 있습니다.",
+   "question": "프로 구독자용 새 모델, 돈 내고 쓸 만할까요?",
+   "keywords": [
+    "제미나이네온",
+    "구글"
+   ]
+  },
+  {
+   "region": "오픈AI 칩 설계",
+   "short": "오픈AI 모델이 AMD 칩 설계 최대 14% 개선",
+   "headline": "오픈AI 모델이\nAMD 칩 설계\n최대 14% 개선",
+   "ill": {
+    "kind": "number",
+    "value": 14,
+    "suffix": "%",
+    "label": "AMD 주력 GPU 설계의 전력·성능·면적 개선 폭 (최대 · 오픈AI 발표)"
+   },
+   "icon": [
+    "Gear",
+    "Hammer and wrench",
+    "🇺🇸"
+   ],
+   "motion": "bob",
+   "photo": "Sam Altman",
+   "stat1": "5개월",
+   "stat1_label": "1년치 설계 진전을 5개월 안에 (오픈AI 주장)",
+   "stat2": "제조 반영",
+   "stat2_label": "일부 변경은 AMD가 최근 제조에 보낸 설계에 포함",
+   "source": "OpenAI 블로그 (11/18)",
+   "hook": {
+    "q": "칩 설계도\nAI가 한다?",
+    "hi": "최대 14% 개선"
+   },
+   "summary": "오픈AI가 18일 자사 모델로 칩 설계를 개선한 결과를 공개했습니다. AMD 주력 GPU 설계에서 최적화된 기존 설계 대비 전력·성능·면적을 최대 14% 개선했고, 1년치 진전을 5개월 안에 이뤘다고 밝혔습니다. AMD는 이 가운데 일부를 최근 제조에 보낸 설계에 반영했고, 차세대 CPU 핵심 블록에서도 한 자릿수 퍼센트 개선을 확인했다고 오픈AI는 전했습니다. 오픈AI는 반도체 설계 도구 회사 시놉시스와 전용 모델 GPT-시놉시스도 훈련하기로 했습니다.",
+   "keywords": [
+    "오픈AI",
+    "칩설계"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "오픈AI",
+  "short": "챗GPT 받아쓰기, 10분 제한 해제",
+  "headline": "챗GPT 받아쓰기\n말하는 대로 글자로\n10분 제한 없이",
+  "point1": "말하면 바로 글자로 뜨는 라이브 받아쓰기",
+  "point1_sub": "모든 챗GPT 요금제 · 무료 플랜 포함 · iOS·안드로이드·웹·데스크톱 (순차 적용)",
+  "point2": "회의 메모나 긴 초안을 말로 넣을 때 쓰면 됩니다.",
+  "point2_sub": "파형을 누르면 글자 보이기·숨기기 · 10분 녹음 제한 삭제",
+  "verdict": "써먹기",
+  "source": "OpenAI 챗GPT 릴리스 노트 (11/18)",
+  "icon": [
+   "Microphone",
+   "Mobile phone"
+  ]
+ },
+ "market": {
+  "date_label": "11/18 마감 (KST 11/19 06:00)",
+  "headline": "나스닥 +0.42%\nAMD +5.31%\n엔비디아 −2.89%",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 24429.88,
+    "pct": 0.42
+   },
+   {
+    "name": "AMD",
+    "value": 530.14,
+    "pct": 5.31
+   },
+   {
+    "name": "엔비디아",
+    "value": 150.96,
+    "pct": -2.89
+   }
+  ],
+  "note": "11/18 정규장 종가 · 엔비디아는 실적 발표 뒤에도 5일 연속 하락 (Yahoo Finance) · 앤트로픽 11/19 거래 시작 예정",
+  "photo": "AMD headquarters Santa Clara",
+  "icon": [
+   "Coin",
+   "Money bag",
+   "Chart increasing"
+  ]
+ },
+ "oneliner": "813억 달러 상장\n지수 3위 새 모델\n칩 설계도 AI와",
+ "scripts": [
+  "앤트로픽 공모가 83달러 확정? 813억 달러 조달. 오늘 AI, 핵심만 정리.",
+  "앤트로픽 공모가 83달러 확정, 813억 달러 조달. 오늘 밤 나스닥에서 거래 시작 예정입니다.",
+  "구글 새 모델 제미나이 4 네온, 외부 지수 61점으로 3위. 프로 구독자도 앱에서 고릅니다.",
+  "오픈AI 모델이 에이엠디 칩 설계를 최대 14퍼센트 개선. 일부는 제조 설계에 반영됐다고 합니다.",
+  "챗GPT 받아쓰기, 말하는 대로 글자로 뜨고 10분 제한도 사라졌습니다. 회의 메모나 긴 초안을 말로 넣을 때 쓰면 됩니다.",
+  "나스닥 0.42퍼센트 상승, 에이엠디 5.31퍼센트 올랐고 엔비디아는 실적 발표 뒤에도 2.89퍼센트 하락.",
+  "오늘의 한 줄. 813억 달러 상장, 지수 3위 새 모델, 칩 설계도 AI와. 클로드 만든 회사가 상장하는 날, 여러분이라면 주식을 사시겠어요, 지켜보시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Pencil",
+  "Automobile",
+  "Alarm clock",
+  "Chart increasing",
+  "Clock",
+  "Bank",
+  "Desktop computer",
+  "Dollar banknote",
+  "Rocket",
+  "Microscope",
+  "Robot",
+  "Check mark button"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

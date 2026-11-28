@@ -1,0 +1,193 @@
+{
+ "edition": "pm",
+ "date_short": "11.23 MON",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "코스피 3%대 하락\n자사주 한도 완화",
+  "hi": "코스피 −3.31%",
+  "count": false
+ },
+ "question": "자사주 한도 완화, 효과 있을까요?",
+ "keywords": [
+  "자사주",
+  "신용매수",
+  "과학AI"
+ ],
+ "issues": [
+  {
+   "region": "금융위원회",
+   "short": "상장사 하루 자사주 매수 주문 한도 11/24부터 3개월 완화",
+   "headline": "자사주 매수 한도\n석 달간 완화\n내일부터",
+   "ill": {
+    "kind": "icon",
+    "label": "11/23 금융위 정례회의 의결 · 11/24~2027/2/23"
+   },
+   "icon": [
+    "Money bag",
+    "Office building",
+    "Shopping cart"
+   ],
+   "motion": "bob",
+   "stat1": "3개월",
+   "stat1_label": "11/24~2027/2/23 · 하루 매수 주문 한도 완화",
+   "stat2": "준비 단계",
+   "stat2_label": "증시안정펀드는 아직 가동 전",
+   "source": "금융위원회 (11/23)",
+   "hook": {
+    "q": "자사주 매수 한도\n석 달간 완화",
+    "hi": "내일부터 3개월",
+    "count": false
+   },
+   "summary": "금융위원회는 내일부터 석 달간 상장사가 하루에 자기 회사 주식을 사들이기 위해 낼 수 있는 주문 한도를 늘리기로 의결했습니다. 증시안정펀드는 아직 가동이 아니라 준비 단계입니다.",
+   "question": "자사주 한도 완화, 효과 있을까요?",
+   "keywords": [
+    "자사주",
+    "금융위"
+   ]
+  },
+  {
+   "region": "중국 증시",
+   "short": "상하이·선전·베이징 거래소, 신용매수 최소 보증금 100%→80% · 11/30 시행",
+   "headline": "중국 신용매수\n보증금 비율\n100%→80%",
+   "ill": {
+    "kind": "icon",
+    "label": "상하이·선전·베이징 3개 거래소 · 11/22 발표"
+   },
+   "icon": [
+    "Credit card",
+    "Chart increasing",
+    "Classical building"
+   ],
+   "motion": "sway",
+   "stat1": "100%→80%",
+   "stat1_label": "빚내 주식 살 때 최소 보증금 비율",
+   "stat2": "11/30",
+   "stat2_label": "시행일 · 중국 증감회 승인",
+   "source": "상하이증권거래소 (11/22)",
+   "hook": {
+    "q": "중국 신용매수\n보증금 낮춰",
+    "hi": "100%→80%",
+    "count": false
+   },
+   "summary": "중국 상하이·선전·베이징 거래소도 대책을 내놨습니다. 오는 30일부터 돈을 빌려 주식을 살 때 필요한 최소 보증금 비율을 100퍼센트에서 80퍼센트로 낮춥니다.",
+   "question": "중국 증시 부양책, 통할까요?",
+   "keywords": [
+    "중국증시",
+    "신용매수"
+   ]
+  },
+  {
+   "region": "AI·과학",
+   "short": "과기정통부, 대전서 과학 연구 AI 활용 간담회",
+   "headline": "과학 연구에\nAI 쓰는 방안\n간담회",
+   "ill": {
+    "kind": "icon",
+    "label": "국가과학AI연구센터(NAIS) 대전센터 · 과기정통부"
+   },
+   "icon": [
+    "Microscope",
+    "Test tube",
+    "Robot"
+   ],
+   "motion": "drive",
+   "stat1": "대전",
+   "stat1_label": "국가과학AI연구센터(NAIS)에서 간담회",
+   "stat2": "데이터·컴퓨팅",
+   "stat2_label": "자율실험실 등 분야별 전문가 토론",
+   "source": "과학기술정보통신부 (11/23)",
+   "hook": {
+    "q": "과학 연구에\nAI 활용",
+    "hi": "과기정통부 간담회",
+    "count": false
+   },
+   "summary": "과학기술정보통신부는 대전에서 인공지능을 과학 연구에 쓰는 방안을 주제로 간담회를 열었습니다. 연구 데이터와 컴퓨팅 자원을 활용하는 법, 실험을 자동화하는 방안 등이 논의 주제입니다.",
+   "question": "AI 과학자, 기대되시나요?",
+   "keywords": [
+    "과학AI",
+    "NAIS"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/23(월) 정규장 마감",
+  "headline": "코스피 −3.31%\n코스닥 −1.58%",
+  "headline_short": "코스피 −3.31%, 코스닥 −1.58%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 4708.54,
+    "pct": -3.31
+   },
+   {
+    "name": "코스닥",
+    "value": 635.45,
+    "pct": -1.58
+   }
+  ],
+  "note": "11/23 15:30 정규장 종가 · 11/20 대비 · 원·달러 1,345.9원(15:30)"
+ },
+ "oneliner": "증시는 급락\n자사주 한도는 완화",
+ "scripts": [
+  "코스피 3.31퍼센트 하락 마감. 자사주 매수 한도는 석 달간 완화. 오늘 저녁 이슈, 핵심만 정리.",
+  "금융위, 내일부터 석 달간 상장사 하루 자사주 매수 주문 한도 완화 의결. 증시안정펀드는 아직 준비 단계.",
+  "중국 상하이·선전·베이징 거래소, 30일부터 신용매수 최소 보증금 비율 100퍼센트에서 80퍼센트로 낮춰.",
+  "과기정통부, 대전에서 AI를 과학 연구에 쓰는 방안 간담회. 연구 데이터·컴퓨팅·실험 자동화 등 논의.",
+  "코스피, 장중 4,600선 아래로 밀렸다가 3.31퍼센트 내린 4,708.54 마감. 코스닥은 1.58퍼센트 하락.",
+  "오늘의 한 줄. 증시는 급락, 자사주 한도는 완화. 자사주 한도 완화, 효과 있을까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Artist palette",
+  "Balance scale",
+  "Ballot box with ballot",
+  "Bank",
+  "Bar chart",
+  "Bed",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chart decreasing",
+  "Cloud",
+  "Coin",
+  "Computer mouse",
+  "Control knobs",
+  "Desktop computer",
+  "Electric plug",
+  "Factory",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Locked with key",
+  "Mobile phone",
+  "Money with wings",
+  "Oil drum",
+  "Package",
+  "Paintbrush",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Speech balloon",
+  "Stopwatch",
+  "Teacher",
+  "Thermometer"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-23_1700_pm.md",
+  "drive_id": "1iZQDzWszmYKeyaZOj79ph4LfwhZrSUNw",
+  "job_id": "cardnews-20261123-1700",
+  "version": "v01"
+ }
+}

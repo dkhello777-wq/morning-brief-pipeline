@@ -1,0 +1,190 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.08 SUN",
+  "title": "간밤의\nAI 소식\n핵심 정리",
+  "hook": {
+    "q": "AI가 뺏는다던\n화이트칼라 +7만?",
+    "hi": "10월 7만 명↑"
+  },
+  "question": "AI 시대, 1인 창업과 취업 중 어느 쪽을 택하시겠어요?",
+  "keywords": [
+    "AI뉴스",
+    "AI일자리",
+    "데이터센터"
+  ],
+  "issues": [
+    {
+      "region": "미국 고용",
+      "short": "AI에 취약하다던 화이트칼라, 10월 7만 명 증가",
+      "headline": "AI에 밀린다던\n전문·사무직\n10월 +7만",
+      "ill": {
+        "kind": "number",
+        "value": 7,
+        "suffix": "만 명",
+        "label": "10월 미국 전문·사업서비스 고용 증가 · 2022년 7월 이후 최대 (BLS·WSJ)"
+      },
+      "icon": [
+        "Briefcase",
+        "Necktie",
+        "🇺🇸"
+      ],
+      "motion": "bob",
+      "photo": "Office cubicles workers",
+      "image_prompt": "a bright modern office floor with rows of desks where people work beside laptops, a large glowing upward bar chart on the far wall, no text, no logos, no recognizable faces",
+      "stat1": "+1만7,300",
+      "stat1_label": "경영·과학·기술 컨설팅 고용 증가 · 법률 +2,400 · 회계 +2,300 (WSJ)",
+      "stat2": "−17%",
+      "stat2_label": "문서작성 서비스 고용 1년 새 감소 (9월 자료) · 콜센터 −4.7% (WSJ)",
+      "source": "미 노동통계국(BLS) · WSJ",
+      "hook": {
+        "q": "AI가 뺏는다던\n화이트칼라 +7만?",
+        "hi": "10월 7만 명↑"
+      },
+      "summary": "미국 노동통계국의 10월 고용보고서(11월 6일)에서 전문·사업서비스 고용이 7만 명 늘었습니다. 지난 12개월 월평균 1만5천 명을 크게 웃돌고, 월스트리트저널은 2022년 7월 이후 가장 큰 증가라고 전했습니다. AI 노출도가 높다고 자주 꼽히던 경영·과학·기술 컨설팅(+1만7,300명), 법률(+2,400명), 회계(+2,300명)가 모두 늘었습니다. 다만 9월 자료에서 문서작성 서비스 고용은 1년 새 17%, 콜센터는 4.7% 줄어, 반복 업무부터 영향이 나타난다는 분석도 함께 실렸습니다(WSJ).",
+      "question": "여러분 직무는 AI 때문에 줄었나요, 바뀌었나요?",
+      "keywords": [
+        "AI일자리",
+        "미국고용"
+      ]
+    },
+    {
+      "region": "1인 창업",
+      "short": "직원 없는 창업 신청, AI 노출 업종서 26.8% 증가",
+      "headline": "직원 0명 창업\nAI 노출 업종서\n+26.8%",
+      "ill": {
+        "kind": "number",
+        "value": 26.8,
+        "decimals": 1,
+        "suffix": "%",
+        "label": "AI 노출 업종의 고용 계획 없는 창업 신청 증가율 · 2024년 1분기→2026년 1분기 (머카터스센터·CNBC)"
+      },
+      "icon": [
+        "Seedling",
+        "Shopping bags",
+        "Laptop"
+      ],
+      "motion": "bob",
+      "photo": "Small business owner working on laptop",
+      "stat1": "22.2만→28.1만",
+      "stat1_label": "분기당 고용 계획 없는 창업 신청 건수 · 같은 기간 고용형 창업 신청은 −6.4%",
+      "stat2": "250~300만$",
+      "stat2_label": "직원 0명으로 전자상거래 브랜드 12개 운영하는 창업자의 올해 예상 매출 (CNBC)",
+      "source": "CNBC · 머카터스센터",
+      "hook": {
+        "q": "직원 0명 창업\n왜 늘었나?",
+        "hi": "신청 +26.8%"
+      },
+      "summary": "CNBC가 7일 전한 조지메이슨대 머카터스센터 분석에 따르면, AI 노출도가 높은 업종에서 고용 계획 징후가 없는 창업 신청이 2024년 1분기 분기당 약 22만2천 건에서 2026년 1분기 약 28만1천 건으로 26.8% 늘었습니다. 같은 기간 직원을 둘 가능성이 높은 창업 신청은 6.4% 줄었습니다. 직원 없이 전자상거래 브랜드 12개를 운영하는 알렉스 윌런은 올해 매출을 250만~300만 달러로 예상하며, 사진·디자인·회계·광고를 AI 도구로 처리한다고 말했습니다. 분석을 맡은 경제학자는 예비·기술적 분석이며 AI가 원인이라고 단정할 수 없다고 선을 그었습니다.",
+      "question": "직원 대신 AI, 여러분 사업이라면 어디까지 맡기겠어요?",
+      "keywords": [
+        "1인창업",
+        "AI활용"
+      ]
+    },
+    {
+      "region": "유럽 시위",
+      "short": "유럽 곳곳 데이터센터 반대 시위, 15개국 행동 예고",
+      "headline": "유럽 곳곳\n데이터센터\n반대 시위",
+      "ill": {
+        "kind": "number",
+        "value": 2000,
+        "suffix": "명",
+        "label": "7일 더블린 데이터센터 반대 행진 참가자 (RTE) · 헬싱키 1,300명 (YLE)"
+      },
+      "icon": [
+        "Megaphone",
+        "Office building",
+        "🇪🇺"
+      ],
+      "motion": "sway",
+      "photo": "Dublin O'Connell Street",
+      "stat1": "100+ 단체",
+      "stat1_label": "15개국 '더러운 데이터센터 중단' 6~7일 이틀 행동 예고 · 대형 사업 중단 요구 (가디언 11/5)",
+      "stat2": "MS 부지",
+      "stat2_label": "6일 암스테르담 마이크로소프트 데이터센터 공사장 진입·점거 (AP) · 7일 덴마크 쾨게 MS 센터 앞 시위 (블룸버그)",
+      "source": "Bloomberg · RTE · YLE · The Guardian · AP",
+      "hook": {
+        "q": "유럽은 왜\n데이터센터 반대?",
+        "hi": "더블린 2천 명"
+      },
+      "summary": "블룸버그에 따르면 7일 토요일 유럽 곳곳에서 데이터센터 반대 시위가 이어졌습니다. 더블린에서 약 2,000명이 행진했고(RTE), 헬싱키에서 약 1,300명이 모였으며 핀란드 소도시에서도 시위가 열렸습니다(YLE). 가디언은 100개 넘는 단체가 15개국에서 6~7일 '더러운 데이터센터 중단' 행동을 예고하며 대형 사업 중단(모라토리엄)을 요구했다고 전했고, AP는 6일 암스테르담에서 시위대가 마이크로소프트 데이터센터 공사장에 들어가 점거했다고 보도했습니다.",
+      "question": "우리 동네에 AI 데이터센터가 들어온다면 찬성하시겠어요?",
+      "keywords": [
+        "데이터센터",
+        "유럽시위"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "구글",
+    "short": "안티그래비티 원격 에이전트",
+    "headline": "노트북 닫아도\n코딩 에이전트\n클라우드서 계속",
+    "point1": "작업을 맡기면 구글 클라우드 환경에서 코드 작성·테스트·PR 생성까지 계속 진행",
+    "point1_sub": "Google AI Pro·Ultra 개인 계정 · 순차 배포 중 · 무료·AI Plus·업무 계정은 제외",
+    "point2": "퇴근 전 코드 수정을 맡기고 폰으로 확인할 때 쓰면 됩니다.",
+    "point2_sub": "GitHub 저장소·드라이브 파일 연결 · antigravity.google.com/remote 에서 폰으로 승인·방향 조정",
+    "verdict": "써먹기",
+    "source": "Google Antigravity 문서·X (11/6)",
+    "photo": "Closed laptop on desk at night",
+    "icon": [
+      "Cloud",
+      "Laptop",
+      "Rocket"
+    ]
+  },
+  "market": {
+    "date_label": "11/6 마감 · 주말 휴장",
+    "headline": "AMD +11.04%\n마이크론 +5.12%\n주간 나스닥 −3.4%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 24579.42,
+        "pct": 1.09
+      },
+      {
+        "name": "AMD",
+        "value": 449.04,
+        "pct": 11.04
+      },
+      {
+        "name": "마이크론",
+        "value": 690.0,
+        "pct": 5.12
+      }
+    ],
+    "note": "11/6(금) 정규장 종가 · 주간 나스닥 −3.4%, S&P 500 −2.7%(CNBC) · 월요일 개장 전까지 변동 없음",
+    "photo": "Micron Technology headquarters Boise"
+  },
+  "oneliner": "겁먹기 전에\n숫자부터\n확인하자",
+  "scripts": [
+    "AI가 뺏는다던 화이트칼라 7만 명? 10월 미 고용. 오늘 AI, 핵심만 정리.",
+    "미 10월 전문·사업서비스 고용 7만 명 증가, 2022년 7월 이후 최대. 법률·회계도 증가.",
+    "AI 노출 업종 직원 없는 창업 신청 2년 새 26.8퍼센트 증가. 회계·광고를 AI로 돌린 사례.",
+    "유럽 곳곳 데이터센터 반대 시위. 더블린 2천, 헬싱키 1,300명. 단체들 대형 사업 중단 요구.",
+    "구글 안티그래비티, 노트북 닫아도 클라우드에서 계속 일하는 코딩 에이전트 공개. 퇴근 전 맡기고 폰으로 볼 때 쓰면 됩니다.",
+    "금요일 나스닥 1.09, 에이엠디 11.04, 마이크론 5.12퍼센트 상승. 주간 나스닥 3.4퍼센트 하락.",
+    "오늘의 한 줄. 겁먹기 전에 숫자부터 확인하자. AI 시대, 1인 창업과 취업 중 어느 쪽을 택하시겠어요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "Fuel pump",
+    "Bear",
+    "Fog",
+    "Electric plug",
+    "Balance scale",
+    "Chart increasing",
+    "Sheaf of rice",
+    "Thermometer",
+    "Credit card",
+    "Money bag",
+    "Classical building",
+    "Laptop",
+    "Bank",
+    "Globe showing Europe-Africa",
+    "Movie camera",
+    "Chart decreasing",
+    "Scroll"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

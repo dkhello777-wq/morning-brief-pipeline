@@ -1,0 +1,183 @@
+{
+  "topic": "ai",
+  "edition": "am",
+  "date_short": "11.03 TUE",
+  "title": "간밤의\nAI 소식\n1분 정리",
+  "hook": {
+    "q": "오라클\n200억달러 더?",
+    "hi": "주가 −8.76%"
+  },
+  "question": "AI 인프라 돈 경쟁, 어디까지 갈까요?",
+  "keywords": [
+    "AI뉴스",
+    "오라클",
+    "앤트로픽"
+  ],
+  "issues": [
+    {
+      "region": "오라클 자금 조달",
+      "short": "오라클 200억달러 조달",
+      "headline": "오라클\n주식·채권\n200억달러 조달",
+      "ill": {
+        "kind": "number",
+        "value": 200,
+        "suffix": "억달러",
+        "label": "보통주 100억 + 선순위 채권 100억 · 11/2 SEC 신고"
+      },
+      "icon": [
+        "Money bag",
+        "Money with wings",
+        "Factory"
+      ],
+      "motion": "spin",
+      "photo": "Oracle Corporation headquarters Austin Texas",
+      "image_prompt": "a towering stack of server racks balanced on a seesaw against a mountain of bond certificates and coins",
+      "stat1": "−8.76%",
+      "stat1_label": "11/2 종가 119.22달러",
+      "stat2": "FY2030\n상한",
+      "stat2_label": "AI용 추가 조달 200억달러 이내 약속 (지난주 투자자의 날)",
+      "source": "Reuters · CNBC",
+      "hook": {
+        "q": "오라클\n200억달러 더?",
+        "hi": "주가 −8.76%"
+      },
+      "summary": "오라클이 11월 2일 미국 증권거래위원회 신고로 보통주 100억 달러와 선순위 채권 100억 달러, 합계 200억 달러를 조달할 계획을 밝혔습니다. 자금은 설비 투자와 부채 상환 등 일반 기업 용도에 쓰며, 회사는 지난주 투자자의 날에서 2030 회계연도까지 AI용 추가 조달을 이 200억 달러 이내로 제한하겠다고 약속했습니다. 빚으로 하는 AI 투자를 금리 상승기에 정당화하기 어려워진다는 투자자 우려가 커지며 주가는 이날 8.76% 내린 119.22달러로 마감했습니다.",
+      "question": "AI 데이터센터, 빚내서 짓는 게 맞을까요?",
+      "keywords": [
+        "오라클",
+        "AI투자"
+      ]
+    },
+    {
+      "region": "앤트로픽 상장 신고",
+      "short": "앤트로픽 분기 매출 170억달러",
+      "headline": "앤트로픽\n3분기 매출\n170억달러",
+      "ill": {
+        "kind": "number",
+        "value": 170,
+        "suffix": "억달러",
+        "label": "3분기 매출 (전년 동기 대비 +1,127%)"
+      },
+      "icon": [
+        "Brain",
+        "Money bag",
+        "Light bulb"
+      ],
+      "motion": "bob",
+      "photo": "Anthropic office San Francisco",
+      "stat1": "−233억$",
+      "stat1_label": "3분기 순손실 (전환사채 평가손 영향)",
+      "stat2": "8,954억$",
+      "stat2_label": "컴퓨팅·인프라 약정 총액 · 2030년 말까지 4,475억",
+      "source": "SEC S-1/A · Reuters · CNBC",
+      "hook": {
+        "q": "앤트로픽\n분기 170억$?",
+        "hi": "약정 8954억$"
+      },
+      "summary": "앤트로픽이 11월 2일 수정 상장 신고서(S-1/A)에서 3분기 매출 169.6억 달러를 공개했습니다. 1년 전보다 1,127% 늘었고 2분기 115.6억 달러에서 47% 증가했지만, 전환사채 평가손 등으로 3분기 순손실은 232.9억 달러, 영업손실은 5.67억 달러였습니다. 컴퓨팅·인프라 구매·임대 약정은 약 8,954억 달러로, 이 중 4,475억 달러는 2030년 말 이전, 698억 달러는 앞으로 12개월 안에 집행될 예정입니다. 로이터는 앤트로픽이 11월 9일 주간에 투자자 대상 주식 마케팅을 시작할 것으로 보인다고 지난달 전했습니다.",
+      "question": "매출 12배, 약정 9천억 달러. 어느 숫자가 먼저 보이나요?",
+      "keywords": [
+        "앤트로픽",
+        "AI상장"
+      ]
+    },
+    {
+      "region": "마벨–루멘텀",
+      "short": "1,150억달러 반도체 합병",
+      "headline": "마벨, 루멘텀\n1,150억달러에\n주식 교환 인수",
+      "ill": {
+        "kind": "number",
+        "value": 1150,
+        "suffix": "억달러",
+        "label": "기업가치 기준 · 전액 주식 교환 · 2028년 상반기 마무리 예정"
+      },
+      "icon": [
+        "Electric plug",
+        "Satellite antenna",
+        "Handshake"
+      ],
+      "motion": "sway",
+      "photo": "Marvell Technology headquarters Santa Clara",
+      "stat1": "4.5주",
+      "stat1_label": "루멘텀 1주당 받는 마벨 주식",
+      "stat2": "−12.72%",
+      "stat2_label": "발표 당일 마벨 종가 171.41달러 · 루멘텀 −18%",
+      "source": "Marvell 보도자료 · Reuters",
+      "hook": {
+        "q": "1,150억달러\n합병인데 −13%?",
+        "hi": "마벨 −12.7%"
+      },
+      "summary": "반도체 기업 마벨이 11월 2일 광통신 부품업체 루멘텀을 전액 주식 교환으로 인수한다고 발표했습니다. 루멘텀 주주는 1주당 마벨 주식 4.5주를 받고, 기업가치 기준 1,150억 달러, 주당 약 1,132달러로 10월 28일 종가 대비 약 23.9% 프리미엄입니다. AI 데이터센터용 연결 기술을 겨냥한 거래로 2028년 상반기 마무리를 목표로 하지만, 발표 당일 마벨은 12.72%, 루멘텀은 18% 떨어졌습니다.",
+      "question": "1,150억 달러 합병, 과한 베팅일까요?",
+      "keywords": [
+        "마벨",
+        "루멘텀"
+      ]
+    }
+  ],
+  "ai": {
+    "company": "구글",
+    "short": "비즈 사진 아바타",
+    "headline": "구글 비즈\n내 사진으로\n아바타 영상",
+    "point1": "사진 한 장 올리면 영상 속 내 아바타 생성",
+    "point1_sub": "컴퓨터·드라이브·포토 사진 선택 · 배경·조명 보정 · 프로젝트에 저장해 재사용",
+    "point2": "얼굴 안 찍고 설명 영상을 만들 때 쓰면 됩니다.",
+    "point2_sub": "개인 Google 계정·Google AI Pro·Ultra, 비즈니스·교육 플랜 · 10/30부터 15일 내 순차 적용(예정 배포 도메인은 11/20부터)",
+    "verdict": "써먹기",
+    "source": "Google Workspace Updates 블로그 (11/2)",
+    "photo": "Googleplex"
+  },
+  "market": {
+    "date_label": "11/2 마감 (KST 06:00)",
+    "headline": "AI 청구서 불안\n오라클 −8.76%\n마벨 −12.72%",
+    "rows": [
+      {
+        "name": "나스닥",
+        "value": 25164.32,
+        "pct": -1.07
+      },
+      {
+        "name": "오라클",
+        "value": 119.1,
+        "pct": -8.76
+      },
+      {
+        "name": "마벨",
+        "value": 171.41,
+        "pct": -12.72
+      }
+    ],
+    "note": "오라클·마벨 급락 → 돈 쓰는 AI 기업에 시장이 냉정했다 · 인텔 −8.80%, 애플은 실적 발표 앞두고 −1.83%",
+    "photo": "Oracle Corporation headquarters Austin Texas"
+  },
+  "oneliner": "버는 돈보다\n약정한 돈을\n먼저 보라",
+  "scripts": [
+    "오라클 200억 달러 더? 주가 8.76퍼센트 하락. 오늘 AI, 1분 정리.",
+    "오라클, 주식 100억·채권 100억 달러 조달. 2030 회계연도까지 AI 추가 조달은 여기까지.",
+    "앤트로픽 3분기 매출 170억 달러, 1년 새 12배 넘게. 컴퓨팅·인프라 약정은 8954억 달러.",
+    "마벨이 루멘텀을 기업가치 1150억 달러 주식 교환으로 인수. 당일 마벨 12.72퍼센트 하락.",
+    "구글 비즈에서 내 사진 한 장으로 영상 아바타를 만들 수 있습니다. 얼굴 안 찍고 설명 영상을 만들 때 쓰면 됩니다.",
+    "나스닥 1.07, 오라클 8.76, 마벨 12.72퍼센트 하락. 돈 쓰는 AI 기업에 시장이 냉정했습니다.",
+    "오늘의 한 줄. 버는 돈보다 약정한 돈을 먼저 보세요. AI 인프라 돈 경쟁, 어디까지 갈까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+  ],
+  "shorts_to_build": [],
+  "recent_icons": [
+    "House",
+    "Banknote with dollar sign",
+    "Megaphone",
+    "Fuel pump",
+    "Coin",
+    "Dove",
+    "Mobile phone",
+    "Briefcase",
+    "Graduation cap",
+    "Oil drum",
+    "Laptop",
+    "Balance scale",
+    "Bank",
+    "Articulated lorry",
+    "Classical building"
+  ],
+  "voice_id": "tc_68d4b115f0486108a7eefb37",
+  "note": "정오 게시 전 재대조: 인텔·애플 하락을 'AI 기업에 냉정' 설명에서 분리"
+}

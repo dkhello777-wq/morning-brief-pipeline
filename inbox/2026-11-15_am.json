@@ -1,0 +1,184 @@
+{
+ "edition": "am",
+ "date_short": "11.15 SUN",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "hook": {
+  "q": "중국 수입시장\n6개월째 1위",
+  "hi": "수출 1조$ 눈앞"
+ },
+ "question": "수출 1조 달러, 체감되시나요?",
+ "keywords": [
+  "수출",
+  "독립유공자",
+  "미국증시"
+ ],
+ "issues": [
+  {
+   "region": "수출",
+   "short": "한국, 중국 수입시장 6개월째 1위",
+   "headline": "중국 수입시장\n한국\n6개월째 1위",
+   "ill": {
+    "kind": "number",
+    "value": 9.8,
+    "decimals": 1,
+    "suffix": "%",
+    "label": "중국 수입시장 한국 점유율 · 1~9월 (무역협회)"
+   },
+   "icon": [
+    "Ship",
+    "Package",
+    "Chart increasing"
+   ],
+   "motion": "pulse",
+   "photo": "Busan port container terminal",
+   "stat1": "6개월",
+   "stat1_label": "4~9월 중국 수입시장 1위",
+   "stat2": "1조$",
+   "stat2_label": "첫 연간 수출, 이르면 19~20일 전망",
+   "source": "연합뉴스 · 무역협회 (11/14)",
+   "hook": {
+    "q": "중국 수입시장\n6개월째 1위",
+    "hi": "수출 1조$ 눈앞"
+   },
+   "summary": "한국무역협회 통계에 따르면 한국은 4월부터 9월까지 6개월 연속 중국 수입시장 1위를 지켰고, 1~9월 점유율은 9.8%였습니다. 반도체 수출 호조로 이르면 이달 19~20일께 처음으로 연간 수출 1조 달러를 넘을 것으로 예상됩니다(연합뉴스, 11/14).",
+   "question": "수출 1조 달러, 체감되시나요?",
+   "keywords": [
+    "수출",
+    "반도체"
+   ]
+  },
+  {
+   "region": "국가보훈부",
+   "short": "호시한·이괄 지사 유해 오늘 귀환 예정",
+   "headline": "독립유공자\n두 지사\n고국으로",
+   "ill": {
+    "kind": "icon",
+    "label": "국가보훈부 발표 (11/13) · 순국선열의 날 앞두고"
+   },
+   "icon": [
+    "Airplane arrival",
+    "Flag: South Korea",
+    "Rosette"
+   ],
+   "motion": "sway",
+   "stat1": "15일",
+   "stat1_label": "인천공항 도착·영접 예정",
+   "stat2": "16일",
+   "stat2_label": "서울 서대문 봉환식",
+   "source": "국가보훈부 · 연합뉴스 (11/13)",
+   "hook": {
+    "q": "독립유공자\n고국으로",
+    "hi": "오늘 인천공항 귀환"
+   },
+   "summary": "미국과 우즈베키스탄에 안장됐던 독립유공자 호시한·이괄 지사의 유해가 배우자 유해와 함께 15일 인천공항으로 들어올 예정입니다. 봉환식은 16일 서울 서대문구 3·1독립선언기념탑에서 열리고, 두 지사는 국립대전현충원에 안장됩니다(국가보훈부·연합뉴스).",
+   "question": "독립유공자 유해 봉환, 어떻게 보시나요?",
+   "keywords": [
+    "독립유공자",
+    "보훈부"
+   ]
+  },
+  {
+   "region": "미국",
+   "short": "미국 증시 금요일 엇갈린 마감",
+   "headline": "미국 증시\n금요일\n엇갈린 마감",
+   "ill": {
+    "kind": "number",
+    "value": 0.91,
+    "decimals": 2,
+    "suffix": "%",
+    "label": "나스닥종합 하락 · 11/13(금) 종가 · 주말 휴장"
+   },
+   "icon": [
+    "Chart decreasing",
+    "Dollar banknote",
+    "Bank"
+   ],
+   "motion": "pulse",
+   "photo": "New York Stock Exchange facade",
+   "stat1": "+0.10%",
+   "stat1_label": "다우 · 52,347.55",
+   "stat2": "-0.40%",
+   "stat2_label": "S&P 500 · 7,561.67",
+   "source": "AP · Reuters · 11/13 정규장 종가",
+   "hook": {
+    "q": "주말 앞둔\n미국 증시는?",
+    "hi": "나스닥 -0.91%"
+   },
+   "summary": "뉴욕증시의 마지막 거래일인 13일(금) 다우는 0.10% 오른 52,347.55, S&P 500은 0.40% 내린 7,561.67, 나스닥종합은 0.91% 내린 25,136.27에 마감했습니다. 기술주가 약세였고, 주말이라 새 정규장 마감은 없습니다(AP·Reuters).",
+   "question": "다음 주 미국 증시, 어떻게 보시나요?",
+   "keywords": [
+    "미국증시",
+    "나스닥"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "llama.cpp",
+  "short": "내 컴퓨터에서 AI 실행 도구, 라이브러리 1.0 공개",
+  "headline": "llama.cpp\n라이브러리\n1.0 공개",
+  "point1": "개인 컴퓨터에서 AI 모델을 돌리는 오픈소스 도구",
+  "point1_sub": "새 AI 모델이 아니라 앱에 AI를 붙이는 라이브러리 (ggml-org, 11/13)",
+  "point2": "앞으로 호환이 깨지는 변경은 큰 버전 번호로 알립니다.",
+  "point2_sub": "llama.cpp·ggml 모두 v1.0.0",
+  "verdict": "개발자용",
+  "source": "ggml-org 공식 블로그 · GitHub (11/13)",
+  "icon": [
+   "Laptop",
+   "Llama",
+   "Gear"
+  ]
+ },
+ "market": {
+  "date_label": "11/13(금) 정규장 마감 · 주말 휴장",
+  "headline": "나스닥 -0.91%\nS&P -0.40%\n다우 +0.10%",
+  "dow": {
+   "value": 52347.55,
+   "pct": 0.1
+  },
+  "spx": {
+   "value": 7561.67,
+   "pct": -0.4
+  },
+  "ndx": {
+   "value": 25136.27,
+   "pct": -0.91
+  },
+  "note": "11/13(금) 정규장 공식 종가 · 주말이라 새 마감 없음",
+  "photo": "Wall Street sign"
+ },
+ "oneliner": "수출은 1조 달러 앞\n독립유공자는 고국 품으로",
+ "scripts": [
+  "중국 수입시장 6개월째 1위. 오늘 세계 이슈, 핵심만 정리.",
+  "한국, 중국 수입시장 6개월째 1위. 연간 수출 1조 달러는 이르면 20일께 전망.",
+  "호시한·이괄 지사 유해, 오늘 인천공항으로 귀환 예정. 봉환식은 내일 서대문.",
+  "미국 증시 금요일 엇갈린 마감. 나스닥 0.91퍼센트 하락. 주말이라 휴장.",
+  "라마 닷 씨피피, 라이브러리 1.0 공개. 내 컴퓨터에서 AI를 돌리는 도구입니다.",
+  "다우 0.10퍼센트 상승, 에스앤피 0.40퍼센트 하락, 나스닥 0.91퍼센트 하락.",
+  "오늘의 한 줄. 수출은 1조 달러 앞, 독립유공자는 고국 품으로. 수출 1조 달러, 체감되시나요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Robot",
+  "High voltage",
+  "Classical building",
+  "Dove",
+  "Handshake",
+  "Laptop",
+  "Chart decreasing",
+  "Dollar banknote",
+  "Abacus",
+  "Magnifying glass tilted left",
+  "Mobile phone",
+  "Light bulb"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-15_0600_am_v01.md",
+  "drive_id": "1XJhcGVvDFZwBaEITMEsNRz0zYpYyxt28",
+  "job_id": "cardnews-20261115-0600",
+  "version": "v01"
+ }
+}

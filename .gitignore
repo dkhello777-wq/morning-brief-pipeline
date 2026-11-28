@@ -2,3 +2,5 @@ config.json
 *.b64
 out/
 work/
+__pycache__/
+*.pyc

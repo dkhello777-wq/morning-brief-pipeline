@@ -1,0 +1,160 @@
+{
+ "edition": "pm",
+ "date_short": "11.15 SUN",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "hook": {
+  "q": "아세안\n정상회의 개막",
+  "hi": "마닐라 15~17일"
+ },
+ "question": "AI가 진행하는 홈쇼핑, 보실 건가요?",
+ "keywords": [
+  "아세안",
+  "이재명",
+  "현대홈쇼핑"
+ ],
+ "issues": [
+  {
+   "region": "아세안",
+   "short": "필리핀 마닐라서 아세안 정상회의 개막 (15~17일)",
+   "headline": "아세안\n정상회의\n마닐라 개막",
+   "ill": {
+    "kind": "icon",
+    "label": "11/15 개막 · 사흘간 · 필리핀 의장국"
+   },
+   "icon": [
+    "Globe showing Asia-Australia",
+    "Handshake",
+    "Spiral calendar"
+   ],
+   "motion": "sway",
+   "photo": "Philippine International Convention Center",
+   "stat1": "3일",
+   "stat1_label": "11/15~17 · 필리핀 마닐라",
+   "stat2": "에너지·식량",
+   "stat2_label": "공급 문제 · 지역 안보 논의",
+   "source": "아세안 사무국 · 필리핀 정부 (11/15)",
+   "hook": {
+    "q": "아세안\n정상회의 개막",
+    "hi": "마닐라 15~17일"
+   },
+   "summary": "동남아시아 국가 정상들이 15일 필리핀 마닐라에 모였습니다. 사흘간 열리는 이번 회의에서는 에너지와 식량 공급, 지역 안보와 같은 문제를 논의합니다(아세안 사무국·필리핀 정부).",
+   "question": "아세안 정상회의, 관심 있게 보시나요?",
+   "keywords": [
+    "아세안",
+    "필리핀"
+   ]
+  },
+  {
+   "region": "외교",
+   "short": "이재명 대통령, 16일 한·아세안·한·메콩 정상회의 참석 예정",
+   "headline": "이 대통령\n내일 한·아세안\n정상회의",
+   "ill": {
+    "kind": "icon",
+    "label": "11/16(월) 참석 예정 · 청와대 11/12 브리핑"
+   },
+   "icon": [
+    "Handshake",
+    "Gem stone",
+    "Police car light"
+   ],
+   "motion": "pulse",
+   "stat1": "16일",
+   "stat1_label": "한·아세안 → 한·메콩 정상회의",
+   "stat2": "핵심광물",
+   "stat2_label": "초국가 범죄 대응 협력도 논의 예정",
+   "source": "청와대 브리핑 (11/12)",
+   "hook": {
+    "q": "이 대통령\n내일 아세안행",
+    "hi": "16일 정상회의"
+   },
+   "summary": "이재명 대통령은 16일 한·아세안 정상회의에 참석합니다. 이어 한·메콩 정상회의에서 핵심 광물과 국경을 넘는 범죄에 어떻게 함께 대응할지 논의할 예정입니다(청와대 11/12 브리핑).",
+   "question": "이번 아세안 순방, 무엇을 기대하시나요?",
+   "keywords": [
+    "이재명",
+    "아세안"
+   ]
+  },
+  {
+   "region": "유통·AI",
+   "short": "현대홈쇼핑, AI로 만든 판매 방송 16일 첫 정규 편성",
+   "headline": "쇼호스트 없이\nAI가 만든\n홈쇼핑 방송",
+   "ill": {
+    "kind": "icon",
+    "label": "목소리·화면 모두 AI 제작 · 현대홈쇼핑 (11/15)"
+   },
+   "icon": [
+    "Television",
+    "Robot",
+    "Kiwi fruit"
+   ],
+   "motion": "bob",
+   "stat1": "15:20",
+   "stat1_label": "16일 첫 정규 편성 예정",
+   "stat2": "골드키위",
+   "stat2_label": "첫 상품 · 제주 골드키위",
+   "source": "연합뉴스 · 뉴시스 (11/15)",
+   "hook": {
+    "q": "쇼호스트 없는\n홈쇼핑?",
+    "hi": "AI가 목소리·화면"
+   },
+   "summary": "현대홈쇼핑은 사람 쇼호스트나 카메라 촬영 없이, 인공지능으로 음성과 화면을 만든 판매 방송을 16일 처음 정규 편성한다고 밝혔습니다. 첫 상품은 제주 골드키위입니다(연합뉴스·뉴시스).",
+   "question": "AI가 진행하는 홈쇼핑, 보실 건가요?",
+   "keywords": [
+    "현대홈쇼핑",
+    "AI"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "일요일 휴장 · 11/13(금) 마감",
+  "headline": "국내 증시 휴장\n금요일 코스피 −0.98%\n코스닥 +0.45%",
+  "headline_short": "일요일 휴장 · 13일 코스피 −0.98%, 코스닥 +0.45%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5290.53,
+    "pct": -0.98
+   },
+   {
+    "name": "코스닥",
+    "value": 699.66,
+    "pct": 0.45
+   }
+  ],
+  "note": "11/15 일요일 휴장 · 마지막 정규장 11/13 15:30 종가 · 전 거래일 대비",
+  "photo": "Korea Exchange"
+ },
+ "oneliner": "쇼호스트 없이\nAI가 파는\n홈쇼핑이 온다",
+ "scripts": [
+  "아세안 정상회의 개막, AI 홈쇼핑 첫 편성. 오늘 국내 이슈, 핵심만 정리.",
+  "아세안 정상회의, 필리핀 마닐라서 개막. 사흘간 에너지·식량·지역 안보 논의.",
+  "이재명 대통령, 내일 한·아세안, 한·메콩 정상회의 참석. 핵심 광물·국경 범죄 협력 논의.",
+  "현대홈쇼핑, 음성·화면 모두 AI로 만든 방송 내일 첫 정규 편성. 첫 상품은 제주 골드키위.",
+  "국내 증시는 일요일 휴장. 금요일 코스피 0.98퍼센트 내렸고, 코스닥 0.45퍼센트 올랐습니다.",
+  "오늘의 한 줄. 쇼호스트 없이 AI가 파는 홈쇼핑이 온다. AI가 진행하는 홈쇼핑, 보실 건가요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Office building",
+  "Bust in silhouette",
+  "Memo",
+  "Shield",
+  "Magnifying glass tilted right",
+  "Robot",
+  "High voltage",
+  "Laptop",
+  "Chart increasing",
+  "Building construction",
+  "Factory",
+  "Airplane"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-15_1700_pm_v01.md",
+  "drive_id": "1QZEWcHqM3htm4Eat-YjV-STr33l29ypL",
+  "job_id": "cardnews-20261115-1700",
+  "version": "v01"
+ }
+}

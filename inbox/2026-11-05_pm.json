@@ -1,0 +1,166 @@
+{
+ "edition": "pm",
+ "date_short": "11.05 THU",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "hook": {
+  "q": "코스피·코스닥\n5%대 하락",
+  "hi": "−5.28%"
+ },
+ "question": "금융권 보안 전수점검, 이번엔 달라질까요?",
+ "keywords": [
+  "코스피",
+  "금융보안",
+  "반도체"
+ ],
+ "issues": [
+  {
+   "region": "금융위",
+   "short": "금융권 580여 개사 보안 전수점검 추진",
+   "headline": "금융권 580여 곳\n보안 전수점검\n추진",
+   "ill": {
+    "kind": "number",
+    "value": 580,
+    "suffix": "여 개사",
+    "label": "보안 전수점검 대상 금융회사 · 가상자산·전자금융 포함 (금융위 11/5 발표)"
+   },
+   "icon": [
+    "Shield",
+    "Locked with key",
+    "Bank"
+   ],
+   "motion": "pulse",
+   "photo": "Financial Services Commission Korea",
+   "stat1": "외부접점",
+   "stat1_label": "외부접점과 내부통제체계 운영실태 점검 추진 · 점검 완료 아님",
+   "stat2": "11/5",
+   "stat2_label": "금융위 간담회 발표 · 은행·증권·보험·가상자산·온투업 포함",
+   "source": "금융위원회 · 정책브리핑",
+   "hook": {
+    "q": "금융권 보안\n전수점검?",
+    "hi": "580여 개사"
+   },
+   "summary": "금융당국이 5일 간담회에서 은행·증권·보험뿐 아니라 가상자산·전자금융·온라인투자연계금융업 등을 포함한 금융권 580여 개사의 보안을 전수점검하겠다고 발표했습니다. 잇단 침해사고에 대응해 외부접점과 내부통제체계 운영실태를 점검하는 것으로, 점검을 추진한다는 발표이며 아직 끝난 것은 아닙니다.",
+   "question": "금융권 보안 전수점검, 이번엔 달라질까요?",
+   "keywords": [
+    "금융보안",
+    "가상자산"
+   ]
+  },
+  {
+   "region": "반도체",
+   "short": "실트로닉 CEO: AI로 칩 공급 쏠려",
+   "headline": "AI로 칩 쏠려\n폰·PC 공급\n제약 우려",
+   "ill": {
+    "kind": "icon"
+   },
+   "icon": [
+    "Mobile phone",
+    "Laptop",
+    "Gear"
+   ],
+   "motion": "bob",
+   "photo": "Silicon wafer",
+   "stat1": "AI 쏠림",
+   "stat1_label": "AI 쪽으로 반도체 공급이 배분된다는 실트로닉 CEO 미하엘 헤크마이어 인터뷰 (Reuters)",
+   "stat2": "폰·PC",
+   "stat2_label": "스마트폰·PC 등 다른 시장 공급이 제약된다는 발언 · 실트로닉은 연매출 전망 소폭 상향",
+   "source": "Reuters · Siltronic",
+   "hook": {
+    "q": "AI로 칩 쏠려\n폰·PC는?",
+    "hi": "공급 제약"
+   },
+   "summary": "독일 웨이퍼 업체 실트로닉의 미하엘 헤크마이어 최고경영자는 로이터 인터뷰에서 AI 쪽으로 반도체 공급이 배분되면서 스마트폰과 PC 등 다른 시장의 공급이 제약받고 있다고 말했습니다. 실트로닉은 4일 실적 발표에서 AI가 이끄는 수요로 웨이퍼 수요가 늘었다며 올해 매출 전망을 소폭 올렸습니다.",
+   "question": "스마트폰·PC 값, 오를 거라 보세요?",
+   "keywords": [
+    "반도체",
+    "실트로닉"
+   ]
+  },
+  {
+   "region": "오픈AI",
+   "short": "AI로 리눅스 취약점 948건 수정안",
+   "headline": "AI가 리눅스\n취약점 948건\n수정안 생성",
+   "ill": {
+    "kind": "number",
+    "value": 948,
+    "suffix": "건",
+    "label": "오픈AI가 수정안을 만든 리눅스 로컬 권한 상승 취약점 수 (회사 발표)"
+   },
+   "icon": [
+    "Penguin",
+    "Laptop",
+    "Shield"
+   ],
+   "motion": "bob",
+   "photo": "Tux Linux penguin",
+   "stat1": "연구 발표",
+   "stat1_label": "10월 중순 통제된 연구 환경에서 실행 · 11/4 발표",
+   "stat2": "사람 검토",
+   "stat2_label": "수정안은 연구자·유지관리자 검토를 거침 · 전부 배포 완료 아님",
+   "source": "OpenAI 공식 연구 발표 (11/4)",
+   "hook": {
+    "q": "AI가 리눅스\n취약점 고친다?",
+    "hi": "948건"
+   },
+   "summary": "오픈AI는 4일 통제된 연구 환경에서 AI로 리눅스 취약점을 재현하고, 948개의 서로 다른 로컬 권한 상승 취약점에 대한 수정안을 만들었다고 발표했습니다. 회사 자체 발표이며, 자동으로 만든 수정안은 사람 연구자와 유지관리자의 검토를 거칩니다.",
+   "question": "보안 취약점 찾기, AI에 맡겨도 될까요?",
+   "keywords": [
+    "오픈AI",
+    "보안"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/5 마감 (15:30)",
+  "headline": "코스피·코스닥\n5%대 하락\n반도체주 약세",
+  "headline_short": "코스피 −5.28%, 코스닥 −5.11%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5383.8,
+    "pct": -5.28
+   },
+   {
+    "name": "코스닥",
+    "value": 678.41,
+    "pct": -5.11
+   }
+  ],
+  "note": "코스피 −300.00p · 코스닥 −36.54p · 한국경제TV: 미 데이터센터 규제 우려 속 반도체주 약세",
+  "photo": "Korea Exchange building Yeouido"
+ },
+ "oneliner": "주가는 5% 빠지고\n금융권은 보안 점검,\nAI는 취약점 수정안",
+ "scripts": [
+  "코스피·코스닥 5퍼센트대 하락. 오늘 국내 이슈와 증시, 핵심만 정리.",
+  "금융당국, 가상자산업체를 포함한 금융권 580여 개사 보안 전수점검 추진. 잇단 침해사고 대응입니다.",
+  "실트로닉 CEO, AI로 반도체 공급이 몰려 스마트폰·PC용이 제약된다고 로이터에 밝혔습니다.",
+  "오픈AI, AI로 리눅스 취약점 948건의 수정안을 만들었다고 발표. 전문가 검토를 거칩니다.",
+  "코스피 5.28퍼센트 내린 5,383.80, 코스닥 5.11퍼센트 하락. 반도체주가 약세였습니다.",
+  "오늘의 한 줄. 주가는 5퍼센트 빠지고, 금융권은 보안 점검, AI는 취약점 수정안. 금융권 보안 전수점검, 이번엔 달라질까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Mobile phone",
+  "Ballot box with ballot",
+  "Graduation cap",
+  "Fuel pump",
+  "Coin",
+  "Balance scale",
+  "Magnifying glass tilted left",
+  "Desktop computer",
+  "High voltage",
+  "Ship",
+  "Shopping cart",
+  "Cityscape",
+  "Speech balloon"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-05_1700_pm_v01.md",
+  "drive_id": "1f7sS9JiM7aBCL94doFFREtBHaWwUGGAj",
+  "job_id": "cardnews-20261105-1700",
+  "version": "v01"
+ }
+}

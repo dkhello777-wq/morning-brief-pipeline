@@ -1,0 +1,5 @@
+{"cards":[
+{"photo":"photos/google.jpg","kicker":"AI NEWS","old":"$324.89","new":"$283.82","num_label":"알파벳 주가 · 10/29 하루 −12.64%\n상장 이후 최악의 하루","tag":"AI 실적","sub":"Alphabet","head":"AI에 돈 쏟더니\n구글 [[하루 5천억 달러]] 증발","credit":"사진 David Nagle · Wikimedia Commons · CC BY-SA 4.0","seconds":6},
+{"photo":"photos/anthropic.jpg","kicker":"AI NEWS","old":"코딩 면접","new":"0번","num_label":"앤트로픽 한 팀 · 10월부터 채용에서 폐지\n\"작은 코딩 문제는 이제 Claude가 더 잘 푼다\"","tag":"AI 채용","sub":"Anthropic","head":"코딩 면접이 사라진다,\n이제 [[만든 걸]] 보여 줘라","credit":"사진 TechCrunch · Wikimedia Commons · CC BY 2.0","seconds":6},
+{"photo":"photos/deepmind.jpg","kicker":"AI NEWS","old":"","new":"59점","num_label":"제미나이 4 카본 · Artificial Analysis 지수 1위\n보안 방어 기관부터 먼저 공개","tag":"AI 모델","sub":"Google DeepMind","head":"구글 새 AI,\n[[보안팀부터]] 먼저 푼다","credit":"사진 Christopher Michel · Wikimedia Commons · CC BY-SA 4.0","seconds":6}
+]}

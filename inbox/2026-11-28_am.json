@@ -1,0 +1,242 @@
+{
+ "edition": "am",
+ "date_short": "11.28 SAT",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "뉴욕 3대 지수\n동반 상승",
+  "hi": "나스닥 +2.31%",
+  "count": false
+ },
+ "question": "반등, 다음 주에도 이어질까요?",
+ "keywords": [
+  "뉴욕증시",
+  "코스피",
+  "고용보고서"
+ ],
+ "issues": [
+  {
+   "region": "국내 증시",
+   "short": "11/27 코스피 4,915.68 (+4.34%) · 코스닥 708.99 (+8.13%) · 외국인 코스피 약 1.1조 원 순매수",
+   "headline": "코스피 4,900선\n회복\n코스닥 8% 급등",
+   "ill": {
+    "kind": "number",
+    "value": 8.13,
+    "suffix": "%",
+    "label": "코스닥 11/27 정규장 상승률 · 708.99 (연합뉴스)"
+   },
+   "icon": [
+    "Fire",
+    "Flag in hole",
+    "Seedling"
+   ],
+   "motion": "bob",
+   "stat1": "+4.34%",
+   "stat1_label": "코스피 4,915.68 · 11/27 마감",
+   "stat2": "약 1.1조 원",
+   "stat2_label": "외국인 유가증권시장 순매수 · 원·달러 주간 1,337.9원(−4.8원)",
+   "source": "연합뉴스 · 삼성증권 · 조선비즈 (11/27)",
+   "hook": {
+    "q": "코스닥\n8% 급등",
+    "hi": "코스피 4,900선",
+    "count": false
+   },
+   "summary": "금요일 국내장에서 코스피는 4.34% 올라 4,900선을 회복했고, 코스닥은 8.13% 뛰었습니다. 유가증권시장에서 외국인은 약 1조 1천억 원을 순매수했고, 서울 외환시장 주간 거래에서 원·달러 환율은 4원 80전 내렸습니다.",
+   "question": "반등, 다음 주에도 이어질까요?",
+   "keywords": [
+    "코스피",
+    "코스닥"
+   ]
+  },
+  {
+   "region": "뉴욕 주간",
+   "short": "뉴욕 3대 지수 주간 모두 5% 이상 상승 · 나스닥 종합 주간 +6.7%",
+   "headline": "뉴욕 3대 지수\n한 주 새\n5% 넘게 상승",
+   "ill": {
+    "kind": "number",
+    "value": 6.7,
+    "suffix": "%",
+    "label": "나스닥 종합 주간 상승률 · 11/27 단축장 마감 기준 (AP)"
+   },
+   "icon": [
+    "Tear-off calendar",
+    "Trophy",
+    "Party popper"
+   ],
+   "motion": "sway",
+   "stat1": "+6.7%",
+   "stat1_label": "나스닥 종합 주간",
+   "stat2": "5%+",
+   "stat2_label": "다우·S&P500도 주간 5% 이상",
+   "source": "AP (11/27)",
+   "hook": {
+    "q": "뉴욕 한 주\n얼마나 올랐나",
+    "hi": "나스닥 주간 +6.7%",
+    "count": false
+   },
+   "summary": "뉴욕 3대 지수는 주간으로도 모두 5% 이상 올랐고, 나스닥 종합은 한 주 동안 6.7% 상승했습니다. 금요일은 추수감사절 다음 날 단축장으로 한국시간 토요일 새벽 3시에 정규장이 끝났습니다.",
+   "question": "이번 반등, 믿을 만할까요?",
+   "keywords": [
+    "뉴욕증시",
+    "나스닥"
+   ]
+  },
+  {
+   "region": "다음 주 일정",
+   "short": "미국 11월 고용보고서 12/4(금) 22:30 KST 발표 예정 · 주말 한미 주식 정규장 휴장",
+   "headline": "미국 고용보고서\n12/4 밤\n발표 예정",
+   "ill": {
+    "kind": "icon",
+    "label": "현지 12/4 08:30 동부시간 = 한국 22:30 · 결과 전망 아님 (미 노동통계국)"
+   },
+   "icon": [
+    "Spiral calendar",
+    "Briefcase",
+    "Megaphone"
+   ],
+   "motion": "drive",
+   "stat1": "12/4",
+   "stat1_label": "금요일 발표 예정",
+   "stat2": "22:30",
+   "stat2_label": "한국시간 · 미 노동통계국 일정",
+   "source": "미 노동통계국 12월 발표 일정",
+   "hook": {
+    "q": "다음 주\n미국 고용지표",
+    "hi": "12/4 22:30",
+    "count": false
+   },
+   "summary": "주말에는 한국과 미국 모두 주식 정규장이 열리지 않습니다. 다음 주에는 미국의 11월 고용보고서가 한국시간 12월 4일 금요일 밤 10시 30분에 나올 예정입니다.",
+   "question": "고용지표, 시장에 어떤 영향 줄까요?",
+   "keywords": [
+    "고용보고서",
+    "미국경제"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "센스노바",
+  "short": "센스노바, 로봇 조작 모델 RoboRSI-27B 가중치 공개 · 카메라로 결과 보고 다음 동작 선택",
+  "headline": "로봇 조작 AI\n가중치 공개\n센스노바",
+  "point1": "로봇이 카메라로 작업 결과를 보고 다음 움직임을 고릅니다",
+  "point1_sub": "로봇 조작 모델 RoboRSI-27B · 공개 가중치",
+  "point2": "로봇 팔 두 개가 작은 큐브를 맞추는 시연을 공개했습니다",
+  "point2_sub": "개발진 시연 · 상용 성능·현장 검증 주장 아님",
+  "verdict": "공개",
+  "source": "센스노바 허깅페이스 모델 카드",
+  "icon": [
+   "Mechanical arm",
+   "Video camera",
+   "Puzzle piece"
+  ]
+ },
+ "market": {
+  "date_label": "현지 11/27(금) 단축장 정규장 마감",
+  "headline": "다우 +1.18%\nS&P +1.60%\n나스닥 +2.31%",
+  "dow": {
+   "value": 50774.94,
+   "pct": 1.18
+  },
+  "spx": {
+   "value": 7297.49,
+   "pct": 1.6
+  },
+  "ndx": {
+   "value": 24129.5,
+   "pct": 2.31
+  },
+  "note": "추수감사절 다음 날 단축장 · 미 동부 13:00 조기 종료(한국 28일 03:00) · 전 거래일(11/25) 대비"
+ },
+ "oneliner": "한 주의 끝은 반등\n다음 주는 고용지표",
+ "scripts": [
+  "뉴욕 3대 지수 동반 상승, 나스닥 2.31퍼센트. 오늘 세계 이슈, 핵심만 정리.",
+  "금요일 코스피 4.34퍼센트 올라 4,900선 회복, 코스닥은 8.13퍼센트 급등. 외국인은 약 1조 1천억 원 순매수.",
+  "뉴욕 3대 지수, 주간으로도 모두 5퍼센트 이상 상승. 나스닥 종합은 한 주 동안 6.7퍼센트 올랐습니다.",
+  "다음 주 미국 11월 고용보고서 발표. 한국시간 12월 4일 금요일 밤 10시 30분 예정.",
+  "센스노바, 로봇 조작 모델 가중치 공개. 로봇이 카메라로 결과를 보고 다음 움직임을 고릅니다.",
+  "추수감사절 다음 날 단축장, 다우 1.18, 에스앤피 1.6, 나스닥 종합 2.31퍼센트 상승 마감.",
+  "오늘의 한 줄. 한 주의 끝은 반등, 다음 주는 고용지표. 반등, 다음 주에도 이어질까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-28_0600_am.md",
+  "drive_id": "12-tWOt-g4TPxMH9dPEkDc03MLTMIuKPT",
+  "job_id": "cardnews-20261128-0600",
+  "version": "v01"
+ },
+ "recent_icons": [
+  "Abacus",
+  "Airplane",
+  "Alarm clock",
+  "Balance scale",
+  "Bank",
+  "Bed",
+  "Bell",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chains",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Clipboard",
+  "Cloud",
+  "Coin",
+  "Crab",
+  "Credit card",
+  "Desktop computer",
+  "Electric plug",
+  "Eye",
+  "Factory",
+  "Gear",
+  "Globe showing Americas",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Japanese castle",
+  "Laptop",
+  "Locked with key",
+  "Luggage",
+  "Magnifying glass tilted left",
+  "Magnifying glass tilted right",
+  "Microscope",
+  "Milky way",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Night with stars",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Page facing up",
+  "Pill",
+  "Prohibited",
+  "Receipt",
+  "Robot",
+  "Rocket",
+  "Satellite",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Statue of Liberty",
+  "Stethoscope",
+  "Stopwatch",
+  "Teacher",
+  "Test tube",
+  "Thermometer",
+  "Turkey",
+  "Up arrow",
+  "World map"
+ ]
+}

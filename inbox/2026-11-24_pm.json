@@ -1,0 +1,194 @@
+{
+ "edition": "pm",
+ "date_short": "11.24 TUE",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "코스피\n5천 선 회복",
+  "hi": "코스피 +6.32%",
+  "count": false
+ },
+ "question": "이번 반등, 이어질까요?",
+ "keywords": [
+  "코스피",
+  "국민주권의날",
+  "수출통제"
+ ],
+ "issues": [
+  {
+   "region": "정부기념일",
+   "short": "12월 3일 '12·3 국민주권의 날' 정부기념일 지정 · 국무회의 통과",
+   "headline": "12월 3일\n국민주권의 날\n기념일 지정",
+   "ill": {
+    "kind": "icon",
+    "label": "대통령령 개정안 국무회의 통과 · 공휴일 아님 (행정안전부)"
+   },
+   "icon": [
+    "Spiral calendar",
+    "Classical building",
+    "Raising hands"
+   ],
+   "motion": "bob",
+   "stat1": "12월 3일",
+   "stat1_label": "매년 '12·3 국민주권의 날' · 정부기념일",
+   "stat2": "제1회",
+   "stat2_label": "올해 12월 3일 국회 일대 기념식 예정",
+   "source": "행정안전부 (11/24)",
+   "hook": {
+    "q": "12월 3일\n국민주권의 날",
+    "hi": "정부기념일 지정",
+    "count": false
+   },
+   "summary": "정부는 12월 3일을 국민주권의 날로 지정하는 대통령령 개정안을 국무회의에서 의결했습니다. 2024년 비상계엄에 맞서 민주주의를 지킨 시민들을 기리는 날로, 다음 달 3일 국회 일대에서 첫 기념식이 열릴 예정입니다.",
+   "question": "국민주권의 날, 어떻게 보세요?",
+   "keywords": [
+    "국민주권의날",
+    "기념일"
+   ]
+  },
+  {
+   "region": "미국 수출통제",
+   "short": "미 상무부, 싱가포르·말레이시아·태국 7개 기업 수출통제 명단 추가",
+   "headline": "동남아 7개 기업\n미국 수출통제\n명단 추가",
+   "ill": {
+    "kind": "icon",
+    "label": "싱가포르·말레이시아·태국 · 해당 7개 기업 대상 (미 상무부 산업안보국)"
+   },
+   "icon": [
+    "Globe showing Asia-Australia",
+    "Prohibited",
+    "Desktop computer"
+   ],
+   "motion": "sway",
+   "stat1": "7개 기업",
+   "stat1_label": "싱가포르 메가스피드 등 · 명단 추가 최종 규칙",
+   "stat2": "첨단 컴퓨팅",
+   "stat2_label": "허가 없는 곳으로 흘러갈 위험 크다고 판단",
+   "source": "미 상무부 산업안보국 (11/24 공개)",
+   "hook": {
+    "q": "동남아 7개 기업\n수출통제",
+    "hi": "미 상무부 명단 추가",
+    "count": false
+   },
+   "summary": "미국 상무부는 싱가포르의 메가스피드 등 동남아 7개 기업을 수출통제 명단에 추가하는 최종 규칙을 공개했습니다. 첨단 컴퓨팅 제품이 허가받지 않은 곳으로 흘러갈 위험이 크다는 판단입니다.",
+   "question": "반도체 수출통제, 어디까지 갈까요?",
+   "keywords": [
+    "수출통제",
+    "반도체"
+   ]
+  },
+  {
+   "region": "내일 일정",
+   "short": "25일 22:30 한국시간, 미국 3분기 GDP 잠정치·10월 PCE 물가 발표",
+   "headline": "내일 밤 10시 반\n미국 성장률\n물가 발표",
+   "ill": {
+    "kind": "icon",
+    "label": "미 경제분석국 · 11/25 22:30 한국시간"
+   },
+   "icon": [
+    "Alarm clock",
+    "Chart increasing",
+    "Shopping cart"
+   ],
+   "motion": "drive",
+   "stat1": "22:30",
+   "stat1_label": "25일 한국시간 · 미 동부 08:30",
+   "stat2": "GDP·PCE",
+   "stat2_label": "3분기 성장률 잠정치 · 10월 개인소비지출 물가",
+   "source": "미 경제분석국 (BEA) 일정",
+   "hook": {
+    "q": "내일 밤\n미국 지표 발표",
+    "hi": "GDP·PCE",
+    "count": false
+   },
+   "summary": "내일 밤 열 시 반에는 미국의 3분기 경제성장률 잠정치와 10월 개인소비지출 물가지수가 발표됩니다.",
+   "question": "내일 미국 지표, 어떻게 나올까요?",
+   "keywords": [
+    "미국GDP",
+    "PCE"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/24(화) 정규장 마감",
+  "headline": "코스피 +6.32%\n코스닥 +4.79%",
+  "headline_short": "코스피 +6.32%, 코스닥 +4.79%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5006.03,
+    "pct": 6.32
+   },
+   {
+    "name": "코스닥",
+    "value": 665.88,
+    "pct": 4.79
+   }
+  ],
+  "note": "11/24 15:30 정규장 종가 · 전 거래일 대비 · 원·달러 1,342.4원(−3.5원, 15:30)"
+ },
+ "oneliner": "증시는 5천 선\n12월 3일은 기념일로",
+ "scripts": [
+  "코스피, 5천 선 회복. 오늘 국내 이슈, 핵심만 정리.",
+  "정부, 12월 3일을 국민주권의 날로 지정. 공휴일 아닌 정부기념일. 첫 기념식은 국회 일대에서.",
+  "미국 상무부, 메가스피드 등 동남아 7개 기업 수출통제 명단에 추가. 첨단 컴퓨팅 제품 유출 위험 판단.",
+  "내일 밤 열 시 반, 미국 3분기 경제성장률 잠정치와 10월 개인소비지출 물가지수 발표.",
+  "코스피 6.32퍼센트 오른 5,006.03, 코스닥 4.79퍼센트 오른 665.88 마감. 엔비디아 젠슨 황 복귀 뒤 반도체주 반등.",
+  "오늘의 한 줄. 증시는 5천 선, 12월 3일은 기념일로. 이번 반등, 이어질까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Bank",
+  "Bed",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Cloud",
+  "Coin",
+  "Credit card",
+  "Desktop computer",
+  "Electric plug",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Locked with key",
+  "Microscope",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Robot",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Stopwatch",
+  "Teacher",
+  "Test tube",
+  "Thermometer"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-24_1700_pm.md",
+  "drive_id": "1jbAyWliM5irRS6DT_t-BRM0AeOplQWA4",
+  "job_id": "cardnews-20261124-1700",
+  "version": "v01"
+ }
+}

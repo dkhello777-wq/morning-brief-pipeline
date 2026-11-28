@@ -1,0 +1,181 @@
+{
+ "edition": "am",
+ "date_short": "11.14 SAT",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "hook": {
+  "q": "EU 정상들\nAI 첫 집중 논의",
+  "hi": "더블린 회의"
+ },
+ "question": "유럽의 AI 추격, 가능하다고 보시나요?",
+ "keywords": [
+  "미국증시",
+  "EU",
+  "우크라이나"
+ ],
+ "issues": [
+  {
+   "region": "미국",
+   "short": "미국 3대 지수 엇갈린 마감",
+   "headline": "미국 증시\n3대 지수\n엇갈린 마감",
+   "ill": {
+    "kind": "number",
+    "value": 0.91,
+    "decimals": 2,
+    "suffix": "%",
+    "label": "나스닥종합 하락 · 11/13 정규장 종가 · 전 거래일 대비"
+   },
+   "icon": [
+    "Chart decreasing",
+    "Dollar banknote",
+    "Bank"
+   ],
+   "motion": "pulse",
+   "photo": "New York Stock Exchange facade",
+   "stat1": "-0.40%",
+   "stat1_label": "S&P 500 · 7,561.67",
+   "stat2": "+0.10%",
+   "stat2_label": "다우 · 52,347.55",
+   "source": "11/13 정규장 공식 종가",
+   "hook": {
+    "q": "금요일\n미국 증시는?",
+    "hi": "나스닥 -0.91%"
+   },
+   "summary": "미국 13일(금) 정규장에서 나스닥종합은 -0.91%인 25,136.27, S&P 500은 -0.40%인 7,561.67, 다우는 +0.10%인 52,347.55에 마감했습니다(전 거래일 대비 공식 종가).",
+   "question": "이번 주 미국 증시, 어떻게 보셨나요?",
+   "keywords": [
+    "미국증시",
+    "나스닥"
+   ]
+  },
+  {
+   "region": "EU",
+   "short": "EU 정상들, 더블린서 AI 첫 집중 논의",
+   "headline": "EU 정상들\nAI 첫\n집중 논의",
+   "ill": {
+    "kind": "icon",
+    "label": "더블린 비공식 정상회의 (11/13)"
+   },
+   "icon": [
+    "Robot",
+    "High voltage",
+    "Classical building"
+   ],
+   "motion": "sway",
+   "photo": "Dublin Castle",
+   "stat1": "투자",
+   "stat1_label": "공공·민간 투자 확대",
+   "stat2": "전력",
+   "stat2_label": "저렴한 청정에너지 확보",
+   "source": "유럽이사회 (11/13)",
+   "hook": {
+    "q": "EU 정상들\nAI 첫 집중 논의",
+    "hi": "투자·전력·일자리"
+   },
+   "summary": "유럽연합 정상들이 11월 13일 아일랜드 더블린 비공식 회의에서 인공지능을 처음으로 깊이 논의했습니다. 공공·민간 투자, 데이터센터 등에 필요한 에너지 확보, 일자리와 안전에 미칠 영향이 의제였습니다. 신규 예산이 확정된 것은 아닙니다(유럽이사회).",
+   "question": "유럽의 AI 추격, 가능하다고 보시나요?",
+   "keywords": [
+    "EU",
+    "AI"
+   ]
+  },
+  {
+   "region": "우크라이나",
+   "short": "유럽 측 평화 협상팀 구성 합의",
+   "headline": "우크라이나\n평화 협상\n유럽팀 구성",
+   "ill": {
+    "kind": "icon",
+    "label": "유럽이사회 의장 기자회견 (11/13)"
+   },
+   "icon": [
+    "Dove",
+    "Handshake",
+    "Flag: Ukraine"
+   ],
+   "motion": "bob",
+   "stat1": "E5",
+   "stat1_label": "EU 기구 + 의지의 연합 5국",
+   "stat2": "합의",
+   "stat2_label": "협정 체결 아님",
+   "source": "유럽이사회 (11/13)",
+   "hook": {
+    "q": "우크라이나 협상\n유럽은 누가?",
+    "hi": "유럽 협상팀 합의"
+   },
+   "summary": "같은 회의에서 정상들은 우크라이나 평화 협상에 나설 유럽 측 팀을 EU 기구와 '의지의 연합' E5 국가로 하기로 합의했습니다. 평화협정이 체결된 것은 아니며, 내년 우크라이나 재정 지원은 11월 26~27일 정상회의에서 논의합니다(유럽이사회).",
+   "question": "우크라이나 평화 협상, 진전될까요?",
+   "keywords": [
+    "우크라이나",
+    "EU"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "엔비디아",
+  "short": "정부 \"한국 GPU 26만 장 공급 계획 유지\"",
+  "headline": "엔비디아\nGPU 26만 장\n공급 계획 유지",
+  "point1": "황 CEO 사임에도 한국 GPU 26만 장 공급 계획 유지",
+  "point1_sub": "배경훈 부총리 재확인 · 납품 완료 아님 (연합뉴스, 11/13)",
+  "point2": "AI 인프라·피지컬 AI 공동연구 협력도 계속합니다.",
+  "point2_sub": "정부 GPU 5만 장 확보 계획도 예정대로",
+  "verdict": "유지",
+  "source": "연합뉴스 · 전자신문 (11/13)",
+  "icon": [
+   "Laptop",
+   "Handshake",
+   "Robot"
+  ]
+ },
+ "market": {
+  "date_label": "11/13(금) 정규장 마감",
+  "headline": "나스닥 -0.91%\nS&P -0.40%\n다우 +0.10%",
+  "dow": {
+   "value": 52347.55,
+   "pct": 0.1
+  },
+  "spx": {
+   "value": 7561.67,
+   "pct": -0.4
+  },
+  "ndx": {
+   "value": 25136.27,
+   "pct": -0.91
+  },
+  "note": "11/13(금) 정규장 공식 종가 · 전 거래일 11/12 대비",
+  "photo": "Wall Street sign"
+ },
+ "oneliner": "유럽은 AI를 논의하고\nGPU 공급 계획은 그대로",
+ "scripts": [
+  "EU 정상들, AI 첫 집중 논의. 오늘 세계 이슈, 핵심만 정리.",
+  "미국 13일 정규장, 나스닥 0.91퍼센트 하락. 3대 지수 엇갈린 마감.",
+  "EU 정상들, 더블린서 AI 첫 집중 논의. 투자와 전력, 일자리가 의제였습니다.",
+  "우크라이나 평화 협상, 유럽 측 협상팀 구성에 합의. 평화협정 체결은 아닙니다.",
+  "엔비디아, 한국 GPU 26만 장 공급 계획 유지. 납품 완료가 아니라 계획 유지입니다.",
+  "다우 0.10퍼센트 상승, 에스앤피 0.40퍼센트 하락, 나스닥 0.91퍼센트 하락.",
+  "오늘의 한 줄. 유럽은 AI를 논의하고, GPU 공급 계획은 그대로. 유럽의 AI 추격, 가능하다고 보시나요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Chart decreasing",
+  "Bank",
+  "Coin",
+  "Page facing up",
+  "Office building",
+  "Bust in silhouette",
+  "Memo",
+  "Shield",
+  "Magnifying glass tilted right",
+  "Building construction",
+  "Factory",
+  "Airplane"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-14_0600_am_v01.md",
+  "drive_id": "1tZc8dMEFvxR1__9e3tHWFhl4U-Gl5vWa",
+  "job_id": "cardnews-20261114-0600",
+  "version": "v01"
+ }
+}

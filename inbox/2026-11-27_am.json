@@ -1,0 +1,222 @@
+{
+ "edition": "am",
+ "date_short": "11.27 FRI",
+ "title": "간밤의\n세계 이슈\n핵심 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "AI 투자,\n빚으로 번지는 위험",
+  "hi": "3,050억 달러 넘어",
+  "count": false
+ },
+ "question": "AI 투자 빚, 걱정할 수준일까요?",
+ "keywords": [
+  "국고채",
+  "영란은행",
+  "AI투자"
+ ],
+ "issues": [
+  {
+   "region": "국내 채권",
+   "short": "11/26 국고채 3년물 연 3.622% · 0.039%p 상승 · 기준금리 연 3.25%",
+   "headline": "국고채 3년물\n연 3.622%\n금리 인상 직후 상승",
+   "ill": {
+    "kind": "icon",
+    "label": "11/26 서울 채권시장 마감 · 전 거래일 대비 3.9bp 상승 (연합뉴스·한국은행)"
+   },
+   "icon": [
+    "Receipt",
+    "Bank",
+    "Up arrow"
+   ],
+   "motion": "bob",
+   "stat1": "연 3.622%",
+   "stat1_label": "국고채 3년물 · 11/26 마감",
+   "stat2": "+0.039%p",
+   "stat2_label": "전 거래일 대비 · 기준금리는 연 3.25%",
+   "source": "연합뉴스 · 한국은행 (11/26)",
+   "hook": {
+    "q": "국고채 금리\n상승 마감",
+    "hi": "연 3.622%",
+    "count": false
+   },
+   "summary": "기준금리 인상 직후 채권 금리도 올랐습니다. 26일 3년 만기 국고채 금리는 0.039%포인트 오른 연 3.622%로 마감했습니다. 한국은행이 올린 기준금리는 연 3.25%입니다.",
+   "question": "대출 금리도 따라 오를까요?",
+   "keywords": [
+    "국고채",
+    "금리"
+   ]
+  },
+  {
+   "region": "영란은행",
+   "short": "영란은행, 대형 클라우드 업체 2026년 회사채 발행 3,050억 달러 초과 전망 · 세계 투자등급 발행의 약 8%",
+   "headline": "AI 투자 자금\n회사채만 3,050억 달러\n넘을 전망",
+   "ill": {
+    "kind": "icon",
+    "label": "대형 클라우드 업체(하이퍼스케일러) 2026년 발행 전망 · 이미 난 손실 아님 (영란은행 금융안정보고서)"
+   },
+   "icon": [
+    "Cloud",
+    "Chains",
+    "Money with wings"
+   ],
+   "motion": "sway",
+   "stat1": "3,050억 달러+",
+   "stat1_label": "2026년 대형 클라우드 업체 회사채 발행 전망",
+   "stat2": "약 8%",
+   "stat2_label": "세계 투자등급 채권 발행 중 비중",
+   "source": "영란은행 금융안정보고서 (11/26)",
+   "hook": {
+    "q": "AI 투자,\n빚으로 번지는 위험",
+    "hi": "3,050억 달러 넘어",
+    "count": false
+   },
+   "summary": "영국 중앙은행은 대형 클라우드 업체의 올해 회사채 발행액이 3,050억 달러를 넘을 것으로 봤습니다. 세계 투자등급 채권 발행의 약 8%입니다. AI 투자에 회사채와 사모 대출이 함께 얽히면서 한 곳의 충격이 다른 시장으로 번질 수 있다고 지적했습니다.",
+   "question": "AI 투자 빚, 걱정할 수준일까요?",
+   "keywords": [
+    "영란은행",
+    "AI투자"
+   ]
+  },
+  {
+   "region": "오늘 일정",
+   "short": "오늘 08:30 도쿄 23구 11월 물가 속보 · 뉴욕 23:30 개장, 28일 03:00 조기 마감(한국시간)",
+   "headline": "오늘 도쿄 물가\n뉴욕은\n조기 마감",
+   "ill": {
+    "kind": "icon",
+    "label": "도쿄 23구 11월 잠정치 · 일본 전국 물가 아님 · 뉴욕 미 동부 09:30~13:00 (일본 통계국·NYSE)"
+   },
+   "icon": [
+    "Alarm clock",
+    "Japanese castle",
+    "Statue of Liberty"
+   ],
+   "motion": "drive",
+   "stat1": "08:30",
+   "stat1_label": "도쿄 23구 11월 소비자물가 발표",
+   "stat2": "03:00",
+   "stat2_label": "28일 새벽 뉴욕 조기 마감 (한국시간)",
+   "source": "일본 통계국 · 뉴욕증권거래소",
+   "hook": {
+    "q": "오늘 도쿄 물가\n뉴욕 조기 마감",
+    "hi": "08:30 · 03:00",
+    "count": false
+   },
+   "summary": "오늘 아침 8시 반엔 도쿄 23구의 11월 물가가 나옵니다. 뉴욕 증시는 오늘 밤 11시 반에 열고, 한국 시간 내일 새벽 3시에 일찍 마감합니다.",
+   "question": "연말 증시, 어떻게 보세요?",
+   "keywords": [
+    "도쿄물가",
+    "뉴욕증시"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "톰슨로이터",
+  "short": "톰슨로이터, 법률·세무용 차기 AI 모델 '톰슨 1.1' 연내 공개 계획 · GLM·젬마 기반",
+  "headline": "법률·세무 AI\n톰슨 1.1\n연내 공개 계획",
+  "point1": "법률·세무 전문가용 차기 모델을 연내 내놓을 계획입니다",
+  "point1_sub": "8월 공개한 톰슨 1.0의 후속 · 아직 출시 전",
+  "point2": "중국 GLM과 구글 젬마를 바탕으로 만듭니다",
+  "point2_sub": "누구나 내려받는 공개 모델 활용 · 비용 절감 목적 · 성능은 독립 검증 전",
+  "verdict": "연내 계획",
+  "source": "톰슨로이터 블로그 · 비즈니스인사이더 (11/26)",
+  "icon": [
+   "Balance scale",
+   "Scroll",
+   "Robot"
+  ]
+ },
+ "market": {
+  "date_label": "현지 11/25(수) 정규장 마감 · 26일 휴장",
+  "headline": "다우 +0.33%\nS&P −0.25%\n나스닥 −0.62%",
+  "dow": {
+   "value": 50182.95,
+   "pct": 0.33
+  },
+  "spx": {
+   "value": 7182.78,
+   "pct": -0.25
+  },
+  "ndx": {
+   "value": 23585.8,
+   "pct": -0.62
+  },
+  "note": "현지 11/26 추수감사절 휴장 → 11/25 정규장 종가가 최신 · 전 거래일 대비"
+ },
+ "oneliner": "뉴욕은 쉬어 가고\nAI 투자엔 빚 경고",
+ "scripts": [
+  "뉴욕 휴장, 영국 중앙은행은 AI 투자 빚 경고. 오늘 세계 이슈, 핵심만 정리.",
+  "기준금리 인상 직후 국고채 3년물 연 3.622퍼센트, 0.039퍼센트포인트 상승 마감.",
+  "영란은행, 대형 클라우드 업체 올해 회사채 발행 3,050억 달러 넘을 전망. 세계 투자등급 발행의 약 8퍼센트.",
+  "오늘 아침 8시 반 도쿄 23구 11월 물가 발표. 뉴욕 증시는 한국시간 내일 새벽 3시 조기 마감.",
+  "톰슨로이터, 법률·세무용 차기 AI 모델 연내 공개 계획. 중국 GLM과 구글 젬마 기반.",
+  "뉴욕증시는 추수감사절 휴장. 직전 25일 종가는 다우 0.33퍼센트 상승, 에스앤피 0.25, 나스닥 0.62퍼센트 하락.",
+  "오늘의 한 줄. 뉴욕은 쉬어 가고, AI 투자엔 빚 경고. AI 투자 빚, 걱정할 수준일까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1,
+  2
+ ],
+ "recent_icons": [
+  "Abacus",
+  "Alarm clock",
+  "Bank",
+  "Bar chart",
+  "Bed",
+  "Brain",
+  "Building construction",
+  "Calendar",
+  "Chair",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Cloud",
+  "Coin",
+  "Credit card",
+  "Crown",
+  "Desktop computer",
+  "Electric plug",
+  "Factory",
+  "Gauge",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Laptop",
+  "Link",
+  "Locked with key",
+  "Magnifying glass tilted left",
+  "Microscope",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Prohibited",
+  "Raising hands",
+  "Robot",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Spiral calendar",
+  "Stopwatch",
+  "Teacher",
+  "Test tube",
+  "Thermometer",
+  "Video game"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-27_0600_am.md",
+  "drive_id": "14tat67yWBDE1MinGBt6bSC2J3zpQ1rXo",
+  "job_id": "cardnews-20261127-0600",
+  "version": "v01"
+ }
+}

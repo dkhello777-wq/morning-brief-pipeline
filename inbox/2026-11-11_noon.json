@@ -1,0 +1,195 @@
+{
+ "topic": "ai",
+ "edition": "am",
+ "date_short": "11.11 WED",
+ "title": "간밤의\nAI 소식\n핵심 정리",
+ "hook": {
+  "q": "벤츠 라인에\n휴머노이드 96%?",
+  "hi": "성공률 96%"
+ },
+ "question": "공장 로봇 96%, 내 현장에는 언제 올까요?",
+ "keywords": [
+  "AI뉴스",
+  "휴머노이드",
+  "클로드"
+ ],
+ "issues": [
+  {
+   "region": "구글 로봇 AI",
+   "short": "제미나이 로보틱스 2.5, 벤츠 라인 96%",
+   "headline": "벤츠 생산라인\n휴머노이드\n성공률 96%",
+   "ill": {
+    "kind": "number",
+    "value": 96,
+    "suffix": "%",
+    "label": "벤츠 생산라인 개념검증 · 휴머노이드 아폴로 2의 부품 집어 담기 성공률 (Google DeepMind)"
+   },
+   "icon": [
+    "Mechanical arm",
+    "Factory",
+    "Robot"
+   ],
+   "motion": "bob",
+   "photo": "Mercedes-Benz factory assembly line",
+   "image_prompt": "a humanoid robot picking automotive parts from a bin on a bright factory assembly line, no people, no text, no logos",
+   "stat1": "30%+",
+   "stat1_label": "이전 기준 모델 대비 과제 성공률 30~100% 향상 (과제 종류별)",
+   "stat2": "20%+",
+   "stat2_label": "과제 완료 속도 20~30% 향상 · 로봇 파트너사에 순차 제공, 일반 공개 아님",
+   "source": "Google DeepMind 블로그 (11/10)",
+   "hook": {
+    "q": "벤츠 라인에\n휴머노이드 96%?",
+    "hi": "성공률 96%"
+   },
+   "summary": "구글 딥마인드가 11월 10일 로봇용 AI 모델 제미나이 로보틱스 2.5를 공개했습니다. 이전 기준 모델보다 과제 종류에 따라 성공률이 30~100% 높고, 과제 완료 속도는 20~30% 빠르다고 밝혔습니다. 메르세데스-벤츠 생산라인 개념검증에서는 이 모델을 돌린 앱트로닉의 휴머노이드 아폴로 2가 자동차 부품을 집어 담는 작업을 96% 성공률로 수행했습니다. 모델은 딥마인드의 로봇 파트너사에 순차 제공되며, 로봇이 위험한 지시를 거부하는지 시험하는 공개 벤치마크 ASIMOV-Jailbreak도 함께 내놨습니다.",
+   "question": "공장 로봇 96%, 내 현장에는 언제 올까요?",
+   "keywords": [
+    "제미나이로보틱스",
+    "휴머노이드"
+   ]
+  },
+  {
+   "region": "앤트로픽 오피스",
+   "short": "클로드 스프레드시트·화이트보드 베타",
+   "headline": "클로드 시트\n화이트보드\n베타 출시",
+   "ill": {
+    "kind": "icon"
+   },
+   "icon": [
+    "Bar chart",
+    "Memo",
+    "Laptop"
+   ],
+   "motion": "bob",
+   "photo": "spreadsheet on laptop screen office desk",
+   "stat1": "베타",
+   "stat1_label": "클로드 시트·화이트보드는 베타, 대시보드는 정식 제공 (Anthropic 11/10 · Seeking Alpha)",
+   "stat2": "Pro+",
+   "stat2_label": "화이트보드는 Pro·Max·Ultra·Team·Enterprise 베타 · 플랜 사용량 한도에 포함 (헬프센터)",
+   "source": "Anthropic 공식 블로그·헬프센터 · Bloomberg",
+   "hook": {
+    "q": "엑셀 업무도\n클로드가?",
+    "hi": "베타 2종 출시"
+   },
+   "summary": "앤트로픽이 11월 10일 팀용 업무 도구를 한꺼번에 내놨습니다. 공식 블로그는 이날부터 클로드가 팀과 함께 스프레드시트, 화이트보드, 대시보드를 만든다고 밝혔고, 클로드 시트와 클로드 화이트보드는 베타, 대시보드는 정식 제공입니다(Seeking Alpha). 화이트보드는 Pro·Max·Ultra·Team·Enterprise 플랜에서 웹·데스크톱·모바일로 쓸 수 있고 플랜 사용량 한도에 포함됩니다. 어도비·아틀라시안 같은 파트너 앱을 클로드 안에 띄우는 연동도 시작했습니다. 블룸버그는 상장을 앞둔 앤트로픽이 마이크로소프트에 도전한다고 봤고, Seeking Alpha는 이날 마이크로소프트 주가가 장중 3% 가까이 내렸다고 전했습니다.",
+   "question": "엑셀 업무, AI에 맡길 수 있겠어요?",
+   "keywords": [
+    "클로드",
+    "앤트로픽"
+   ]
+  },
+  {
+   "region": "미국 AI 규제",
+   "short": "뉴욕주 AI 안전법 등록 시작",
+   "headline": "뉴욕주 AI법\n사고 72시간 내\n보고 의무",
+   "ill": {
+    "kind": "number",
+    "value": 72,
+    "suffix": "시간",
+    "label": "중대 안전사고 보고 시한 · 캘리포니아 SB 53은 15일 (TechCrunch)"
+   },
+   "icon": [
+    "Page facing up",
+    "Classical building",
+    "Scroll"
+   ],
+   "motion": "sway",
+   "photo": "New York State Capitol Albany",
+   "stat1": "$5억+",
+   "stat1_label": "연 매출 5억 달러 넘는 대형 개발사 대상 · 2027년 1월 1일까지 등록",
+   "stat2": "$300만",
+   "stat2_label": "위반 시 최대 100만 달러, 반복 위반 최대 300만 달러 벌금",
+   "source": "TechCrunch (11/10)",
+   "hook": {
+    "q": "AI 사고 나면\n72시간 안에?",
+    "hi": "벌금 300만$"
+   },
+   "summary": "뉴욕주가 11월 10일 AI 안전·투명성 법률인 RAISE법의 등록 포털을 열었다고 테크크런치가 전했습니다. 연 매출 5억 달러를 넘는 대형 첨단 AI 개발사가 대상이며, 오픈AI와 앤트로픽 등은 2027년 1월 1일까지 등록해야 합니다. 안전 프레임워크 공개, 중대 안전사고 72시간 내 보고, 모델 투명성 보고서 발행이 의무이고, 위반 시 최대 100만 달러, 반복 위반은 최대 300만 달러 벌금입니다. 새로 만든 디지털 혁신·거버넌스·신뢰 사무국(DIGIT)이 집행하고, 빙엄턴대의 뉴욕 AI 책임연구센터가 독립 평가를 맡습니다. 호컬 주지사는 AI 개발이 불가피하고 부수 피해도 감수할 수 있다는 기술 리더들을 비판했으며, 캘리포니아 SB 53의 사고 보고 시한은 15일입니다.",
+   "keywords": [
+    "AI규제",
+    "뉴욕"
+   ]
+  }
+ ],
+ "ai": {
+  "company": "스포티파이",
+  "short": "AI DJ 새 목소리·멘트 끄기",
+  "headline": "스포티파이 AI DJ\n목소리 고르고\n멘트 끄기",
+  "point1": "영어 7종·스페인어 2종 중 목소리 선택 · 곡 사이 멘트 끄기 옵션 추가",
+  "point1_sub": "프리미엄 구독자 · DJ 제공 지역(한국 포함)에 11/10부터 순차 적용",
+  "point2": "작업하거나 파티에서 음악만 쭉 틀어 둘 때 쓰면 됩니다.",
+  "point2_sub": "앱에서 DJ 검색 → 점 세 개 메뉴에서 목소리·멘트 설정 · 무료 플랜 적용 여부는 미표기",
+  "verdict": "써먹기",
+  "source": "TechCrunch (11/10) · Spotify 뉴스룸 (5/7)",
+  "photo": "headphones and smartphone music streaming",
+  "icon": [
+   "Headphone",
+   "Musical note",
+   "Radio"
+  ]
+ },
+ "market": {
+  "date_label": "11/10 마감 (KST 11/11 06:00)",
+  "headline": "엔비디아 −5.47%\n브로드컴 +3.91%\n나스닥 −0.74%",
+  "rows": [
+   {
+    "name": "나스닥",
+    "value": 25065.88,
+    "pct": -0.74
+   },
+   {
+    "name": "엔비디아",
+    "value": 168.89,
+    "pct": -5.47
+   },
+   {
+    "name": "브로드컴",
+    "value": 331.98,
+    "pct": 3.91
+   }
+  ],
+  "note": "11/10 정규장 종가 · S&P 500 −0.38%, 다우 −0.30% · 10월 CPI 전월 대비 +0.4%로 예상 0.3% 상회 (Yahoo Finance)",
+  "photo": "Broadcom headquarters",
+  "icon": [
+   "Receipt",
+   "Money bag"
+  ]
+ },
+ "oneliner": "로봇은 공장으로\nAI는 엑셀로\n규제는 72시간으로",
+ "scripts": [
+  "벤츠 라인에 휴머노이드 96퍼센트? 구글 로봇 AI. 오늘 AI, 핵심만 정리.",
+  "구글 딥마인드 제미나이 로보틱스 2.5. 벤츠 라인 시범, 휴머노이드 부품 집기 성공률 96퍼센트.",
+  "앤트로픽, 클로드 스프레드시트와 화이트보드 베타 출시. 블룸버그는 마이크로소프트 도전으로 봤습니다.",
+  "뉴욕주 AI 안전법 등록 시작. 사고 72시간 내 보고 의무, 위반 시 벌금 최대 300만 달러.",
+  "스포티파이 AI DJ, 목소리 선택과 곡 사이 멘트 끄기 옵션 추가. 프리미엄 대상.",
+  "나스닥 0.74, 엔비디아 5.47퍼센트 하락, 브로드컴 3.91 상승. 10월 물가는 예상 상회.",
+  "오늘의 한 줄. 로봇은 공장으로, AI는 엑셀로, 규제는 72시간으로. 공장 로봇 96퍼센트, 내 현장에는 언제 올까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [],
+ "recent_icons": [
+  "Money with wings",
+  "Gear",
+  "Desktop computer",
+  "Framed picture",
+  "Money bag",
+  "Magnifying glass tilted right",
+  "Robot",
+  "Balance scale",
+  "Speaking head",
+  "Dollar banknote",
+  "Briefcase",
+  "Seedling",
+  "Megaphone",
+  "Cloud",
+  "Credit card",
+  "Classical building",
+  "Laptop",
+  "Locked with key",
+  "Handshake",
+  "Movie camera",
+  "Purse",
+  "Package",
+  "Hourglass not done"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37"
+}

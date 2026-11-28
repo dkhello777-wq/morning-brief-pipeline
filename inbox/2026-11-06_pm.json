@@ -1,0 +1,168 @@
+{
+ "edition": "pm",
+ "date_short": "11.06 FRI",
+ "title": "오늘의\n국내외 이슈\n저녁 정리",
+ "hook": {
+  "q": "코스피 6% 급락\n정부 대응은?",
+  "hi": "−6.02%"
+ },
+ "question": "신용융자 담보 의무 면제, 시장 안정에 도움 될까요?",
+ "keywords": [
+  "코스피",
+  "신용융자",
+  "기후위험"
+ ],
+ "issues": [
+  {
+   "region": "재정경제부",
+   "short": "신용융자 담보 140% 유지 의무 3개월 면제",
+   "headline": "신용융자 담보\n140% 유지 의무\n3개월 면제",
+   "ill": {
+    "kind": "number",
+    "value": 140,
+    "suffix": "%",
+    "label": "증권사 신용융자 담보비율 유지 의무 · 11/9부터 3개월 면제 (11/6 발표)"
+   },
+   "icon": [
+    "Bank",
+    "Chart decreasing",
+    "Calendar"
+   ],
+   "motion": "pulse",
+   "photo": "Yeouido financial district Seoul",
+   "stat1": "11/9",
+   "stat1_label": "시행일 · 이날부터 3개월간 적용",
+   "stat2": "의무 면제",
+   "stat2_label": "담보비율 유지 의무만 면제 · 모든 반대매매 금지나 투자자 채무 면제 아님",
+   "source": "재정경제부 · 연합뉴스 · YTN",
+   "hook": {
+    "q": "신용융자 담보\n의무 면제?",
+    "hi": "11/9부터 3개월"
+   },
+   "summary": "재정경제부가 6일 긴급 시장상황점검회의를 열었고, 증권사의 신용융자 담보비율 140% 유지 의무를 11월 9일부터 3개월간 면제하기로 했습니다(연합뉴스·YTN). 담보비율 유지 의무를 면제하는 것이며, 모든 반대매매가 금지되거나 투자자의 채무가 면제되는 것은 아닙니다.",
+   "question": "신용융자 담보 의무 면제, 시장 안정에 도움 될까요?",
+   "keywords": [
+    "신용융자",
+    "반대매매"
+   ]
+  },
+  {
+   "region": "유엔난민기구",
+   "short": "강제이주민 약 9천만 명, 기후 위험국 거주",
+   "headline": "강제이주민\n약 9천만 명\n기후 위험국에",
+   "ill": {
+    "kind": "number",
+    "value": 9,
+    "suffix": "천만 명",
+    "label": "기후 위험에 노출된 국가에 사는 강제이주민 수 (UNHCR · Reuters)"
+   },
+   "icon": [
+    "Globe showing Europe-Africa",
+    "Water wave",
+    "Thermometer"
+   ],
+   "motion": "bob",
+   "photo": "UNHCR headquarters Geneva",
+   "stat1": "기후난민 아님",
+   "stat1_label": "새로 생긴 기후난민 수가 아님 · 난민 외 강제이주민 포함",
+   "stat2": "지원 확대",
+   "stat2_label": "홍수·폭염에 대비할 기후 적응 지원 확대 촉구",
+   "source": "Reuters · The Korea Times",
+   "hook": {
+    "q": "강제이주민\n기후 위험에?",
+    "hi": "약 9천만 명"
+   },
+   "summary": "유엔난민기구(UNHCR)는 강제이주민 약 9천만 명이 기후 위험에 노출된 국가에 살고 있다며, 홍수와 폭염 등에 대비할 적응 지원을 늘려야 한다고 촉구했습니다(Reuters). 이 수치는 기후변화로 새로 생긴 난민 수가 아니며 난민 외 다른 강제이주민도 포함합니다.",
+   "question": "기후 위험, 남의 일이 아니라고 느끼시나요?",
+   "keywords": [
+    "유엔난민기구",
+    "기후위험"
+   ]
+  },
+  {
+   "region": "구글",
+   "short": "제미나이 옴니 1.2 플래시 공개",
+   "headline": "구글 영상 AI\n최대 15초\nAPI 가격 30%↓",
+   "ill": {
+    "kind": "number",
+    "value": 30,
+    "suffix": "%↓",
+    "label": "720p 영상 API 가격 · 옴니 1.1 대비 (구글 공식 발표 11/5)"
+   },
+   "icon": [
+    "Movie camera",
+    "Clapper board",
+    "Speech balloon"
+   ],
+   "motion": "bob",
+   "photo": "Googleplex Mountain View",
+   "stat1": "15초",
+   "stat1_label": "최대 영상 길이 · 대화로 이어서 수정 가능",
+   "stat2": "0.07달러",
+   "stat2_label": "720p 영상 초당 API 가격 · 모든 해상도·구독 총비용 30% 인하 아님",
+   "source": "Google 공식 발표 (11/5)",
+   "hook": {
+    "q": "구글 영상 AI\n더 싸졌다?",
+    "hi": "720p 30%↓"
+   },
+   "summary": "구글이 최대 15초 영상 생성과 대화형 연속 수정을 지원하는 제미나이 옴니 1.2 플래시를 공개했습니다. 720p 영상 API 가격은 초당 0.07달러로 옴니 1.1보다 30% 낮습니다. 720p API 기준이며, 제품별 제공 범위와 적용 시점은 다를 수 있습니다.",
+   "question": "AI 영상, 직접 만들어 보셨나요?",
+   "keywords": [
+    "구글",
+    "제미나이"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/6 마감 (15:30)",
+  "headline": "코스피 −6.02%\n코스닥 −5.03%\n급락 마감",
+  "headline_short": "코스피 −6.02%, 코스닥 −5.03%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5059.69,
+    "pct": -6.02
+   },
+   {
+    "name": "코스닥",
+    "value": 644.27,
+    "pct": -5.03
+   }
+  ],
+  "note": "코스피 −324.11p · 코스닥 −34.14p · 11/6 정규장 종가",
+  "photo": "Korea Exchange building Yeouido"
+ },
+ "oneliner": "증시는 6% 급락,\n정부는 담보 의무\n석 달 면제",
+ "scripts": [
+  "코스피 6퍼센트 급락. 오늘 국내외 이슈와 증시, 핵심만 정리.",
+  "정부, 11월 9일부터 석 달간 증권사 신용융자 담보비율 140퍼센트 유지 의무 면제.",
+  "유엔난민기구, 강제이주민 약 9천만 명이 기후 위험 국가에 산다며 지원 확대 촉구.",
+  "구글 제미나이 옴니 1.2 플래시 공개. 최대 15초 영상, 720p API 가격 30퍼센트 인하.",
+  "코스피 6.02퍼센트 내린 5,059.69, 코스닥 5.03퍼센트 내린 644.27로 마감했습니다.",
+  "오늘의 한 줄. 증시는 급락, 정부는 담보 의무 석 달 면제. 신용융자 담보 의무 면제, 시장 안정에 도움 될까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Money with wings",
+  "Dollar banknote",
+  "Locked with key",
+  "Bug",
+  "Shield",
+  "Handshake",
+  "Laptop",
+  "Briefcase",
+  "Bank",
+  "Pound banknote",
+  "Chart increasing",
+  "Scroll"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-06_1700_pm_v01.md",
+  "drive_id": "1otiOducvPmJvm282DUd6Cr-1zyg9zT_8",
+  "job_id": "cardnews-20261106-1700",
+  "version": "v01"
+ }
+}

@@ -1,0 +1,159 @@
+{
+ "edition": "pm",
+ "date_short": "11.18 WED",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "hook": {
+  "q": "코스피\n하루 만에\n5천선 회복",
+  "hi": "코스피 +1.99%"
+ },
+ "question": "5천선 회복한 코스피, 어떻게 보세요?",
+ "keywords": [
+  "코스피",
+  "가계신용",
+  "KDI"
+ ],
+ "issues": [
+  {
+   "region": "가계빚",
+   "short": "3분기 말 가계신용 2,030.5조 원, 9.8조 증가",
+   "headline": "가계신용\n2,030조\n9.8조 늘었다",
+   "ill": {
+    "kind": "icon",
+    "label": "3분기 말 · 한국은행 잠정치 (11/18)"
+   },
+   "icon": [
+    "Bank",
+    "Credit card",
+    "Chart increasing"
+   ],
+   "motion": "bob",
+   "stat1": "2,030.5조",
+   "stat1_label": "3분기 말 가계신용 · 잠정",
+   "stat2": "+9.8조",
+   "stat2_label": "전 분기보다 증가",
+   "source": "한국은행 (11/18)",
+   "hook": {
+    "q": "가계빚\n또 늘었다",
+    "hi": "+9.8조 원"
+   },
+   "summary": "한국은행 잠정 집계에서 3분기 말 가계신용은 2,030조 5천억 원으로, 전 분기보다 9조 8천억 원 늘었습니다(한국은행, 잠정치).",
+   "question": "늘어나는 가계빚, 체감하시나요?",
+   "keywords": [
+    "가계신용",
+    "한국은행"
+   ]
+  },
+  {
+   "region": "경제전망",
+   "short": "KDI, 내년 성장률 전망 3.9%로 상향",
+   "headline": "KDI\n내년 성장률\n3.9% 전망",
+   "ill": {
+    "kind": "icon",
+    "label": "한국개발연구원 경제전망 (11/18) · 전망치"
+   },
+   "icon": [
+    "Chart increasing",
+    "Desktop computer",
+    "Ship"
+   ],
+   "motion": "pulse",
+   "stat1": "3.8%",
+   "stat1_label": "2026년 성장률 전망",
+   "stat2": "3.9%",
+   "stat2_label": "2027년 전망 · 종전 2.2%",
+   "source": "KDI · 연합뉴스 (11/18)",
+   "hook": {
+    "q": "내년 성장률\n전망 올렸다",
+    "hi": "2.2% → 3.9%"
+   },
+   "summary": "한국개발연구원(KDI)은 올해 성장률을 3.8%, 내년은 3.9%로 전망했습니다. 내년 전망은 종전 2.2%에서 올렸고, 반도체 수출과 투자가 주요 배경입니다(KDI·연합뉴스).",
+   "question": "내년 경기, 좋아질 거라 보시나요?",
+   "keywords": [
+    "KDI",
+    "성장률"
+   ]
+  },
+  {
+   "region": "한중 정상회담",
+   "short": "이재명 대통령·시진핑 주석, 선전 APEC 계기 회담",
+   "headline": "선전에서\n한중\n정상회담",
+   "ill": {
+    "kind": "icon",
+    "label": "선전 APEC 계기 · 의제는 회담 전 청와대 발표"
+   },
+   "icon": [
+    "Handshake",
+    "Globe showing Asia-Australia",
+    "Classical building"
+   ],
+   "motion": "sway",
+   "photo": "Shenzhen skyline",
+   "stat1": "교역·투자",
+   "stat1_label": "회담 전 공개 의제",
+   "stat2": "인적·문화",
+   "stat2_label": "교류도 의제에 포함",
+   "source": "연합뉴스 · 청와대 (11/18)",
+   "hook": {
+    "q": "이재명·시진핑\n선전서 회담",
+    "hi": "APEC 계기"
+   },
+   "summary": "중국 선전에서 APEC을 계기로 이재명 대통령과 시진핑 주석이 회담했습니다. 청와대가 회담 전 밝힌 의제는 교역과 투자, 인적·문화 교류 등이었습니다(연합뉴스·청와대).",
+   "question": "이번 한중 회담, 어떤 성과를 기대하시나요?",
+   "keywords": [
+    "한중정상회담",
+    "APEC"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/18(수) 정규장 마감",
+  "headline": "코스피 +1.99%\n코스닥 +1.96%\n5천선 회복",
+  "headline_short": "코스피 +1.99%, 코스닥 +1.96%, 5천선 회복",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5067.44,
+    "pct": 1.99
+   },
+   {
+    "name": "코스닥",
+    "value": 662.81,
+    "pct": 1.96
+   }
+  ],
+  "note": "11/18 정규장 종가 · 전 거래일 대비 (연합뉴스 15:36)"
+ },
+ "oneliner": "증시는 5천선 회복\n가계빚은 2,030조",
+ "scripts": [
+  "코스피 하루 만에 5천선 회복. 오늘 국내 이슈, 핵심만 정리.",
+  "3분기 말 가계신용 2천30조 5천억 원, 전 분기보다 9조 8천억 원 늘어. 한국은행 잠정치.",
+  "KDI, 내년 성장률 전망 3.9퍼센트로 올려. 종전 2.2퍼센트. 올해는 3.8퍼센트, 반도체 수출과 투자가 배경.",
+  "이재명 대통령, 중국 선전에서 시진핑 주석과 회담. 회담 전 공개된 의제는 교역·투자와 인적·문화 교류.",
+  "코스피 1.99퍼센트 오른 5천67.44, 코스닥 1.96퍼센트 오른 662.81.",
+  "오늘의 한 줄. 증시는 5천선 회복, 가계빚은 2천30조. 5천선 회복한 코스피, 어떻게 보세요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Office building",
+  "Bust in silhouette",
+  "Memo",
+  "Shield",
+  "Magnifying glass tilted right",
+  "Robot",
+  "High voltage",
+  "Laptop",
+  "Chart increasing",
+  "Building construction",
+  "Factory",
+  "Airplane"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-18_1700_pm.md",
+  "drive_id": "1vqSnkjGh8kFYvLqFl_hSF533tS63oscr",
+  "job_id": "cardnews-20261118-1700",
+  "version": "v01"
+ }
+}

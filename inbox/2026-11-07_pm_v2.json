@@ -1,0 +1,168 @@
+{
+ "edition": "pm",
+ "date_short": "11.07 SAT",
+ "title": "오늘의\n국내외 이슈\n저녁 정리",
+ "hook": {
+  "q": "오픈AI 데이터센터\n전력비 직접 부담?",
+  "hi": "물·전력 사용량 공개"
+ },
+ "question": "AI 데이터센터 비용, 누가 내야 할까요?",
+ "keywords": [
+  "오픈AI",
+  "백악관",
+  "법무부장관"
+ ],
+ "issues": [
+  {
+   "region": "오픈AI",
+   "short": "오픈AI, 미국 데이터센터 전력·인프라 비용 부담 약속",
+   "headline": "오픈AI\n데이터센터 비용\n직접 부담 약속",
+   "ill": {
+    "kind": "icon",
+    "label": "향후 미국에서 직접 소유·운영할 시설 대상 (OpenAI 11/5 발표)"
+   },
+   "icon": [
+    "Electric plug",
+    "Droplet",
+    "High voltage"
+   ],
+   "motion": "pulse",
+   "stat1": "전력·인프라",
+   "stat1_label": "필요한 전력·인프라 비용 부담 약속 · 이행은 앞으로",
+   "stat2": "사용량 공개",
+   "stat2_label": "시설별 물·전력 사용량 공개 · 기존·협력사 시설 즉시 적용 아님",
+   "source": "OpenAI 공식 발표 (11/5)",
+   "hook": {
+    "q": "오픈AI 데이터센터\n전력비 직접 부담?",
+    "hi": "물·전력 사용량 공개"
+   },
+   "summary": "오픈AI는 앞으로 미국에서 직접 소유하고 운영할 데이터센터의 전력과 인프라 비용을 부담하고, 물과 전력 사용량을 공개하겠다고 밝혔습니다(OpenAI 11/5 발표). 향후 직접 소유·운영할 시설에 대한 회사의 약속이며, 기존 시설이나 협력사 데이터센터에 즉시 적용되거나 이행이 완료된 것은 아닙니다.",
+   "question": "AI 데이터센터 비용, 누가 내야 할까요?",
+   "keywords": [
+    "오픈AI",
+    "데이터센터"
+   ]
+  },
+  {
+   "region": "미국 백악관",
+   "short": "트럼프, 백악관 비서실장 교체 발표",
+   "headline": "백악관 비서실장\n와일스 → 밀러\n9일부터",
+   "ill": {
+    "kind": "icon",
+    "label": "스티븐 밀러 부비서실장이 수지 와일스 후임 (미국 11/6 발표)"
+   },
+   "icon": [
+    "Bust in silhouette",
+    "Necktie",
+    "Calendar"
+   ],
+   "motion": "bob",
+   "photo": "White House Washington DC",
+   "stat1": "밀러",
+   "stat1_label": "스티븐 밀러 현 부비서실장 · 비서실장 후임",
+   "stat2": "11월 9일",
+   "stat2_label": "교체 예정일(현지) · 아직 취임 전",
+   "source": "MBC · 연합뉴스 (미국 11/6 발표)",
+   "hook": {
+    "q": "백악관\n비서실장 교체",
+    "hi": "와일스 → 밀러"
+   },
+   "summary": "트럼프 미국 대통령은 백악관 비서실장을 교체한다고 발표했습니다. 스티븐 밀러 부비서실장이 오는 9일부터 수지 와일스의 뒤를 잇습니다(MBC·연합뉴스).",
+   "question": "백악관 인사, 우리에게도 영향이 있을까요?",
+   "keywords": [
+    "백악관",
+    "스티븐밀러"
+   ]
+  },
+  {
+   "region": "국회",
+   "short": "이용철 법무부 장관 후보자 지명 공방",
+   "headline": "법무장관 후보자\n지명 공방\n여야 맞서",
+   "ill": {
+    "kind": "icon",
+    "label": "국민의힘 지명 철회 요구 · 민주당 의혹 반박 (11/7)"
+   },
+   "icon": [
+    "Balance scale",
+    "Speaking head",
+    "Speech balloon"
+   ],
+   "motion": "bob",
+   "photo": "National Assembly Proceeding Hall Seoul",
+   "stat1": "철회 요구",
+   "stat1_label": "국민의힘, 지명 철회 요구 (11/7)",
+   "stat2": "의혹 반박",
+   "stat2_label": "민주당, 대장동 관련 의혹 반박·전문성 강조",
+   "source": "MBC · SBS · 뉴시스 (11/7)",
+   "hook": {
+    "q": "법무장관 후보자\n지명 공방",
+    "hi": "철회 vs 반박"
+   },
+   "summary": "국민의힘은 이용철 법무부 장관 후보자의 지명 철회를 요구했습니다. 민주당은 대장동 관련 의혹을 반박하며 후보자의 전문성을 강조했습니다(MBC·SBS·뉴시스).",
+   "question": "장관 후보자 검증, 무엇을 가장 봐야 할까요?",
+   "keywords": [
+    "법무부장관",
+    "인사청문"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/6 마감 · 오늘 휴장",
+  "headline": "주말 휴장\n어제 코스피 −6.02%\n코스닥 −5.03%",
+  "headline_short": "휴장 · 11/6 코스피 −6.02%, 코스닥 −5.03%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5059.69,
+    "pct": -6.02
+   },
+   {
+    "name": "코스닥",
+    "value": 644.27,
+    "pct": -5.03
+   }
+  ],
+  "note": "11/7 토요일 휴장 · 마지막 거래일 11/6 정규장 종가",
+  "photo": "Korea Exchange building Yeouido"
+ },
+ "oneliner": "증시는 쉬어도\n인사·AI 약속은\n이어졌다",
+ "scripts": [
+  "11월 7일 저녁 브리핑. 오늘 국내외 이슈, 핵심만 정리.",
+  "오픈AI, 앞으로 미국에 직접 운영할 데이터센터 전력·인프라 비용 부담 약속.",
+  "트럼프, 백악관 비서실장 교체 발표. 9일부터 스티븐 밀러가 와일스 후임.",
+  "국민의힘, 이용철 법무장관 후보자 지명 철회 요구. 민주당은 의혹 반박.",
+  "오늘 국내 증시는 휴장. 어제 코스피 6.02퍼센트 내린 5,059.69, 코스닥 644.27.",
+  "오늘의 한 줄. 증시는 쉬어도 인사와 AI 약속은 이어졌습니다. AI 데이터센터 비용, 누가 내야 할까요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Chart increasing",
+  "Desktop computer",
+  "Dollar banknote",
+  "Sheaf of rice",
+  "Bread",
+  "Globe showing Asia-Australia",
+  "Thermometer",
+  "Snowflake",
+  "Gloves",
+  "Credit card",
+  "Receipt",
+  "Abacus",
+  "Money bag",
+  "Office building",
+  "Classical building",
+  "Memo",
+  "Laptop",
+  "Link",
+  "Rocket"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-07_1700_pm_v01.md",
+  "drive_id": "18WXL-ss9hHog39XiHNs7M22MDwwmsiVp",
+  "job_id": "cardnews-20261107-1700",
+  "version": "v01"
+ }
+}

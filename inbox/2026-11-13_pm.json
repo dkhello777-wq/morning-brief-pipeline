@@ -1,0 +1,163 @@
+{
+ "edition": "pm",
+ "date_short": "11.13 FRI",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "hook": {
+  "q": "코스피\n하락 전환",
+  "hi": "코스피 −0.98%"
+ },
+ "question": "이번 주 증시, 어떻게 보셨나요?",
+ "keywords": [
+  "코스피",
+  "이란",
+  "공정위"
+ ],
+ "issues": [
+  {
+   "region": "국내 증시",
+   "short": "코스피 −0.98% 하락, 코스닥 +0.45% 상승 마감",
+   "headline": "코스피 하락\n코스닥 상승\n엇갈린 마감",
+   "ill": {
+    "kind": "icon",
+    "label": "11/13 정규장 15:30 종가 · 전 거래일 대비"
+   },
+   "icon": [
+    "Chart decreasing",
+    "Bank",
+    "Coin"
+   ],
+   "motion": "pulse",
+   "stat1": "하락",
+   "stat1_label": "코스피 −0.98% · 5,290.53",
+   "stat2": "상승",
+   "stat2_label": "코스닥 +0.45% · 699.66",
+   "source": "뉴시스 · 뉴스1 (11/13)",
+   "hook": {
+    "q": "코스피\n하락 전환",
+    "hi": "코스피 −0.98%"
+   },
+   "summary": "11월 13일 코스피는 상승 출발했지만 하락 전환해 0.98% 내린 5,290.53에 마감했습니다. 코스닥은 0.45% 오른 699.66으로 거래를 마쳤습니다(뉴시스·뉴스1).",
+   "question": "이번 주 증시, 어떻게 보셨나요?",
+   "keywords": [
+    "코스피",
+    "코스닥"
+   ]
+  },
+  {
+   "region": "미국·이란",
+   "short": "트럼프, 이란 공격 재개 가능성 언급",
+   "headline": "트럼프\n이란 공격\n재개 가능성",
+   "ill": {
+    "kind": "icon",
+    "label": "현지 11/12 인터뷰 발언 · 공격 명령 아님"
+   },
+   "icon": [
+    "Globe showing Europe-Africa",
+    "Speech balloon",
+    "Warning"
+   ],
+   "motion": "sway",
+   "photo": "Donald Trump",
+   "stat1": "12일",
+   "stat1_label": "현지시간 인터뷰 발언",
+   "stat2": "조건부",
+   "stat2_label": "공격 명령 발표와 구분",
+   "source": "뉴시스 · CNN (11/12 현지)",
+   "hook": {
+    "q": "트럼프\n이란에 경고?",
+    "hi": "공격 재개 가능성"
+   },
+   "summary": "트럼프 미국 대통령은 현지시간 11월 12일 인터뷰에서 필요하면 이란에 대한 공격을 재개할 수 있다고 밝혔습니다. 군사 행동 가능성을 언급한 조건부 발언으로, 공격 명령 발표와는 구분해야 합니다(뉴시스·CNN).",
+   "question": "트럼프 발언, 어떻게 보시나요?",
+   "keywords": [
+    "트럼프",
+    "이란"
+   ]
+  },
+  {
+   "region": "공정위",
+   "short": "유통 표준계약서 7종 개정",
+   "headline": "유통\n표준계약서\n7종 개정",
+   "ill": {
+    "kind": "number",
+    "value": 7,
+    "decimals": 0,
+    "suffix": "종",
+    "label": "유통분야 표준거래계약서 개정 · 공정위 (11/13)"
+   },
+   "icon": [
+    "Page facing up",
+    "Package",
+    "Balance scale"
+   ],
+   "motion": "bob",
+   "stat1": "인도일",
+   "stat1_label": "납품대금 지급기한 기준",
+   "stat2": "통지",
+   "stat2_label": "추가 비용 사전 통지 확대",
+   "source": "공정위 · 정책브리핑 · 뉴시스 (11/13)",
+   "hook": {
+    "q": "납품대금\n언제부터 셀까?",
+    "hi": "상품 인도일 기준"
+   },
+   "summary": "공정거래위원회가 11월 13일 유통 표준거래계약서 7종을 개정했습니다. 납품대금 지급기한의 기준을 검수 완료일이 아닌 상품 인도일로 명확히 하고, 추가 비용의 사전 통지 조항도 확대했습니다. 새 법률의 일괄 시행이 아니라 표준계약서 개정과 활용 권장입니다(공정위·정책브리핑).",
+   "question": "납품대금 기준 변경, 도움이 될까요?",
+   "keywords": [
+    "공정위",
+    "표준계약서"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/13(금) 정규장 마감",
+  "headline": "코스피 −0.98%\n코스닥 +0.45%\n엇갈린 마감",
+  "headline_short": "코스피 −0.98%, 코스닥 +0.45% 엇갈린 마감",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 5290.53,
+    "pct": -0.98
+   },
+   {
+    "name": "코스닥",
+    "value": 699.66,
+    "pct": 0.45
+   }
+  ],
+  "note": "11/13 정규장 종가 · 전 거래일 대비 · 코스피 −52.20p, 코스닥 +3.13p",
+  "photo": "Korea Exchange"
+ },
+ "oneliner": "코스피는 쉬어 가고\n코스닥은 올랐다",
+ "scripts": [
+  "코스피 하락 전환, 트럼프 이란 발언. 오늘 국내 이슈, 핵심만 정리.",
+  "코스피, 상승 출발 뒤 하락 전환해 0.98퍼센트 하락. 코스닥은 0.45퍼센트 상승.",
+  "트럼프, 필요하면 이란 공격 재개할 수 있다고 언급. 공격 명령 발표와는 구분해야.",
+  "공정위, 유통 표준계약서 7종 개정. 납품대금 지급기한 기준은 상품 인도일.",
+  "코스피 52.20포인트 내린 5,290.53, 코스닥 3.13포인트 오른 699.66에 마감.",
+  "오늘의 한 줄. 코스피는 쉬어 가고, 코스닥은 올랐다. 이번 주 증시, 어떻게 보셨나요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "recent_icons": [
+  "Office building",
+  "Bust in silhouette",
+  "Memo",
+  "Shield",
+  "Magnifying glass tilted right",
+  "Robot",
+  "High voltage",
+  "Laptop",
+  "Chart increasing",
+  "Building construction",
+  "Factory",
+  "Airplane"
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-13_1700_pm_v01.md",
+  "drive_id": "1QdGaSiZeg5wLpFlr4K8_ZjspntagmNh-",
+  "job_id": "cardnews-20261113-1700",
+  "version": "v01"
+ }
+}

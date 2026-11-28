@@ -1,0 +1,239 @@
+{
+ "edition": "pm",
+ "date_short": "11.28 SAT",
+ "title": "오늘의\n국내 이슈\n저녁 정리",
+ "no_countup": true,
+ "hook": {
+  "q": "코스피 4,900선 회복\n다음 주 물가 발표",
+  "hi": "코스피 +4.34%",
+  "count": false
+ },
+ "question": "다음 주 물가, 어떻게 보세요?",
+ "keywords": [
+  "소비자물가",
+  "오펙플러스",
+  "코스피"
+ ],
+ "issues": [
+  {
+   "region": "다음 주 지표",
+   "short": "11/30(월) 10월 산업활동 · 12/2(수) 11월 소비자물가 · 모두 08:00 발표 예정",
+   "headline": "다음 주\n산업활동·물가\n발표 예정",
+   "ill": {
+    "kind": "icon",
+    "label": "국가데이터처 보도계획 · 발표 예정이며 결과 미확정"
+   },
+   "icon": [
+    "Shopping basket",
+    "Bar chart",
+    "Spiral notepad"
+   ],
+   "motion": "bob",
+   "stat1": "11/30",
+   "stat1_label": "월요일 08:00 · 10월 산업활동동향",
+   "stat2": "12/2",
+   "stat2_label": "수요일 08:00 · 11월 소비자물가동향",
+   "source": "국가데이터처 11·12월 보도계획",
+   "hook": {
+    "q": "다음 주\n물가 나온다",
+    "hi": "12/2 08:00",
+    "count": false
+   },
+   "summary": "다음 주 월요일엔 10월 산업활동, 수요일엔 11월 소비자물가가 나옵니다. 두 지표 모두 오전 8시 발표 예정입니다.",
+   "question": "요즘 장바구니 부담, 어떠세요?",
+   "keywords": [
+    "소비자물가",
+    "산업활동"
+   ]
+  },
+  {
+   "region": "텐센트 번역 AI",
+   "short": "텐센트, 102개 언어 번역 모델 Hy-MT3 3종 공개 · 자체 컴퓨터 실행용 파일도 제공",
+   "headline": "102개 언어\n번역 AI\n텐센트 공개",
+   "ill": {
+    "kind": "number",
+    "value": 102,
+    "suffix": "개 언어",
+    "label": "Hy-MT3 지원 언어 · 한국어·영어·일본어 포함 (텐센트 모델 카드)"
+   },
+   "icon": [
+    "Speaking head",
+    "Open book",
+    "Memo"
+   ],
+   "motion": "sway",
+   "stat1": "3종",
+   "stat1_label": "번역 모델 공개 · 계열 첫 공개 11/24",
+   "stat2": "실행용 파일",
+   "stat2_label": "용량 줄인 파일 제공 · 음성 받아쓰기 기능 아님",
+   "source": "텐센트 허깅페이스 모델 카드",
+   "hook": {
+    "q": "102개 언어\n번역 AI 공개",
+    "hi": "텐센트 Hy-MT3",
+    "count": false
+   },
+   "summary": "텐센트가 이번 주 102개 언어를 지원하는 번역 모델 세 종류를 공개했습니다. 자체 컴퓨터에서 실행할 수 있도록 용량을 줄인 파일도 제공합니다. 문장을 번역하는 모델로, 음성을 받아쓰는 기능과는 다릅니다.",
+   "question": "번역 AI, 어디에 쓰고 계세요?",
+   "keywords": [
+    "텐센트",
+    "번역AI"
+   ]
+  },
+  {
+   "region": "OPEC+",
+   "short": "OPEC+ 11/29 장관회의 예정 · 기존 전체 생산 수준 합의는 올해 말까지",
+   "headline": "OPEC+\n내일 장관회의\n내년 공급 주목",
+   "ill": {
+    "kind": "icon",
+    "label": "회의 결과는 아직 나오지 않음 · 기존 전체 생산 수준 합의 2026년 말까지 (OPEC)"
+   },
+   "icon": [
+    "Droplet",
+    "Fuel pump",
+    "Hourglass with flowing sand"
+   ],
+   "motion": "drive",
+   "stat1": "11/29",
+   "stat1_label": "OPEC+ 장관회의 예정",
+   "stat2": "올해 말",
+   "stat2_label": "기존 전체 생산 수준 합의 기한",
+   "source": "OPEC 공식 발표",
+   "hook": {
+    "q": "산유국\n내일 회의",
+    "hi": "11/29 OPEC+",
+    "count": false
+   },
+   "summary": "주요 산유국 협의체 오펙 플러스가 내일 장관회의를 엽니다. 기존 전체 생산 수준 합의는 올해 말까지로, 내년 공급 방향에 어떤 신호가 나올지 주목됩니다.",
+   "question": "기름값, 내년엔 어떻게 될까요?",
+   "keywords": [
+    "오펙플러스",
+    "유가"
+   ]
+  }
+ ],
+ "market": {
+  "date_label": "11/27(금) 정규장 마감 · 토요일 휴장",
+  "headline": "코스피 +4.34%\n코스닥 +8.13%",
+  "headline_short": "코스피 +4.34%, 코스닥 +8.13%",
+  "rows": [
+   {
+    "name": "코스피",
+    "value": 4915.68,
+    "pct": 4.34
+   },
+   {
+    "name": "코스닥",
+    "value": 708.99,
+    "pct": 8.13
+   }
+  ],
+  "note": "11/27 15:30 정규장 종가 · 토요일 휴장 · 원·달러 1,337.9원(서울 15:30, −4.8원)"
+ },
+ "oneliner": "증시는 쉬어 가고\n다음 주는 물가",
+ "scripts": [
+  "토요일 국내 증시 휴장. 어제 코스피 4,900선 회복. 오늘 국내 이슈, 핵심만 정리.",
+  "다음 주 월요일 10월 산업활동, 수요일 11월 소비자물가 발표. 모두 오전 8시 예정.",
+  "텐센트, 102개 언어 번역 모델 세 종류 공개. 자체 컴퓨터 실행용 파일도 제공.",
+  "산유국 협의체 오펙 플러스, 내일 장관회의. 기존 생산 수준 합의는 올해 말까지.",
+  "어제 코스피 4.34퍼센트 오른 4,915.68, 코스닥 8.13퍼센트 오른 708.99 마감. 원·달러 환율 1,337.9원.",
+  "오늘의 한 줄. 증시는 쉬어 가고, 다음 주는 물가. 다음 주 물가, 어떻게 보세요? 댓글로 남겨 주세요. 내일도 보려면 팔로우."
+ ],
+ "shorts_to_build": [
+  1
+ ],
+ "voice_id": "tc_68d4b115f0486108a7eefb37",
+ "gpt_script": {
+  "file": "2026-11-28_1700_pm.md",
+  "drive_id": "1A5AS5rplRQLJ6mX7WdmQbzpsarnVLNtv",
+  "job_id": "cardnews-20261128-1700",
+  "version": "v01"
+ },
+ "recent_icons": [
+  "Abacus",
+  "Airplane",
+  "Alarm clock",
+  "Balance scale",
+  "Bank",
+  "Bed",
+  "Bell",
+  "Brain",
+  "Briefcase",
+  "Building construction",
+  "Calendar",
+  "Chains",
+  "Chart decreasing",
+  "Chart increasing",
+  "Classical building",
+  "Clipboard",
+  "Cloud",
+  "Coin",
+  "Computer disk",
+  "Crab",
+  "Credit card",
+  "Desktop computer",
+  "Electric plug",
+  "Eye",
+  "Factory",
+  "Fire",
+  "Flag in hole",
+  "Floppy disk",
+  "Gear",
+  "Globe showing Americas",
+  "Globe showing Asia-Australia",
+  "Globe showing Europe-Africa",
+  "Globe with meridians",
+  "Graduation cap",
+  "Handshake",
+  "High voltage",
+  "Hospital",
+  "Hourglass done",
+  "Hourglass not done",
+  "Japanese castle",
+  "Laptop",
+  "Locked with key",
+  "Luggage",
+  "Magnifying glass tilted left",
+  "Magnifying glass tilted right",
+  "Maple leaf",
+  "Mechanical arm",
+  "Megaphone",
+  "Microscope",
+  "Milky way",
+  "Mobile phone",
+  "Money bag",
+  "Money with wings",
+  "Night with stars",
+  "Office building",
+  "Oil drum",
+  "Package",
+  "Page facing up",
+  "Party popper",
+  "Pill",
+  "Prohibited",
+  "Puzzle piece",
+  "Receipt",
+  "Robot",
+  "Rocket",
+  "Satellite",
+  "Satellite antenna",
+  "School",
+  "Scroll",
+  "Seedling",
+  "Shield",
+  "Shopping cart",
+  "Speech balloon",
+  "Spiral calendar",
+  "Statue of Liberty",
+  "Stethoscope",
+  "Stopwatch",
+  "Teacher",
+  "Tear-off calendar",
+  "Test tube",
+  "Thermometer",
+  "Trophy",
+  "Turkey",
+  "Up arrow",
+  "Video camera",
+  "World map"
+ ]
+}
